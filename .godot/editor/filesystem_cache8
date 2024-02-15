@@ -1,0 +1,70 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1708005767
+global.gd::GDScript::-1::1708000165::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::6066976505730363904::1707999019::1707999033::1::::<><>::
+main.tscn::PackedScene::5422367726967608135::1708004320::0::1::::<><>::
+mundo_1.tscn::PackedScene::190773687472385325::1708004316::0::1::::<><>::uid://bw3onneelassf::::res://Assets/tilemaps/BaseSet.png
+Player.gd::GDScript::-1::1708005424::0::1::::<>Node2D<>::
+Player.tscn::PackedScene::6669076117204179132::1708005424::0::1::::<><>::res://Player.gd
+player_variaveis.gd::GDScript::-1::1708000174::0::1::::<>Node<>::
+::res://Assets/::1708000485
+::res://Assets/efeitos/::1708000470
+::res://Assets/inimigos/::1708000439
+::res://Assets/player/::1708000444
+::res://Assets/tilemaps/::1708001014
+BaseSet.png::CompressedTexture2D::3989251763242213729::1708000929::1708000943::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/::1708001033
+Asset License Updated 01 February 2024.txt::TextFile::-1::1706801856::0::1::::<><>::
+Solaria Palette.png::CompressedTexture2D::5822920947109866988::1626883708::1708001033::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/::1706804546
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/Sprites/::1708001033
+Hero 01.png::CompressedTexture2D::6512984699449242762::1638212878::1708001033::1::::<><>::
+Minecart 01.png::CompressedTexture2D::2966218783248822994::1638331450::1708001033::1::::<><>::
+Slime 01.png::CompressedTexture2D::1618405541508013652::1638240692::1708001033::1::::<><>::
+Sword 01.png::CompressedTexture2D::2262527477279316216::1641663280::1708001033::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/Tilesets/::1708001033
+Solaria Demo Update 01.png::CompressedTexture2D::781447570929795499::1665667408::1708001033::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/Examples/::1708001033
+Demo Pack Example 01.png::CompressedTexture2D::8951509062785210635::1665667416::1708001033::1::::<><>::
+Demo Pack Example 02.png::CompressedTexture2D::2479221732113666742::1643404342::1708001033::1::::<><>::
+Demo Pack Example 03.png::CompressedTexture2D::639405876665851269::1665667268::1708001033::1::::<><>::
+Demo Pack Update 01 Preview.png::CompressedTexture2D::7120039948692419221::1665667578::1708001033::1::::<><>::
+Demo Pack Update 01 Sprite Preview.png::CompressedTexture2D::6948789915094899263::1643403018::1708001033::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/::1706804548
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/characters/::1708001033
+!Chest.png::CompressedTexture2D::1934752470140163818::1651621836::1708001033::1::::<><>::
+!Door1.png::CompressedTexture2D::8637753466499533650::1651622596::1708001033::1::::<><>::
+!Flame.png::CompressedTexture2D::1655664245374617053::1651618028::1708001033::1::::<><>::
+!Other1.png::CompressedTexture2D::3280186355025012832::1651619838::1708001033::1::::<><>::
+!Other2.png::CompressedTexture2D::7220119222062500076::1651622996::1708001033::1::::<><>::
+!Switch1.png::CompressedTexture2D::8571694520887391620::1651623092::1708001033::1::::<><>::
+Actor1.png::CompressedTexture2D::6173269965633477348::1651691460::1708001033::1::::<><>::
+Minecart.png::CompressedTexture2D::1400037517805409103::1651708256::1708001033::1::::<><>::
+Monster.png::CompressedTexture2D::2245684252341315179::1651691456::1708001033::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/faces/::1708001033
+Actor1.png::CompressedTexture2D::671177479061394227::1651515592::1708001033::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/tilesets/::1708001033
+Dungeon_A1.png::CompressedTexture2D::6265394914895623059::1651616082::1708001033::1::::<><>::
+Dungeon_A1.txt::TextFile::-1::1651672968::0::1::::<><>::
+Dungeon_A2.png::CompressedTexture2D::2640923764096123179::1651615948::1708001033::1::::<><>::
+Dungeon_A2.txt::TextFile::-1::1651673058::0::1::::<><>::
+Dungeon_A4.png::CompressedTexture2D::1438727750571756798::1651671662::1708001033::1::::<><>::
+Dungeon_A4.txt::TextFile::-1::1651675102::0::1::::<><>::
+Dungeon_A5.png::CompressedTexture2D::6763489726155253698::1651607978::1708001033::1::::<><>::
+Dungeon_A5.txt::TextFile::-1::1651674008::0::1::::<><>::
+Dungeon_B.png::CompressedTexture2D::1641358796998293995::1651607586::1708001033::1::::<><>::
+Dungeon_B.txt::TextFile::-1::1651676458::0::1::::<><>::
+Dungeon_C.png::CompressedTexture2D::6679088669182793476::1651607588::1708001033::1::::<><>::
+Dungeon_C.txt::TextFile::-1::1651685448::0::1::::<><>::
+Outside_A1.png::CompressedTexture2D::6043181666354317667::1651765230::1708001033::1::::<><>::
+Outside_A1.txt::TextFile::-1::1651686014::0::1::::<><>::
+Outside_A2.png::CompressedTexture2D::7662590910387533501::1652980910::1708001033::1::::<><>::
+Outside_A2.txt::TextFile::-1::1651762320::0::1::::<><>::
+Outside_A3.png::CompressedTexture2D::6392635551568854642::1651340872::1708001033::1::::<><>::
+Outside_A3.txt::TextFile::-1::1651686794::0::1::::<><>::
+Outside_A5.png::CompressedTexture2D::8655145523181360282::1651764656::1708001033::1::::<><>::
+Outside_A5.txt::TextFile::-1::1651688198::0::1::::<><>::
+Outside_B.png::CompressedTexture2D::278795600458684400::1651764932::1708001033::1::::<><>::
+Outside_B.txt::TextFile::-1::1651689970::0::1::::<><>::
+Outside_C.png::CompressedTexture2D::2744929875491966678::1651765624::1708001033::1::::<><>::
+Outside_C.txt::TextFile::-1::1651765708::0::1::::<><>::

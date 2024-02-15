@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cjivusri1ga60"]
+
+[node name="main" type="Node2D"]
+
+[node name="control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Global" type="Node" parent="."]
+
+[node name="PlayerVariaveis" type="Node" parent="."]
