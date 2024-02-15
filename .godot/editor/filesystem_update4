@@ -1,4 +1,7 @@
-res://mundo_1.tscn
 res://main.tscn
+res://mundo_1.tscn
 res://Player.tscn
 res://Player.gd
+res://Player/player.tscn
+res://Player/player.gd
+res://Mundos/mundo_1.tscn
