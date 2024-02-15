@@ -1136,6 +1136,8 @@ layer_2/tile_data = PackedInt32Array(-589852, 2359296, 24, 720868, 2359296, 24, 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-43, -198, 353, -202, 279, 124, 184, 272, -206, 257, 250, 348, 392, 96, 394, -321, -9, -281)
+position = Vector2(6, 2)
+build_mode = 1
+polygon = PackedVector2Array(-464, -342, -465, 390, 443, 391, 438, 357, -444, 357, -438, -340, 389, -328, 395, 354, 432, -348, 437, 358, 431, -351)
 
 [node name="Player" parent="." instance=ExtResource("2_b3mdk")]

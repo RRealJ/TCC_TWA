@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-@export var MAX_SPEED = 300
-@export var ACELERACAO = 1500
-@export var FRICCAO = 1200
+@export var MAX_SPEED = 75
+@export var ACELERACAO = 500
+@export var FRICCAO = 1000
 @onready var axis = Vector2.ZERO
 
 func _physics_process(delta):

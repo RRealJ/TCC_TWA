@@ -1,13 +1,43 @@
-[gd_scene format=3 uid="uid://cjivusri1ga60"]
+[gd_scene load_steps=2 format=3 uid="uid://cjivusri1ga60"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_p8nrp"]
 
 [node name="main" type="Node2D"]
-
-[node name="control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+position = Vector2(526, 247)
 
 [node name="Global" type="Node" parent="."]
 
 [node name="PlayerVariaveis" type="Node" parent="."]
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 317.0
+offset_bottom = 213.0
+script = ExtResource("1_p8nrp")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+
+[node name="Comecar" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Começar"
+
+[node name="Loja" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Loja"
+
+[node name="Sair" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sair"
+
+[node name="Opcoes" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Config"
+
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Comecar" to="Menu" method="_on_comecar_pressed"]

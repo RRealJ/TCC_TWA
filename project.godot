@@ -15,7 +15,7 @@ config/description="Por algum motivo foi parar em diversos lugares no tempo, por
 config/version="0.0.1"
 run/main_scene="res://Mundos/mundo_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
