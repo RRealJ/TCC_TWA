@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcafurs16oq33"]
+
+[ext_resource type="Script" path="res://Menus/menu_pausa.gd" id="1_f58eb"]
+[ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="1_iwmj2"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_vduix"]
+action = &"pausar"
+
+[sub_resource type="Shortcut" id="Shortcut_cyvji"]
+events = [SubResource("InputEventAction_vduix")]
+
+[node name="menu_pausa" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_f58eb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.396078)
+
+[node name="menu_holder" type="VBoxContainer" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -81.5
+offset_right = -1.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="btn_continuar" type="Button" parent="menu_holder"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+shortcut = SubResource("Shortcut_cyvji")
+text = "Continuar"
+
+[node name="btn_inventário" type="Button" parent="menu_holder"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "Inventario"
+
+[node name="btn_opcoes" type="Button" parent="menu_holder"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "Config"
+
+[node name="btn_main_menu" type="Button" parent="menu_holder"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "Main Menu"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 133.0
+offset_bottom = 166.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "Pausado"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="menu_holder/btn_continuar" to="." method="_on_btn_continuar_pressed"]
+[connection signal="pressed" from="menu_holder/btn_inventário" to="." method="_on_btn_inventário_pressed"]
+[connection signal="pressed" from="menu_holder/btn_opcoes" to="." method="_on_btn_opcoes_pressed"]
+[connection signal="pressed" from="menu_holder/btn_main_menu" to="." method="_on_btn_main_menu_pressed"]

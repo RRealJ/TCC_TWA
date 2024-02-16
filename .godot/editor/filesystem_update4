@@ -1,25 +1,7 @@
-res://main.tscn
-res://Mundos/mundo_1.tscn
-res://Player/player.tscn
-res://opt_menu.tscn
-res://Inimigos/inimigo_comum.tscn
-res://Inimigos/inimigos.tscn
-res://Inimigos/inimigos.gd
-res://Player/player.gd
-res://Inimigos/inimigos_comum.tscn
+res://Menus/menu_pausa.tscn
 res://Inimigos/inimigos_comum.gd
-res://Mundos/mundo_1.gd
-res://Inimigos/inimigos_campeoes.tscn
-res://Inimigos/inimigos_campeao.tscn
-res://Spawnar_Inimigo.gd
-res://spawner_inimigo.tscn
-res://timers e spawns/spawner_inimigo.tscn
-res://Menus/opt_menu.tscn
-res://Timers e spawns/spawner_inimigo.tscn
-res://Timers e spawns/Spawn_info.gd
-res://Timers e spawns/Spawnar_Inimigo.gd
-res://Timers e spawns/spawnar_inimigo.gd
-res://Timers e spawns/spawn_info.gd
-res://Timers e spawns/Spawn_inimigo.tscn
-res://Timers e spawns/spawn_inimigo.tscn
-res://Timers e spawns/spawn_inimigo.gd
+res://main.tscn
+res://Assets/font/TextFont.tres
+res://Menus/menu_pausa.gd
+res://Player/player.tscn
+res://Mundos/mundo_1.tscn

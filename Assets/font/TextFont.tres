@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://0a7264asjqtn"]
+
+[ext_resource type="FontFile" uid="uid://cxktc2krspd6m" path="res://Assets/font/Perfect DOS VGA 437.ttf" id="1_a81vu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kme3i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lxgm0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_obxpq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jhnd0"]
+
+[resource]
+default_font = ExtResource("1_a81vu")
+default_font_size = 16
+Button/colors/font_focus_color = Color(1, 0.533333, 0.282353, 1)
+Button/colors/font_hover_color = Color(1, 0.533333, 0.282353, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.533333, 0.282353, 1)
+Button/colors/font_pressed_color = Color(0.82701, 0.359048, 3.85046e-07, 1)
+Button/font_sizes/font_size = 16
+Button/styles/focus = SubResource("StyleBoxEmpty_kme3i")
+Button/styles/hover = SubResource("StyleBoxEmpty_lxgm0")
+Button/styles/normal = SubResource("StyleBoxEmpty_obxpq")
+Button/styles/pressed = SubResource("StyleBoxEmpty_jhnd0")

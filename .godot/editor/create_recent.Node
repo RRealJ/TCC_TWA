@@ -1,3 +1,9 @@
+VBoxContainer
+ColorRect
+Label
+Button
+CanvasLayer
+MarginContainer
 Timer
 CollisionShape2D
 Sprite2D
@@ -5,10 +11,4 @@ CharacterBody2D
 Node2D
 AnimatedSprite2D
 HSlider
-Button
-VBoxContainer
-MarginContainer
 CollisionPolygon2D
-Control
-Camera2D
-StaticBody2D

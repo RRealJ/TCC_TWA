@@ -24,23 +24,23 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
 layout_mode = 2
 
-[node name="Comecar" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+[node name="comecar" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Começar"
 
-[node name="Loja" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+[node name="loja" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Loja"
 
-[node name="Sair" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+[node name="sair" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Sair"
 
-[node name="Opcoes" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+[node name="opcoes" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "*"
 
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Comecar" to="Menu" method="_on_comecar_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Loja" to="Menu" method="_on_loja_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Sair" to="Menu" method="_on_sair_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Opcoes" to="Menu" method="_on_opcoes_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/comecar" to="Menu" method="_on_comecar_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/loja" to="Menu" method="_on_loja_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/sair" to="Menu" method="_on_sair_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/opcoes" to="Menu" method="_on_opcoes_pressed"]
