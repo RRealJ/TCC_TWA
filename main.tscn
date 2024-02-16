@@ -38,7 +38,9 @@ text = "Sair"
 
 [node name="Opcoes" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Config"
+text = "*"
 
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Comecar" to="Menu" method="_on_comecar_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Loja" to="Menu" method="_on_loja_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Sair" to="Menu" method="_on_sair_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Opcoes" to="Menu" method="_on_opcoes_pressed"]

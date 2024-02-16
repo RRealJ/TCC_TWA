@@ -1,3 +1,4 @@
+HSlider
 Button
 VBoxContainer
 MarginContainer
@@ -11,4 +12,3 @@ CharacterBody2D
 Node
 AnimatedSprite2D
 TileMap
-Node2D
