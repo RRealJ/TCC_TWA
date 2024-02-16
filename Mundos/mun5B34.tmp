@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://7s87ybeqiy5i"]
+[gd_scene load_steps=8 format=3 uid="uid://7s87ybeqiy5i"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
 [ext_resource type="PackedScene" uid="uid://derytfri27qe1" path="res://Player/player.tscn" id="2_b3mdk"]
 [ext_resource type="PackedScene" uid="uid://dbji1dp00wfdj" path="res://Inimigos/inimigos_comum.tscn" id="3_5o844"]
-[ext_resource type="PackedScene" uid="uid://bnh1awky35ggp" path="res://Timers e spawns/spawn_inimigo.tscn" id="4_eashf"]
-[ext_resource type="Script" path="res://Timers e spawns/spawn_info.gd" id="6_gaajl"]
+[ext_resource type="PackedScene" uid="uid://cc56xuoddcba4" path="res://Inimigos/inimigos_campeoes.tscn" id="5_i7hj6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wl1v"]
 resource_name = "Base"
@@ -1125,22 +1124,6 @@ texture = ExtResource("1_visl5")
 [sub_resource type="TileSet" id="TileSet_1kh7e"]
 sources/0 = SubResource("TileSetAtlasSource_3wl1v")
 
-[sub_resource type="Resource" id="Resource_cimqq"]
-script = ExtResource("6_gaajl")
-time_start = 0
-time_end = 20
-inimigo = ExtResource("3_5o844")
-inimigo_num = 1
-inimigo_spawn_delay = 0
-
-[sub_resource type="Resource" id="Resource_18kad"]
-script = ExtResource("6_gaajl")
-time_start = 20
-time_end = 120
-inimigo = ExtResource("3_5o844")
-inimigo_num = 5
-inimigo_spawn_delay = 0
-
 [node name="mundo1" type="Node2D"]
 script = ExtResource("1_lg6v3")
 
@@ -1161,7 +1144,14 @@ position = Vector2(6, 2)
 build_mode = 1
 polygon = PackedVector2Array(-464, -342, -465, 390, 443, 391, 438, 357, -444, 357, -438, -340, 389, -328, 395, 354, 432, -348, 437, 358, 431, -351)
 
-[node name="Player" parent="." instance=ExtResource("2_b3mdk")]
+[node name="inimigos_comum2" parent="." instance=ExtResource("3_5o844")]
+position = Vector2(24, -224)
 
-[node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
-spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_cimqq"), SubResource("Resource_18kad")])
+[node name="inimigos_comum" parent="." instance=ExtResource("3_5o844")]
+position = Vector2(-87, -124)
+
+[node name="Player" parent="." instance=ExtResource("2_b3mdk")]
+position = Vector2(127, -140)
+
+[node name="inimigos_campeoes" parent="." instance=ExtResource("5_i7hj6")]
+position = Vector2(127, -140)

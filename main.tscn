@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cjivusri1ga60"]
 
-[ext_resource type="Script" path="res://Menu.gd" id="1_p8nrp"]
+[ext_resource type="Script" path="res://Menus/Menu.gd" id="1_p8nrp"]
 
 [node name="main" type="Node2D"]
 position = Vector2(526, 247)

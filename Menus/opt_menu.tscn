@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://55urrtk365cx"]
 
-[ext_resource type="Script" path="res://opt_menu.gd" id="1_bw6i2"]
+[ext_resource type="Script" path="res://Menus/opt_menu.gd" id="1_4660y"]
 
 [node name="opt_menu" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bw6i2")
+script = ExtResource("1_4660y")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -19,15 +19,8 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-min_value = -30.0
-max_value = 0.0
-value = -1.0
-
 [node name="voltar" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Voltar"
 
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/volume" to="." method="_on_volume_value_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/voltar" to="." method="_on_voltar_pressed"]

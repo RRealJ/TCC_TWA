@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://etxgeoy5g5bc"]
 
-[ext_resource type="Script" path="res://sound_menu.gd" id="1_8p0a0"]
+[ext_resource type="Script" path="res://Menus/sound_menu.gd" id="1_8p0a0"]
 
 [node name="sound_menu" type="Control"]
 layout_mode = 3
