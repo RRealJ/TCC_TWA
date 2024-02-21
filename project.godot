@@ -22,6 +22,12 @@ config/icon="res://icon.png"
 Global="*res://global.gd"
 PlayerVariaveis="*res://player_variaveis.gd"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=960
+window/stretch/aspect="expand"
+
 [input]
 
 move_left={

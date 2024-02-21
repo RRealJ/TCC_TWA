@@ -1,6 +1,8 @@
 Label
-Button
 VBoxContainer
+HBoxContainer
+Control
+Button
 ColorRect
 CanvasLayer
 MarginContainer
@@ -10,5 +12,3 @@ Sprite2D
 CharacterBody2D
 Node2D
 AnimatedSprite2D
-HSlider
-CollisionPolygon2D

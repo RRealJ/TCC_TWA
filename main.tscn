@@ -1,52 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjivusri1ga60"]
 
-[ext_resource type="Script" path="res://Menus/Menu.gd" id="1_p8nrp"]
-[ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="2_u6yi6"]
+[ext_resource type="PackedScene" uid="uid://dj6am7htam1ul" path="res://Menus/main_menu.tscn" id="1_85yfn"]
+[ext_resource type="Script" path="res://main.gd" id="1_cpjud"]
 
 [node name="main" type="Node2D"]
 position = Vector2(526, 247)
+script = ExtResource("1_cpjud")
 
 [node name="Global" type="Node" parent="."]
 
 [node name="PlayerVariaveis" type="Node" parent="."]
 
-[node name="Menu" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 317.0
-offset_bottom = 213.0
-script = ExtResource("1_p8nrp")
-
-[node name="MarginContainer" type="MarginContainer" parent="Menu"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
-layout_mode = 2
-
-[node name="btn_saltar" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_u6yi6")
-text = "Saltar"
-
-[node name="btn_loja" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_u6yi6")
-text = "Loja"
-
-[node name="btn_opcoes" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_u6yi6")
-text = "*"
-
-[node name="btn_sair" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_u6yi6")
-text = "Sair"
-
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/btn_saltar" to="Menu" method="_on_btn_comecar_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/btn_saltar" to="Menu" method="_on_btn_saltar_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/btn_loja" to="Menu" method="_on_btn_loja_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/btn_opcoes" to="Menu" method="_on_btn_opcoes_pressed"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/btn_sair" to="Menu" method="_on_btn_sair_pressed"]
+[node name="Main_menu" parent="." instance=ExtResource("1_85yfn")]

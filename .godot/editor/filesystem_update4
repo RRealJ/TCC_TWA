@@ -9,3 +9,10 @@ res://Menus/opt_menu.tscn
 res://Menus/sound_menu.tscn
 res://Menus/opt_menu.gd
 res://Menus/sound_menu.gd
+res://Menus/menu_pausa.gd
+res://Inimigos/inimigos_comum.tscn
+res://global.gd
+res://Mundos/mundo_1.gd
+res://Menus/main_menu.gd
+res://Menus/main_menu.tscn
+res://main.gd
