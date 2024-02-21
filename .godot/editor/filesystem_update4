@@ -1,7 +1,11 @@
 res://Menus/menu_pausa.tscn
 res://Inimigos/inimigos_comum.gd
-res://main.tscn
 res://Assets/font/TextFont.tres
-res://Menus/menu_pausa.gd
-res://Player/player.tscn
+res://Menus/Menu.gd
+res://main.tscn
 res://Mundos/mundo_1.tscn
+res://Player/player.tscn
+res://Menus/opt_menu.tscn
+res://Menus/sound_menu.tscn
+res://Menus/opt_menu.gd
+res://Menus/sound_menu.gd

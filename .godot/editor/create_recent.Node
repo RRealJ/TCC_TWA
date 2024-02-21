@@ -1,7 +1,7 @@
-VBoxContainer
-ColorRect
 Label
 Button
+VBoxContainer
+ColorRect
 CanvasLayer
 MarginContainer
 Timer

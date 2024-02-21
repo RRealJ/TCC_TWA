@@ -1142,6 +1142,7 @@ inimigo_num = 5
 inimigo_spawn_delay = 0
 
 [node name="mundo1" type="Node2D"]
+position = Vector2(2, 0)
 script = ExtResource("1_lg6v3")
 
 [node name="TileMap" type="TileMap" parent="."]
