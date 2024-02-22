@@ -35,3 +35,6 @@ func _on_video_pressed():
 
 func _on_volume_pressed():
 	mostrar_esconder(volume, opcoes)
+
+
+#colocar script para video e volume

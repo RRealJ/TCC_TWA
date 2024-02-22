@@ -13,9 +13,19 @@ grow_vertical = 2
 script = ExtResource("1_awpth")
 
 [node name="menu" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -70.0
+offset_right = 54.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="btn_saltar" type="Button" parent="menu"]
 layout_mode = 2
@@ -39,14 +49,26 @@ text = "Sair"
 
 [node name="Opcoes" type="Control" parent="."]
 visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Opcoes"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -34.0
+offset_right = 54.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="video" type="Button" parent="Opcoes/VBoxContainer"]
 layout_mode = 2
@@ -60,29 +82,114 @@ text = "Volume"
 
 [node name="Video" type="Control" parent="."]
 visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Video"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -34.0
+offset_right = 95.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="labels" type="VBoxContainer" parent="Video/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="resolucao" type="Label" parent="Video/HBoxContainer/labels"]
 layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Resolucao"
+
+[node name="vsync" type="Label" parent="Video/HBoxContainer/labels"]
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "V-Sync"
 
 [node name="checkboxes" type="VBoxContainer" parent="Video/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="cb_resolucao" type="CheckBox" parent="Video/HBoxContainer/checkboxes"]
+layout_mode = 2
+
+[node name="cb_vsync" type="CheckBox" parent="Video/HBoxContainer/checkboxes"]
+layout_mode = 2
 
 [node name="Volume" type="Control" parent="."]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Volume"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -52.0
+offset_right = 208.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="labels" type="VBoxContainer" parent="Volume/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="master" type="Label" parent="Volume/HBoxContainer/labels"]
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Master
+"
+
+[node name="sfx" type="Label" parent="Volume/HBoxContainer/labels"]
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "SFX
+"
+
+[node name="bgm" type="Label" parent="Volume/HBoxContainer/labels"]
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Musica
+"
+
+[node name="sliders" type="VBoxContainer" parent="Volume/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="hs_master" type="HSlider" parent="Volume/HBoxContainer/sliders"]
+layout_mode = 2
+
+[node name="hs_sfx" type="HSlider" parent="Volume/HBoxContainer/sliders"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="hs_bgm" type="HSlider" parent="Volume/HBoxContainer/sliders"]
+layout_mode = 2
+size_flags_vertical = 8
 
 [connection signal="pressed" from="menu/btn_saltar" to="." method="_on_btn_saltar_pressed"]
 [connection signal="pressed" from="menu/btn_loja" to="." method="_on_btn_loja_pressed"]
