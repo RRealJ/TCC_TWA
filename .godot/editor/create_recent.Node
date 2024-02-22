@@ -1,10 +1,11 @@
+OptionButton
+Button
 HSlider
 VBoxContainer
 HBoxContainer
 Label
 CheckBox
 Control
-Button
 ColorRect
 CanvasLayer
 MarginContainer
@@ -12,4 +13,3 @@ Timer
 CollisionShape2D
 Sprite2D
 CharacterBody2D
-Node2D
