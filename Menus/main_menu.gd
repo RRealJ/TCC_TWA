@@ -20,7 +20,7 @@ const DICT_RESOLUCOES : Dictionary = {
 
 func _ready():
 	add_resolucao_items()
-	opt_btn.item_selected.connect(on_resolution_selectec)
+	opt_btn.item_selected.connect(on_resolution_selected)
 
 func _on_btn_saltar_pressed():
 	get_tree().change_scene_to_file("res://Mundos/mundo_1.tscn")
@@ -60,7 +60,7 @@ func add_resolucao_items() -> void:
 		opt_btn.add_item(resolucao_tamanho)
 		 
 
-func on_resolution_selectec(index : int) -> void:
+func on_resolution_selected(index : int) -> void:
 	DisplayServer.window_set_size(DICT_RESOLUCOES.values()[index])
 
 
@@ -86,4 +86,11 @@ func _on_cb_vsync_toggled(toggled_on):
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		
+
+func _on_btn_voltar_video_pressed():
+	mostrar_esconder(opcoes, video)
 	
+	
+func _on_btn_voltar_volume_pressed():
+	mostrar_esconder(opcoes, volume)

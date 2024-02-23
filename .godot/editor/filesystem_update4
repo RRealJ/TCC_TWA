@@ -1,4 +1,5 @@
+res://Menus/main_menu.gd
 res://Menus/main_menu.tscn
 res://Inimigos/inimigos_comum.gd
-res://Menus/main_menu.gd
-res://global.gd
+res://Menus/menu_pausa.gd
+res://Menus/menu_pausa.tscn

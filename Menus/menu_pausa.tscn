@@ -32,6 +32,7 @@ offset_right = -1.0
 offset_bottom = 81.5
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 4
 alignment = 1
 
 [node name="btn_continuar" type="Button" parent="menu_holder"]
@@ -46,12 +47,6 @@ texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_iwmj2")
 text = "Inventario"
-
-[node name="btn_opcoes" type="Button" parent="menu_holder"]
-texture_filter = 1
-layout_mode = 2
-theme = ExtResource("1_iwmj2")
-text = "Config"
 
 [node name="btn_main_menu" type="Button" parent="menu_holder"]
 texture_filter = 1
@@ -73,13 +68,157 @@ theme = ExtResource("1_iwmj2")
 text = "Pausado"
 horizontal_alignment = 1
 
-[node name="pausa_opcoes" type="Control" parent="."]
+[node name="Video" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Video"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -240.0
+offset_right = -247.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="label1" type="VBoxContainer" parent="Video/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="resolucao" type="Label" parent="Video/HBoxContainer1/label1"]
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "Resolucao"
+
+[node name="vsync" type="Label" parent="Video/HBoxContainer1/label1"]
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "V-Sync"
+
+[node name="checkboxes1" type="VBoxContainer" parent="Video/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 13
+
+[node name="ob_resolucao" type="OptionButton" parent="Video/HBoxContainer1/checkboxes1"]
+layout_mode = 2
+
+[node name="cb_vsync" type="CheckBox" parent="Video/HBoxContainer1/checkboxes1"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Video"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 308.0
+offset_top = -238.0
+offset_right = 537.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="label2" type="VBoxContainer" parent="Video/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="fullscreen" type="Label" parent="Video/HBoxContainer2/label2"]
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "FullScreen"
+
+[node name="sem_bordas" type="Label" parent="Video/HBoxContainer2/label2"]
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "Sem Bordas"
+
+[node name="checkboxes2" type="VBoxContainer" parent="Video/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 13
+
+[node name="cb_fullscreen" type="CheckBox" parent="Video/HBoxContainer2/checkboxes2"]
+layout_mode = 2
+
+[node name="cb_sem_bordas" type="CheckBox" parent="Video/HBoxContainer2/checkboxes2"]
+layout_mode = 2
+
+[node name="Volume" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Volume"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -213.0
+offset_right = 235.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="labels" type="VBoxContainer" parent="Volume/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="master" type="Label" parent="Volume/HBoxContainer/labels"]
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "Master
+"
+
+[node name="sfx" type="Label" parent="Volume/HBoxContainer/labels"]
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "SFX
+"
+
+[node name="bgm" type="Label" parent="Volume/HBoxContainer/labels"]
+layout_mode = 2
+theme = ExtResource("1_iwmj2")
+text = "Musica
+"
+
+[node name="sliders" type="VBoxContainer" parent="Volume/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="hs_master" type="HSlider" parent="Volume/HBoxContainer/sliders"]
+layout_mode = 2
+
+[node name="hs_sfx" type="HSlider" parent="Volume/HBoxContainer/sliders"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="hs_bgm" type="HSlider" parent="Volume/HBoxContainer/sliders"]
+layout_mode = 2
+size_flags_vertical = 8
 
 [connection signal="pressed" from="menu_holder/btn_continuar" to="." method="_on_btn_continuar_pressed"]
 [connection signal="pressed" from="menu_holder/btn_inventário" to="." method="_on_btn_inventário_pressed"]
-[connection signal="pressed" from="menu_holder/btn_opcoes" to="." method="_on_btn_opcoes_pressed"]
 [connection signal="pressed" from="menu_holder/btn_main_menu" to="." method="_on_btn_main_menu_pressed"]
