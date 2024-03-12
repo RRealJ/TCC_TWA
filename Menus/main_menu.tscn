@@ -242,7 +242,6 @@ max_value = 1.0
 step = 0.001
 script = ExtResource("3_0g5m2")
 bus_name = "sfx"
-bus_index = 2
 
 [node name="hs_bgm" type="HSlider" parent="Volume/HBoxContainer/sliders"]
 layout_mode = 2
@@ -251,7 +250,6 @@ max_value = 1.0
 step = 0.001
 script = ExtResource("3_0g5m2")
 bus_name = "bgm"
-bus_index = 1
 
 [node name="btn_voltar_volume" type="Button" parent="Volume"]
 layout_mode = 1

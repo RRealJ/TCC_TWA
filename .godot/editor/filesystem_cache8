@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710212083
+::res://::1710212275
 default_bus_layout.tres::AudioBusLayout::2548682415142993850::1710210664::0::1::::<><>::
 global.gd::GDScript::-1::1708574897::0::1::::<>Node<>::
 icon.png::CompressedTexture2D::497090336071308275::1708007622::1708026547::1::::<><>::
@@ -73,16 +73,16 @@ Outside_B.png::CompressedTexture2D::278795600458684400::1651764932::1708001033::
 Outside_B.txt::TextFile::-1::1651689970::0::1::::<><>::
 Outside_C.png::CompressedTexture2D::2744929875491966678::1651765624::1708001033::1::::<><>::
 Outside_C.txt::TextFile::-1::1651765708::0::1::::<><>::
-::res://Inimigos/::1710211249
-inimigos_comum.gd::GDScript::-1::1710211249::0::1::::Inimigo<>CharacterBody2D<>::
+::res://Inimigos/::1710212135
+inimigos_comum.gd::GDScript::-1::1710212135::0::1::::Inimigo<>CharacterBody2D<>::
 inimigos_comum.tscn::PackedScene::7248562642999813795::1708521689::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://hc2aga0mgh7h::::res://icon.png
-::res://Menus/::1710211979
+::res://Menus/::1710212135
 hs_bgm.gd::GDScript::-1::1710211878::0::1::::<>HSlider<>::
 hs_master.gd::GDScript::-1::1710211396::0::1::::<>HSlider<>::
 main_menu.gd::GDScript::-1::1710211759::0::1::::<>Control<>::
 main_menu.tscn::PackedScene::7854980476148917403::1710211979::0::1::::<><>::res://Menus/main_menu.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
 menu_pausa.gd::GDScript::-1::1710211645::0::1::::<>CanvasLayer<>::
-menu_pausa.tscn::PackedScene::7299979961124047284::1710211956::0::1::::<><>::res://Menus/menu_pausa.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
+menu_pausa.tscn::PackedScene::7299979961124047284::1710212135::0::1::::<><>::res://Menus/menu_pausa.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
 volume_sliders.gd::GDScript::-1::1710211396::0::1::::<>HSlider<>::
 ::res://Mundos/::1708526984
 mundo_1.gd::GDScript::-1::1708526984::0::1::::<>Node2D<>::
