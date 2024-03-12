@@ -38,7 +38,8 @@ func _on_btn_inventário_pressed():
 	
 
 func _on_btn_main_menu_pressed():
-	pass # Replace with function body.
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")
 
 
 func mostrar_esconder(mostrar, esconder):

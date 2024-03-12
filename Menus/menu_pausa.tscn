@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcafurs16oq33"]
+[gd_scene load_steps=6 format=3 uid="uid://dcafurs16oq33"]
 
 [ext_resource type="Script" path="res://Menus/menu_pausa.gd" id="1_f58eb"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="1_iwmj2"]
+[ext_resource type="Script" path="res://Menus/volume_sliders.gd" id="3_2y8w3"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_vduix"]
 action = &"pausar"
@@ -210,14 +211,29 @@ alignment = 1
 
 [node name="hs_master" type="HSlider" parent="Volume/HBoxContainer/sliders"]
 layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_2y8w3")
+bus_name = "Master"
 
 [node name="hs_sfx" type="HSlider" parent="Volume/HBoxContainer/sliders"]
 layout_mode = 2
 size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_2y8w3")
+bus_name = "sfx"
+bus_index = 2
 
 [node name="hs_bgm" type="HSlider" parent="Volume/HBoxContainer/sliders"]
 layout_mode = 2
 size_flags_vertical = 8
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_2y8w3")
+bus_name = "bgm"
+bus_index = 1
 
 [connection signal="pressed" from="menu_holder/btn_continuar" to="." method="_on_btn_continuar_pressed"]
 [connection signal="pressed" from="menu_holder/btn_inventário" to="." method="_on_btn_inventário_pressed"]

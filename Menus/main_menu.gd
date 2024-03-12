@@ -1,6 +1,6 @@
 extends Control
 
-
+@onready var btn_saltar = $menu/btn_saltar
 @onready var opcoes = get_node("Opcoes")
 @onready var menu = get_node("menu")
 @onready var video = get_node("Video")
@@ -21,6 +21,7 @@ const DICT_RESOLUCOES : Dictionary = {
 func _ready():
 	add_resolucao_items()
 	opt_btn.item_selected.connect(on_resolution_selected)
+	btn_saltar.grab_focus()
 
 func _on_btn_saltar_pressed():
 	get_tree().change_scene_to_file("res://Mundos/mundo_1.tscn")

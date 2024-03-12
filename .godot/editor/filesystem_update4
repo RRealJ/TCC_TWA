@@ -1,5 +1,2 @@
 res://Menus/menu_pausa.tscn
 res://Inimigos/inimigos_comum.gd
-res://Player/player.gd
-res://player_variaveis.gd
-res://Menus/main_menu.tscn

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dj6am7htam1ul"]
+[gd_scene load_steps=4 format=3 uid="uid://dj6am7htam1ul"]
 
 [ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_awpth"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="2_4ytr2"]
+[ext_resource type="Script" path="res://Menus/volume_sliders.gd" id="3_0g5m2"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -229,14 +230,28 @@ alignment = 1
 
 [node name="hs_master" type="HSlider" parent="Volume/HBoxContainer/sliders"]
 layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_0g5m2")
+bus_name = "Master"
 
 [node name="hs_sfx" type="HSlider" parent="Volume/HBoxContainer/sliders"]
 layout_mode = 2
 size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_0g5m2")
+bus_name = "sfx"
+bus_index = 2
 
 [node name="hs_bgm" type="HSlider" parent="Volume/HBoxContainer/sliders"]
 layout_mode = 2
 size_flags_vertical = 8
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_0g5m2")
+bus_name = "bgm"
+bus_index = 1
 
 [node name="btn_voltar_volume" type="Button" parent="Volume"]
 layout_mode = 1
