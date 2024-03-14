@@ -1,5 +1,8 @@
 extends Control
 
+@onready var slider_master = $Volume/HBoxContainer/sliders/hs_master
+@onready var btn_display = $Video/HBoxContainer/checkboxes/ob_resolucao
+@onready var btn_video = $Opcoes/VBoxContainer/video
 @onready var btn_saltar = $menu/btn_saltar
 @onready var opcoes = get_node("Opcoes")
 @onready var menu = get_node("menu")
@@ -33,6 +36,7 @@ func _on_btn_loja_pressed():
 
 func _on_btn_opcoes_pressed():
 	mostrar_esconder(opcoes, menu)
+	btn_video.grab_focus()
 
 
 func _on_btn_sair_pressed():
@@ -46,14 +50,17 @@ func mostrar_esconder(mostrar, esconder):
 
 func _on_video_pressed():
 	mostrar_esconder(video, opcoes)
+	btn_display.grab_focus()
 
 
 func _on_volume_pressed():
 	mostrar_esconder(volume, opcoes)
+	slider_master.grab_focus()
 
 
 func _on_btn_voltar_opt_pressed():
 	mostrar_esconder(menu, opcoes)
+	btn_saltar.grab_focus()
 	
 	
 func add_resolucao_items() -> void:
@@ -64,8 +71,6 @@ func add_resolucao_items() -> void:
 func on_resolution_selected(index : int) -> void:
 	DisplayServer.window_set_size(DICT_RESOLUCOES.values()[index])
 
-
-			
 	
 func _on_cb_fullscreen_toggled(toggled_on):
 	if toggled_on == true:
@@ -91,7 +96,9 @@ func _on_cb_vsync_toggled(toggled_on):
 
 func _on_btn_voltar_video_pressed():
 	mostrar_esconder(opcoes, video)
+	btn_video.grab_focus()
 	
 	
 func _on_btn_voltar_volume_pressed():
 	mostrar_esconder(opcoes, volume)
+	btn_video.grab_focus()

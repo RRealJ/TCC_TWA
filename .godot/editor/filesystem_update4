@@ -1,4 +1,4 @@
-res://Menus/menu_pausa.tscn
-res://Inimigos/inimigos_comum.gd
-res://Menus/volume_sliders.gd
 res://Menus/main_menu.tscn
+res://Inimigos/inimigos_comum.gd
+res://Menus/menu_pausa.tscn
+res://Menus/main_menu.gd
