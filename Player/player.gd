@@ -2,13 +2,35 @@ extends CharacterBody2D
 
 class_name Player
 
+
+var vida_maxima = 100 + (5 * PlayerVariaveis.vida)
+var vida = vida_maxima
 @export var MAX_SPEED = 75 * PlayerVariaveis.velocidade
 @export var ACELERACAO = 500
 @export var FRICCAO = 1000
 @onready var axis = Vector2.ZERO
+@onready var texto_vida = $player_ui/texto_barra_vida
+@onready var barra_vida = $player_ui/barra_vida
 
+func _ready():
+	barra_vida.max_value = vida_maxima
+	update_PlayerUI()
+	
 func _physics_process(delta):
 	mover(delta)
+	
+	
+func update_PlayerUI():
+	set_barra_de_vida()
+	set_texto_barra_de_vida()
+
+
+func set_texto_barra_de_vida() -> void:
+	texto_vida.text = "%s/%s" % [vida, vida_maxima]
+	
+	
+func set_barra_de_vida() -> void:
+	barra_vida.value = vida
 	
 	
 func mover(delta):
@@ -39,4 +61,4 @@ func aplicar_movimento(acelerac):
 	velocity += acelerac
 	velocity = velocity.limit_length(MAX_SPEED)
 	
-	
+

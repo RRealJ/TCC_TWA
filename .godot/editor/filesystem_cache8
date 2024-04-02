@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710422804
+::res://::1712086551
 default_bus_layout.tres::AudioBusLayout::2548682415142993850::1710210664::0::1::::<><>::
 global.gd::GDScript::-1::1708574897::0::1::::<>Node<>::
 icon.png::CompressedTexture2D::497090336071308275::1708007622::1708026547::1::::<><>::
@@ -8,12 +8,19 @@ main.gd::GDScript::-1::1708527009::0::1::::<>Node2D<>::
 main.tscn::PackedScene::5422367726967608135::1708527027::0::1::::<><>::uid://dj6am7htam1ul::::res://Menus/main_menu.tscn<>res://main.gd
 player_variaveis.gd::GDScript::-1::1709643054::0::1::::<>Node<>::
 README.md::TextFile::-1::1708128012::0::1::::<><>::
-::res://Assets/::1708124977
+::res://Assets/::1712086372
 ::res://Assets/efeitos/::1708000470
 ::res://Assets/font/::1708518371
 Perfect DOS VGA 437 Win.ttf::FontFile::440472894614787392::1219211536::1708126163::1::::<><>::
 Perfect DOS VGA 437.ttf::FontFile::6408987177427465710::1219211542::1708126163::1::::<><>::
 TextFont.tres::Theme::1756713924202378107::1708518371::0::1::::<><>::uid://cxktc2krspd6m::::res://Assets/font/Perfect DOS VGA 437.ttf
+::res://Assets/formatos/::1712087130
+black_rec.png::CompressedTexture2D::6402844540426953983::1712087060::1712087132::1::::<><>::
+b_clock.png::CompressedTexture2D::3156584145621662473::1712087102::1712087132::1::::<><>::
+pp_clock.png::CompressedTexture2D::7767647237437873678::1712087113::1712087132::1::::<><>::
+pp_rec.png::CompressedTexture2D::3628292183735939290::1712087076::1712087132::1::::<><>::
+white_rec.png::CompressedTexture2D::1369347578736325654::1712087048::1712087132::1::::<><>::
+w_clock.png::CompressedTexture2D::5610103259073766561::1712087089::1712087132::1::::<><>::
 ::res://Assets/inimigos/::1708000439
 ::res://Assets/player/::1708000444
 ::res://Assets/tilemaps/::1708001014
@@ -73,23 +80,24 @@ Outside_B.png::CompressedTexture2D::278795600458684400::1651764932::1708001033::
 Outside_B.txt::TextFile::-1::1651689970::0::1::::<><>::
 Outside_C.png::CompressedTexture2D::2744929875491966678::1651765624::1708001033::1::::<><>::
 Outside_C.txt::TextFile::-1::1651765708::0::1::::<><>::
-::res://Inimigos/::1710212282
-inimigos_comum.gd::GDScript::-1::1710212282::0::1::::Inimigo<>CharacterBody2D<>::
+::res://Inimigos/::1712086571
+inimigos_comum.gd::GDScript::-1::1712086571::0::1::::Inimigo<>CharacterBody2D<>::
 inimigos_comum.tscn::PackedScene::7248562642999813795::1708521689::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://hc2aga0mgh7h::::res://icon.png
-::res://Menus/::1710212296
+::res://Menus/::1712086971
 hs_bgm.gd::GDScript::-1::1710211878::0::1::::<>HSlider<>::
 hs_master.gd::GDScript::-1::1710211396::0::1::::<>HSlider<>::
-main_menu.gd::GDScript::-1::1710211759::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::7854980476148917403::1710212296::0::1::::<><>::res://Menus/main_menu.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
+main_menu.gd::GDScript::-1::1710423453::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::7854980476148917403::1712086971::0::1::::<><>::res://Menus/main_menu.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
 menu_pausa.gd::GDScript::-1::1710211645::0::1::::<>CanvasLayer<>::
-menu_pausa.tscn::PackedScene::7299979961124047284::1710212290::0::1::::<><>::res://Menus/menu_pausa.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
+menu_pausa.tscn::PackedScene::7299979961124047284::1712086932::0::1::::<><>::res://Menus/menu_pausa.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
 volume_sliders.gd::GDScript::-1::1710212282::0::1::::<>HSlider<>::
 ::res://Mundos/::1708526984
 mundo_1.gd::GDScript::-1::1708526984::0::1::::<>Node2D<>::
 mundo_1.tscn::PackedScene::2285263864465036388::1708526984::0::1::::<><>::res://Mundos/mundo_1.gd<>uid://bw3onneelassf::::res://Assets/tilemaps/BaseSet.png<>uid://derytfri27qe1::::res://Player/player.tscn<>uid://dbji1dp00wfdj::::res://Inimigos/inimigos_comum.tscn<>uid://bnh1awky35ggp::::res://Timers e spawns/spawn_inimigo.tscn<>res://Timers e spawns/spawn_info.gd
-::res://Player/::1709643012
-player.gd::GDScript::-1::1709643012::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::7476603274640303698::1708526879::0::1::::<><>::res://Player/player.gd<>uid://cso5hmplh0qv5::::res://icon.svg<>uid://dcafurs16oq33::::res://Menus/menu_pausa.tscn
+::res://Player/::1712086945
+player.gd::GDScript::-1::1712086730::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::7476603274640303698::1712086945::0::1::::<><>::res://Player/player.gd<>uid://cso5hmplh0qv5::::res://icon.svg<>uid://bjja1kgsmwtnf::::res://Player/player_ui.tscn<>uid://dcafurs16oq33::::res://Menus/menu_pausa.tscn
+player_ui.tscn::PackedScene::3036746642200546491::1712086945::0::1::::<><>::
 ::res://Timers e spawns/::1708120636
 spawn_info.gd::GDScript::-1::1708106152::0::1::::Spawn_info<>Resource<>::
 spawn_inimigo.gd::GDScript::-1::1708108776::0::1::::<>Node2D<>::

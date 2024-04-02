@@ -11,7 +11,7 @@ radius = 3.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_8xh84")
 
-[node name="player_ui" parent="." instance=ExtResource("2_tape2")]
+[node name="PlayerUI" parent="." instance=ExtResource("2_tape2")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.110887, 0.110887)
