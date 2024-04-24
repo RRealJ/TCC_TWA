@@ -15,13 +15,13 @@ func _ready():
 
 
 func mostrar(mostrar):
-	mostrar.show()
+	mostrar.show()	
 	
 	
 func confirmar():
 	mostrar(confirmacao)
 	$"confirmacao/HBoxContainer/sim".grab_focus()
-	await confirmacao.confirmado or confirmacao.cancelado
+	await confirmacao.decidido
 	confirmacao.hide()
 
 	
@@ -31,6 +31,5 @@ func _on_up_vida_pressed():
 	if confirmacao.opt == 1 and upbar_vida.value < 5:
 		upbar_vida.value += 1
 	else:
-		pass
-	
+		pass	
 		
