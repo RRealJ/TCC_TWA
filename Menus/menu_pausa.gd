@@ -20,8 +20,8 @@ func _ready():
 	opt_btn.item_selected.connect(on_resolution_selected)
 
 
-func _unhandled_input(event):
-	if event.is_action_pressed("pausar"):
+func _unhandled_input(event):	
+	if event.is_action_pressed("escape"):
 		visible = true
 		get_tree().paused = true
 		btn_continuar.grab_focus()

@@ -6,8 +6,10 @@ class_name Player
 var vida_maxima = 100 + (5 * PlayerVariaveis.vida)
 var vida = vida_maxima
 @export var MAX_SPEED = 75 * PlayerVariaveis.velocidade
+var max_speed = MAX_SPEED
 @export var ACELERACAO = 500
 @export var FRICCAO = 1000
+var friccao = FRICCAO
 @onready var axis = Vector2.ZERO
 @onready var texto_vida = $player_ui/texto_barra_vida
 @onready var barra_vida = $player_ui/barra_vida
@@ -37,7 +39,7 @@ func mover(delta):
 	axis = get_input_axis()
 	
 	if axis == Vector2.ZERO:
-		aplicar_fricao(FRICCAO * delta)
+		aplicar_fricao(friccao * delta)
 	else:
 		aplicar_movimento(axis * ACELERACAO * delta)
 		
@@ -59,6 +61,6 @@ func aplicar_fricao(qtd):
 		
 func aplicar_movimento(acelerac):
 	velocity += acelerac
-	velocity = velocity.limit_length(MAX_SPEED)
+	velocity = velocity.limit_length(max_speed)
 	
 

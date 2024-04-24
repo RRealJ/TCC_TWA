@@ -1,0 +1,199 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfm0mdvmbgdv2"]
+
+[ext_resource type="Script" path="res://loja.gd" id="1_2ofpd"]
+[ext_resource type="Texture2D" uid="uid://diwyarq17rwwc" path="res://Assets/formatos/pp_clock.png" id="1_wfg0a"]
+[ext_resource type="Texture2D" uid="uid://cl6tt0w3dyd2p" path="res://Assets/formatos/w_clock.png" id="2_e7ef7"]
+[ext_resource type="Texture2D" uid="uid://xuoatwwa0ci4" path="res://Assets/formatos/upgrade_normal.png" id="2_m2u30"]
+[ext_resource type="Texture2D" uid="uid://0vfd33ej50s7" path="res://Assets/formatos/upgrade_comprado.png" id="3_4u6ew"]
+[ext_resource type="Texture2D" uid="uid://brxtpbe5mc2gs" path="res://Assets/formatos/pp_rec.png" id="6_hyo4r"]
+[ext_resource type="PackedScene" uid="uid://cv57l8cgtgr3v" path="res://confirmacao.tscn" id="7_ga5l3"]
+
+[node name="Loja" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_2ofpd")
+
+[node name="BG" type="CanvasLayer" parent="."]
+
+[node name="categoria" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.003125
+anchor_top = 0.084375
+anchor_right = -0.003125
+anchor_bottom = 0.084375
+offset_left = 606.0
+offset_top = 190.0
+offset_right = 1279.0
+offset_bottom = 244.0
+theme_override_constants/separation = 5
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="player_upgrades" type="Button" parent="categoria"]
+layout_mode = 2
+text = "Player Icon
+"
+
+[node name="deltatime_upgrades" type="Button" parent="categoria"]
+layout_mode = 2
+disabled = true
+text = "DeltaTime Icon
+"
+
+[node name="mapa_upgrades" type="Button" parent="categoria"]
+layout_mode = 2
+text = "Map Icons
+"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 606.0
+offset_top = -155.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.84848, 0.801516, 0.400058, 1)
+
+[node name="p_upgrades" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0046875
+anchor_top = 0.140625
+anchor_right = 0.0046875
+anchor_bottom = 0.50625
+offset_left = 606.0
+offset_top = 190.0
+offset_right = 1279.0
+offset_bottom = 244.0
+theme_override_constants/separation = 61
+metadata/_edit_use_anchors_ = true
+
+[node name="set_1" type="VBoxContainer" parent="p_upgrades"]
+layout_mode = 2
+
+[node name="up_vida" type="TextureButton" parent="p_upgrades/set_1"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_e7ef7")
+texture_focused = ExtResource("1_wfg0a")
+
+[node name="upbar_vida" type="TextureProgressBar" parent="p_upgrades/set_1"]
+layout_mode = 2
+max_value = 5.0
+texture_under = ExtResource("2_m2u30")
+texture_progress = ExtResource("3_4u6ew")
+tint_under = Color(1, 0.940905, 0.936234, 0.780392)
+
+[node name="up_resistencia" type="TextureButton" parent="p_upgrades/set_1"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_e7ef7")
+texture_focused = ExtResource("6_hyo4r")
+
+[node name="upbar_resistencia" type="TextureProgressBar" parent="p_upgrades/set_1"]
+layout_mode = 2
+max_value = 5.0
+texture_under = ExtResource("2_m2u30")
+texture_progress = ExtResource("3_4u6ew")
+tint_under = Color(1, 0.940905, 0.936234, 0.780392)
+
+[node name="set_2" type="VBoxContainer" parent="p_upgrades"]
+layout_mode = 2
+
+[node name="up_velocidade" type="TextureButton" parent="p_upgrades/set_2"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_e7ef7")
+texture_focused = ExtResource("1_wfg0a")
+
+[node name="upbar_velocidade" type="TextureProgressBar" parent="p_upgrades/set_2"]
+layout_mode = 2
+max_value = 5.0
+texture_under = ExtResource("2_m2u30")
+texture_progress = ExtResource("3_4u6ew")
+tint_under = Color(1, 0.940905, 0.936234, 0.780392)
+
+[node name="up_sorte" type="TextureButton" parent="p_upgrades/set_2"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("1_wfg0a")
+texture_focused = ExtResource("2_e7ef7")
+
+[node name="upbar_sorte" type="TextureProgressBar" parent="p_upgrades/set_2"]
+layout_mode = 2
+max_value = 5.0
+texture_under = ExtResource("2_m2u30")
+texture_progress = ExtResource("3_4u6ew")
+tint_under = Color(1, 0.940905, 0.936234, 0.780392)
+
+[node name="set_3" type="VBoxContainer" parent="p_upgrades"]
+layout_mode = 2
+
+[node name="up_dano" type="TextureButton" parent="p_upgrades/set_3"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("1_wfg0a")
+
+[node name="upbar_dano" type="TextureProgressBar" parent="p_upgrades/set_3"]
+layout_mode = 2
+max_value = 5.0
+texture_under = ExtResource("2_m2u30")
+texture_progress = ExtResource("3_4u6ew")
+tint_under = Color(1, 0.940905, 0.936234, 0.780392)
+
+[node name="up_chance_critica" type="TextureButton" parent="p_upgrades/set_3"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("1_wfg0a")
+texture_hover = ExtResource("2_e7ef7")
+
+[node name="upbar_chance_critica" type="TextureProgressBar" parent="p_upgrades/set_3"]
+layout_mode = 2
+max_value = 5.0
+texture_under = ExtResource("2_m2u30")
+texture_progress = ExtResource("3_4u6ew")
+tint_under = Color(1, 0.940905, 0.936234, 0.780392)
+
+[node name="dt_upgrades" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.140625
+anchor_bottom = 0.50625
+offset_left = 606.0
+offset_top = 190.0
+offset_right = 1279.0
+offset_bottom = 244.0
+theme_override_constants/separation = 5
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="mapa_upgrades" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00078125
+anchor_top = 0.140625
+anchor_right = 0.00234375
+anchor_bottom = 0.50625
+offset_left = 606.0
+offset_top = 190.0
+offset_right = 1279.0
+offset_bottom = 244.0
+theme_override_constants/separation = 5
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="confirmacao" parent="." instance=ExtResource("7_ga5l3")]
+visible = false
+
+[connection signal="pressed" from="p_upgrades/set_1/up_vida" to="." method="_on_up_vida_pressed"]

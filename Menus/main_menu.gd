@@ -8,8 +8,9 @@ extends Control
 @onready var menu = get_node("menu")
 @onready var video = get_node("Video")
 @onready var volume = get_node("Volume")
-@onready var global = get_node("Opcoes")
+@onready var global = $"/root/Global"
 @onready var opt_btn = $Video/HBoxContainer/checkboxes/ob_resolucao
+
 
 const DICT_RESOLUCOES : Dictionary = {
 	"1024 x 768" : Vector2i(1024, 768),
@@ -20,11 +21,11 @@ const DICT_RESOLUCOES : Dictionary = {
 }
 	
 
-
 func _ready():
 	add_resolucao_items()
 	opt_btn.item_selected.connect(on_resolution_selected)
 	btn_saltar.grab_focus()
+
 
 func _on_btn_saltar_pressed():
 	get_tree().change_scene_to_file("res://Mundos/mundo_1.tscn")
