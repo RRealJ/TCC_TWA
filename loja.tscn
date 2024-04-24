@@ -197,3 +197,8 @@ metadata/_edit_use_anchors_ = true
 visible = false
 
 [connection signal="pressed" from="p_upgrades/set_1/up_vida" to="." method="_on_up_vida_pressed"]
+[connection signal="pressed" from="p_upgrades/set_1/up_resistencia" to="." method="_on_up_resistencia_pressed"]
+[connection signal="pressed" from="p_upgrades/set_2/up_velocidade" to="." method="_on_up_velocidade_pressed"]
+[connection signal="pressed" from="p_upgrades/set_2/up_sorte" to="." method="_on_up_sorte_pressed"]
+[connection signal="pressed" from="p_upgrades/set_3/up_dano" to="." method="_on_up_dano_pressed"]
+[connection signal="pressed" from="p_upgrades/set_3/up_chance_critica" to="." method="_on_up_chance_critica_pressed"]
