@@ -4,6 +4,6 @@ extends Node2D
 @onready var camera := $camera as Camera2D
 
 func _ready():
-	MundosGlobal.mundo_atual = 1
+	Global.mundo_atual = 1
 	player.follow_camera(camera)
 	

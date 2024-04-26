@@ -4,7 +4,6 @@ class_name Player
 
 
 const iFrame_duration = 1.5
-@export var MAX_SPEED = 75
 @export var ACELERACAO = 500
 @export var FRICCAO = 1000
 @onready var axis = Vector2.ZERO
@@ -14,9 +13,10 @@ const iFrame_duration = 1.5
 @onready var remote_transform := $remote as RemoteTransform2D
 @onready var gameover = $"../gameover"
 
-var vida_maxima = 100 + (5 * PlayerVariaveis.vida)
+var max_speed = 75 * PlayerVariaveis.velocidade
+var vida_maxima = 100 + (25 * PlayerVariaveis.vida)
+var speed = max_speed
 var vida = vida_maxima
-var max_speed = MAX_SPEED * PlayerVariaveis.velocidade
 var friccao = FRICCAO
 
 
@@ -69,12 +69,12 @@ func aplicar_fricao(qtd):
 		
 func aplicar_movimento(acelerac):
 	velocity += acelerac
-	velocity = velocity.limit_length(max_speed)
+	velocity = velocity.limit_length(speed)
 	
 
 func _on_hurtbox_body_entered(body):
 	if body.is_in_group("inimigos"):
-		vida = barra_vida.value - body.dano
+		vida = barra_vida.value - (body.dano - PlayerVariaveis.resistencia * 3)
 		update_PlayerUI()
 	if vida <= 0:
 		get_tree().change_scene_to_file("res://Menus/gameover.tscn")

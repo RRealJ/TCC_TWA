@@ -35,6 +35,10 @@ theme_override_constants/separation = 5
 alignment = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="voltar_menu" type="Button" parent="categoria"]
+layout_mode = 2
+text = "Voltar"
+
 [node name="player_upgrades" type="Button" parent="categoria"]
 layout_mode = 2
 text = "Player Icon
@@ -196,6 +200,7 @@ metadata/_edit_use_anchors_ = true
 [node name="confirmacao" parent="." instance=ExtResource("7_ga5l3")]
 visible = false
 
+[connection signal="pressed" from="categoria/voltar_menu" to="." method="_on_voltar_menu_pressed"]
 [connection signal="pressed" from="p_upgrades/set_1/up_vida" to="." method="_on_up_vida_pressed"]
 [connection signal="pressed" from="p_upgrades/set_1/up_resistencia" to="." method="_on_up_resistencia_pressed"]
 [connection signal="pressed" from="p_upgrades/set_2/up_velocidade" to="." method="_on_up_velocidade_pressed"]

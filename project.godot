@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 PlayerVariaveis="*res://player_variaveis.gd"
 Confirmacao="*res://generico/confirmacao.gd"
-MundosGlobal="*res://mundos_global.gd"
+Global="*res://Global.gd"
 
 [display]
 
