@@ -1,17 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbji1dp00wfdj"]
+[gd_scene load_steps=6 format=3 uid="uid://dbji1dp00wfdj"]
 
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_7uwrf"]
 [ext_resource type="Texture2D" uid="uid://hc2aga0mgh7h" path="res://icon.png" id="2_tdyxc"]
+[ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_xavkd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkm4o"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hb22a"]
+radius = 9.05539
+
 [node name="inimigos_comum" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_7uwrf")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
 scale = Vector2(0.241935, 0.225806)
 texture = ExtResource("2_tdyxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xkm4o")
+
+[node name="softCollision" parent="." instance=ExtResource("3_xavkd")]
+
+[node name="CollisionShape2D" parent="softCollision" index="0"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_hb22a")
+
+[editable path="softCollision"]

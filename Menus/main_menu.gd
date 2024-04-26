@@ -32,7 +32,7 @@ func _on_btn_saltar_pressed():
 
 
 func _on_btn_loja_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://loja.tscn")
 
 
 func _on_btn_opcoes_pressed():

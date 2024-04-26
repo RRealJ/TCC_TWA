@@ -1,6 +1,10 @@
+Timer
+Node
+CollisionShape2D
+Area2D
+Label
 HBoxContainer
 Button
-Label
 CanvasLayer
 TextureProgressBar
 ProgressBar
@@ -8,7 +12,3 @@ TextureButton
 TextureRect
 VBoxContainer
 Container
-GridContainer
-ColorRect
-ItemList
-SubViewport
