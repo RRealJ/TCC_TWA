@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cv57l8cgtgr3v"]
 
-[ext_resource type="Script" path="res://generico/confirmacao.gd" id="1_2ymyx"]
+[ext_resource type="Script" path="res://Generico/confirmacao.gd" id="1_2ymyx"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="1_7umar"]
 
 [node name="confirmacao" type="CanvasLayer"]

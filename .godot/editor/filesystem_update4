@@ -1,11 +1,8 @@
-res://Player/player_ui.tscn
-res://Inimigos/inimigos_comum.gd
-res://Player/player.tscn
-res://generico/player_ui.tscn
-res://generico/barra_vida.gd
-res://generico/barra_vida.tscn
-res://Player/player.gd
 res://Menus/main_menu.tscn
+res://Inimigos/inimigos_comum.gd
 res://Mundos/mundo_1.tscn
 res://Menus/gameover.tscn
 res://loja.tscn
+res://generico/player_ui.tscn
+res://Player/player.tscn
+res://generico/barra_vida.tscn

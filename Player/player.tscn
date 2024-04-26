@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_8xh84"]
 [ext_resource type="Texture2D" uid="uid://cso5hmplh0qv5" path="res://icon.svg" id="1_q5v8y"]
-[ext_resource type="PackedScene" uid="uid://bjja1kgsmwtnf" path="res://generico/player_ui.tscn" id="2_tape2"]
-[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="4_wer0q"]
+[ext_resource type="PackedScene" uid="uid://bjja1kgsmwtnf" path="res://Generico/player_ui.tscn" id="2_tape2"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="4_wer0q"]
 
 [sub_resource type="Shader" id="Shader_kayhy"]
 code = "shader_type canvas_item;

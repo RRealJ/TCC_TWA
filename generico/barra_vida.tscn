@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8i4jge24ih01"]
 
-[ext_resource type="Script" path="res://generico/barra_vida.gd" id="1_x4y70"]
+[ext_resource type="Script" path="res://Generico/barra_vida.gd" id="1_x4y70"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6ugv"]
 
