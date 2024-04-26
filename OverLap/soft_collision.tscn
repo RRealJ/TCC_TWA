@@ -6,5 +6,3 @@
 collision_layer = 16
 collision_mask = 16
 script = ExtResource("1_wm2tt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
+
 const iFrame_duration = 1.5
 @export var MAX_SPEED = 75
 @export var ACELERACAO = 500
@@ -10,8 +11,8 @@ const iFrame_duration = 1.5
 @onready var texto_vida = $player_ui/texto_barra_vida
 @onready var barra_vida = $player_ui/barra_vida
 @onready var texto_velocidade = $player_ui/texto_velocidade
-@onready var blinker = $Blinker
-@onready var hurtbox = $HurtBox
+@onready var remote_transform := $remote as RemoteTransform2D
+@onready var gameover = $"../gameover"
 
 var vida_maxima = 100 + (5 * PlayerVariaveis.vida)
 var vida = vida_maxima
@@ -69,7 +70,18 @@ func aplicar_fricao(qtd):
 func aplicar_movimento(acelerac):
 	velocity += acelerac
 	velocity = velocity.limit_length(max_speed)
+	
+
+func _on_hurtbox_body_entered(body):
+	if body.is_in_group("inimigos"):
+		vida = barra_vida.value - body.dano
+		update_PlayerUI()
+	if vida <= 0:
+		get_tree().change_scene_to_file("res://Menus/gameover.tscn")
+		
 
 
-func _on_hurt_box_area_entered(area: Area2D):
-	print("aeioaie")
+func follow_camera(camera):
+	var camera_path = camera.get_path()
+	remote_transform.remote_path = camera_path
+	

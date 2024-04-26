@@ -1,9 +1,9 @@
 extends Node2D
 
-
-@onready var global = get_node("/root/Global")
-@onready var player_var = get_node("/root/PlayerVariaveis")
+@onready var player := $Player as CharacterBody2D
+@onready var camera := $camera as Camera2D
 
 func _ready():
-	pass
+	MundosGlobal.mundo_atual = 1
+	player.follow_camera(camera)
 	

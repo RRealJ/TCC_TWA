@@ -1,19 +1,10 @@
-res://loja.tscn
-res://Inimigos/inimigos_comum.gd
-res://loja.gd
-res://player_variaveis.gd
-res://Player/player_ui.tscn
-res://Player/player.gd
 res://Menus/main_menu.tscn
-res://Player/player.tscn
-res://confirmacao.tscn
-res://Inimigos/inimigos_comum.tscn
+res://Inimigos/inimigos_comum.gd
 res://Mundos/mundo_1.tscn
-res://soft_collision.gd
-res://OverLap/soft_collision.tscn
-res://OverLap/soft_collision.gd
-res://Player/player_hurt.gdshader
-res://hurt_box.tscn
-res://hurt_box.gd
-res://Blinker.gd
-res://Timers e spawns/blinker.tscn
+res://Menus/gameover.tscn
+res://Menus/gameover.gd
+res://Mundos/mundo_1.gd
+res://Timers e spawns/spawn_inimigo.tscn
+res://Player/player.gd
+res://global.gd
+res://mundos_global.gd

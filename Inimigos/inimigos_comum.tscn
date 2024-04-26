@@ -1,17 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbji1dp00wfdj"]
+[gd_scene load_steps=8 format=3 uid="uid://dbji1dp00wfdj"]
 
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_7uwrf"]
 [ext_resource type="Texture2D" uid="uid://hc2aga0mgh7h" path="res://icon.png" id="2_tdyxc"]
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_xavkd"]
+[ext_resource type="PackedScene" uid="uid://ch0npjf5lb43g" path="res://generico/hitbox.tscn" id="4_d0fi3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkm4o"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hb22a"]
-radius = 9.05539
+[sub_resource type="CircleShape2D" id="CircleShape2D_isme7"]
+radius = 12.0
 
-[node name="inimigos_comum" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_oaa7p"]
+radius = 15.0
+
+[node name="inimigos_comum" type="CharacterBody2D" groups=["inimigos"]]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 0
 script = ExtResource("1_7uwrf")
 
 [node name="sprite" type="Sprite2D" parent="."]
@@ -23,9 +27,18 @@ texture = ExtResource("2_tdyxc")
 shape = SubResource("CircleShape2D_xkm4o")
 
 [node name="softCollision" parent="." instance=ExtResource("3_xavkd")]
+visible = false
 
-[node name="CollisionShape2D" parent="softCollision" index="0"]
+[node name="softcollision" type="CollisionShape2D" parent="softCollision"]
 position = Vector2(-1, 0)
-shape = SubResource("CircleShape2D_hb22a")
+shape = SubResource("CircleShape2D_isme7")
+
+[node name="Hitbox" parent="." instance=ExtResource("4_d0fi3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_oaa7p")
+debug_color = Color(0.749104, 0.0939235, 0.21154, 0.42)
 
 [editable path="softCollision"]
+[editable path="Hitbox"]

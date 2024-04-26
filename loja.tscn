@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://xuoatwwa0ci4" path="res://Assets/formatos/upgrade_normal.png" id="2_m2u30"]
 [ext_resource type="Texture2D" uid="uid://0vfd33ej50s7" path="res://Assets/formatos/upgrade_comprado.png" id="3_4u6ew"]
 [ext_resource type="Texture2D" uid="uid://brxtpbe5mc2gs" path="res://Assets/formatos/pp_rec.png" id="6_hyo4r"]
-[ext_resource type="PackedScene" uid="uid://cv57l8cgtgr3v" path="res://confirmacao.tscn" id="7_ga5l3"]
+[ext_resource type="PackedScene" uid="uid://cv57l8cgtgr3v" path="res://generico/confirmacao.tscn" id="7_ga5l3"]
 
 [node name="Loja" type="Control"]
 layout_mode = 3

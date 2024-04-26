@@ -1,25 +1,41 @@
-[gd_scene load_steps=11 format=3 uid="uid://derytfri27qe1"]
+[gd_scene load_steps=8 format=3 uid="uid://derytfri27qe1"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_8xh84"]
 [ext_resource type="Texture2D" uid="uid://cso5hmplh0qv5" path="res://icon.svg" id="1_q5v8y"]
 [ext_resource type="PackedScene" uid="uid://bjja1kgsmwtnf" path="res://Player/player_ui.tscn" id="2_tape2"]
-[ext_resource type="PackedScene" uid="uid://dcafurs16oq33" path="res://Menus/menu_pausa.tscn" id="3_klpcx"]
-[ext_resource type="Shader" path="res://Player/player_hurt.gdshader" id="3_l10no"]
-[ext_resource type="PackedScene" uid="uid://fdghbjec7e6l" path="res://hurt_box.tscn" id="6_mrk3o"]
-[ext_resource type="PackedScene" uid="uid://cd2f148jupbvi" path="res://Timers e spawns/blinker.tscn" id="7_cm80v"]
+
+[sub_resource type="Shader" id="Shader_kayhy"]
+code = "shader_type canvas_item;
+
+uniform bool pisca = false;
+
+void fragment() {
+	vec4 cor_textura = texture(TEXTURE, UV);
+	if (pisca) {
+		vec3 branco = vec3(1,1,1);
+		vec3 branco_alt = mix(cor_textura.rgb, branco, 0.6);
+		COLOR = vec4(branco_alt, cor_textura.a);
+	} 	else {
+		COLOR = cor_textura;
+	}
+		
+}
+"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_juad7"]
-shader = ExtResource("3_l10no")
+shader = SubResource("Shader_kayhy")
 shader_parameter/pisca = false
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtgwj"]
 radius = 4.0
 height = 8.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vmrt4"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_at7l6"]
+radius = 6.08276
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
+collision_mask = 0
 script = ExtResource("1_8xh84")
 
 [node name="player_ui" parent="." instance=ExtResource("2_tape2")]
@@ -32,22 +48,14 @@ texture = ExtResource("1_q5v8y")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_vtgwj")
 
-[node name="HurtBox" parent="." instance=ExtResource("6_mrk3o")]
+[node name="hurtbox" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 34
-esbranquisado = ExtResource("3_l10no")
 
-[node name="CollisionShape2D" parent="HurtBox" index="0"]
-shape = SubResource("CircleShape2D_vmrt4")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+shape = SubResource("CircleShape2D_at7l6")
+debug_color = Color(0.854772, 0.0758151, 0.182702, 0.42)
 
-[node name="Blinker" parent="." instance=ExtResource("7_cm80v")]
+[node name="remote" type="RemoteTransform2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
-
-[node name="menu_pausa" parent="Camera2D" instance=ExtResource("3_klpcx")]
-visible = false
-
-[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
-
-[editable path="HurtBox"]
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

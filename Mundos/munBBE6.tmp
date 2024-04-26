@@ -1160,6 +1160,3 @@ zoom = Vector2(3, 3)
 
 [node name="menu_pausa" parent="camera" instance=ExtResource("7_ltw6q")]
 visible = false
-
-[node name="Timer" type="Timer" parent="."]
-autostart = true
