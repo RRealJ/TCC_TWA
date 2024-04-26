@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8i4jge24ih01"]
+
+[ext_resource type="Script" path="res://generico/barra_vida.gd" id="1_x4y70"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6ugv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggmqj"]
+bg_color = Color(0, 0.676589, 0.0569626, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckx2u"]
+bg_color = Color(0.0720892, 0.106197, 0.0809303, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wkix"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="barra_vida" type="ProgressBar"]
+z_index = 1
+offset_left = 75.0
+offset_top = 5.0
+offset_right = 495.0
+offset_bottom = 45.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_p6ugv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ggmqj")
+value = 60.0
+show_percentage = false
+script = ExtResource("1_x4y70")
+
+[node name="barra_dano" type="ProgressBar" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ckx2u")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8wkix")
+value = 80.0
+show_percentage = false
+
+[node name="delay_dano" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="delay_dano" to="." method="_on_delay_dano_timeout"]

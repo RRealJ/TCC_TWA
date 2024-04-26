@@ -1,6 +1,7 @@
+ProgressBar
+Timer
 Button
 Control
-Timer
 AnimationPlayer
 Label
 TextureRect
@@ -11,4 +12,3 @@ CollisionShape2D
 Area2D
 Node
 HBoxContainer
-CanvasLayer

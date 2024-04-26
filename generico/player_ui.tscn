@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjja1kgsmwtnf"]
+
+[ext_resource type="Texture2D" uid="uid://bk8cqkr7ukuv6" path="res://Assets/formatos/b_clock.png" id="1_3tsbh"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="1_fk6hq"]
+[ext_resource type="Texture2D" uid="uid://cl6tt0w3dyd2p" path="res://Assets/formatos/w_clock.png" id="2_bjl60"]
+[ext_resource type="Texture2D" uid="uid://cxht6cyk3e8vr" path="res://Assets/formatos/black_rec.png" id="3_d7o3t"]
+[ext_resource type="Texture2D" uid="uid://brxtpbe5mc2gs" path="res://Assets/formatos/pp_rec.png" id="4_ismcj"]
+[ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="5_4ym88"]
+
+[node name="player_ui" type="CanvasLayer"]
+
+[node name="texto_barra_vida" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -615.0
+offset_top = -465.0
+offset_right = -589.0
+offset_bottom = -442.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="barra_vida" parent="." instance=ExtResource("1_fk6hq")]
+
+[node name="barra_delta_time" type="TextureProgressBar" parent="."]
+offset_left = 18.0
+offset_top = 749.0
+offset_right = 198.0
+offset_bottom = 903.0
+fill_mode = 4
+texture_under = ExtResource("1_3tsbh")
+texture_progress = ExtResource("2_bjl60")
+tint_progress = Color(0.85098, 0.85098, 0.0745098, 1)
+
+[node name="barra_exp" type="TextureProgressBar" parent="."]
+offset_left = 1.0
+offset_top = 913.0
+offset_right = 1280.0
+offset_bottom = 953.0
+texture_under = ExtResource("3_d7o3t")
+texture_progress = ExtResource("4_ismcj")
+
+[node name="texto_velocidade" type="Label" parent="."]
+offset_left = 1149.0
+offset_top = 871.0
+offset_right = 1229.0
+offset_bottom = 937.0
+theme = ExtResource("5_4ym88")
+theme_override_font_sizes/font_size = 65
+text = "11"
