@@ -6,4 +6,4 @@ extends Node2D
 func _ready():
 	Global.mundo_atual = 1
 	player.follow_camera(camera)
-	
+

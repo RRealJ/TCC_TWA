@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfm0mdvmbgdv2"]
+[gd_scene load_steps=9 format=3 uid="uid://dfm0mdvmbgdv2"]
 
 [ext_resource type="Script" path="res://loja.gd" id="1_2ofpd"]
 [ext_resource type="Texture2D" uid="uid://diwyarq17rwwc" path="res://Assets/formatos/pp_clock.png" id="1_wfg0a"]
 [ext_resource type="Texture2D" uid="uid://cl6tt0w3dyd2p" path="res://Assets/formatos/w_clock.png" id="2_e7ef7"]
 [ext_resource type="Texture2D" uid="uid://xuoatwwa0ci4" path="res://Assets/formatos/upgrade_normal.png" id="2_m2u30"]
 [ext_resource type="Texture2D" uid="uid://0vfd33ej50s7" path="res://Assets/formatos/upgrade_comprado.png" id="3_4u6ew"]
-[ext_resource type="Texture2D" uid="uid://brxtpbe5mc2gs" path="res://Assets/formatos/pp_rec.png" id="6_hyo4r"]
 [ext_resource type="PackedScene" uid="uid://cv57l8cgtgr3v" path="res://Generico/confirmacao.tscn" id="7_ga5l3"]
+[ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="8_2vibf"]
+[ext_resource type="PackedScene" uid="uid://bx43gpgmorkah" path="res://text_edit_sara.tscn" id="8_pa2xe"]
 
 [node name="Loja" type="Control"]
 layout_mode = 3
@@ -90,6 +91,7 @@ layout_mode = 2
 layout_mode = 2
 mouse_filter = 1
 texture_normal = ExtResource("2_e7ef7")
+texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
 
 [node name="upbar_vida" type="TextureProgressBar" parent="p_upgrades/set_1"]
@@ -103,7 +105,8 @@ tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 layout_mode = 2
 mouse_filter = 1
 texture_normal = ExtResource("2_e7ef7")
-texture_focused = ExtResource("6_hyo4r")
+texture_hover = ExtResource("1_wfg0a")
+texture_focused = ExtResource("1_wfg0a")
 
 [node name="upbar_resistencia" type="TextureProgressBar" parent="p_upgrades/set_1"]
 layout_mode = 2
@@ -119,6 +122,7 @@ layout_mode = 2
 layout_mode = 2
 mouse_filter = 1
 texture_normal = ExtResource("2_e7ef7")
+texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
 
 [node name="upbar_velocidade" type="TextureProgressBar" parent="p_upgrades/set_2"]
@@ -131,8 +135,9 @@ tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 [node name="up_sorte" type="TextureButton" parent="p_upgrades/set_2"]
 layout_mode = 2
 mouse_filter = 1
-texture_normal = ExtResource("1_wfg0a")
-texture_focused = ExtResource("2_e7ef7")
+texture_normal = ExtResource("2_e7ef7")
+texture_hover = ExtResource("1_wfg0a")
+texture_focused = ExtResource("1_wfg0a")
 
 [node name="upbar_sorte" type="TextureProgressBar" parent="p_upgrades/set_2"]
 layout_mode = 2
@@ -147,7 +152,9 @@ layout_mode = 2
 [node name="up_dano" type="TextureButton" parent="p_upgrades/set_3"]
 layout_mode = 2
 mouse_filter = 1
-texture_normal = ExtResource("1_wfg0a")
+texture_normal = ExtResource("2_e7ef7")
+texture_hover = ExtResource("1_wfg0a")
+texture_focused = ExtResource("1_wfg0a")
 
 [node name="upbar_dano" type="TextureProgressBar" parent="p_upgrades/set_3"]
 layout_mode = 2
@@ -159,8 +166,9 @@ tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 [node name="up_chance_critica" type="TextureButton" parent="p_upgrades/set_3"]
 layout_mode = 2
 mouse_filter = 1
-texture_normal = ExtResource("1_wfg0a")
-texture_hover = ExtResource("2_e7ef7")
+texture_normal = ExtResource("2_e7ef7")
+texture_hover = ExtResource("1_wfg0a")
+texture_focused = ExtResource("1_wfg0a")
 
 [node name="upbar_chance_critica" type="TextureProgressBar" parent="p_upgrades/set_3"]
 layout_mode = 2
@@ -200,10 +208,40 @@ metadata/_edit_use_anchors_ = true
 [node name="confirmacao" parent="." instance=ExtResource("7_ga5l3")]
 visible = false
 
+[node name="nome_up" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -629.0
+offset_top = 416.0
+offset_right = -42.0
+offset_bottom = 448.0
+grow_horizontal = 2
+theme = ExtResource("8_2vibf")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" parent="." instance=ExtResource("8_pa2xe")]
+layout_mode = 1
+offset_left = -630.0
+offset_top = -26.0
+offset_right = -43.0
+offset_bottom = 249.0
+
 [connection signal="pressed" from="categoria/voltar_menu" to="." method="_on_voltar_menu_pressed"]
+[connection signal="focus_entered" from="p_upgrades/set_1/up_vida" to="." method="_on_up_vida_focus_entered"]
 [connection signal="pressed" from="p_upgrades/set_1/up_vida" to="." method="_on_up_vida_pressed"]
+[connection signal="focus_entered" from="p_upgrades/set_1/up_resistencia" to="." method="_on_up_resistencia_focus_entered"]
 [connection signal="pressed" from="p_upgrades/set_1/up_resistencia" to="." method="_on_up_resistencia_pressed"]
+[connection signal="focus_entered" from="p_upgrades/set_2/up_velocidade" to="." method="_on_up_velocidade_focus_entered"]
 [connection signal="pressed" from="p_upgrades/set_2/up_velocidade" to="." method="_on_up_velocidade_pressed"]
+[connection signal="focus_entered" from="p_upgrades/set_2/up_sorte" to="." method="_on_up_sorte_focus_entered"]
 [connection signal="pressed" from="p_upgrades/set_2/up_sorte" to="." method="_on_up_sorte_pressed"]
+[connection signal="focus_entered" from="p_upgrades/set_3/up_dano" to="." method="_on_up_dano_focus_entered"]
 [connection signal="pressed" from="p_upgrades/set_3/up_dano" to="." method="_on_up_dano_pressed"]
+[connection signal="focus_entered" from="p_upgrades/set_3/up_chance_critica" to="." method="_on_up_chance_critica_focus_entered"]
 [connection signal="pressed" from="p_upgrades/set_3/up_chance_critica" to="." method="_on_up_chance_critica_pressed"]
+[connection signal="focus_entered" from="nome_up" to="." method="_on_nome_up_focus_entered"]
+[connection signal="focus_entered" from="TextEdit" to="." method="_on_text_edit_focus_entered"]

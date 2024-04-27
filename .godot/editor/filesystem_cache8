@@ -1,18 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714164265
+::res://::1714184372
 default_bus_layout.tres::AudioBusLayout::2548682415142993850::1710210664::0::1::::<><>::
 Global.gd::GDScript::-1::1714155539::0::1::::<>Node<>::
 icon.png::CompressedTexture2D::497090336071308275::1708007622::1708026547::1::::<><>::
 icon.svg::CompressedTexture2D::6066976505730363904::1708007734::1708013340::1::::<><>::
 inimigos.gd::GDScript::-1::1714150670::0::1::::Inimigos<>CharacterBody2D<>::
 loja.gd::GDScript::-1::1714156005::0::1::::Loja<>Control<>::
-loja.tscn::PackedScene::7536518347221947377::1714164321::0::1::::<><>::res://loja.gd<>uid://diwyarq17rwwc::::res://Assets/formatos/pp_clock.png<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://xuoatwwa0ci4::::res://Assets/formatos/upgrade_normal.png<>uid://0vfd33ej50s7::::res://Assets/formatos/upgrade_comprado.png<>uid://brxtpbe5mc2gs::::res://Assets/formatos/pp_rec.png<>uid://cv57l8cgtgr3v::::res://generico/confirmacao.tscn
+loja.tscn::PackedScene::7536518347221947377::1714164321::0::1::::<><>::res://loja.gd<>uid://diwyarq17rwwc::::res://Assets/formatos/pp_clock.png<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://xuoatwwa0ci4::::res://Assets/formatos/upgrade_normal.png<>uid://0vfd33ej50s7::::res://Assets/formatos/upgrade_comprado.png<>uid://brxtpbe5mc2gs::::res://Assets/formatos/pp_rec.png<>uid://cv57l8cgtgr3v::::res://Generico/confirmacao.tscn
 main.gd::GDScript::-1::1708527009::0::1::::<>Node2D<>::
 main.tscn::PackedScene::5422367726967608135::1708527027::0::1::::<><>::uid://dj6am7htam1ul::::res://Menus/main_menu.tscn<>res://main.gd
 player_variaveis.gd::GDScript::-1::1714134494::0::1::::<>Node<>::
 README.md::TextFile::-1::1708128012::0::1::::<><>::
-::res://Assets/::1714151356
-::res://Assets/efeitos/::1708000470
+::res://Assets/::1714185343
+::res://Assets/efeitos/::1714185338
 ::res://Assets/font/::1708518371
 Perfect DOS VGA 437 Win.ttf::FontFile::440472894614787392::1219211536::1708126163::1::::<><>::
 Perfect DOS VGA 437.ttf::FontFile::6408987177427465710::1219211542::1708126163::1::::<><>::
@@ -28,6 +28,10 @@ white_rec.png::CompressedTexture2D::1369347578736325654::1712087048::1712087132:
 w_clock.png::CompressedTexture2D::5610103259073766561::1712087089::1712087132::1::::<><>::
 ::res://Assets/inimigos/::1708000439
 ::res://Assets/player/::1708000444
+::res://Assets/text_box/::1714187011
+Sara_TextBox16.png::CompressedTexture2D::5676698643213330133::1714186310::1714186559::1::::<><>::
+Sara_TextBox32.png::CompressedTexture2D::4585341129156083775::1714187011::1714187013::1::::<><>::
+Sara_TextBox.png::CompressedTexture2D::8129096991258650017::1714186558::1714186559::1::::<><>::
 ::res://Assets/tilemaps/::1708001014
 BaseSet.png::CompressedTexture2D::3989251763242213729::1708000929::1708000943::1::::<><>::
 ::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/::1708001033
@@ -87,18 +91,18 @@ Outside_C.png::CompressedTexture2D::2744929875491966678::1651765624::1708001033:
 Outside_C.txt::TextFile::-1::1651765708::0::1::::<><>::
 ::res://Assets/titulos/::1714151365
 game_over.png::CompressedTexture2D::3044605584024100914::1714151365::1714151365::1::::<><>::
-::res://generico/::1714164265
+::res://Generico/::1714164321
 barra_vida.gd::GDScript::-1::1714163575::0::1::::<>ProgressBar<>::
-barra_vida.tscn::PackedScene::4720944733301171576::1714164321::0::1::::<><>::res://generico/barra_vida.gd
+barra_vida.tscn::PackedScene::4720944733301171576::1714164321::0::1::::<><>::res://Generico/barra_vida.gd
 confirmacao.gd::GDScript::-1::1713977018::0::1::::<>CanvasLayer<>::
-confirmacao.tscn::PackedScene::6310702740566579121::1714151097::0::1::::<><>::res://generico/confirmacao.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
+confirmacao.tscn::PackedScene::6310702740566579121::1714164321::0::1::::<><>::res://Generico/confirmacao.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
 Hitbox.gd::GDScript::-1::1714150334::0::1::::<>Area2D<>::
-hitbox.tscn::PackedScene::5316589306330470250::1714151097::0::1::::<><>::res://generico/Hitbox.gd
-player_ui.tscn::PackedScene::3036746642200546491::1714164321::0::1::::<><>::uid://bk8cqkr7ukuv6::::res://Assets/formatos/b_clock.png<>uid://b8i4jge24ih01::::res://generico/barra_vida.tscn<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://cxht6cyk3e8vr::::res://Assets/formatos/black_rec.png<>uid://brxtpbe5mc2gs::::res://Assets/formatos/pp_rec.png<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
-::res://Inimigos/::1714164254
+hitbox.tscn::PackedScene::5316589306330470250::1714164321::0::1::::<><>::res://Generico/Hitbox.gd
+player_ui.tscn::PackedScene::3036746642200546491::1714164321::0::1::::<><>::uid://bk8cqkr7ukuv6::::res://Assets/formatos/b_clock.png<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://cxht6cyk3e8vr::::res://Assets/formatos/black_rec.png<>uid://brxtpbe5mc2gs::::res://Assets/formatos/pp_rec.png<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
+::res://Inimigos/::1714164321
 inimigos_comum.gd::GDScript::-1::1714164254::0::1::::<>Inimigos<>::
-inimigos_comum.tscn::PackedScene::7248562642999813795::1714151097::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://hc2aga0mgh7h::::res://icon.png<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://ch0npjf5lb43g::::res://generico/hitbox.tscn
-::res://Menus/::1714164265
+inimigos_comum.tscn::PackedScene::7248562642999813795::1714164321::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://hc2aga0mgh7h::::res://icon.png<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://ch0npjf5lb43g::::res://Generico/hitbox.tscn
+::res://Menus/::1714164309
 gameover.gd::GDScript::-1::1714155672::0::1::::<>Control<>::
 gameover.tscn::PackedScene::7923462256383072716::1714164265::0::1::::<><>::res://Menus/gameover.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
 hs_bgm.gd::GDScript::-1::1710211878::0::1::::<>HSlider<>::
@@ -114,9 +118,9 @@ mundo_1.tscn::PackedScene::2285263864465036388::1714164265::0::1::::<><>::res://
 ::res://OverLap/::1714150383
 soft_collision.gd::GDScript::-1::1714137668::0::1::::<>Area2D<>::
 soft_collision.tscn::PackedScene::7472329603237536089::1714150383::0::1::::<><>::res://OverLap/soft_collision.gd
-::res://Player/::1714164265
+::res://Player/::1714164324
 player.gd::GDScript::-1::1714164087::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::7476603274640303698::1714164321::0::1::::<><>::res://Player/player.gd<>uid://cso5hmplh0qv5::::res://icon.svg<>uid://bjja1kgsmwtnf::::res://generico/player_ui.tscn<>uid://b8i4jge24ih01::::res://generico/barra_vida.tscn
+player.tscn::PackedScene::7476603274640303698::1714164324::0::1::::<><>::res://Player/player.gd<>uid://cso5hmplh0qv5::::res://icon.svg<>uid://bjja1kgsmwtnf::::res://Generico/player_ui.tscn<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn
 ::res://Timers e spawns/::1714153590
 spawn_info.gd::GDScript::-1::1708106152::0::1::::Spawn_info<>Resource<>::
 spawn_inimigo.gd::GDScript::-1::1708108776::0::1::::<>Node2D<>::
