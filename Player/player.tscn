@@ -2,16 +2,9 @@
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_8xh84"]
 [ext_resource type="PackedScene" uid="uid://bjja1kgsmwtnf" path="res://generico/player_ui.tscn" id="2_tape2"]
-[ext_resource type="Texture2D" uid="uid://d4mtbukbp2riw" path="res://Assets/player/sprite_move_l.png" id="4_l5q4d"]
-[ext_resource type="Texture2D" uid="uid://dw3lxmr4of7ra" path="res://Assets/player/sprite_move.png" id="4_vrjnq"]
+[ext_resource type="Texture2D" uid="uid://tp6jsitysqn" path="res://Assets/player/sprite_move_l.png" id="4_l5q4d"]
+[ext_resource type="Texture2D" uid="uid://bgjrvdmpmu7nn" path="res://Assets/player/sprite_move.png" id="4_vrjnq"]
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="4_wer0q"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtgwj"]
-radius = 4.0
-height = 8.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_at7l6"]
-radius = 6.08276
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ppdri"]
 atlas = ExtResource("4_l5q4d")
@@ -172,37 +165,16 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtgwj"]
+radius = 4.0
+height = 26.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e10f4"]
+radius = 6.0
+height = 28.0
+
 [sub_resource type="Animation" id="Animation_v5jau"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("anim:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"idle_r"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("anim:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_ujnqq"]
-resource_name = "idle_r"
-length = 0.1
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -257,9 +229,9 @@ tracks/1/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_p3lko"]
-resource_name = "move_r"
-length = 0.4
+[sub_resource type="Animation" id="Animation_ujnqq"]
+resource_name = "idle_r"
+length = 0.1
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -271,7 +243,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"move_right"]
+"values": [&"idle_r"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -280,10 +252,10 @@ tracks/1/path = NodePath("anim:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_ljc4x"]
@@ -315,8 +287,8 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3]
 }
 
-[sub_resource type="Animation" id="Animation_knjou"]
-resource_name = "move_upDown_r"
+[sub_resource type="Animation" id="Animation_p3lko"]
+resource_name = "move_r"
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -329,7 +301,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"move_upDown_r"]
+"values": [&"move_right"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -359,6 +331,35 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"move_upDown_l"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("anim:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_knjou"]
+resource_name = "move_upDown_r"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"move_upDown_r"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -484,7 +485,13 @@ script = ExtResource("1_8xh84")
 
 [node name="player_ui" parent="." instance=ExtResource("2_tape2")]
 
+[node name="anim" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_mqlye")
+animation = &"idle_r"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_vtgwj")
 
 [node name="hurtbox" type="Area2D" parent="."]
@@ -492,7 +499,8 @@ collision_layer = 0
 collision_mask = 34
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
-shape = SubResource("CircleShape2D_at7l6")
+position = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_e10f4")
 debug_color = Color(0.854772, 0.0758151, 0.182702, 0.42)
 
 [node name="remote" type="RemoteTransform2D" parent="."]
@@ -502,11 +510,6 @@ offset_left = -8.0
 offset_top = -20.0
 offset_right = 8.0
 offset_bottom = -18.0
-
-[node name="anim" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_mqlye")
-animation = &"idle_r"
 
 [node name="animation" type="AnimationPlayer" parent="."]
 libraries = {

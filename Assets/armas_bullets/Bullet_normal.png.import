@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgjrvdmpmu7nn"
-path="res://.godot/imported/sprite_move.png-e274a7eedcecacb3051271dab8aca4c6.ctex"
+uid="uid://ccwts55a5xhaj"
+path="res://.godot/imported/Bullet_normal.png-8e65d16bbcd97661b9c74e87a9613604.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/player/sprite_move.png"
-dest_files=["res://.godot/imported/sprite_move.png-e274a7eedcecacb3051271dab8aca4c6.ctex"]
+source_file="res://Assets/armas_bullets/Bullet_normal.png"
+dest_files=["res://.godot/imported/Bullet_normal.png-8e65d16bbcd97661b9c74e87a9613604.ctex"]
 
 [params]
 

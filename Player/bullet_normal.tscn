@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnlje1vfd60wm"]
+
+[ext_resource type="Script" path="res://Player/bullet_normal.gd" id="1_xdr17"]
+[ext_resource type="Texture2D" uid="uid://ccwts55a5xhaj" path="res://Assets/armas_bullets/Bullet_normal.png" id="2_ecek8"]
+
+[node name="bullet_normal" type="CharacterBody2D" groups=["Bullet"]]
+script = ExtResource("1_xdr17")
+bullet_velocidade = 200.0
+bullet_penetracao = 1
+bullet_dano = 22
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_ecek8")
+
+[node name="bullet_vida" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="bullet_vida" to="." method="_on_bullet_vida_timeout"]
