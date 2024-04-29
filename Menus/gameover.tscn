@@ -132,11 +132,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="btn_restart" type="Button" parent="VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_nnl44")
 text = "Reiniciar"
 
 [node name="btn_finalizar" type="Button" parent="VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_nnl44")
 text = "Menu"

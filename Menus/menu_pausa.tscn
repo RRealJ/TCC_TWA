@@ -23,6 +23,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.396078)
 
 [node name="menu_holder" type="VBoxContainer" parent="."]
+texture_filter = 1
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
@@ -92,6 +93,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="label1" type="VBoxContainer" parent="Video/HBoxContainer1"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -133,6 +135,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="label2" type="VBoxContainer" parent="Video/HBoxContainer2"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -182,6 +185,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="labels" type="VBoxContainer" parent="Volume/HBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 

@@ -1,3 +1,6 @@
+AnimationTree
+AnimationPlayer
+AnimatedSprite2D
 Label
 GPUParticlesAttractorVectorField3D
 RichTextLabel
@@ -10,5 +13,3 @@ NinePatchRect
 TextEdit
 ProgressBar
 Timer
-Button
-Control

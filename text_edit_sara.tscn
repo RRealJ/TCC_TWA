@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://cxktc2krspd6m" path="res://Assets/font/Perfect DOS VGA 437.ttf" id="2_ll560"]
 
 [node name="TextEdit" type="TextEdit"]
+texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

@@ -28,21 +28,25 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="btn_saltar" type="Button" parent="menu"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Saltar"
 
 [node name="btn_loja" type="Button" parent="menu"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Loja"
 
 [node name="btn_opcoes" type="Button" parent="menu"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "*"
 
 [node name="btn_sair" type="Button" parent="menu"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Sair"
@@ -71,11 +75,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="video" type="Button" parent="Opcoes/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Video"
 
 [node name="volume" type="Button" parent="Opcoes/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Volume"
@@ -120,6 +126,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="labels" type="VBoxContainer" parent="Video/HBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 
@@ -201,6 +208,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="labels" type="VBoxContainer" parent="Volume/HBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 

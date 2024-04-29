@@ -2,6 +2,10 @@ extends Control
 
 
 @onready var mundo = Global.mundo_atual
+@onready var btn_finalizar = $VBoxContainer/btn_finalizar
+
+func _ready():
+	btn_finalizar.grab_focus()
 
 func _on_btn_restart_pressed():
 	print(mundo)

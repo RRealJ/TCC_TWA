@@ -1156,7 +1156,7 @@ layer_2/tile_data = PackedInt32Array(-589852, 2359296, 24, 720868, 2359296, 24, 
 spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_cimqq")])
 
 [node name="camera" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(3, 3)
 
 [node name="menu_pausa" parent="camera" instance=ExtResource("7_ltw6q")]
 visible = false
