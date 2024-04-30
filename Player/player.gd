@@ -20,7 +20,7 @@ const iFrame_duration = 1.5
 @onready var animationTree = $AnimationTree
 @onready var state_machine = animationTree["parameters/playback"]
 @onready var anim_morte = preload("res://Efeitos/morte_vfx.tscn")
-@onready var mundo = get_tree().get_root()
+@onready var mundo = $".."
 
 var vida_maxima = 100 + 25 * PlayerVariaveis.vida
 var vida = vida_maxima
@@ -109,6 +109,9 @@ func follow_camera(camera):
 	
 
 func morto():
+	Global.moedas += mundo.moedas
+	Global.inimigos_derrotados += mundo.inimigos_abatidos
+	Global.jogos_jogados += 1
 	animacao_morte()
 	queue_free()
 	get_tree().change_scene_to_file("res://Menus/gameover.tscn")

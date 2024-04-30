@@ -101,10 +101,12 @@ script = ExtResource("1_25gg1")
 [node name="select" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(720, 1570)
 stream = ExtResource("2_v5vgk")
+bus = &"sfx"
 
 [node name="pressed" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(360, 785)
 stream = ExtResource("3_36h75")
+bus = &"sfx"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

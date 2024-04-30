@@ -8,8 +8,9 @@ extends Control
 @onready var menu = get_node("menu")
 @onready var video = get_node("Video")
 @onready var volume = get_node("Volume")
-@onready var global = $"/root/Global"
+@onready var status = get_node("Status")
 @onready var opt_btn = $Video/HBoxContainer/checkboxes/ob_resolucao
+@onready var btn_voltar = $Opcoes/btn_voltar_opt
 
 
 const DICT_RESOLUCOES : Dictionary = {
@@ -100,15 +101,24 @@ func _on_cb_vsync_toggled(toggled_on):
 
 func _on_btn_voltar_video_pressed():
 	mostrar_esconder(opcoes, video)
-	btn_video.grab_focus()
+	btn_voltar.grab_focus()
 	
 	
 func _on_btn_voltar_volume_pressed():
 	mostrar_esconder(opcoes, volume)
-	btn_video.grab_focus()
+	btn_voltar.grab_focus()
 	
 	
-func play_audio(audio):
-	audio.play()
-	
-	
+func _on_btn_voltar_status_pressed():
+	mostrar_esconder(opcoes, status)
+	btn_voltar.grab_focus()
+
+
+func _on_status_pressed():
+	mostrar_esconder(status, opcoes)
+	$Status/HBoxContainer/info/info_moedas.text = str(Global.moedas)
+	$Status/HBoxContainer/info/info_completados.text = str(Global.jogos_completados)
+	$Status/HBoxContainer/info/info_jogos.text = str(Global.jogos_jogados)
+	$Status/HBoxContainer/info/info_inimigos.text = str(Global.inimigos_derrotados)
+	$Status/HBoxContainer/info/info_conquistas.text = str(Global.conquista_completadas)
+	$Status/btn_voltar_status.grab_focus()

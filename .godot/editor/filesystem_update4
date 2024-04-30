@@ -12,3 +12,10 @@ res://Menus/gameover.gd
 res://inimigos.gd
 res://mundo.gd
 res://Mundos/mundo_1.gd
+res://Menus/main_menu.tscn
+res://Global.gd
+res://Menus/main_menu.gd
+res://OverLap/soft_collision.tscn
+res://Inimigos/inimigos.gd
+res://OverLap/soft_collision.gd
+res://Player/bullet_normal.gd

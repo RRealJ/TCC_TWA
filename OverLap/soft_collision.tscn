@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://depwgaoxn7hlx"]
+[gd_scene load_steps=3 format=3 uid="uid://depwgaoxn7hlx"]
 
 [ext_resource type="Script" path="res://OverLap/soft_collision.gd" id="1_wm2tt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ow0u"]
+radius = 13.0
+height = 26.0
 
 [node name="softCollision" type="Area2D"]
 collision_layer = 16
 collision_mask = 16
 script = ExtResource("1_wm2tt")
+
+[node name="softcollision_col" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8ow0u")

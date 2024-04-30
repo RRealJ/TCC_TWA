@@ -79,7 +79,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="video" type="Button" parent="Opcoes/VBoxContainer"]
-texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Video"
@@ -90,7 +89,14 @@ layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Volume"
 
+[node name="status" type="Button" parent="Opcoes/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Status"
+
 [node name="btn_voltar_opt" type="Button" parent="Opcoes"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -217,18 +223,21 @@ layout_mode = 2
 size_flags_horizontal = 4
 
 [node name="master" type="Label" parent="Volume/HBoxContainer/labels"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Master
 "
 
 [node name="sfx" type="Label" parent="Volume/HBoxContainer/labels"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "SFX
 "
 
 [node name="bgm" type="Label" parent="Volume/HBoxContainer/labels"]
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Musica
@@ -264,6 +273,121 @@ script = ExtResource("3_0g5m2")
 bus_name = "bgm"
 
 [node name="btn_voltar_volume" type="Button" parent="Volume"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -32.0
+offset_right = 54.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_4ytr2")
+text = "Voltar
+"
+
+[node name="Status" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -34.0
+offset_right = 95.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 103
+
+[node name="labels" type="VBoxContainer" parent="Status/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+
+[node name="moedas_coletadas" type="Label" parent="Status/HBoxContainer/labels"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Moedas"
+
+[node name="jogos_completados" type="Label" parent="Status/HBoxContainer/labels"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Mundos Completados"
+
+[node name="jogos_jogados" type="Label" parent="Status/HBoxContainer/labels"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Mundos Completados"
+
+[node name="inimigos" type="Label" parent="Status/HBoxContainer/labels"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Inimigos Abatidos"
+
+[node name="conquistas" type="Label" parent="Status/HBoxContainer/labels"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Conquistas
+"
+
+[node name="info" type="VBoxContainer" parent="Status/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 13
+
+[node name="info_moedas" type="Label" parent="Status/HBoxContainer/info"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "00000"
+
+[node name="info_completados" type="Label" parent="Status/HBoxContainer/info"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "00"
+
+[node name="info_jogos" type="Label" parent="Status/HBoxContainer/info"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "0"
+
+[node name="info_inimigos" type="Label" parent="Status/HBoxContainer/info"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "00000"
+
+[node name="info_conquistas" type="Label" parent="Status/HBoxContainer/info"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "00"
+
+[node name="btn_voltar_status" type="Button" parent="Status"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -285,9 +409,11 @@ text = "Voltar
 [connection signal="pressed" from="menu/btn_sair" to="." method="_on_btn_sair_pressed"]
 [connection signal="pressed" from="Opcoes/VBoxContainer/video" to="." method="_on_video_pressed"]
 [connection signal="pressed" from="Opcoes/VBoxContainer/volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="Opcoes/VBoxContainer/status" to="." method="_on_status_pressed"]
 [connection signal="pressed" from="Opcoes/btn_voltar_opt" to="." method="_on_btn_voltar_opt_pressed"]
 [connection signal="toggled" from="Video/HBoxContainer/checkboxes/cb_vsync" to="." method="_on_cb_vsync_toggled"]
 [connection signal="toggled" from="Video/HBoxContainer/checkboxes/cb_fullscreen" to="." method="_on_cb_fullscreen_toggled"]
 [connection signal="toggled" from="Video/HBoxContainer/checkboxes/cb_sem_bordas" to="." method="_on_cb_sem_bordas_toggled"]
 [connection signal="pressed" from="Video/btn_voltar_video" to="." method="_on_btn_voltar_video_pressed"]
 [connection signal="pressed" from="Volume/btn_voltar_volume" to="." method="_on_btn_voltar_volume_pressed"]
+[connection signal="pressed" from="Status/btn_voltar_status" to="." method="_on_btn_voltar_status_pressed"]

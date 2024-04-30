@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbji1dp00wfdj"]
+[gd_scene load_steps=7 format=3 uid="uid://dbji1dp00wfdj"]
 
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_7uwrf"]
 [ext_resource type="Texture2D" uid="uid://hc2aga0mgh7h" path="res://icon.png" id="2_tdyxc"]
@@ -6,9 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="5_680ql"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkm4o"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_isme7"]
-radius = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l4edp"]
 radius = 15.0
@@ -24,15 +21,11 @@ scale = Vector2(0.241935, 0.225806)
 texture = ExtResource("2_tdyxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_xkm4o")
 
 [node name="softCollision" parent="." instance=ExtResource("3_xavkd")]
-visible = false
-
-[node name="softcollision" type="CollisionShape2D" parent="softCollision"]
-position = Vector2(-1, 0)
-shape = SubResource("CircleShape2D_isme7")
 
 [node name="barra_vida" parent="." instance=ExtResource("5_680ql")]
 offset_left = -13.0
@@ -41,6 +34,7 @@ offset_right = 11.0
 offset_bottom = -18.0
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(-1, 0)

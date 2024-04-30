@@ -12,7 +12,6 @@ func _on_bullet_vida_timeout():
 
 func _on_body_entered(body):
 	if body is Inimigos:
-		print('ACERTOU O inimgo')
 		penetracao -= 1
 		if penetracao <= 0:
 			queue_free()
