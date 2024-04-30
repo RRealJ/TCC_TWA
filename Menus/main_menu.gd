@@ -25,13 +25,15 @@ func _ready():
 	add_resolucao_items()
 	opt_btn.item_selected.connect(on_resolution_selected)
 	btn_saltar.grab_focus()
-
+	
 
 func _on_btn_saltar_pressed():
+	await get_tree().create_timer(0.4).timeout
 	get_tree().change_scene_to_file("res://Mundos/mundo_1.tscn")
 
 
 func _on_btn_loja_pressed():
+	await get_tree().create_timer(0.4).timeout
 	get_tree().change_scene_to_file("res://loja.tscn")
 
 
@@ -41,6 +43,7 @@ func _on_btn_opcoes_pressed():
 
 
 func _on_btn_sair_pressed():
+	await get_tree().create_timer(0.4).timeout
 	get_tree().quit()
 
 
@@ -103,3 +106,9 @@ func _on_btn_voltar_video_pressed():
 func _on_btn_voltar_volume_pressed():
 	mostrar_esconder(opcoes, volume)
 	btn_video.grab_focus()
+	
+	
+func play_audio(audio):
+	audio.play()
+	
+	

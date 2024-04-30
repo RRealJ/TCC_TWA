@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfm0mdvmbgdv2"]
+[gd_scene load_steps=11 format=3 uid="uid://dfm0mdvmbgdv2"]
 
 [ext_resource type="Script" path="res://loja.gd" id="1_2ofpd"]
 [ext_resource type="Texture2D" uid="uid://diwyarq17rwwc" path="res://Assets/formatos/pp_clock.png" id="1_wfg0a"]
+[ext_resource type="PackedScene" uid="uid://eo4h62aq2wtt" path="res://Audio/ui_sounds.tscn" id="2_2soxn"]
 [ext_resource type="Texture2D" uid="uid://cl6tt0w3dyd2p" path="res://Assets/formatos/w_clock.png" id="2_e7ef7"]
 [ext_resource type="Texture2D" uid="uid://xuoatwwa0ci4" path="res://Assets/formatos/upgrade_normal.png" id="2_m2u30"]
 [ext_resource type="Texture2D" uid="uid://0vfd33ej50s7" path="res://Assets/formatos/upgrade_comprado.png" id="3_4u6ew"]
-[ext_resource type="PackedScene" uid="uid://cv57l8cgtgr3v" path="res://generico/confirmacao.tscn" id="7_ga5l3"]
+[ext_resource type="PackedScene" uid="uid://cv57l8cgtgr3v" path="res://Generico/confirmacao.tscn" id="7_ga5l3"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="8_2vibf"]
 [ext_resource type="PackedScene" uid="uid://bx43gpgmorkah" path="res://text_edit_sara.tscn" id="8_pa2xe"]
+[ext_resource type="AudioStream" uid="uid://new414htllf2" path="res://Audio/btns_loja.mp3" id="10_ihp2p"]
 
 [node name="Loja" type="Control"]
 layout_mode = 3
@@ -19,15 +21,16 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_2ofpd")
 
+[node name="UiSounds" parent="." instance=ExtResource("2_2soxn")]
+root_path = NodePath("..")
+
 [node name="BG" type="CanvasLayer" parent="."]
 
 [node name="categoria" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.003125
-anchor_top = 0.084375
-anchor_right = -0.003125
-anchor_bottom = 0.084375
+anchor_top = 0.0833333
+anchor_bottom = 0.0833333
 offset_left = 606.0
 offset_top = 190.0
 offset_right = 1279.0
@@ -229,6 +232,10 @@ offset_left = -630.0
 offset_top = -26.0
 offset_right = -43.0
 offset_bottom = 249.0
+
+[node name="btn_upgrade" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_ihp2p")
+bus = &"sfx"
 
 [connection signal="pressed" from="categoria/voltar_menu" to="." method="_on_voltar_menu_pressed"]
 [connection signal="focus_entered" from="p_upgrades/set_1/up_vida" to="." method="_on_up_vida_focus_entered"]

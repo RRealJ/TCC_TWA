@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_7uwrf"]
 [ext_resource type="Texture2D" uid="uid://hc2aga0mgh7h" path="res://icon.png" id="2_tdyxc"]
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_xavkd"]
-[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="5_680ql"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="5_680ql"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkm4o"]
 

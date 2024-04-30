@@ -9,6 +9,7 @@ class_name Loja
 @onready var confirmacao = $confirmacao
 @onready var nome_up = $nome_up
 @onready var descricao_up = $TextEdit/MarginContainer/Label
+@onready var sfx_upgrade = $btn_upgrade
 
 
 const upgrades_nome_desc = {
@@ -50,6 +51,7 @@ func _on_button_pressed(selecao, button):
 	await confirmar()
 	if confirmacao.opt == 1 and button.value < 5:
 		button.value += 1
+		sfx_upgrade.play()
 	else:
 		pass
 	selecao.grab_focus()
@@ -92,6 +94,7 @@ func _on_up_chance_critica_pressed():
 
 
 func _on_voltar_menu_pressed():
+	await get_tree().create_timer(0.4).timeout
 	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")
 
 

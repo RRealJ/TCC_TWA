@@ -1,3 +1,5 @@
+AudioStreamPlayer2D
+Node
 CollisionShape2D
 Area2D
 Marker2D
@@ -10,5 +12,3 @@ AnimationPlayer
 AnimatedSprite2D
 Label
 GPUParticlesAttractorVectorField3D
-RichTextLabel
-ColorRect

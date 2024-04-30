@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://rl3wcnvcth1u"]
+
+[ext_resource type="Script" path="res://hitbox.gd" id="1_vuvmv"]
+
+[node name="hitbox" type="Area2D"]
+collision_layer = 4
+collision_mask = 33
+script = ExtResource("1_vuvmv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
