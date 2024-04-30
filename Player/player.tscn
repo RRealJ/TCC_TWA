@@ -524,4 +524,7 @@ parameters/idle/idle_bs2d/blend_position = Vector2(0, 0)
 parameters/move/TimeScale/scale = 1.2
 parameters/move/move_bs2D/blend_position = Vector2(-0.0128586, 0.964758)
 
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 1)
+
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

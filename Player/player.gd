@@ -24,7 +24,6 @@ var vida = vida_maxima
 var speed = max_speed
 var aceleracao = ACELERACAO
 var friccao = FRICCAO
-
 enum{IDLE, MOVE}
 var state = IDLE
 
@@ -45,6 +44,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	var mouse_pos = get_global_mouse_position()
+	$Marker2D.look_at(mouse_pos)
 	mover(delta)
 	animate()
 	texto_velocidade.text = str(int(self.velocity.length()))

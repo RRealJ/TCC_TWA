@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Area2D
 
 class_name Bullet
 
@@ -20,8 +20,8 @@ func _ready():
 	
 	
 func _physics_process(delta):
-	velocity = Vector2(0, -bullet_velocidade).rotated(dir)
-	move_and_slide()
+	position += (Vector2.RIGHT*bullet_velocidade).rotated(dir) * delta
+
 	
 	
 	

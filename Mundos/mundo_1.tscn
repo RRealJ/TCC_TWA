@@ -1158,7 +1158,7 @@ layer_2/tile_data = PackedInt32Array(-589852, 2359296, 24, 720868, 2359296, 24, 
 script = ExtResource("8_pcuka")
 bullet = ExtResource("9_3cj20")
 
-[node name="cooldown" type="Timer" parent="Player/teste_arma"]
+[node name="Timer" type="Timer" parent="Player/teste_arma"]
 autostart = true
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
@@ -1170,7 +1170,7 @@ zoom = Vector2(2.5, 2.5)
 [node name="menu_pausa" parent="camera" instance=ExtResource("7_ltw6q")]
 visible = false
 
-[node name="Timer" type="Timer" parent="."]
+[node name="timer_estagio" type="Timer" parent="."]
 autostart = true
 
-[connection signal="timeout" from="Player/teste_arma/cooldown" to="Player/teste_arma" method="_on_cooldown_timeout"]
+[connection signal="timeout" from="Player/teste_arma/Timer" to="Player/teste_arma" method="_on_timer_timeout"]

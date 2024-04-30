@@ -1,7 +1,9 @@
-Timer
-Sprite2D
-Node2D
+Marker2D
+Area2D
 CollisionShape2D
+Timer
+Node2D
+Sprite2D
 CharacterBody2D
 AnimationTree
 AnimationPlayer
@@ -10,5 +12,3 @@ Label
 GPUParticlesAttractorVectorField3D
 RichTextLabel
 ColorRect
-Container
-VBoxContainer
