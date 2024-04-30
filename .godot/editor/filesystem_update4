@@ -1,3 +1,4 @@
-res://Menus/main_menu.tscn
+res://Audio/ui_sounds.tscn
 res://Inimigos/inimigos_comum.gd
 res://Timers e spawns/spawn_inimigo.gd
+res://Audio/ui_sounds.gd

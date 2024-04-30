@@ -28,13 +28,14 @@ func _ready() -> void:
 func install_sounds(node: Node) -> void:
 	for i in node.get_children():
 		if i is Button:
-			i.focus_entered.connect(func(): play_sfx_audio(&"select")) #lambda func
-			i.pressed.connect(func(): play_sfx_audio(&"pressed"))
+			i.focus_entered.connect(play_sfx_audio.bind(&"select"))
+			i.pressed.connect(play_sfx_audio.bind(&"pressed"))
 
 		#recurssivo
 		install_sounds(i) 
 		
 
 func play_sfx_audio(sound: StringName) -> void:
+	print("Tocando o som:" + sounds[sound])
 	sounds[sound].play()
 		
