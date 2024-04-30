@@ -1,12 +1,3 @@
 res://Menus/main_menu.tscn
 res://Inimigos/inimigos_comum.gd
 res://Timers e spawns/spawn_inimigo.gd
-res://Menus/main_menu.gd
-res://Mundos/mundo_1.tscn
-res://Player/player.tscn
-res://Player/bullet_normal.tscn
-res://Inimigos/inimigos_comum.tscn
-res://loja.tscn
-res://Audio/ui_sounds.tscn
-res://Audio/ui_sounds.gd
-res://loja.gd
