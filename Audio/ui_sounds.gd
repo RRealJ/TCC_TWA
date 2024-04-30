@@ -36,6 +36,5 @@ func install_sounds(node: Node) -> void:
 		
 
 func play_sfx_audio(sound: StringName) -> void:
-	print("Tocando o som:" + sounds[sound])
 	sounds[sound].play()
 		

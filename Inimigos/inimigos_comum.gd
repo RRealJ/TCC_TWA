@@ -1,17 +1,16 @@
 extends Inimigos
 
-@onready var vida_i = vida
 @onready var barra_vida = $barra_vida
 
 func _ready():
-	barra_vida.init_vida(vida_i)
+	barra_vida.init_vida(vida)
 
 
 func update_vida():
-	barra_vida.value = vida_i
+	barra_vida.value = vida
 	print('update vida')
-	if vida_i <= 0:
-		queue_free()
+	if vida <= 0:
+		morto()
 
 
 func _on_hitbox_body_entered(body: Bullet):
@@ -22,4 +21,3 @@ func _on_hitbox_body_entered(body: Bullet):
 		update_vida()
 
 	
-

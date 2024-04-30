@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
+signal PlayerDeath
 
 const iFrame_duration = 1.5
 @export var max_speed = 75 * PlayerVariaveis.velocidade
@@ -18,6 +19,8 @@ const iFrame_duration = 1.5
 @onready var anim = $animation
 @onready var animationTree = $AnimationTree
 @onready var state_machine = animationTree["parameters/playback"]
+@onready var anim_morte = preload("res://Efeitos/morte_vfx.tscn")
+@onready var mundo = get_tree().get_root()
 
 var vida_maxima = 100 + 25 * PlayerVariaveis.vida
 var vida = vida_maxima
@@ -95,10 +98,27 @@ func _on_hurtbox_body_entered(body):
 		vida = barra_vida.vida - (body.dano - PlayerVariaveis.resistencia * 3)
 		update_PlayerUI()
 	if vida <= 0:
-		get_tree().change_scene_to_file("res://Menus/gameover.tscn")
-
+		morto()
+		
+		
+# Colocar Area2D para pegar drops, se drop for Moedas, mundo.moedas_coletadas(moeda) #
 
 func follow_camera(camera):
 	var camera_path = camera.get_path()
 	remote_transform.remote_path = camera_path
+	
+
+func morto():
+	animacao_morte()
+	queue_free()
+	get_tree().change_scene_to_file("res://Menus/gameover.tscn")
+	
+
+func animacao_morte():
+	var morto = anim_morte.instantiate()
+	morto.global_position = global_position
+	get_tree().get_root().add_child(morto)
+	get_tree().get_root().remove_child(morto)
+	
+	
 	
