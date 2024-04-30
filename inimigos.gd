@@ -8,6 +8,7 @@ class_name Inimigos
 @onready var target = $"../../Player" #Cuidado com outros mundos, mundo_1 OK
 @onready var soft_collisons = $softCollision
 
+
 func _physics_process(delta):
 	if target == null:
 		get_tree().get_nodes_in_group("Player")[0]
@@ -18,3 +19,10 @@ func _physics_process(delta):
 		move_and_slide()
 		
 		
+func receber_dano(dano_recebido):
+	self.vida_i = self.vida_i - dano_recebido
+	print('dano rebecido meotodo')
+	
+
+
+

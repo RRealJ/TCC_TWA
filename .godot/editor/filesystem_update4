@@ -1,10 +1,33 @@
-res://Player/player.tscn
+res://Menus/gameover.tscn
 res://Inimigos/inimigos_comum.gd
 res://Timers e spawns/spawn_inimigo.gd
-res://armas.gd
-res://Menus/gameover.tscn
+res://Player/player.tscn
 res://Player/bullet_normal.tscn
 res://generico/player_ui.tscn
 res://Mundos/mundo_1.tscn
+res://Generico/Hitbox.gd
+res://Player/bullet_normal.gd
 res://Player/bullet.gd
+res://player_variaveis.gd
+res://Inimigos/inimigos_comum.tscn
+res://Mundos/mundo_1.gd
+res://generico/hitbox.tscn
+res://inimigos.gd
+res://generico/barra_vida.tscn
+res://armas.gd
+res://Generico/barra_vida.gd
+res://Generico/confirmacao.gd
+res://Menus/gameover.gd
+res://Global.gd
+res://loja.gd
+res://Menus/main_menu.gd
+res://Menus/menu_pausa.gd
+res://mundo.gd
 res://Player/player.gd
+res://OverLap/soft_collision.gd
+res://Timers e spawns/spawn_info.gd
+res://text_edit_sara.gd
+res://Menus/volume_sliders.gd
+res://hitbox.gd
+res://hitbox.tscn
+res://loja.tscn

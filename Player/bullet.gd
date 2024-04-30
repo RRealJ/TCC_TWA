@@ -8,7 +8,7 @@ var spawn_rot: float
 var zdex: int
 
 @export var bullet_velocidade: float
-@export var bullet_penetracao: int
+@export var bullet_penetracao:= PlayerVariaveis.penetracao as int
 @export var bullet_dano: int
 @onready var bullet_vida:= $bullet_vida as Timer
 

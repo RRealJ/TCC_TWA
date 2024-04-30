@@ -1,136 +1,136 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714435742
-armas.gd::GDScript::-1::1714435724::0::1::::Arma<>Node2D<>::
-default_bus_layout.tres::AudioBusLayout::2548682415142993850::1714259000::0::1::::<><>::
-Global.gd::GDScript::-1::1714259000::0::1::::<>Node<>::
-icon.png::CompressedTexture2D::497090336071308275::1714259000::1714259000::1::::<><>::
-icon.svg::CompressedTexture2D::6066976505730363904::1714259000::1714259035::1::::<><>::
-inimigos.gd::GDScript::-1::1714259000::0::1::::Inimigos<>CharacterBody2D<>::
-loja.gd::GDScript::-1::1714259000::0::1::::Loja<>Control<>::
-loja.tscn::PackedScene::7536518347221947377::1714335531::0::1::::<><>::res://loja.gd<>uid://diwyarq17rwwc::::res://Assets/formatos/pp_clock.png<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://xuoatwwa0ci4::::res://Assets/formatos/upgrade_normal.png<>uid://0vfd33ej50s7::::res://Assets/formatos/upgrade_comprado.png<>uid://cv57l8cgtgr3v::::res://generico/confirmacao.tscn<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>uid://bx43gpgmorkah::::res://text_edit_sara.tscn
-main.gd::GDScript::-1::1714259000::0::1::::<>Node2D<>::
-main.tscn::PackedScene::5422367726967608135::1714259000::0::1::::<><>::uid://dj6am7htam1ul::::res://Menus/main_menu.tscn<>res://main.gd
-mundo.gd::GDScript::-1::1714335505::0::1::::Mundo<>Node<>::
-player_variaveis.gd::GDScript::-1::1714259000::0::1::::<>Node<>::
-README.md::TextFile::-1::1714259000::0::1::::<><>::
-text_edit_sara.gd::GDScript::-1::1714259000::0::1::::<>TextEdit<>::
-text_edit_sara.tscn::PackedScene::4062342630480161943::1714400782::0::1::::<><>::uid://b6lf5svqpdoyp::::res://Assets/text_box/Sara_TextBox32.png<>res://text_edit_sara.gd<>uid://cxktc2krspd6m::::res://Assets/font/Perfect DOS VGA 437.ttf
-::res://Assets/::1714424412
-::res://Assets/armas_bullets/::1714424605
-Bullet_normal.png::CompressedTexture2D::4959822754490071869::1714424602::1714424605::1::::<><>::
-::res://Assets/font/::1714259000
-Perfect DOS VGA 437 Win.ttf::FontFile::440472894614787392::1714259000::1714259000::1::::<><>::
-Perfect DOS VGA 437.ttf::FontFile::6408987177427465710::1714259000::1714259000::1::::<><>::
-TextFont.tres::Theme::1756713924202378107::1714259000::0::1::::<><>::uid://cxktc2krspd6m::::res://Assets/font/Perfect DOS VGA 437.ttf
-::res://Assets/formatos/::1714259000
-black_rec.png::CompressedTexture2D::6402844540426953983::1714259000::1714259000::1::::<><>::
-b_clock.png::CompressedTexture2D::3156584145621662473::1714259000::1714259000::1::::<><>::
-pp_clock.png::CompressedTexture2D::7767647237437873678::1714259000::1714259000::1::::<><>::
-pp_rec.png::CompressedTexture2D::3628292183735939290::1714259000::1714259000::1::::<><>::
-upgrade_comprado.png::CompressedTexture2D::1798383480234916968::1714259000::1714259000::1::::<><>::
-upgrade_normal.png::CompressedTexture2D::1656482029584585277::1714259000::1714259000::1::::<><>::
-white_rec.png::CompressedTexture2D::1369347578736325654::1714259000::1714259000::1::::<><>::
-w_clock.png::CompressedTexture2D::5610103259073766561::1714259000::1714259000::1::::<><>::
-::res://Assets/player/::1714426227
-sprite_move.png::CompressedTexture2D::2827203012662960391::1714426166::1714426227::1::::<><>::
-sprite_move_l.png::CompressedTexture2D::40189792736153701::1714426222::1714426227::1::::<><>::
-::res://Assets/text_box/::1714259000
-Sara_TextBox16.png::CompressedTexture2D::5676698643213330133::1714259000::1714259000::1::::<><>::
-Sara_TextBox32.png::CompressedTexture2D::4585341129156083775::1714259000::1714259000::1::::<><>::
-Sara_TextBox.png::CompressedTexture2D::8129096991258650017::1714259000::1714259000::1::::<><>::
-::res://Assets/tilemaps/::1714259000
-BaseSet.png::CompressedTexture2D::3989251763242213729::1714259000::1714259000::1::::<><>::
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/::1714259000
-Asset License Updated 01 February 2024.txt::TextFile::-1::1714259000::0::1::::<><>::
-Solaria Palette.png::CompressedTexture2D::5822920947109866988::1714259000::1714259000::1::::<><>::
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/::1714259000
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/Sprites/::1714259000
-Hero 01.png::CompressedTexture2D::6512984699449242762::1714259000::1714259000::1::::<><>::
-Minecart 01.png::CompressedTexture2D::2966218783248822994::1714259000::1714259000::1::::<><>::
-Slime 01.png::CompressedTexture2D::1618405541508013652::1714259000::1714259000::1::::<><>::
-Sword 01.png::CompressedTexture2D::2262527477279316216::1714259000::1714259000::1::::<><>::
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/Tilesets/::1714259000
-Solaria Demo Update 01.png::CompressedTexture2D::781447570929795499::1714259000::1714259000::1::::<><>::
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/Examples/::1714259000
-Demo Pack Example 01.png::CompressedTexture2D::8951509062785210635::1714259000::1714259000::1::::<><>::
-Demo Pack Example 02.png::CompressedTexture2D::2479221732113666742::1714259000::1714259000::1::::<><>::
-Demo Pack Example 03.png::CompressedTexture2D::639405876665851269::1714259000::1714259000::1::::<><>::
-Demo Pack Update 01 Preview.png::CompressedTexture2D::7120039948692419221::1714259000::1714259000::1::::<><>::
-Demo Pack Update 01 Sprite Preview.png::CompressedTexture2D::6948789915094899263::1714259000::1714259000::1::::<><>::
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/::1714259000
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/characters/::1714259000
-!Chest.png::CompressedTexture2D::1934752470140163818::1714259000::1714259000::1::::<><>::
-!Door1.png::CompressedTexture2D::8637753466499533650::1714259000::1714259000::1::::<><>::
-!Flame.png::CompressedTexture2D::1655664245374617053::1714259000::1714259000::1::::<><>::
-!Other1.png::CompressedTexture2D::3280186355025012832::1714259000::1714259000::1::::<><>::
-!Other2.png::CompressedTexture2D::7220119222062500076::1714259000::1714259000::1::::<><>::
-!Switch1.png::CompressedTexture2D::8571694520887391620::1714259000::1714259000::1::::<><>::
-Actor1.png::CompressedTexture2D::6173269965633477348::1714259000::1714259000::1::::<><>::
-Minecart.png::CompressedTexture2D::1400037517805409103::1714259000::1714259000::1::::<><>::
-Monster.png::CompressedTexture2D::2245684252341315179::1714259000::1714259000::1::::<><>::
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/faces/::1714259000
-Actor1.png::CompressedTexture2D::671177479061394227::1714259000::1714259000::1::::<><>::
-::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/tilesets/::1714259000
-Dungeon_A1.png::CompressedTexture2D::6265394914895623059::1714259000::1714259000::1::::<><>::
-Dungeon_A1.txt::TextFile::-1::1714259000::0::1::::<><>::
-Dungeon_A2.png::CompressedTexture2D::2640923764096123179::1714259000::1714259000::1::::<><>::
-Dungeon_A2.txt::TextFile::-1::1714259000::0::1::::<><>::
-Dungeon_A4.png::CompressedTexture2D::1438727750571756798::1714259000::1714259000::1::::<><>::
-Dungeon_A4.txt::TextFile::-1::1714259000::0::1::::<><>::
-Dungeon_A5.png::CompressedTexture2D::6763489726155253698::1714259000::1714259000::1::::<><>::
-Dungeon_A5.txt::TextFile::-1::1714259000::0::1::::<><>::
-Dungeon_B.png::CompressedTexture2D::1641358796998293995::1714259000::1714259000::1::::<><>::
-Dungeon_B.txt::TextFile::-1::1714259000::0::1::::<><>::
-Dungeon_C.png::CompressedTexture2D::6679088669182793476::1714259000::1714259000::1::::<><>::
-Dungeon_C.txt::TextFile::-1::1714259000::0::1::::<><>::
-Outside_A1.png::CompressedTexture2D::6043181666354317667::1714259000::1714259000::1::::<><>::
-Outside_A1.txt::TextFile::-1::1714259000::0::1::::<><>::
-Outside_A2.png::CompressedTexture2D::7662590910387533501::1714259000::1714259000::1::::<><>::
-Outside_A2.txt::TextFile::-1::1714259000::0::1::::<><>::
-Outside_A3.png::CompressedTexture2D::6392635551568854642::1714259000::1714259000::1::::<><>::
-Outside_A3.txt::TextFile::-1::1714259000::0::1::::<><>::
-Outside_A5.png::CompressedTexture2D::8655145523181360282::1714259000::1714259000::1::::<><>::
-Outside_A5.txt::TextFile::-1::1714259000::0::1::::<><>::
-Outside_B.png::CompressedTexture2D::278795600458684400::1714259000::1714259000::1::::<><>::
-Outside_B.txt::TextFile::-1::1714259000::0::1::::<><>::
-Outside_C.png::CompressedTexture2D::2744929875491966678::1714259000::1714259000::1::::<><>::
-Outside_C.txt::TextFile::-1::1714259000::0::1::::<><>::
-::res://Assets/titulos/::1714259000
-game_over.png::CompressedTexture2D::3044605584024100914::1714259000::1714259000::1::::<><>::
-::res://generico/::1714435729
-barra_vida.gd::GDScript::-1::1714259000::0::1::::<>ProgressBar<>::
-barra_vida.tscn::PackedScene::4720944733301171576::1714400782::0::1::::<><>::res://Generico/barra_vida.gd
-confirmacao.gd::GDScript::-1::1714259000::0::1::::<>CanvasLayer<>::
-confirmacao.tscn::PackedScene::6310702740566579121::1714259000::0::1::::<><>::res://Generico/confirmacao.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
-Hitbox.gd::GDScript::-1::1714259000::0::1::::<>Area2D<>::
-hitbox.tscn::PackedScene::5316589306330470250::1714259000::0::1::::<><>::res://Generico/Hitbox.gd
-player_ui.tscn::PackedScene::3036746642200546491::1714435729::0::1::::<><>::uid://bk8cqkr7ukuv6::::res://Assets/formatos/b_clock.png<>uid://b8i4jge24ih01::::res://generico/barra_vida.tscn<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://cxht6cyk3e8vr::::res://Assets/formatos/black_rec.png<>uid://brxtpbe5mc2gs::::res://Assets/formatos/pp_rec.png<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
-::res://Inimigos/::1714435366
-inimigos_comum.gd::GDScript::-1::1714435366::0::1::::<>Inimigos<>::
-inimigos_comum.tscn::PackedScene::7248562642999813795::1714259000::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://hc2aga0mgh7h::::res://icon.png<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://ch0npjf5lb43g::::res://Generico/hitbox.tscn
-::res://Menus/::1714435729
-gameover.gd::GDScript::-1::1714393258::0::1::::<>Control<>::
-gameover.tscn::PackedScene::7923462256383072716::1714435729::0::1::::<><>::res://Menus/gameover.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
-hs_bgm.gd::GDScript::-1::1714259000::0::1::::<>HSlider<>::
-hs_master.gd::GDScript::-1::1714259000::0::1::::<>HSlider<>::
-main_menu.gd::GDScript::-1::1714259000::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::7854980476148917403::1714400782::0::1::::<><>::res://Menus/main_menu.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
-menu_pausa.gd::GDScript::-1::1714259000::0::1::::<>CanvasLayer<>::
-menu_pausa.tscn::PackedScene::7299979961124047284::1714393081::0::1::::<><>::res://Menus/menu_pausa.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
-volume_sliders.gd::GDScript::-1::1714259000::0::1::::<>HSlider<>::
-::res://Mundos/::1714435576
-mundo_1.gd::GDScript::-1::1714428944::0::1::::<>Mundo<>::
-mundo_1.tscn::PackedScene::2285263864465036388::1714435576::0::1::::<><>::res://Mundos/mundo_1.gd<>uid://bw3onneelassf::::res://Assets/tilemaps/BaseSet.png<>uid://derytfri27qe1::::res://Player/player.tscn<>uid://dbji1dp00wfdj::::res://Inimigos/inimigos_comum.tscn<>uid://bnh1awky35ggp::::res://Timers e spawns/spawn_inimigo.tscn<>res://Timers e spawns/spawn_info.gd<>uid://dcafurs16oq33::::res://Menus/menu_pausa.tscn<>res://armas.gd<>uid://cnlje1vfd60wm::::res://Player/bullet_normal.tscn
-::res://OverLap/::1714259000
-soft_collision.gd::GDScript::-1::1714259000::0::1::::<>Area2D<>::
-soft_collision.tscn::PackedScene::7472329603237536089::1714259000::0::1::::<><>::res://OverLap/soft_collision.gd
-::res://Player/::1714435729
-bullet.gd::GDScript::-1::1714435461::0::1::::Bullet<>CharacterBody2D<>::
-bullet_normal.gd::GDScript::-1::1714434460::0::1::::<>Bullet<>::
-bullet_normal.tscn::PackedScene::5708559484366229092::1714435729::0::1::::<><>::res://Player/bullet_normal.gd<>uid://ccwts55a5xhaj::::res://Assets/armas_bullets/Bullet_normal.png
-player.gd::GDScript::-1::1714428829::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::7476603274640303698::1714435729::0::1::::<><>::res://Player/player.gd<>uid://bjja1kgsmwtnf::::res://generico/player_ui.tscn<>uid://tp6jsitysqn::::res://Assets/player/sprite_move_l.png<>uid://bgjrvdmpmu7nn::::res://Assets/player/sprite_move.png<>uid://b8i4jge24ih01::::res://generico/barra_vida.tscn
-::res://Timers e spawns/::1714435366
-spawn_info.gd::GDScript::-1::1714259000::0::1::::Spawn_info<>Resource<>::
-spawn_inimigo.gd::GDScript::-1::1714435366::0::1::::<>Node2D<>::
-spawn_inimigo.tscn::PackedScene::3314906109168669731::1714259000::0::1::::<><>::res://Timers e spawns/spawn_inimigo.gd
+::res://::1714439240
+armas.gd::GDScript::-1::1714439219::0::1::::Arma<>Node2D<>::
+default_bus_layout.tres::AudioBusLayout::2548682415142993850::1714439219::0::1::::<><>::
+Global.gd::GDScript::-1::1714439219::0::1::::<>Node<>::
+icon.png::CompressedTexture2D::497090336071308275::1714439219::1714439219::1::::<><>::
+icon.svg::CompressedTexture2D::6066976505730363904::1714439219::1714439219::1::::<><>::
+inimigos.gd::GDScript::-1::1714439219::0::1::::Inimigos<>CharacterBody2D<>::
+loja.gd::GDScript::-1::1714439219::0::1::::Loja<>Control<>::
+loja.tscn::PackedScene::7536518347221947377::1714439219::0::1::::<><>::res://loja.gd<>uid://diwyarq17rwwc::::res://Assets/formatos/pp_clock.png<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://xuoatwwa0ci4::::res://Assets/formatos/upgrade_normal.png<>uid://0vfd33ej50s7::::res://Assets/formatos/upgrade_comprado.png<>uid://cv57l8cgtgr3v::::res://generico/confirmacao.tscn<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>uid://bx43gpgmorkah::::res://text_edit_sara.tscn
+main.gd::GDScript::-1::1714439219::0::1::::<>Node2D<>::
+main.tscn::PackedScene::5422367726967608135::1714439219::0::1::::<><>::uid://dj6am7htam1ul::::res://Menus/main_menu.tscn<>res://main.gd
+mundo.gd::GDScript::-1::1714439219::0::1::::Mundo<>Node<>::
+player_variaveis.gd::GDScript::-1::1714439219::0::1::::<>Node<>::
+README.md::TextFile::-1::1714439219::0::1::::<><>::
+text_edit_sara.gd::GDScript::-1::1714439219::0::1::::<>TextEdit<>::
+text_edit_sara.tscn::PackedScene::4062342630480161943::1714439219::0::1::::<><>::uid://b6lf5svqpdoyp::::res://Assets/text_box/Sara_TextBox32.png<>res://text_edit_sara.gd<>uid://cxktc2krspd6m::::res://Assets/font/Perfect DOS VGA 437.ttf
+::res://Assets/::1714439219
+::res://Assets/armas_bullets/::1714439219
+Bullet_normal.png::CompressedTexture2D::4959822754490071869::1714439219::1714439219::1::::<><>::
+::res://Assets/font/::1714439219
+Perfect DOS VGA 437 Win.ttf::FontFile::440472894614787392::1714439219::1714439219::1::::<><>::
+Perfect DOS VGA 437.ttf::FontFile::6408987177427465710::1714439219::1714439219::1::::<><>::
+TextFont.tres::Theme::1756713924202378107::1714439219::0::1::::<><>::uid://cxktc2krspd6m::::res://Assets/font/Perfect DOS VGA 437.ttf
+::res://Assets/formatos/::1714439219
+black_rec.png::CompressedTexture2D::6402844540426953983::1714439219::1714439219::1::::<><>::
+b_clock.png::CompressedTexture2D::3156584145621662473::1714439219::1714439219::1::::<><>::
+pp_clock.png::CompressedTexture2D::7767647237437873678::1714439219::1714439219::1::::<><>::
+pp_rec.png::CompressedTexture2D::3628292183735939290::1714439219::1714439219::1::::<><>::
+upgrade_comprado.png::CompressedTexture2D::1798383480234916968::1714439219::1714439219::1::::<><>::
+upgrade_normal.png::CompressedTexture2D::1656482029584585277::1714439219::1714439219::1::::<><>::
+white_rec.png::CompressedTexture2D::1369347578736325654::1714439219::1714439219::1::::<><>::
+w_clock.png::CompressedTexture2D::5610103259073766561::1714439219::1714439219::1::::<><>::
+::res://Assets/player/::1714439219
+sprite_move.png::CompressedTexture2D::2827203012662960391::1714439219::1714439219::1::::<><>::
+sprite_move_l.png::CompressedTexture2D::40189792736153701::1714439219::1714439219::1::::<><>::
+::res://Assets/text_box/::1714439219
+Sara_TextBox16.png::CompressedTexture2D::5676698643213330133::1714439219::1714439219::1::::<><>::
+Sara_TextBox32.png::CompressedTexture2D::4585341129156083775::1714439219::1714439219::1::::<><>::
+Sara_TextBox.png::CompressedTexture2D::8129096991258650017::1714439219::1714439219::1::::<><>::
+::res://Assets/tilemaps/::1714439219
+BaseSet.png::CompressedTexture2D::3989251763242213729::1714439219::1714439219::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/::1714439219
+Asset License Updated 01 February 2024.txt::TextFile::-1::1714439219::0::1::::<><>::
+Solaria Palette.png::CompressedTexture2D::5822920947109866988::1714439219::1714439219::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/::1714439219
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/Sprites/::1714439219
+Hero 01.png::CompressedTexture2D::6512984699449242762::1714439219::1714439219::1::::<><>::
+Minecart 01.png::CompressedTexture2D::2966218783248822994::1714439219::1714439219::1::::<><>::
+Slime 01.png::CompressedTexture2D::1618405541508013652::1714439219::1714439219::1::::<><>::
+Sword 01.png::CompressedTexture2D::2262527477279316216::1714439219::1714439219::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/16x16/Tilesets/::1714439219
+Solaria Demo Update 01.png::CompressedTexture2D::781447570929795499::1714439219::1714439219::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/Examples/::1714439219
+Demo Pack Example 01.png::CompressedTexture2D::8951509062785210635::1714439219::1714439219::1::::<><>::
+Demo Pack Example 02.png::CompressedTexture2D::2479221732113666742::1714439219::1714439219::1::::<><>::
+Demo Pack Example 03.png::CompressedTexture2D::639405876665851269::1714439219::1714439219::1::::<><>::
+Demo Pack Update 01 Preview.png::CompressedTexture2D::7120039948692419221::1714439219::1714439219::1::::<><>::
+Demo Pack Update 01 Sprite Preview.png::CompressedTexture2D::6948789915094899263::1714439219::1714439219::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/::1714439219
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/characters/::1714439219
+!Chest.png::CompressedTexture2D::1934752470140163818::1714439219::1714439219::1::::<><>::
+!Door1.png::CompressedTexture2D::8637753466499533650::1714439219::1714439219::1::::<><>::
+!Flame.png::CompressedTexture2D::1655664245374617053::1714439219::1714439219::1::::<><>::
+!Other1.png::CompressedTexture2D::3280186355025012832::1714439219::1714439219::1::::<><>::
+!Other2.png::CompressedTexture2D::7220119222062500076::1714439219::1714439219::1::::<><>::
+!Switch1.png::CompressedTexture2D::8571694520887391620::1714439219::1714439219::1::::<><>::
+Actor1.png::CompressedTexture2D::6173269965633477348::1714439219::1714439219::1::::<><>::
+Minecart.png::CompressedTexture2D::1400037517805409103::1714439219::1714439219::1::::<><>::
+Monster.png::CompressedTexture2D::2245684252341315179::1714439219::1714439219::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/faces/::1714439219
+Actor1.png::CompressedTexture2D::671177479061394227::1714439219::1714439219::1::::<><>::
+::res://Assets/tilemaps/World of Solaria Demo Pack Update 03a/RPG Maker/tilesets/::1714439219
+Dungeon_A1.png::CompressedTexture2D::6265394914895623059::1714439219::1714439219::1::::<><>::
+Dungeon_A1.txt::TextFile::-1::1714439219::0::1::::<><>::
+Dungeon_A2.png::CompressedTexture2D::2640923764096123179::1714439219::1714439219::1::::<><>::
+Dungeon_A2.txt::TextFile::-1::1714439219::0::1::::<><>::
+Dungeon_A4.png::CompressedTexture2D::1438727750571756798::1714439219::1714439219::1::::<><>::
+Dungeon_A4.txt::TextFile::-1::1714439219::0::1::::<><>::
+Dungeon_A5.png::CompressedTexture2D::6763489726155253698::1714439219::1714439219::1::::<><>::
+Dungeon_A5.txt::TextFile::-1::1714439219::0::1::::<><>::
+Dungeon_B.png::CompressedTexture2D::1641358796998293995::1714439219::1714439219::1::::<><>::
+Dungeon_B.txt::TextFile::-1::1714439219::0::1::::<><>::
+Dungeon_C.png::CompressedTexture2D::6679088669182793476::1714439219::1714439219::1::::<><>::
+Dungeon_C.txt::TextFile::-1::1714439219::0::1::::<><>::
+Outside_A1.png::CompressedTexture2D::6043181666354317667::1714439219::1714439219::1::::<><>::
+Outside_A1.txt::TextFile::-1::1714439219::0::1::::<><>::
+Outside_A2.png::CompressedTexture2D::7662590910387533501::1714439219::1714439219::1::::<><>::
+Outside_A2.txt::TextFile::-1::1714439219::0::1::::<><>::
+Outside_A3.png::CompressedTexture2D::6392635551568854642::1714439219::1714439219::1::::<><>::
+Outside_A3.txt::TextFile::-1::1714439219::0::1::::<><>::
+Outside_A5.png::CompressedTexture2D::8655145523181360282::1714439219::1714439219::1::::<><>::
+Outside_A5.txt::TextFile::-1::1714439219::0::1::::<><>::
+Outside_B.png::CompressedTexture2D::278795600458684400::1714439219::1714439219::1::::<><>::
+Outside_B.txt::TextFile::-1::1714439219::0::1::::<><>::
+Outside_C.png::CompressedTexture2D::2744929875491966678::1714439219::1714439219::1::::<><>::
+Outside_C.txt::TextFile::-1::1714439219::0::1::::<><>::
+::res://Assets/titulos/::1714439219
+game_over.png::CompressedTexture2D::3044605584024100914::1714439219::1714439219::1::::<><>::
+::res://generico/::1714439219
+barra_vida.gd::GDScript::-1::1714439219::0::1::::<>ProgressBar<>::
+barra_vida.tscn::PackedScene::4720944733301171576::1714439219::0::1::::<><>::res://Generico/barra_vida.gd
+confirmacao.gd::GDScript::-1::1714439219::0::1::::<>CanvasLayer<>::
+confirmacao.tscn::PackedScene::6310702740566579121::1714439219::0::1::::<><>::res://Generico/confirmacao.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
+Hitbox.gd::GDScript::-1::1714439219::0::1::::<>Area2D<>::
+hitbox.tscn::PackedScene::5316589306330470250::1714439219::0::1::::<><>::res://Generico/Hitbox.gd
+player_ui.tscn::PackedScene::3036746642200546491::1714439219::0::1::::<><>::uid://bk8cqkr7ukuv6::::res://Assets/formatos/b_clock.png<>uid://b8i4jge24ih01::::res://generico/barra_vida.tscn<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://cxht6cyk3e8vr::::res://Assets/formatos/black_rec.png<>uid://brxtpbe5mc2gs::::res://Assets/formatos/pp_rec.png<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
+::res://Inimigos/::1714439219
+inimigos_comum.gd::GDScript::-1::1714439219::0::1::::<>Inimigos<>::
+inimigos_comum.tscn::PackedScene::7248562642999813795::1714439219::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://hc2aga0mgh7h::::res://icon.png<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://ch0npjf5lb43g::::res://Generico/hitbox.tscn
+::res://Menus/::1714439219
+gameover.gd::GDScript::-1::1714439219::0::1::::<>Control<>::
+gameover.tscn::PackedScene::7923462256383072716::1714439219::0::1::::<><>::res://Menus/gameover.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
+hs_bgm.gd::GDScript::-1::1714439219::0::1::::<>HSlider<>::
+hs_master.gd::GDScript::-1::1714439219::0::1::::<>HSlider<>::
+main_menu.gd::GDScript::-1::1714439219::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::7854980476148917403::1714439219::0::1::::<><>::res://Menus/main_menu.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
+menu_pausa.gd::GDScript::-1::1714439219::0::1::::<>CanvasLayer<>::
+menu_pausa.tscn::PackedScene::7299979961124047284::1714439219::0::1::::<><>::res://Menus/menu_pausa.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd
+volume_sliders.gd::GDScript::-1::1714439219::0::1::::<>HSlider<>::
+::res://Mundos/::1714439219
+mundo_1.gd::GDScript::-1::1714439219::0::1::::<>Mundo<>::
+mundo_1.tscn::PackedScene::2285263864465036388::1714439219::0::1::::<><>::res://Mundos/mundo_1.gd<>uid://bw3onneelassf::::res://Assets/tilemaps/BaseSet.png<>uid://derytfri27qe1::::res://Player/player.tscn<>uid://dbji1dp00wfdj::::res://Inimigos/inimigos_comum.tscn<>uid://bnh1awky35ggp::::res://Timers e spawns/spawn_inimigo.tscn<>res://Timers e spawns/spawn_info.gd<>uid://dcafurs16oq33::::res://Menus/menu_pausa.tscn<>res://armas.gd<>uid://cnlje1vfd60wm::::res://Player/bullet_normal.tscn
+::res://OverLap/::1714439219
+soft_collision.gd::GDScript::-1::1714439219::0::1::::<>Area2D<>::
+soft_collision.tscn::PackedScene::7472329603237536089::1714439219::0::1::::<><>::res://OverLap/soft_collision.gd
+::res://Player/::1714439219
+bullet.gd::GDScript::-1::1714439219::0::1::::Bullet<>Area2D<>::
+bullet_normal.gd::GDScript::-1::1714439219::0::1::::<>Bullet<>::
+bullet_normal.tscn::PackedScene::5708559484366229092::1714439219::0::1::::<><>::res://Player/bullet_normal.gd<>uid://ccwts55a5xhaj::::res://Assets/armas_bullets/Bullet_normal.png
+player.gd::GDScript::-1::1714439219::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::7476603274640303698::1714439219::0::1::::<><>::res://Player/player.gd<>uid://bjja1kgsmwtnf::::res://generico/player_ui.tscn<>uid://tp6jsitysqn::::res://Assets/player/sprite_move_l.png<>uid://bgjrvdmpmu7nn::::res://Assets/player/sprite_move.png<>uid://b8i4jge24ih01::::res://generico/barra_vida.tscn
+::res://Timers e spawns/::1714439219
+spawn_info.gd::GDScript::-1::1714439219::0::1::::Spawn_info<>Resource<>::
+spawn_inimigo.gd::GDScript::-1::1714439219::0::1::::<>Node2D<>::
+spawn_inimigo.tscn::PackedScene::3314906109168669731::1714439219::0::1::::<><>::res://Timers e spawns/spawn_inimigo.gd
