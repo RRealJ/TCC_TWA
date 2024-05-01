@@ -15,7 +15,6 @@ signal InimigoMorto
 @onready var mundo = $"../.."
 
 
-
 func _physics_process(delta):
 	if target == null:
 		get_tree().get_nodes_in_group("Player")[0]

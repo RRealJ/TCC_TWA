@@ -6,30 +6,24 @@
 [node name="confirmacao" type="CanvasLayer"]
 script = ExtResource("1_2ymyx")
 
-[node name="texto" type="Label" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -90.0
-offset_top = -181.0
-offset_right = 90.0
-offset_bottom = -132.0
+offset_left = -142.5
+offset_top = -16.0
+offset_right = 142.5
+offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_7umar")
-text = "Confirmar?"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 505.0
-offset_top = 337.0
-offset_right = 830.0
-offset_bottom = 466.0
+size_flags_horizontal = 4
 theme_override_constants/separation = 177
 
 [node name="sim" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme = ExtResource("1_7umar")
 text = "Sim"
 
@@ -37,6 +31,22 @@ text = "Sim"
 layout_mode = 2
 theme = ExtResource("1_7umar")
 text = "Nao"
+
+[node name="texto" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -190.0
+offset_right = 90.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_7umar")
+text = "Confirmar?"
 
 [connection signal="pressed" from="HBoxContainer/sim" to="." method="_on_sim_pressed"]
 [connection signal="pressed" from="HBoxContainer/nao" to="." method="_on_nao_pressed"]

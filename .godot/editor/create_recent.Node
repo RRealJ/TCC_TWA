@@ -1,8 +1,10 @@
-CollisionShape2D
-Label
+VBoxContainer
+HBoxContainer
 Control
-Button
 AudioStreamPlayer2D
+Label
+CollisionShape2D
+Button
 AnimationPlayer
 Sprite2D
 AnimatedSprite2D
@@ -10,5 +12,3 @@ Node2D
 Node
 Area2D
 Marker2D
-Timer
-CharacterBody2D
