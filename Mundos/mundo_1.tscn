@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://7s87ybeqiy5i"]
+[gd_scene load_steps=14 format=3 uid="uid://7s87ybeqiy5i"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
@@ -7,8 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bnh1awky35ggp" path="res://Timers e spawns/spawn_inimigo.tscn" id="4_eashf"]
 [ext_resource type="Script" path="res://Timers e spawns/spawn_info.gd" id="6_gaajl"]
 [ext_resource type="PackedScene" uid="uid://dcafurs16oq33" path="res://Menus/menu_pausa.tscn" id="7_ltw6q"]
-[ext_resource type="Script" path="res://armas.gd" id="8_pcuka"]
+[ext_resource type="Script" path="res://Player/armas.gd" id="8_pcuka"]
 [ext_resource type="PackedScene" uid="uid://cnlje1vfd60wm" path="res://Player/bullet_normal.tscn" id="9_3cj20"]
+[ext_resource type="PackedScene" uid="uid://cnt8b52rwq0u7" path="res://drop_moedas.tscn" id="10_cqptc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wl1v"]
 resource_name = "Base"
@@ -1172,5 +1173,8 @@ visible = false
 
 [node name="timer_estagio" type="Timer" parent="."]
 autostart = true
+
+[node name="drop_moedas" parent="." instance=ExtResource("10_cqptc")]
+position = Vector2(-144, -30)
 
 [connection signal="timeout" from="Player/teste_arma/Timer" to="Player/teste_arma" method="_on_timer_timeout"]

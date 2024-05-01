@@ -70,6 +70,8 @@ escape={
 2d_physics/layer_5="soft_collisions"
 2d_physics/layer_6="bullet"
 2d_physics/layer_7="mundo"
+2d_physics/layer_8="drops"
+2d_physics/layer_9="pick_up_area"
 
 [rendering]
 

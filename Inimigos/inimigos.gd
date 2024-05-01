@@ -11,6 +11,7 @@ signal InimigoMorto
 @export var ouro:= 10 as int
 @export var exp: int
 @onready var anim_morte = preload("res://Efeitos/morte_vfx.tscn")
+@onready var drop_moedas = load("res://drop_moedas.tscn")
 @onready var target = $"../../Player" #Cuidado com outros mundos, mundo_1 OK
 @onready var mundo = $"../.."
 
@@ -25,7 +26,6 @@ func _physics_process(delta):
 		
 func receber_dano(dano_recebido):
 	vida = vida - dano_recebido
-	print('dano rebecido meotodo')
 	
 
 func morto():
@@ -43,7 +43,10 @@ func animacao_morte():
 	
 	
 func drop_coin():
-	pass
+	var moeda = drop_moedas.instantiate()
+	moeda.global_position = global_position
+	moeda.valor = int(randi_range(5, 20))
+	mundo.add_child(moeda)
 	
 	
 func drop_exp():

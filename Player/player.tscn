@@ -1,10 +1,13 @@
-[gd_scene load_steps=55 format=3 uid="uid://derytfri27qe1"]
+[gd_scene load_steps=56 format=3 uid="uid://derytfri27qe1"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_8xh84"]
 [ext_resource type="PackedScene" uid="uid://bjja1kgsmwtnf" path="res://Generico/player_ui.tscn" id="2_tape2"]
 [ext_resource type="Texture2D" uid="uid://tp6jsitysqn" path="res://Assets/player/sprite_move_l.png" id="4_l5q4d"]
 [ext_resource type="Texture2D" uid="uid://bgjrvdmpmu7nn" path="res://Assets/player/sprite_move.png" id="4_vrjnq"]
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="4_wer0q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tu3h2"]
+radius = 53.0094
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ppdri"]
 atlas = ExtResource("4_l5q4d")
@@ -484,6 +487,14 @@ collision_mask = 0
 script = ExtResource("1_8xh84")
 
 [node name="player_ui" parent="." instance=ExtResource("2_tape2")]
+
+[node name="pick_up" type="Area2D" parent="."]
+collision_layer = 256
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pick_up"]
+shape = SubResource("CircleShape2D_tu3h2")
+debug_color = Color(0.882353, 0.870588, 0, 0.419608)
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

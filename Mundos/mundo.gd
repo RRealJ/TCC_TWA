@@ -15,7 +15,7 @@ func _ready():
 
 
 func count_moedas(moeda):
-	moedas += moeda
+	moedas = moedas + moeda
 	
 
 func count_inimigo():
