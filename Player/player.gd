@@ -9,11 +9,11 @@ const iFrame_duration = 1.5
 @export var ACELERACAO = 500 * PlayerVariaveis.velocidade
 @export var FRICCAO = 1000 * PlayerVariaveis.velocidade
 @onready var axis = Vector2.ZERO
-@onready var texto_vida = $player_ui/texto_barra_vida
-@onready var texto_velocidade = $player_ui/texto_velocidade
+@onready var texto_vida = $player_ui/sup_esquerda/texto_barra_vida
+@onready var texto_velocidade = $player_ui/inf_direita/texto_velocidade
 @onready var remote_transform := $remote as RemoteTransform2D
 @onready var gameover = $"../gameover"
-@onready var barra_vida = $player_ui/barra_vida
+@onready var barra_vida = $player_ui/sup_esquerda/barra_vida
 @onready var mini_barra = $mini_barra
 @onready var anim_sprite = $anim
 @onready var anim = $animation
@@ -21,6 +21,10 @@ const iFrame_duration = 1.5
 @onready var state_machine = animationTree["parameters/playback"]
 @onready var anim_morte = preload("res://Efeitos/morte_vfx.tscn")
 @onready var mundo = $".."
+@onready var barra_exp = $"player_ui/inferior/barra_exp"
+@onready var exp := 0 as int
+@onready var nivel := 1 as int
+@onready var texto_nivel = $"player_ui/inf_esquerda/texto_nivel"
 
 var vida_maxima = 100 + 25 * PlayerVariaveis.vida
 var vida = vida_maxima
@@ -41,6 +45,11 @@ var animTree_state_keys = [
 ]
 
 func _ready():
+	barra_exp.min_value = 0
+	barra_exp.max_value = 100
+	barra_exp.value = 0
+	$player_ui/sup_direito/contagem_inimigos.text = "0"
+	$player_ui/sup_direito/contagem_moedas.text = "0"
 	barra_vida.init_vida(vida)
 	mini_barra.init_vida(vida)
 	update_PlayerUI()
@@ -51,18 +60,28 @@ func _physics_process(delta):
 	$Marker2D.look_at(mouse_pos)
 	mover(delta)
 	animate()
-	texto_velocidade.text = str(int(self.velocity.length()))
+	texto_velocidade.text = str(int(velocity.length()))
 
 
 func update_PlayerUI():
 	set_texto_barra_de_vida()
+	texto_nivel.text = str(nivel)
 	barra_vida.vida = vida
 	mini_barra.vida = vida
 
 
 func set_texto_barra_de_vida() -> void:
+	print("setando vida")
 	texto_vida.text = "%s/%s" % [vida, vida_maxima]
 
+
+func update_exp():
+	barra_exp.value += exp
+	if barra_exp.value > barra_exp.max_value:
+		barra_exp.value = 0
+		barra_exp.max_value = barra_exp.max_value + (100 * nivel)
+		nivel += 1 
+	
 
 func mover(delta):
 	axis = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -119,10 +138,10 @@ func morto():
 	
 
 func animacao_morte():
-	var morto = anim_morte.instantiate()
-	morto.global_position = global_position
-	get_tree().get_root().add_child(morto)
-	get_tree().get_root().remove_child(morto)
+	var morreu = anim_morte.instantiate()
+	morreu.global_position = global_position
+	get_tree().get_root().add_child(morreu)
+	get_tree().get_root().remove_child(morreu)
 	
 	
 	

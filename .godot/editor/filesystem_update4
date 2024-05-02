@@ -2,3 +2,13 @@ res://Player/player.tscn
 res://Inimigos/inimigos_comum.gd
 res://Timers e spawns/spawn_inimigo.gd
 res://Player/player.gd
+res://Menus/main_menu.tscn
+res://Inimigos/inimigos_comum.tscn
+res://drop_moedas.tscn
+res://Efeitos/morte_vfx.tscn
+res://Mundos/mundo_1.tscn
+res://Generico/player_ui.tscn
+res://Mundos/mundo.gd
+res://drop_moedas.gd
+res://Inimigos/inimigos.gd
+res://Mundos/mundo_1.gd

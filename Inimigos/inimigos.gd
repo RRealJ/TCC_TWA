@@ -45,7 +45,7 @@ func animacao_morte():
 func drop_coin():
 	var moeda = drop_moedas.instantiate()
 	moeda.global_position = global_position
-	moeda.valor = int(randi_range(5, 20))
+	moeda.valor = int(randi_range(5 * PlayerVariaveis.sorte, 20 * PlayerVariaveis.sorte))
 	mundo.add_child(moeda)
 	
 	

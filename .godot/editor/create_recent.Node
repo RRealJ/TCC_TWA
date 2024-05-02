@@ -1,14 +1,14 @@
+Label
+ProgressBar
+Control
 CollisionShape2D
 Area2D
 AnimationPlayer
 Sprite2D
 VBoxContainer
 HBoxContainer
-Control
 AudioStreamPlayer2D
-Label
 Button
 AnimatedSprite2D
 Node2D
 Node
-Marker2D

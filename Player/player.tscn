@@ -519,7 +519,7 @@ debug_color = Color(0.854772, 0.0758151, 0.182702, 0.42)
 [node name="mini_barra" parent="." instance=ExtResource("4_wer0q")]
 offset_left = -8.0
 offset_top = -20.0
-offset_right = 8.0
+offset_right = 9.0
 offset_bottom = -18.0
 
 [node name="animation" type="AnimationPlayer" parent="."]

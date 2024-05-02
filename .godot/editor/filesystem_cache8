@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714657490
+::res://::1714666831
 default_bus_layout.tres::AudioBusLayout::2548682415142993850::1714490946::0::1::::<><>::
 drop_moedas.gd::GDScript::-1::1714525414::0::1::::<>Node2D<>::
 drop_moedas.tscn::PackedScene::5726526576775640684::1714525414::0::1::::<><>::res://drop_moedas.gd<>uid://dgvkufebo18ra::::res://Assets/drops/drop_moedas.png
@@ -117,9 +117,9 @@ barra_vida.tscn::PackedScene::4720944733301171576::1714490946::0::1::::<><>::res
 confirmacao.gd::GDScript::-1::1714490946::0::1::::<>CanvasLayer<>::
 confirmacao.tscn::PackedScene::6310702740566579121::1714522030::0::1::::<><>::res://Generico/confirmacao.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
 player_ui.tscn::PackedScene::3036746642200546491::1714522030::0::1::::<><>::uid://bk8cqkr7ukuv6::::res://Assets/formatos/b_clock.png<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn<>uid://cl6tt0w3dyd2p::::res://Assets/formatos/w_clock.png<>uid://cxht6cyk3e8vr::::res://Assets/formatos/black_rec.png<>uid://brxtpbe5mc2gs::::res://Assets/formatos/pp_rec.png<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
-::res://Inimigos/::1714525408
+::res://Inimigos/::1714657557
 inimigos.gd::GDScript::-1::1714525408::0::1::::Inimigos<>CharacterBody2D<>::
-inimigos_comum.gd::GDScript::-1::1714522376::0::1::::<>Inimigos<>::
+inimigos_comum.gd::GDScript::-1::1714657557::0::1::::<>Inimigos<>::
 inimigos_comum.tscn::PackedScene::7248562642999813795::1714525408::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://hc2aga0mgh7h::::res://icon.png<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn
 ::res://Menus/::1714525340
 gameover.gd::GDScript::-1::1714490946::0::1::::<>Control<>::
@@ -139,14 +139,14 @@ mundo_1.tscn::PackedScene::2285263864465036388::1714525304::0::1::::<><>::res://
 hitbox.tscn::PackedScene::1217657986491306812::1714490946::0::1::::<><>::res://hitbox.gd
 soft_collision.gd::GDScript::-1::1714490946::0::1::::<>Area2D<>::
 soft_collision.tscn::PackedScene::7472329603237536089::1714522029::0::1::::<><>::res://OverLap/soft_collision.gd
-::res://Player/::1714525376
+::res://Player/::1714659311
 armas.gd::GDScript::-1::1714490946::0::1::::Arma<>Node2D<>::
 bullet.gd::GDScript::-1::1714490946::0::1::::Bullet<>Area2D<>::
 bullet_normal.gd::GDScript::-1::1714490946::0::1::::<>Bullet<>::
 bullet_normal.tscn::PackedScene::5708559484366229092::1714490946::0::1::::<><>::res://Player/bullet_normal.gd<>uid://ccwts55a5xhaj::::res://Assets/armas_bullets/Bullet_normal.png
-player.gd::GDScript::-1::1714490946::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::7476603274640303698::1714525376::0::1::::<><>::res://Player/player.gd<>uid://bjja1kgsmwtnf::::res://Generico/player_ui.tscn<>uid://tp6jsitysqn::::res://Assets/player/sprite_move_l.png<>uid://bgjrvdmpmu7nn::::res://Assets/player/sprite_move.png<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn
-::res://Timers e spawns/::1714522376
+player.gd::GDScript::-1::1714657557::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::7476603274640303698::1714659311::0::1::::<><>::res://Player/player.gd<>uid://bjja1kgsmwtnf::::res://Generico/player_ui.tscn<>uid://tp6jsitysqn::::res://Assets/player/sprite_move_l.png<>uid://bgjrvdmpmu7nn::::res://Assets/player/sprite_move.png<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn
+::res://Timers e spawns/::1714657557
 spawn_info.gd::GDScript::-1::1714490946::0::1::::Spawn_info<>Resource<>::
-spawn_inimigo.gd::GDScript::-1::1714522376::0::1::::<>Node2D<>::
+spawn_inimigo.gd::GDScript::-1::1714657557::0::1::::<>Node2D<>::
 spawn_inimigo.tscn::PackedScene::3314906109168669731::1714490946::0::1::::<><>::res://Timers e spawns/spawn_inimigo.gd
