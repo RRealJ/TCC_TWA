@@ -111,6 +111,7 @@ func follow_camera(camera):
 func morto():
 	Global.moedas += mundo.moedas
 	Global.inimigos_derrotados += mundo.inimigos_abatidos
+	Global.moedas += mundo.inimigos_abatidos
 	Global.jogos_jogados += 1
 	animacao_morte()
 	queue_free()

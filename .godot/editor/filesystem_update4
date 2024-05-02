@@ -1,13 +1,4 @@
-res://Mundos/mundo_1.tscn
+res://Player/player.tscn
 res://Inimigos/inimigos_comum.gd
 res://Timers e spawns/spawn_inimigo.gd
-res://Efeitos/morte_vfx.tscn
-res://drop_moedas.gd
-res://Efeitos/morte_vfx.gd
-res://drop_moedas.tscn
-res://Player/player.tscn
-res://Menus/main_menu.tscn
-res://Inimigos/inimigos_comum.tscn
-res://Mundos/mundo.gd
-res://Inimigos/inimigos.gd
-res://Global.gd
+res://Player/player.gd
