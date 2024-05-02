@@ -120,6 +120,7 @@ grow_horizontal = 0
 
 [node name="contagem_moedas" type="Label" parent="sup_direito"]
 texture_filter = 1
+layout_mode = 0
 offset_left = -369.0
 offset_top = 7.0
 offset_right = 37.0

@@ -65,22 +65,26 @@ func _physics_process(delta):
 
 func update_PlayerUI():
 	set_texto_barra_de_vida()
-	texto_nivel.text = str(nivel)
 	barra_vida.vida = vida
 	mini_barra.vida = vida
 
 
 func set_texto_barra_de_vida() -> void:
-	print("setando vida")
 	texto_vida.text = "%s/%s" % [vida, vida_maxima]
 
 
-func update_exp():
+func update_exp(_exp):
+	exp += _exp
 	barra_exp.value += exp
-	if barra_exp.value > barra_exp.max_value:
+	if barra_exp.value >= barra_exp.max_value:
+		print(barra_exp.value)
 		barra_exp.value = 0
-		barra_exp.max_value = barra_exp.max_value + (100 * nivel)
+		print(barra_exp.value)
+		barra_exp.max_value += 100
+		print(barra_exp.max_value)
 		nivel += 1 
+		texto_nivel.text = str(nivel)
+		exp = 0
 	
 
 func mover(delta):

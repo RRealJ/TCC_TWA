@@ -9,9 +9,10 @@ signal InimigoMorto
 @export var dano = 10
 @export var vida = 30
 @export var ouro:= 10 as int
-@export var exp: int
+@export var exp_multi: int
 @onready var anim_morte = preload("res://Efeitos/morte_vfx.tscn")
-@onready var drop_moedas = load("res://drop_moedas.tscn")
+@onready var drop_moedas = load("res://Efeitos/drop_moedas.tscn")
+@onready var drop_expe = load("res://Efeitos/drop_exp.tscn")
 @onready var target = $"../../Player" #Cuidado com outros mundos, mundo_1 OK
 @onready var mundo = $"../.."
 
@@ -50,7 +51,10 @@ func drop_coin():
 	
 	
 func drop_exp():
-	pass
+	var exp = drop_expe.instantiate()
+	exp.global_position = global_position
+	exp.valor = int(randi_range(5 * exp_multi, 20 * exp_multi))
+	mundo.add_child(exp)
 	
 
 

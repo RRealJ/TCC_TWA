@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnt8b52rwq0u7"]
 
-[ext_resource type="Script" path="res://drop_moedas.gd" id="1_ki8i7"]
+[ext_resource type="Script" path="res://Efeitos/drop_moedas.gd" id="1_ki8i7"]
 [ext_resource type="Texture2D" uid="uid://dgvkufebo18ra" path="res://Assets/drops/drop_moedas.png" id="2_orjdd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_of7cf"]
@@ -9,6 +9,7 @@ height = 34.0
 
 [sub_resource type="Animation" id="Animation_j845i"]
 resource_name = "drop_moeda"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
