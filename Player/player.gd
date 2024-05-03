@@ -85,6 +85,7 @@ func update_exp(_exp):
 		nivel += 1 
 		texto_nivel.text = str(nivel)
 		exp = 0
+		$level_up.play()
 	
 
 func mover(delta):

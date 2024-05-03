@@ -1,12 +1,10 @@
-res://Mundos/mundo_1.tscn
+res://Player/player.tscn
 res://Inimigos/inimigos_comum.gd
 res://Timers e spawns/spawn_inimigo.gd
-res://Efeitos/drop_moedas.tscn
-res://Efeitos/drop_exp.gd
-res://Efeitos/drop_exp.tscn
-res://Player/player.tscn
-res://Inimigos/inimigos_comum.tscn
-res://Inimigos/inimigos.gd
-res://Menus/main_menu.tscn
-res://Generico/player_ui.tscn
 res://Player/player.gd
+res://Menus/main_menu.tscn
+res://Inimigos/inimigos_comum.tscn
+res://Mundos/mundo_1.tscn
+res://Generico/player_ui.tscn
+res://Efeitos/drop_exp.tscn
+res://Efeitos/drop_moedas.tscn
