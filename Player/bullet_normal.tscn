@@ -1,30 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnlje1vfd60wm"]
+[gd_scene load_steps=5 format=3 uid="uid://cnlje1vfd60wm"]
 
 [ext_resource type="Script" path="res://Player/bullet_normal.gd" id="1_xdr17"]
 [ext_resource type="Texture2D" uid="uid://ccwts55a5xhaj" path="res://Assets/armas_bullets/Bullet_normal.png" id="2_ecek8"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hemwr"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_thue2"]
 radius = 2.0
 height = 6.0
 
-[node name="bullet_normal" type="Area2D" groups=["Bullets"]]
-collision_layer = 32
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cr2sh"]
+radius = 2.0
+height = 6.0
+
+[node name="bullet_normal" type="CharacterBody2D" groups=["Bullets"]]
+collision_layer = 0
 collision_mask = 6
 script = ExtResource("1_xdr17")
 bullet_velocidade = 200.0
 bullet_dano = 20
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-3.8147e-06, -3.8147e-06)
-scale = Vector2(0.114587, 0.109372)
+position = Vector2(3.8743e-07, -3.8147e-06)
+scale = Vector2(0.125, 0.109372)
 texture = ExtResource("2_ecek8")
 
-[node name="hitbox" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_hemwr")
+shape = SubResource("CapsuleShape2D_thue2")
 
 [node name="bullet_vida" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cr2sh")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

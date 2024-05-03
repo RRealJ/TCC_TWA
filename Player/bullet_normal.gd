@@ -10,7 +10,7 @@ func _on_bullet_vida_timeout():
 	queue_free()
 
 
-func _on_body_entered(body):
+func _on_area_2d_body_entered(body):
 	if body is Inimigos:
 		penetracao -= 1
 		if penetracao <= 0:

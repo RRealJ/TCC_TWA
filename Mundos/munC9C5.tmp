@@ -1160,7 +1160,9 @@ layer_2/tile_data = PackedInt32Array(-589852, 2359296, 24, 720868, 2359296, 24, 
 script = ExtResource("8_pcuka")
 bullet = ExtResource("9_3cj20")
 bullet_qtd = 2
-arc = 45.0
+
+[node name="Timer" type="Timer" parent="Player/teste_arma"]
+autostart = true
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
 spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_cimqq")])
@@ -1191,3 +1193,5 @@ position = Vector2(162, -36)
 
 [node name="drop_exp5" parent="." instance=ExtResource("11_oddgg")]
 position = Vector2(57, -70)
+
+[connection signal="timeout" from="Player/teste_arma/Timer" to="Player/teste_arma" method="_on_timer_timeout"]

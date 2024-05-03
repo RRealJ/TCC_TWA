@@ -26,8 +26,15 @@ func _ready():
 	add_resolucao_items()
 	opt_btn.item_selected.connect(on_resolution_selected)
 	btn_saltar.grab_focus()
+	#var video_settings = ConfigFileHandler.load_video_settings()
+	#$Video/HBoxContainer/checkboxes/cb_fullscreen.button_pressed = video_settings.fullscreen
 	
-
+	#var audio_settings = ConfigFileHandler.load_audio_settings()
+	#$Volume/HBoxContainer/sliders/hs_master.value = min(audio_settings.master_volume, 1.0) * 100
+	#$Volume/HBoxContainer/sliders/hs_sfx.value = min(audio_settings.sfx_volume, 1.0) * 100
+	#$Volume/HBoxContainer/sliders/hs_bgm.value = min(audio_settings.bgm_volume, 1.0) * 100
+	
+	
 func _on_btn_saltar_pressed():
 	await get_tree().create_timer(0.4).timeout
 	get_tree().change_scene_to_file("res://Mundos/mundo_1.tscn")
@@ -85,6 +92,7 @@ func _on_cb_fullscreen_toggled(toggled_on):
 
 
 func _on_cb_sem_bordas_toggled(toggled_on):
+	ConfigFileHandler.save_video_settings("fullscreen", toggled_on)
 	if toggled_on == true:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
@@ -122,3 +130,18 @@ func _on_status_pressed():
 	$Status/HBoxContainer/info/info_inimigos.text = str(Global.inimigos_derrotados)
 	$Status/HBoxContainer/info/info_conquistas.text = str(Global.conquista_completadas)
 	$Status/btn_voltar_status.grab_focus()
+
+
+func _on_hs_master_drag_ended(value_changed):
+	if value_changed:
+		ConfigFileHandler.save_audio_settings("master_volume", $Volume/HBoxContainer/sliders/hs_master.value/100)
+
+
+func _on_hs_sfx_drag_ended(value_changed):
+	if value_changed:
+		ConfigFileHandler.save_audio_settings("sfx_volume", $Volume/HBoxContainer/sliders/hs_sfx.value/100)
+
+
+func _on_hs_bgm_drag_ended(value_changed):
+	if value_changed:
+		ConfigFileHandler.save_audio_settings("bgm_volume", $Volume/HBoxContainer/sliders/hs_bgm.value/100)

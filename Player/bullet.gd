@@ -1,11 +1,9 @@
-extends Area2D
+extends CharacterBody2D
 
 class_name Bullet
 
+var zindex:= 1 as int
 var dir: float
-var spawn_pos: Vector2
-var spawn_rot: float
-var zdex: int
 
 @export var bullet_velocidade: float
 @export var bullet_penetracao:= PlayerVariaveis.penetracao as int
@@ -14,15 +12,11 @@ var zdex: int
 
 
 func _ready():
-	global_position = spawn_pos
-	global_rotation = spawn_rot
-	z_index = zdex
+	z_index = zindex
 	
 	
 func _physics_process(delta):
 	position += (Vector2.RIGHT*bullet_velocidade).rotated(dir) * delta
-
-	
 	
 	
 	

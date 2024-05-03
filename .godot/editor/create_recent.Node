@@ -1,7 +1,8 @@
-AudioStreamPlayer2D
-AnimationPlayer
 CollisionShape2D
 Area2D
+CharacterBody2D
+AudioStreamPlayer2D
+AnimationPlayer
 Sprite2D
 Label
 ProgressBar
@@ -11,4 +12,3 @@ HBoxContainer
 Button
 AnimatedSprite2D
 Node2D
-Node

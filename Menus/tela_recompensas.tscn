@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl6kf0xrh773k"]
+
+[ext_resource type="Script" path="res://Menus/tela_recompensas.gd" id="1_4vkx3"]
+
+[node name="tela_recompensas" type="CanvasLayer"]
+script = ExtResource("1_4vkx3")
