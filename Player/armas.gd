@@ -27,15 +27,15 @@ func atirar():
 			
 			if bullet_qtd == 1:
 				new_bullet.rotation = global_rotation
+				new_bullet.dir = global_rotation
 				
 			else:
 				var arc_rad = deg_to_rad(arc)
 				var increment = arc_rad / (bullet_qtd - 1)
-				new_bullet.global_rotation = (
-					(global_rotation - arc_rad / 2) + (increment * i) 	
-				)
-				
-			new_bullet.dir = global_rotation
+				var new_rotation = (global_rotation - arc_rad / 2) + (increment * i) 	
+				new_bullet.global_rotation = new_rotation
+				new_bullet.dir = new_rotation
+			
 			new_bullet.zindex = z_index
 			mundo.add_child(new_bullet)
 		await get_tree().create_timer(1 / fire_rate).timeout
