@@ -9,3 +9,7 @@ res://Player/bullet_normal.tscn
 res://Menus/main_menu.tscn
 res://Menus/gameover.tscn
 res://Generico/player_ui.tscn
+res://Player/player.gd
+res://Mundos/mundo.gd
+res://Generico/timer_estagios.tscn
+res://Generico/timer_estagios.gd

@@ -1,3 +1,5 @@
+Timer
+Label
 CollisionShape2D
 CollisionPolygon2D
 AnimatedSprite2D
@@ -7,7 +9,6 @@ CharacterBody2D
 AudioStreamPlayer2D
 AnimationPlayer
 Sprite2D
-Label
 ProgressBar
 VBoxContainer
 HBoxContainer

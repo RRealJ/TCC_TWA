@@ -39,6 +39,7 @@ var blend_pos_paths = [
 	"parameters/idle/idle_bs2d/blend_position",
 	"parameters/move/move_bs2D/blend_position"
 ]
+
 var animTree_state_keys = [
 	"idle",
 	"move"
