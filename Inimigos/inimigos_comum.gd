@@ -2,6 +2,7 @@ extends Inimigos
 
 @onready var barra_vida = $barra_vida
 
+
 func _ready():
 	barra_vida.init_vida(vida)
 

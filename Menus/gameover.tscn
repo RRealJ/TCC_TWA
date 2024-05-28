@@ -118,13 +118,15 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="gameover_titulo" type="Label" parent="."]
-layout_mode = 2
-offset_left = 360.0
-offset_top = 97.0
-offset_right = 921.0
-offset_bottom = 189.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 133.0
+offset_right = 281.0
+offset_bottom = 253.0
 grow_horizontal = 2
-grow_vertical = 2
 theme = ExtResource("1_nnl44")
 theme_override_colors/font_color = Color(0.926324, 0.379373, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.695053, 0.389133, 1, 1)
@@ -160,6 +162,11 @@ libraries = {
 "": SubResource("AnimationLibrary_jqe70")
 }
 autoplay = "fadeIn"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="focus_entered" from="VBoxContainer/btn_restart" to="." method="_on_btn_restart_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/btn_restart" to="." method="_on_btn_restart_pressed"]

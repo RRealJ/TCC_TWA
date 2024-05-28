@@ -1,4 +1,7 @@
 CollisionShape2D
+CollisionPolygon2D
+AnimatedSprite2D
+Control
 Area2D
 CharacterBody2D
 AudioStreamPlayer2D
@@ -6,9 +9,6 @@ AnimationPlayer
 Sprite2D
 Label
 ProgressBar
-Control
 VBoxContainer
 HBoxContainer
 Button
-AnimatedSprite2D
-Node2D

@@ -23,7 +23,13 @@ func _physics_process(delta):
 	else:
 		velocity = position.direction_to(target.position) * speed
 		move_and_slide()
+		$AnimatedSprite2D.play("andar")
 		
+		if (target.position.x - position.x) < 0:
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.flip_h = false
+	
 		
 func receber_dano(dano_recebido):
 	vida = vida - dano_recebido

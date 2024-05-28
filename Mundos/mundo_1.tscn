@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
 [ext_resource type="PackedScene" uid="uid://derytfri27qe1" path="res://Player/player.tscn" id="2_b3mdk"]
-[ext_resource type="PackedScene" uid="uid://dbji1dp00wfdj" path="res://Inimigos/inimigos_comum.tscn" id="3_5o844"]
+[ext_resource type="PackedScene" uid="uid://dbji1dp00wfdj" path="res://Inimigos/dino_comum.tscn" id="3_5o844"]
 [ext_resource type="PackedScene" uid="uid://bnh1awky35ggp" path="res://Timers e spawns/spawn_inimigo.tscn" id="4_eashf"]
 [ext_resource type="Script" path="res://Timers e spawns/spawn_info.gd" id="6_gaajl"]
 [ext_resource type="PackedScene" uid="uid://dcafurs16oq33" path="res://Menus/menu_pausa.tscn" id="7_ltw6q"]

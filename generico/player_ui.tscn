@@ -100,10 +100,10 @@ grow_vertical = 0
 [node name="texto_velocidade" type="Label" parent="inf_direita"]
 texture_filter = 1
 layout_mode = 0
-offset_left = -90.0
-offset_top = -116.0
-offset_right = -10.0
-offset_bottom = -50.0
+offset_left = -89.0
+offset_top = -64.0
+offset_right = -9.0
+offset_bottom = 2.0
 theme = ExtResource("5_4ym88")
 theme_override_colors/font_shadow_color = Color(0.658132, 0.771446, 1, 1)
 theme_override_font_sizes/font_size = 65

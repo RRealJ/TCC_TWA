@@ -134,14 +134,17 @@ func _on_status_pressed():
 
 func _on_hs_master_drag_ended(value_changed):
 	if value_changed:
-		ConfigFileHandler.save_audio_settings("master_volume", $Volume/HBoxContainer/sliders/hs_master.value/100)
+		pass
+		#ConfigFileHandler.save_audio_settings("master_volume", $Volume/HBoxContainer/sliders/hs_master.value/100)
 
 
 func _on_hs_sfx_drag_ended(value_changed):
 	if value_changed:
-		ConfigFileHandler.save_audio_settings("sfx_volume", $Volume/HBoxContainer/sliders/hs_sfx.value/100)
+		pass
+		#ConfigFileHandler.save_audio_settings("sfx_volume", $Volume/HBoxContainer/sliders/hs_sfx.value/100)
 
 
 func _on_hs_bgm_drag_ended(value_changed):
 	if value_changed:
-		ConfigFileHandler.save_audio_settings("bgm_volume", $Volume/HBoxContainer/sliders/hs_bgm.value/100)
+		pass
+		#ConfigFileHandler.save_audio_settings("bgm_volume", $Volume/HBoxContainer/sliders/hs_bgm.value/100)
