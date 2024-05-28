@@ -170,8 +170,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtgwj"]
-radius = 4.0
-height = 26.0
+radius = 3.0
+height = 20.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e10f4"]
 radius = 6.0
@@ -490,6 +490,7 @@ script = ExtResource("1_8xh84")
 [node name="player_ui" parent="." instance=ExtResource("2_tape2")]
 
 [node name="pick_up" type="Area2D" parent="."]
+visible = false
 collision_layer = 256
 collision_mask = 128
 

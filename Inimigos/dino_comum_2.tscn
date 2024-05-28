@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://smj15b1gwncy"]
+
+[ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_oq4x4"]
+[ext_resource type="Texture2D" uid="uid://bbubn1j6mecqx" path="res://Assets/inimigos/M1_comum2.png" id="2_lh2wm"]
+[ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_lvtv3"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="4_bowak"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1alyw"]
+atlas = ExtResource("2_lh2wm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh60q"]
+atlas = ExtResource("2_lh2wm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iw5i"]
+atlas = ExtResource("2_lh2wm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg6pl"]
+atlas = ExtResource("2_lh2wm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0j5j4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1alyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh60q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iw5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg6pl")
+}],
+"loop": true,
+"name": &"andar",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y5xca"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvra6"]
+radius = 14.0
+height = 34.0
+
+[node name="dino_comum_2" type="CharacterBody2D" groups=["inimigos"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_oq4x4")
+speed_limit = 105
+speed = 90
+dano = 20
+vida = 15
+ouro = 20
+exp_multi = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0j5j4")
+animation = &"andar"
+frame_progress = 0.930746
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_y5xca")
+
+[node name="softCollision" parent="." instance=ExtResource("3_lvtv3")]
+
+[node name="softcollision_col" parent="softCollision" index="0"]
+position = Vector2(1, 4)
+rotation = 1.5708
+
+[node name="barra_vida" parent="." instance=ExtResource("4_bowak")]
+offset_left = -13.0
+offset_top = -21.0
+offset_right = 11.0
+offset_bottom = -18.0
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(1, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cvra6")
+debug_color = Color(0.849834, 0, 0.39639, 0.42)
+
+[editable path="softCollision"]

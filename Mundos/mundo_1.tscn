@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://7s87ybeqiy5i"]
+[gd_scene load_steps=17 format=3 uid="uid://7s87ybeqiy5i"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dcafurs16oq33" path="res://Menus/menu_pausa.tscn" id="7_ltw6q"]
 [ext_resource type="Script" path="res://Player/armas.gd" id="8_pcuka"]
 [ext_resource type="PackedScene" uid="uid://cnlje1vfd60wm" path="res://Player/bullet_normal.tscn" id="9_3cj20"]
+[ext_resource type="PackedScene" uid="uid://smj15b1gwncy" path="res://Inimigos/dino_comum_2.tscn" id="9_wggie"]
 [ext_resource type="PackedScene" uid="uid://cnt8b52rwq0u7" path="res://Efeitos/drop_moedas.tscn" id="10_cqptc"]
 [ext_resource type="PackedScene" uid="uid://d4id0b8wvrc6w" path="res://Efeitos/drop_exp.tscn" id="11_oddgg"]
 
@@ -1135,7 +1136,15 @@ script = ExtResource("6_gaajl")
 time_start = 0
 time_end = 10
 inimigo = ExtResource("3_5o844")
-inimigo_num = 10
+inimigo_num = 4
+inimigo_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_7sxt6"]
+script = ExtResource("6_gaajl")
+time_start = 11
+time_end = 13
+inimigo = ExtResource("9_wggie")
+inimigo_num = 5
 inimigo_spawn_delay = 1
 
 [node name="mundo1" type="Node2D"]
@@ -1161,7 +1170,7 @@ script = ExtResource("8_pcuka")
 bullet = ExtResource("9_3cj20")
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
-spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_cimqq")])
+spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_cimqq"), SubResource("Resource_7sxt6")])
 
 [node name="camera" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)

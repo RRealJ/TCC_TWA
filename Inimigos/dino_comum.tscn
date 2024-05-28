@@ -1,24 +1,24 @@
 [gd_scene load_steps=12 format=3 uid="uid://dbji1dp00wfdj"]
 
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_7uwrf"]
-[ext_resource type="Texture2D" uid="uid://rgtb7n58ui2d" path="res://Assets/inimigos/New Piskel (3).png" id="2_rfc25"]
+[ext_resource type="Texture2D" uid="uid://rgtb7n58ui2d" path="res://Assets/inimigos/M1_comum.png" id="2_sdpa3"]
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_xavkd"]
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="5_680ql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qfvy"]
-atlas = ExtResource("2_rfc25")
+atlas = ExtResource("2_sdpa3")
 region = Rect2(0, 8, 32, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oyspp"]
-atlas = ExtResource("2_rfc25")
+atlas = ExtResource("2_sdpa3")
 region = Rect2(32, 8, 32, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0dqf"]
-atlas = ExtResource("2_rfc25")
+atlas = ExtResource("2_sdpa3")
 region = Rect2(64, 8, 32, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ilhtb"]
-atlas = ExtResource("2_rfc25")
+atlas = ExtResource("2_sdpa3")
 region = Rect2(96, 8, 32, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fsir5"]

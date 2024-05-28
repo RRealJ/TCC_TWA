@@ -1,15 +1,10 @@
-res://Inimigos/inimigos_comum.tscn
+res://Inimigos/dino_comum.tscn
 res://Inimigos/inimigos_comum.gd
 res://Timers e spawns/spawn_inimigo.gd
+res://Inimigos/dino_comum_2.tscn
 res://Mundos/mundo_1.tscn
-res://Inimigos/dino_comum.tscn
-res://Inimigos/inimigos.gd
 res://Player/player.tscn
 res://Player/bullet_normal.tscn
 res://Menus/main_menu.tscn
 res://Menus/gameover.tscn
 res://Generico/player_ui.tscn
-res://Player/player.gd
-res://Mundos/mundo.gd
-res://Generico/timer_estagios.tscn
-res://Generico/timer_estagios.gd
