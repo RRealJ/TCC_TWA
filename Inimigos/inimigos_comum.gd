@@ -13,8 +13,8 @@ func update_vida():
 		morto()
 
 
-func _on_hitbox_body_entered(body: Bullet):
-	if body is Bullet:
+func _on_hitbox_body_entered(body):
+	if body is Bullet or body is AreaArma:
 		receber_dano(body.dano)
 		update_vida()
 
