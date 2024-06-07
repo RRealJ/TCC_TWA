@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_oq4x4"]
 [ext_resource type="Texture2D" uid="uid://bbubn1j6mecqx" path="res://Assets/inimigos/M1_comum2.png" id="2_lh2wm"]
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_lvtv3"]
-[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="4_bowak"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="4_bowak"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1alyw"]
 atlas = ExtResource("2_lh2wm")
@@ -42,6 +42,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5xca"]
+radius = 13.0384
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvra6"]
 radius = 14.0
@@ -64,8 +65,7 @@ animation = &"andar"
 frame_progress = 0.930746
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-1, 0)
+position = Vector2(1, 5)
 shape = SubResource("CircleShape2D_y5xca")
 
 [node name="softCollision" parent="." instance=ExtResource("3_lvtv3")]
@@ -81,6 +81,8 @@ offset_right = 11.0
 offset_bottom = -18.0
 
 [node name="hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(1, 3)

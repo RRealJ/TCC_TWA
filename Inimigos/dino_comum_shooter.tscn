@@ -1,0 +1,98 @@
+[gd_scene load_steps=14 format=3 uid="uid://etergefwbryv"]
+
+[ext_resource type="Script" path="res://Inimigos/inimigos_shooter.gd" id="1_0k4ro"]
+[ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="1_15rhq"]
+[ext_resource type="Texture2D" uid="uid://cx6u16tsmr2q1" path="res://Assets/inimigos/M1_shooter.png" id="1_30kv0"]
+[ext_resource type="PackedScene" uid="uid://cnlje1vfd60wm" path="res://Player/bullet_normal.tscn" id="2_7n6rs"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="2_j7j6u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb2ie"]
+atlas = ExtResource("1_30kv0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gaor"]
+atlas = ExtResource("1_30kv0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui25l"]
+atlas = ExtResource("1_30kv0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfqr1"]
+atlas = ExtResource("1_30kv0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u26dd"]
+atlas = ExtResource("1_30kv0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2e8xk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb2ie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gaor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui25l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfqr1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u26dd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7nou"]
+radius = 9.0
+height = 26.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_apyr5"]
+radius = 11.0
+height = 36.0
+
+[node name="dino_comum_shooter" type="CharacterBody2D" groups=["inimigos"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_0k4ro")
+bullet = ExtResource("2_7n6rs")
+fire_rate = 1.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2e8xk")
+frame_progress = 0.423018
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_v7nou")
+
+[node name="softCollision" parent="." instance=ExtResource("1_15rhq")]
+
+[node name="softcollision_col" parent="softCollision" index="0"]
+position = Vector2(1, 2)
+rotation = 1.5708
+
+[node name="barra_vida" parent="." instance=ExtResource("2_j7j6u")]
+offset_left = -11.0
+offset_top = -18.0
+offset_right = 13.0
+offset_bottom = -15.0
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(1, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_apyr5")
+debug_color = Color(0.849834, 0, 0.39639, 0.42)
+
+[editable path="softCollision"]

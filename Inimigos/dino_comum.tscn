@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_7uwrf"]
 [ext_resource type="Texture2D" uid="uid://rgtb7n58ui2d" path="res://Assets/inimigos/M1_comum.png" id="2_sdpa3"]
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_xavkd"]
-[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="5_680ql"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="5_680ql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qfvy"]
 atlas = ExtResource("2_sdpa3")
@@ -42,6 +42,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkm4o"]
+radius = 14.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yk1gn"]
 radius = 14.0
@@ -60,11 +61,13 @@ sprite_frames = SubResource("SpriteFrames_fsir5")
 animation = &"andar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-1, 0)
+position = Vector2(1, -1)
 shape = SubResource("CircleShape2D_xkm4o")
 
 [node name="softCollision" parent="." instance=ExtResource("3_xavkd")]
+
+[node name="softcollision_col" parent="softCollision" index="0"]
+rotation = 1.5708
 
 [node name="barra_vida" parent="." instance=ExtResource("5_680ql")]
 offset_left = -13.0
@@ -73,6 +76,8 @@ offset_right = 11.0
 offset_bottom = -18.0
 
 [node name="hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(1, 0)

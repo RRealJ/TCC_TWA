@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://7s87ybeqiy5i"]
+[gd_scene load_steps=19 format=3 uid="uid://7s87ybeqiy5i"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cnlje1vfd60wm" path="res://Player/bullet_normal.tscn" id="9_3cj20"]
 [ext_resource type="PackedScene" uid="uid://smj15b1gwncy" path="res://Inimigos/dino_comum_2.tscn" id="9_wggie"]
 [ext_resource type="PackedScene" uid="uid://cnt8b52rwq0u7" path="res://Efeitos/drop_moedas.tscn" id="10_cqptc"]
-[ext_resource type="PackedScene" uid="uid://d4id0b8wvrc6w" path="res://Efeitos/drop_exp.tscn" id="11_oddgg"]
+[ext_resource type="PackedScene" uid="uid://etergefwbryv" path="res://Inimigos/dino_comum_shooter.tscn" id="11_5vrth"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wl1v"]
 resource_name = "Base"
@@ -1135,17 +1135,25 @@ sources/0 = SubResource("TileSetAtlasSource_3wl1v")
 [sub_resource type="Resource" id="Resource_cimqq"]
 script = ExtResource("6_gaajl")
 time_start = 0
-time_end = 10
+time_end = 1
 inimigo = ExtResource("3_5o844")
-inimigo_num = 4
+inimigo_num = 1
 inimigo_spawn_delay = 1
 
 [sub_resource type="Resource" id="Resource_7sxt6"]
 script = ExtResource("6_gaajl")
-time_start = 11
-time_end = 13
+time_start = 2
+time_end = 3
 inimigo = ExtResource("9_wggie")
-inimigo_num = 5
+inimigo_num = 2
+inimigo_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_1uhp0"]
+script = ExtResource("6_gaajl")
+time_start = 2
+time_end = 4
+inimigo = ExtResource("11_5vrth")
+inimigo_num = 10
 inimigo_spawn_delay = 1
 
 [node name="mundo1" type="Node2D"]
@@ -1174,7 +1182,7 @@ bullet = ExtResource("9_3cj20")
 fire_rate = 1.0
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
-spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_cimqq"), SubResource("Resource_7sxt6")])
+spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_cimqq"), SubResource("Resource_7sxt6"), SubResource("Resource_1uhp0")])
 
 [node name="camera" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
@@ -1184,18 +1192,3 @@ visible = false
 
 [node name="drop_moedas" parent="." instance=ExtResource("10_cqptc")]
 position = Vector2(-144, -30)
-
-[node name="drop_exp" parent="." instance=ExtResource("11_oddgg")]
-position = Vector2(126, -123)
-
-[node name="drop_exp2" parent="." instance=ExtResource("11_oddgg")]
-position = Vector2(6, -126)
-
-[node name="drop_exp3" parent="." instance=ExtResource("11_oddgg")]
-position = Vector2(188, -85)
-
-[node name="drop_exp4" parent="." instance=ExtResource("11_oddgg")]
-position = Vector2(162, -36)
-
-[node name="drop_exp5" parent="." instance=ExtResource("11_oddgg")]
-position = Vector2(57, -70)

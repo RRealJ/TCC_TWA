@@ -9,7 +9,8 @@ signal InimigoMorto
 @export var dano = 10
 @export var vida = 30
 @export var ouro:= 10 as int
-@export var exp_multi: int
+@export var exp_multi:= 1 as int
+@onready var target_pos : Vector2
 @onready var anim_morte = preload("res://Efeitos/morte_vfx.tscn")
 @onready var drop_moedas = load("res://Efeitos/drop_moedas.tscn")
 @onready var drop_expe = load("res://Efeitos/drop_exp.tscn")
@@ -29,7 +30,9 @@ func _physics_process(delta):
 			$AnimatedSprite2D.flip_h = true
 		else:
 			$AnimatedSprite2D.flip_h = false
-	
+			
+		target_pos = target.global_position
+		
 		
 func receber_dano(dano_recebido):
 	vida = vida - dano_recebido
