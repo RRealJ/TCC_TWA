@@ -125,8 +125,7 @@ func _on_hurtbox_body_entered(body):
 	if vida <= 0:
 		morto()
 		
-		
-# Colocar Area2D para pegar drops, se drop for Moedas, mundo.moedas_coletadas(moeda) #
+	
 
 func follow_camera(camera):
 	var camera_path = camera.get_path()

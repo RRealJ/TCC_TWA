@@ -13,6 +13,6 @@ func update_vida():
 
 
 func _on_hitbox_body_entered(body):
-	if body is Bullet or body is AreaArma:
+	if body.is_in_group("Bullets") or body is AreaArma:
 		receber_dano(body.dano)
 		update_vida()

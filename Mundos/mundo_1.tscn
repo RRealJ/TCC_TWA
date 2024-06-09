@@ -1132,29 +1132,29 @@ texture = ExtResource("1_visl5")
 [sub_resource type="TileSet" id="TileSet_1kh7e"]
 sources/0 = SubResource("TileSetAtlasSource_3wl1v")
 
-[sub_resource type="Resource" id="Resource_cimqq"]
-script = ExtResource("6_gaajl")
-time_start = 0
-time_end = 1
-inimigo = ExtResource("3_5o844")
-inimigo_num = 1
-inimigo_spawn_delay = 1
-
-[sub_resource type="Resource" id="Resource_7sxt6"]
+[sub_resource type="Resource" id="Resource_x5qbg"]
 script = ExtResource("6_gaajl")
 time_start = 2
-time_end = 3
-inimigo = ExtResource("9_wggie")
-inimigo_num = 2
-inimigo_spawn_delay = 1
+time_end = 5
+inimigo = ExtResource("3_5o844")
+inimigo_num = 5
+inimigo_spawn_delay = 0
 
-[sub_resource type="Resource" id="Resource_8q3m4"]
+[sub_resource type="Resource" id="Resource_qymne"]
 script = ExtResource("6_gaajl")
 time_start = 3
-time_end = 5
+time_end = 6
+inimigo = ExtResource("9_wggie")
+inimigo_num = 5
+inimigo_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_16apn"]
+script = ExtResource("6_gaajl")
+time_start = 6
+time_end = 8
 inimigo = ExtResource("11_5vrth")
-inimigo_num = 10
-inimigo_spawn_delay = 1
+inimigo_num = 4
+inimigo_spawn_delay = 0
 
 [node name="mundo1" type="Node2D"]
 position = Vector2(2, 0)
@@ -1182,7 +1182,7 @@ bullet = ExtResource("9_3cj20")
 fire_rate = 1.0
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
-spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_cimqq"), SubResource("Resource_7sxt6"), SubResource("Resource_8q3m4")])
+spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_x5qbg"), SubResource("Resource_qymne"), SubResource("Resource_16apn")])
 
 [node name="camera" type="Camera2D" parent="."]
 

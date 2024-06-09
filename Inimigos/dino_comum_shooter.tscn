@@ -62,6 +62,10 @@ height = 36.0
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_wj33l")
+speed_limit = 60
+speed = 40
+vida = 100
+ouro = 50
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2e8xk")
