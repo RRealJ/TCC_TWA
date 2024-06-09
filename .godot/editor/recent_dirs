@@ -1,6 +1,7 @@
-res://Assets/armas_bullets-areas
 res://Player
 res://Inimigos
+res://generico
+res://Assets/armas_bullets-areas
 res://Assets/inimigos
 res://
 res://Efeitos
@@ -9,7 +10,6 @@ res://Menus
 res://Audio
 res://Assets/player
 D:/TCC/Player
-res://generico
 res://Timers e spawns
 res://OverLap
 res://Assets/font

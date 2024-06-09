@@ -32,7 +32,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_thue2")
 
 [node name="bullet_vida" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 3.0
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -40,3 +40,4 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cr2sh")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="bullet_vida" to="." method="_on_bullet_vida_timeout"]
