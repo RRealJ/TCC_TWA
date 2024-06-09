@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://etergefwbryv"]
+[gd_scene load_steps=14 format=3 uid="uid://etergefwbryv"]
 
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="1_15rhq"]
 [ext_resource type="Texture2D" uid="uid://cx6u16tsmr2q1" path="res://Assets/inimigos/M1_shooter.png" id="1_30kv0"]
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_wj33l"]
-[ext_resource type="PackedScene" uid="uid://cnlje1vfd60wm" path="res://Player/bullet_normal.tscn" id="2_7n6rs"]
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="2_j7j6u"]
 [ext_resource type="PackedScene" uid="uid://cm7kq4adfq6k4" path="res://generico/shooter.tscn" id="5_rscpy"]
 
@@ -98,8 +97,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_apyr5")
 debug_color = Color(0.849834, 0, 0.39639, 0.42)
 
-[node name="shooter" parent="." instance=ExtResource("5_rscpy")]
-bullet = ExtResource("2_7n6rs")
+[node name="shooter" parent="." groups=["inimigos"] instance=ExtResource("5_rscpy")]
 
 [editable path="softCollision"]
 [editable path="shooter"]
