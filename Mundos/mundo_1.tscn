@@ -1179,12 +1179,14 @@ script = ExtResource("8_pcuka")
 bullet = ExtResource("9_3cj20")
 
 [node name="blessed_area" parent="Player" instance=ExtResource("6_m0863")]
+z_index = -1
 fire_rate = 1.0
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
 spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_x5qbg"), SubResource("Resource_qymne"), SubResource("Resource_16apn")])
 
 [node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
 
 [node name="menu_pausa" parent="camera" instance=ExtResource("7_ltw6q")]
 visible = false

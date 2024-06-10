@@ -1,4 +1,6 @@
-res://Assets/armas_bullets-areas
+res://Inventario
+res://Inventario/Itens
+res://Assets/itens
 res://Inimigos
 res://Player
 res://generico

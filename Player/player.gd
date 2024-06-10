@@ -8,6 +8,7 @@ const iFrame_duration = 1.5
 @export var max_speed = 75 * PlayerVariaveis.velocidade
 @export var ACELERACAO = 500 * PlayerVariaveis.velocidade
 @export var FRICCAO = 1000 * PlayerVariaveis.velocidade
+@export var inv: Inv
 @onready var axis = Vector2.ZERO
 @onready var texto_vida = $player_ui/sup_esquerda/texto_barra_vida
 @onready var texto_velocidade = $player_ui/inf_direita/texto_velocidade

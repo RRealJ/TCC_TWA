@@ -30,13 +30,8 @@ func _unhandled_input(event):
 func _on_btn_continuar_pressed():
 	get_tree().paused = false
 	visible = false
-
-
-func _on_btn_inventário_pressed():
-	pass # Replace with function body.
-
 	
-
+	
 func _on_btn_main_menu_pressed():
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")

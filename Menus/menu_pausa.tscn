@@ -44,12 +44,6 @@ theme = ExtResource("1_iwmj2")
 shortcut = SubResource("Shortcut_cyvji")
 text = "Continuar"
 
-[node name="btn_inventário" type="Button" parent="menu_holder"]
-texture_filter = 1
-layout_mode = 2
-theme = ExtResource("1_iwmj2")
-text = "Inventario"
-
 [node name="btn_main_menu" type="Button" parent="menu_holder"]
 texture_filter = 1
 layout_mode = 2
@@ -238,5 +232,4 @@ script = ExtResource("3_2y8w3")
 bus_name = "bgm"
 
 [connection signal="pressed" from="menu_holder/btn_continuar" to="." method="_on_btn_continuar_pressed"]
-[connection signal="pressed" from="menu_holder/btn_inventário" to="." method="_on_btn_inventário_pressed"]
 [connection signal="pressed" from="menu_holder/btn_main_menu" to="." method="_on_btn_main_menu_pressed"]

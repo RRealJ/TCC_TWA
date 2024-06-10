@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=3 format=3 uid="uid://d0cbjnswpqls"]
+
+[ext_resource type="Resource" uid="uid://cntklbi62h6hl" path="res://Inventario/Itens/Area_Instavel.tres" id="1_kx5yw"]
+[ext_resource type="Script" path="res://Inventario/inventario.gd" id="1_ua7ij"]
+
+[resource]
+script = ExtResource("1_ua7ij")
+itens = Array[Resource("res://Inventario/itens_inventario.gd")]([null, null, null, ExtResource("1_kx5yw"), null, null, null, null, null, null, null, null])

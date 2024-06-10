@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccwts55a5xhaj"
-path="res://.godot/imported/Bullet_normal.png-be999f2c3ea4a13674ffdb2777694e0c.ctex"
+uid="uid://ddmfhbr2v2yy4"
+path="res://.godot/imported/inventory-background.png-56ea8f44a4a4934273dec7437e8b9f50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/armas_bullets-areas/Bullet_normal.png"
-dest_files=["res://.godot/imported/Bullet_normal.png-be999f2c3ea4a13674ffdb2777694e0c.ctex"]
+source_file="res://Assets/itens/inventory-background.png"
+dest_files=["res://.godot/imported/inventory-background.png-56ea8f44a4a4934273dec7437e8b9f50.ctex"]
 
 [params]
 

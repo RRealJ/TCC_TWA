@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ca2ht3sny8tvi"]
 
 [ext_resource type="Script" path="res://AreaArma.gd" id="1_iolbi"]
-[ext_resource type="Texture2D" uid="uid://cfuy1x7wd1ryt" path="res://Assets/armas_bullets-areas/Blessed_Area.png" id="2_hhjs0"]
+[ext_resource type="Texture2D" uid="uid://cfuy1x7wd1ryt" path="res://Assets/itens/armas_bullets-areas/Area_Instavel.png" id="2_hhjs0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbkwr"]
 atlas = ExtResource("2_hhjs0")

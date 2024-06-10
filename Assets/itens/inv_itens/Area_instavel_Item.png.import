@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfuy1x7wd1ryt"
-path="res://.godot/imported/Blessed_Area.png-499d932d6e8fe991a857294218945dd5.ctex"
+uid="uid://c1xya40okrqky"
+path="res://.godot/imported/Area_instavel_Item.png-78ac04810241130c165f419827f1498a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/armas_bullets-areas/Blessed_Area.png"
-dest_files=["res://.godot/imported/Blessed_Area.png-499d932d6e8fe991a857294218945dd5.ctex"]
+source_file="res://Assets/itens/inv_itens/Area_instavel_Item.png"
+dest_files=["res://.godot/imported/Area_instavel_Item.png-78ac04810241130c165f419827f1498a.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnlje1vfd60wm"]
 
 [ext_resource type="Script" path="res://Player/bullet_normal.gd" id="1_xdr17"]
-[ext_resource type="Texture2D" uid="uid://ccwts55a5xhaj" path="res://Assets/armas_bullets-areas/Bullet_normal.png" id="2_2v76a"]
+[ext_resource type="Texture2D" uid="uid://ccwts55a5xhaj" path="res://Assets/itens/armas_bullets-areas/Bullet_normal.png" id="2_bmar5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_thue2"]
 radius = 2.0
@@ -21,7 +21,7 @@ bullet_dano = 20
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.8743e-07, -3.8147e-06)
 scale = Vector2(0.125, 0.109372)
-texture = ExtResource("2_2v76a")
+texture = ExtResource("2_bmar5")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
