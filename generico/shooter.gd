@@ -27,7 +27,7 @@ func atirar():
 			
 			new_bullet.zindex = z_index
 			mundo.add_child(new_bullet)
-		await get_tree().create_timer(3 / fire_rate).timeout
+		await get_tree().create_timer(fire_rate).timeout
 		can_shoot = true
 		atirar()
 
