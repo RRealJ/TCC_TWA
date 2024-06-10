@@ -2,6 +2,7 @@ extends Node2D
 
 class_name Arma
 
+@export var item: InvItem
 @export var bullet: PackedScene
 @export var bullet_qtd: int = 1
 @export_range(0, 360) var arc: float = 0

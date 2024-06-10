@@ -150,4 +150,3 @@ func animacao_morte():
 	get_tree().get_root().remove_child(morreu)
 	
 	
-	

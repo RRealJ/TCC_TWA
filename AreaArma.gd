@@ -3,6 +3,7 @@ extends Area2D
 
 class_name AreaArma
 
+@export var item: InvItem
 @export var dano:int = 15
 @export_range(0, 20) var fire_rate: float = 1.0
 @onready var mundo = $"../../"

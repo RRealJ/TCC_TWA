@@ -6,16 +6,14 @@ extends Control
 var is_open = false
 
 func _ready():
-	print(inv)
-	print(slots)
+	inv.update.connect(update_slots)
 	update_slots()
 	close()
 	
 	
 func update_slots():
-	for i in range(min(inv.itens.size(), slots.size())):
-		print(slots[i])
-		slots[i].update(inv.itens[i])
+	for i in range(min(inv.slots.size(), slots.size())):
+		slots[i].update(inv.slots[i])
 	
 	
 func _process(delta):
