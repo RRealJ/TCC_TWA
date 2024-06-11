@@ -24,6 +24,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/Panel"]
 custom_minimum_size = Vector2(18, 32)
+layout_mode = 0
 offset_left = 8.0
 offset_top = 3.0
 offset_right = 26.0

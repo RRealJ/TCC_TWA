@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cusfjydxl8wgd"]
+[gd_scene load_steps=10 format=3 uid="uid://cusfjydxl8wgd"]
 
 [ext_resource type="Script" path="res://Recompensas/recompensas.gd" id="1_42iys"]
 [ext_resource type="Texture2D" uid="uid://cskcpj6c7lwyr" path="res://Assets/recompensas/animacao_recompensa.png" id="1_okefi"]
+[ext_resource type="PackedScene" uid="uid://1vq6ompx4bnn" path="res://Recompensas/recompensa_ui_slot.tscn" id="3_3tict"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a801x"]
 atlas = ExtResource("1_okefi")
@@ -79,11 +80,27 @@ frame = 8
 frame_progress = 1.0
 centered = false
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 354.0
-offset_top = 325.0
-offset_right = 923.0
-offset_bottom = 470.0
+offset_left = 318.0
+offset_top = 310.0
+offset_right = 444.0
+offset_bottom = 348.0
+scale = Vector2(5, 5)
+theme_override_constants/separation = 15
+
+[node name="recompensa_ui_slot" parent="HBoxContainer" instance=ExtResource("3_3tict")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="recompensa_ui_slot2" parent="HBoxContainer" instance=ExtResource("3_3tict")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="recompensa_ui_slot3" parent="HBoxContainer" instance=ExtResource("3_3tict")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
