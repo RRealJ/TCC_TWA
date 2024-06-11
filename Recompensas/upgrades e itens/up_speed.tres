@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://ea735xw04m6j"]
+
+[ext_resource type="Script" path="res://Inventario/itens_inventario.gd" id="1_llwgg"]
+[ext_resource type="Texture2D" uid="uid://dm2shhiwn14dg" path="res://Assets/itens/inv_itens/up_speed.png" id="2_pu4cf"]
+
+[resource]
+script = ExtResource("1_llwgg")
+level = 1
+nome = "Upgrade Velocidade"
+descricao = "Aumenta sua velocidade maxima."
+textura = ExtResource("2_pu4cf")

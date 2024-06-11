@@ -33,7 +33,7 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 	var r = []
 	var opt = []
 	for i in range(0, 10):
-		var rand = randi_range(1,3) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
+		var rand = randi_range(1,4) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
 		if !opt.has(rand):
 			opt.append(rand)
 		
@@ -44,23 +44,25 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 	if 	1 in opt: 
 		var up_vida = load("res://Recompensas/upgrades e itens/up_vida.tres")
 		r.append(up_vida)
-		print('1')
+		print('up_1')
 		
 	if 2 in opt:
 		var area_instavel = load("res://Player/Armas e Bullets/area_instavel.tscn")
 		r.append(area_instavel)
-		print('2')
+		print('up_2')
 		
 	if 3 in opt:
 		var bullet_normal = load("res://Player/Armas e Bullets/bullet_normal.tscn")
 		r.append(bullet_normal)
-		print('3')
+		print('up_3')
 		
 	if 4 in opt:
-		print('4')
+		var up_speed = load("res://Recompensas/upgrades e itens/up_speed.tres")
+		r.append(up_speed)
+		print('up_4')
 		
 	if 5 in opt:
-		print('5')
+		print('up_5')
 		
 	return r
 

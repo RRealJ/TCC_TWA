@@ -1,16 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://7s87ybeqiy5i"]
+[gd_scene load_steps=16 format=3 uid="uid://7s87ybeqiy5i"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
 [ext_resource type="PackedScene" uid="uid://derytfri27qe1" path="res://Player/player.tscn" id="2_b3mdk"]
-[ext_resource type="PackedScene" uid="uid://dbji1dp00wfdj" path="res://Inimigos/dino_comum.tscn" id="3_5o844"]
 [ext_resource type="PackedScene" uid="uid://bnh1awky35ggp" path="res://Timers e spawns/spawn_inimigo.tscn" id="4_eashf"]
 [ext_resource type="Script" path="res://Timers e spawns/spawn_info.gd" id="6_gaajl"]
 [ext_resource type="PackedScene" uid="uid://ca2ht3sny8tvi" path="res://Player/Armas e Bullets/area_instavel.tscn" id="6_m0863"]
 [ext_resource type="PackedScene" uid="uid://dcafurs16oq33" path="res://Menus/menu_pausa.tscn" id="7_ltw6q"]
 [ext_resource type="Script" path="res://Player/Armas e Bullets/armas.gd" id="8_pcuka"]
 [ext_resource type="PackedScene" uid="uid://cnlje1vfd60wm" path="res://Player/Armas e Bullets/bullet_normal.tscn" id="9_3cj20"]
-[ext_resource type="PackedScene" uid="uid://smj15b1gwncy" path="res://Inimigos/dino_comum_2.tscn" id="9_wggie"]
 [ext_resource type="PackedScene" uid="uid://cnt8b52rwq0u7" path="res://Efeitos/drop_moedas.tscn" id="10_cqptc"]
 [ext_resource type="PackedScene" uid="uid://etergefwbryv" path="res://Inimigos/dino_comum_shooter.tscn" id="11_5vrth"]
 [ext_resource type="PackedScene" uid="uid://d3odji1imsb8s" path="res://Recompensas/recompensas.tscn" id="13_itkum"]
@@ -1133,22 +1131,6 @@ texture = ExtResource("1_visl5")
 [sub_resource type="TileSet" id="TileSet_1kh7e"]
 sources/0 = SubResource("TileSetAtlasSource_3wl1v")
 
-[sub_resource type="Resource" id="Resource_x5qbg"]
-script = ExtResource("6_gaajl")
-time_start = 2
-time_end = 5
-inimigo = ExtResource("3_5o844")
-inimigo_num = 5
-inimigo_spawn_delay = 0
-
-[sub_resource type="Resource" id="Resource_qymne"]
-script = ExtResource("6_gaajl")
-time_start = 3
-time_end = 6
-inimigo = ExtResource("9_wggie")
-inimigo_num = 5
-inimigo_spawn_delay = 0
-
 [sub_resource type="Resource" id="Resource_16apn"]
 script = ExtResource("6_gaajl")
 time_start = 6
@@ -1184,7 +1166,7 @@ z_index = -1
 fire_rate = 1.0
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
-spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_x5qbg"), SubResource("Resource_qymne"), SubResource("Resource_16apn")])
+spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_16apn")])
 
 [node name="camera" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)

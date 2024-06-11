@@ -15,11 +15,6 @@ var can_shoot = true
 func _ready():
 	inv.update.connect(update_level)
 	atirar()
-
-
-func _physics_process(delta):
-	if has_overlapping_bodies(): #existem bodies da mask dentro? true/false
-		colidindo()
 	
 	
 func atirar():
@@ -38,7 +33,6 @@ func _on_body_entered(body):
 
 
 func colidindo() -> void:
-	await get_tree().create_timer(1 / fire_rate).timeout 
 	#await serve pra n ficar repetindo o dano infitinamente no msm inimigo
 	var lista_inimigos = get_overlapping_bodies()
 	for i in lista_inimigos:
@@ -48,3 +42,7 @@ func colidindo() -> void:
 func update_level():
 	level = item.level
 	
+
+func _on_verificacao_timeout():
+	if has_overlapping_bodies(): #existem bodies da mask dentro? true/false
+		colidindo()

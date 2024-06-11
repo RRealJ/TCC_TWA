@@ -63,7 +63,7 @@ collision_mask = 0
 script = ExtResource("1_wj33l")
 speed_limit = 60
 speed = 40
-vida = 100
+vida = 150
 ouro = 50
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

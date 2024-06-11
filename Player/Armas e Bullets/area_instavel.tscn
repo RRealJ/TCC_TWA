@@ -68,4 +68,9 @@ scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_sa66x")
 debug_color = Color(0.713726, 0.360784, 0.917647, 0.0392157)
 
+[node name="verificacao" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="verificacao" to="." method="_on_verificacao_timeout"]
