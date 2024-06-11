@@ -1,3 +1,4 @@
+CanvasLayer
 HBoxContainer
 GridContainer
 NinePatchRect
@@ -11,5 +12,3 @@ Control
 AnimatedSprite2D
 AnimationTree
 AnimationPlayer
-Timer
-CollisionShape2D

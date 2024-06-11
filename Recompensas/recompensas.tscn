@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3odji1imsb8s"]
+
+[ext_resource type="PackedScene" uid="uid://cusfjydxl8wgd" path="res://Recompensas/Recompensas_ui.tscn" id="1_4m1ya"]
+
+[node name="Recompensas" type="CanvasLayer"]
+
+[node name="recompensas_ui" parent="." instance=ExtResource("1_4m1ya")]

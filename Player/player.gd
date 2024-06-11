@@ -10,6 +10,7 @@ const iFrame_duration = 1.5
 @export var FRICCAO = 1000 * PlayerVariaveis.velocidade
 @export var inv: Inv
 @onready var axis = Vector2.ZERO
+@onready var recompensas_ui = $"../camera/Recompensas/recompensas_ui"
 @onready var texto_vida = $player_ui/sup_esquerda/texto_barra_vida
 @onready var texto_velocidade = $player_ui/inf_direita/texto_velocidade
 @onready var remote_transform := $remote as RemoteTransform2D
@@ -26,6 +27,7 @@ const iFrame_duration = 1.5
 @onready var exp := 0 as int
 @onready var nivel := 1 as int
 @onready var texto_nivel = $"player_ui/inf_esquerda/texto_nivel"
+
 
 var vida_maxima = 100 + 25 * PlayerVariaveis.vida
 var vida = vida_maxima
@@ -88,6 +90,7 @@ func update_exp(_exp):
 		texto_nivel.text = str(nivel)
 		exp = 0
 		$level_up.play()
+		recompensas_ui.upgrade()
 	
 
 func mover(delta):
@@ -148,5 +151,4 @@ func animacao_morte():
 	morreu.global_position = global_position
 	get_tree().get_root().add_child(morreu)
 	get_tree().get_root().remove_child(morreu)
-	
 	

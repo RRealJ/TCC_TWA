@@ -8,13 +8,19 @@ class_name Recompensa
 
 
 func _ready():
+	visible = false
+	var recompensas = recompesas_random()
+	
+
+func upgrade():
+	visible = true
 	get_tree().paused = true
 	anim.play("entrada")
 
 
 func insert():
 	recompensas.clear()
-	var recompensas = recompesas_random()
+	recompensas = recompesas_random()
 	for i in range(0, 3):
 		var temp_r = recompensas[i]
 		if recompensas[i] is PackedScene: #verificar se é uma cena
@@ -24,11 +30,10 @@ func insert():
 		
 	
 func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
-	var repeticao = true
 	var r = []
 	var opt = []
 	for i in range(0, 10):
-		var rand = randi_range(1,3) 
+		var rand = randi_range(1,3) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
 		if !opt.has(rand):
 			opt.append(rand)
 		
@@ -36,7 +41,7 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 			print(opt)
 			break
 		
-	if 	1 in opt: #colocar mais buffs e CENAS
+	if 	1 in opt: 
 		var up_vida = load("res://Recompensas/upgrades e itens/up_vida.tres")
 		r.append(up_vida)
 		print('1')
