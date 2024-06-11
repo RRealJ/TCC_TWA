@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Inventario/inventario.gd" id="1_ua7ij"]
 [ext_resource type="Script" path="res://inv_slot.gd" id="2_7wpgg"]
 
-[sub_resource type="Resource" id="Resource_bgpvx"]
+[sub_resource type="Resource" id="Resource_5e3av"]
 script = ExtResource("2_7wpgg")
 level = 0
 
@@ -53,4 +53,4 @@ level = 0
 
 [resource]
 script = ExtResource("1_ua7ij")
-slots = Array[ExtResource("2_7wpgg")]([SubResource("Resource_bgpvx"), SubResource("Resource_fpjc8"), SubResource("Resource_ehd3u"), SubResource("Resource_0s8ui"), SubResource("Resource_3bg06"), SubResource("Resource_6bqqh"), SubResource("Resource_iptnb"), SubResource("Resource_fc63x"), SubResource("Resource_o3hv2"), SubResource("Resource_2cblq"), SubResource("Resource_3w0gw"), SubResource("Resource_nbe6n")])
+slots = Array[ExtResource("2_7wpgg")]([SubResource("Resource_5e3av"), SubResource("Resource_fpjc8"), SubResource("Resource_ehd3u"), SubResource("Resource_0s8ui"), SubResource("Resource_3bg06"), SubResource("Resource_6bqqh"), SubResource("Resource_iptnb"), SubResource("Resource_fc63x"), SubResource("Resource_o3hv2"), SubResource("Resource_2cblq"), SubResource("Resource_3w0gw"), SubResource("Resource_nbe6n")])

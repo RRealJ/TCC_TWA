@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://cusfjydxl8wgd"]
+
+[ext_resource type="Script" path="res://Recompensas/recompensas.gd" id="1_42iys"]
+[ext_resource type="Texture2D" uid="uid://cskcpj6c7lwyr" path="res://Assets/recompensas/animacao_recompensa.png" id="1_okefi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a801x"]
+atlas = ExtResource("1_okefi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f6cq"]
+atlas = ExtResource("1_okefi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ij0yr"]
+atlas = ExtResource("1_okefi")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e350t"]
+atlas = ExtResource("1_okefi")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pakx7"]
+atlas = ExtResource("1_okefi")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s0ql0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a801x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f6cq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij0yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f6cq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij0yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f6cq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij0yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e350t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pakx7")
+}],
+"loop": false,
+"name": &"entrada",
+"speed": 3.0
+}]
+
+[node name="recompensas_ui" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_42iys")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1288.0
+offset_bottom = 964.0
+color = Color(0, 0, 0, 0.588235)
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(170, 80)
+scale = Vector2(29.0313, 25)
+sprite_frames = SubResource("SpriteFrames_s0ql0")
+animation = &"entrada"
+frame = 8
+frame_progress = 1.0
+centered = false
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 325.0
+offset_right = 923.0
+offset_bottom = 470.0
+
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

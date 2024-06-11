@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://1vq6ompx4bnn"]
+
+[ext_resource type="Script" path="res://Recompensas/recompensa_ui_slot.gd" id="1_lkrt6"]
+[ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="1_o477h"]
+
+[node name="recompensa_ui_slot" type="Panel"]
+process_mode = 3
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_lkrt6")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+custom_minimum_size = Vector2(18, 32)
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 26.0
+offset_bottom = 35.0
+scale = Vector2(0.45, 0.45)
+theme = ExtResource("1_o477h")
+theme_override_colors/font_color = Color(0.185051, 0.0737524, 0.432487, 1)
+text = "1"
+horizontal_alignment = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnlje1vfd60wm"]
 
-[ext_resource type="Script" path="res://Player/bullet_normal.gd" id="1_xdr17"]
+[ext_resource type="Script" path="res://Player/Armas e Bullets/bullet_normal.gd" id="1_xdr17"]
 [ext_resource type="Texture2D" uid="uid://ccwts55a5xhaj" path="res://Assets/itens/armas_bullets-areas/Bullet_normal.png" id="2_bmar5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_thue2"]
@@ -32,6 +32,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_thue2")
 
 [node name="bullet_vida" type="Timer" parent="."]
+process_callback = 0
 wait_time = 3.0
 autostart = true
 
