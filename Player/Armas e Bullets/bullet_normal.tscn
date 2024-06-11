@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnlje1vfd60wm"]
+[gd_scene load_steps=6 format=3 uid="uid://cnlje1vfd60wm"]
 
 [ext_resource type="Script" path="res://Player/Armas e Bullets/bullet_normal.gd" id="1_xdr17"]
 [ext_resource type="Texture2D" uid="uid://ccwts55a5xhaj" path="res://Assets/itens/armas_bullets-areas/Bullet_normal.png" id="2_bmar5"]
+[ext_resource type="Resource" uid="uid://dcecgpmga3vvd" path="res://Recompensas/upgrades e itens/bala_normal.tres" id="2_j7tw8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_thue2"]
 radius = 2.0
@@ -15,6 +16,7 @@ height = 6.0
 collision_layer = 0
 collision_mask = 6
 script = ExtResource("1_xdr17")
+item = ExtResource("2_j7tw8")
 bullet_velocidade = 200.0
 bullet_dano = 20
 

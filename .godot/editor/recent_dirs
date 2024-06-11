@@ -1,5 +1,7 @@
-res://Player/Itens
+res://Recompensas/upgrades e itens
+res://Assets/itens/armas_bullets-areas
 res://Recompensas
+res://Assets/itens/inv_itens
 res://Assets/recompensas
 res://Player/Armas e Bullets
 res://Inventario
@@ -18,5 +20,3 @@ D:/TCC/Player
 res://Timers e spawns
 res://OverLap
 res://Assets/font
-res://Mundos
-res://Assets/tilemaps

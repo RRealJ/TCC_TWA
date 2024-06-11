@@ -28,7 +28,7 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 	var r = []
 	var opt = []
 	for i in range(0, 10):
-		var rand = randi_range(1,5) 
+		var rand = randi_range(1,3) 
 		if !opt.has(rand):
 			opt.append(rand)
 		
@@ -37,6 +37,8 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 			break
 		
 	if 	1 in opt: #colocar mais buffs e CENAS
+		var up_vida = load("res://Recompensas/upgrades e itens/up_vida.tres")
+		r.append(up_vida)
 		print('1')
 		
 	if 2 in opt:

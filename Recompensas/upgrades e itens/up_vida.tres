@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://b47g1ydftb7hd"]
+
+[ext_resource type="Script" path="res://Inventario/itens_inventario.gd" id="1_oa44i"]
+[ext_resource type="Texture2D" uid="uid://chptq8bynye1n" path="res://Assets/itens/inv_itens/up_vida.png" id="2_jojp1"]
+
+[resource]
+script = ExtResource("1_oa44i")
+level = 1
+nome = "Upgrade Vida"
+descricao = "Aumenta a vida em 20."
+textura = ExtResource("2_jojp1")
