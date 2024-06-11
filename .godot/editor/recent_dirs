@@ -1,3 +1,5 @@
+res://
+res://Assets/drops
 res://Recompensas/upgrades e itens
 res://Assets/itens/inv_itens
 res://Assets/itens/armas_bullets-areas
@@ -10,7 +12,6 @@ res://Inimigos
 res://Player
 res://generico
 res://Assets/inimigos
-res://
 res://Efeitos
 res://Generico
 res://Menus
@@ -19,4 +20,3 @@ res://Assets/player
 D:/TCC/Player
 res://Timers e spawns
 res://OverLap
-res://Assets/font
