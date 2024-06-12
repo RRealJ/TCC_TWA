@@ -11,7 +11,6 @@ var dir: float
 @export var bullet_penetracao:= PlayerVariaveis.penetracao as int
 @export var bullet_dano: int
 @onready var bullet_vida:= $bullet_vida as Timer
-@onready var level: int = 1
 
 
 func _ready():
@@ -21,9 +20,6 @@ func _ready():
 func _physics_process(delta):
 	position += (Vector2.RIGHT*bullet_velocidade).rotated(dir) * delta
 	
-
-func update_level():
-	level = item.level
 	
 	
 	

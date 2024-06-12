@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_sks46")
-level = 1
+level = 0
 nome = "Bala Normal"
 descricao = "Aumenta o dano da bala normal."
 textura = ExtResource("2_lh1pd")

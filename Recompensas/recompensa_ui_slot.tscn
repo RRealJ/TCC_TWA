@@ -31,6 +31,6 @@ offset_right = 26.0
 offset_bottom = 35.0
 scale = Vector2(0.45, 0.45)
 theme = ExtResource("1_o477h")
-theme_override_colors/font_color = Color(0.874978, 0.25655, 3.85046e-07, 1)
+theme_override_colors/font_color = Color(1.2514e-06, 0.954157, 0.648569, 1)
 text = "1"
 horizontal_alignment = 2

@@ -13,6 +13,6 @@ func update(recompensa):
 		level_text.text = str(recompensa.level)
 	else:
 		item_visual.texture = recompensa.item.textura
-		level_text.text = str(recompensa.item.level)
-	level_text.visible = true
+		level_text.text = str(recompensa.item.level + 1)
+		level_text.visible = true
 	item_visual.visible = true

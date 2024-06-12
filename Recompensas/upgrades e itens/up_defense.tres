@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://bcfqsj4sorl6a"]
+
+[ext_resource type="Script" path="res://Inventario/itens_inventario.gd" id="1_1ytr5"]
+[ext_resource type="Texture2D" uid="uid://suvxqfijb8c8" path="res://Assets/itens/inv_itens/up_defense.png" id="2_f1le2"]
+
+[resource]
+script = ExtResource("1_1ytr5")
+level = 1
+nome = "Upgrade Defesa"
+descricao = "Aumenta as resistências contra dano."
+textura = ExtResource("2_f1le2")

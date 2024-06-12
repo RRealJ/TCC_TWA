@@ -9,12 +9,10 @@ class_name Arma
 @export_range(0, 360) var arc: float = 0
 @export_range(0, 20) var fire_rate: float = 1.0
 @onready var mundo = $"../../"
-@onready var level: int = 1
 var can_shoot = true
 
 
 func _ready():
-	inv.update.connect(update_level)
 	atirar()
 
 
@@ -46,7 +44,5 @@ func atirar():
 		can_shoot = true
 		atirar()
 	
-		
-func update_level():
-	level = item.level
+
 

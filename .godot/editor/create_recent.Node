@@ -1,6 +1,7 @@
+Button
+HBoxContainer
 Timer
 CanvasLayer
-HBoxContainer
 GridContainer
 NinePatchRect
 TextureButton
@@ -12,4 +13,3 @@ ColorRect
 Control
 AnimatedSprite2D
 AnimationTree
-AnimationPlayer

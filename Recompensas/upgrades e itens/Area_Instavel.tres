@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_ykrgg")
-level = 1
+level = 0
 nome = "Area Instavel"
 descricao = "Cria uma area de instabilidade ao seu redor, inimigos tomam dano ao contato."
 textura = ExtResource("2_svkl5")

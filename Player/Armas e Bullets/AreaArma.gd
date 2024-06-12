@@ -8,12 +8,10 @@ class_name AreaArma
 @export var dano:int = 15
 @export_range(0, 20) var fire_rate: float = 1.0
 @onready var mundo = $"../../"
-@onready var level: int = 1
 var can_shoot = true
 
 
 func _ready():
-	inv.update.connect(update_level)
 	atirar()
 	
 	
@@ -37,10 +35,6 @@ func colidindo() -> void:
 	var lista_inimigos = get_overlapping_bodies()
 	for i in lista_inimigos:
 		i._on_hitbox_body_entered(self)
-		
-		
-func update_level():
-	level = item.level
 	
 
 func _on_verificacao_timeout():
