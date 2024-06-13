@@ -1,10 +1,10 @@
-res://Player/player.tscn
-res://Inventario/player_inv.tres
+res://Mundos/mundo_1.tscn
 res://Inimigos/inimigos_comum.gd
+res://Inventario/player_inv.tres
 res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
 res://Player/player.gd
-res://Mundos/mundo_1.tscn
+res://Player/player.tscn
 res://Recompensas/Recompensas_ui.tscn
 res://Player/Armas e Bullets/bullet_normal.tscn
 res://Player/Armas e Bullets/area_instavel.tscn
@@ -13,6 +13,7 @@ res://Inventario/inv_ui_slot.tscn
 res://generico/player_ui.tscn
 res://generico/barra_vida.tscn
 res://Player/Armas e Bullets/AreaArma.gd
+res://Player/Armas e Bullets/bullet.gd
+res://Inimigos/bullet_inimigo.gd
 res://Player/Armas e Bullets/bullet_normal.gd
-res://Recompensas/recompensas.gd
-res://Menus/menu_pausa.gd
+res://generico/shooter.gd

@@ -8,6 +8,8 @@ class_name AreaArma
 @export var bullet_dano:int = 15
 @export_range(0, 20) var fire_rate: float = 1.0
 @onready var mundo = $"../../"
+@onready var menu_pausa = $"../../camera/menu_pausa"
+@onready var recompensas_ui = $"../../camera/Recompensas"
 @onready var dano = bullet_dano * PlayerVariaveis.dano
 var can_shoot = true
 
@@ -17,7 +19,6 @@ func _ready():
 	
 	
 func atirar():
-	print(dano)
 	$AnimatedSprite2D.play("area_attack")
 	if can_shoot:
 		can_shoot = false
@@ -27,11 +28,12 @@ func atirar():
 		
 
 func _on_body_entered(body):
-	dano = bullet_dano * PlayerVariaveis.dano * item.level
-	print("Area Instavel dano: ",dano, "| level: ", item.level)
-	if body is Inimigos:
-		body._on_hitbox_body_entered(self)
-	await get_tree().create_timer(1 / fire_rate).timeout
+	if menu_pausa.visible == false && recompensas_ui.visible == false:
+		dano = bullet_dano * PlayerVariaveis.dano * item.level
+		print("Area Instavel dano: ",dano, "| level: ", item.level)
+		if body is Inimigos:
+			body._on_hitbox_body_entered(self)
+		await get_tree().create_timer(1 / fire_rate).timeout
 
 
 func colidindo() -> void:
@@ -42,6 +44,7 @@ func colidindo() -> void:
 	
 
 func _on_verificacao_timeout():
-	if has_overlapping_bodies(): #existem bodies da mask dentro? true/false
-		colidindo()
+	if menu_pausa.visible == false && recompensas_ui.visible == false:
+		if has_overlapping_bodies(): #existem bodies da mask dentro? true/false
+			colidindo()
 		

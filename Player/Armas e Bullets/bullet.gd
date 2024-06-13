@@ -11,6 +11,8 @@ var dir: float
 @export var bullet_penetracao:= PlayerVariaveis.penetracao as int
 @export var bullet_dano: int
 @onready var bullet_vida:= $bullet_vida as Timer
+@onready var menu_pausa = $"../camera/menu_pausa"
+@onready var recompensas_ui = $"../camera/Recompensas"
 
 
 func _ready():

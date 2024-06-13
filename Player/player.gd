@@ -27,6 +27,7 @@ const iFrame_duration = 1.5
 @onready var exp := 0 as int
 @onready var nivel := 1 as int
 @onready var texto_nivel = $"player_ui/inf_esquerda/texto_nivel"
+@onready var menu_pausa = $"../camera/menu_pausa"
 
 
 var vida_maxima = 100 + 25 * PlayerVariaveis.vida
@@ -34,6 +35,7 @@ var vida = vida_maxima
 var speed = max_speed
 var aceleracao = ACELERACAO
 var friccao = FRICCAO
+var resistencia = PlayerVariaveis.resistencia * 3
 enum{IDLE, MOVE}
 var state = IDLE
 
@@ -120,11 +122,12 @@ func animate() -> void:
 	
 
 func _on_hurtbox_body_entered(body):
-	if body.is_in_group("inimigos"):
-		vida = barra_vida.vida - (body.dano - PlayerVariaveis.resistencia * 3)
-		update_PlayerUI()
-	if vida <= 0:
-		morto()
+	if menu_pausa.visible == false:
+		if body.is_in_group("inimigos"):
+			vida = barra_vida.vida - (body.dano - resistencia)
+			update_PlayerUI()
+		if vida <= 0:
+			morto()
 		
 
 func follow_camera(camera):
@@ -170,4 +173,4 @@ func inserir(item): #inserir no iventário()
 			speed = speed + 75
 		
 		elif item.nome == "Upgrade Defesa":
-			print("upgrade defesa aumentada")
+			resistencia = resistencia + 5
