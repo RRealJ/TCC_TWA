@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://7s87ybeqiy5i"]
+[gd_scene load_steps=16 format=3 uid="uid://7s87ybeqiy5i"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
 [ext_resource type="PackedScene" uid="uid://derytfri27qe1" path="res://Player/player.tscn" id="2_b3mdk"]
 [ext_resource type="PackedScene" uid="uid://bnh1awky35ggp" path="res://Timers e spawns/spawn_inimigo.tscn" id="4_eashf"]
 [ext_resource type="Script" path="res://Timers e spawns/spawn_info.gd" id="6_gaajl"]
-[ext_resource type="PackedScene" uid="uid://ca2ht3sny8tvi" path="res://Player/Armas e Bullets/area_instavel.tscn" id="6_m0863"]
 [ext_resource type="PackedScene" uid="uid://dcafurs16oq33" path="res://Menus/menu_pausa.tscn" id="7_ltw6q"]
 [ext_resource type="Script" path="res://Player/Armas e Bullets/armas.gd" id="8_pcuka"]
 [ext_resource type="PackedScene" uid="uid://cnlje1vfd60wm" path="res://Player/Armas e Bullets/bullet_normal.tscn" id="9_3cj20"]
@@ -1161,10 +1160,6 @@ layer_2/tile_data = PackedInt32Array(-589852, 2359296, 24, 720868, 2359296, 24, 
 [node name="teste_arma" type="Node2D" parent="Player"]
 script = ExtResource("8_pcuka")
 bullet = ExtResource("9_3cj20")
-
-[node name="blessed_area" parent="Player" instance=ExtResource("6_m0863")]
-z_index = -1
-fire_rate = 1.0
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("4_eashf")]
 spawns = Array[ExtResource("6_gaajl")]([SubResource("Resource_16apn")])

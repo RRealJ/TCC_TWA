@@ -103,5 +103,4 @@ func _on_button_3_pressed():
 
 
 func cena(item):
-	if item is PackedScene:
-		player.inserir(item)
+	player.inserir(item)

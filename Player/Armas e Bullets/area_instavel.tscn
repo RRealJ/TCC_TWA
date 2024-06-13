@@ -55,7 +55,6 @@ collision_layer = 0
 collision_mask = 6
 script = ExtResource("1_iolbi")
 item = ExtResource("2_6q2pk")
-fire_rate = 3.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)

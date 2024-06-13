@@ -12,6 +12,7 @@ class_name Arma
 var can_shoot = true
 
 
+
 func _ready():
 	atirar()
 

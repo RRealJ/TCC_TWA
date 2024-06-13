@@ -16,10 +16,11 @@ var dir: float
 func _ready():
 	z_index = zindex
 	
-	
+
 func _physics_process(delta):
 	position += (Vector2.RIGHT*bullet_velocidade).rotated(dir) * delta
 	
 	
-	
+
+
 	

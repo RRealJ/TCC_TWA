@@ -154,5 +154,18 @@ func animacao_morte():
 	
 
 func inserir(item): #inserir no iventário()
-	var i = item.instantiate()
-	inv.insert(i.item)
+	if item is PackedScene:
+		var i = item.instantiate()
+		if i.item.level == 0:
+			$".".add_child(i)
+		inv.insert(i.item)
+
+	else:
+		if item.nome == "Upgrade Vida":
+			print("upgrade vida aumentada")
+			
+		elif item.nome == "Upgrade Velocidade":
+			print("upgrade velocidade aumentada")
+		
+		elif item.nome == "Upgrade Defesa":
+			print("upgrade defesa aumentada")
