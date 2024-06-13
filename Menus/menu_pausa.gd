@@ -20,11 +20,12 @@ func _ready():
 	opt_btn.item_selected.connect(on_resolution_selected)
 
 
-func _unhandled_input(event):	
+func _unhandled_input(event):
 	if event.is_action_pressed("escape"):
-		visible = true
-		get_tree().paused = true
-		btn_continuar.grab_focus()
+		if $"../Recompensas".visible == false:
+			visible = true
+			get_tree().paused = true
+			btn_continuar.grab_focus()
 		
 
 func _on_btn_continuar_pressed():

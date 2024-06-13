@@ -1171,6 +1171,7 @@ zoom = Vector2(2.5, 2.5)
 visible = false
 
 [node name="Recompensas" parent="camera" instance=ExtResource("13_itkum")]
+visible = false
 
 [node name="drop_moedas" parent="." instance=ExtResource("10_cqptc")]
 position = Vector2(-144, -30)

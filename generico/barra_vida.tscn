@@ -45,6 +45,7 @@ value = 80.0
 show_percentage = false
 
 [node name="delay_dano" type="Timer" parent="."]
+process_callback = 0
 wait_time = 0.4
 one_shot = true
 

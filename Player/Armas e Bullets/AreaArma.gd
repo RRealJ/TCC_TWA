@@ -17,7 +17,7 @@ func _ready():
 	
 	
 func atirar():
-	
+	print(dano)
 	$AnimatedSprite2D.play("area_attack")
 	if can_shoot:
 		can_shoot = false
@@ -27,7 +27,7 @@ func atirar():
 		
 
 func _on_body_entered(body):
-	dano = bullet_dano * item.level * PlayerVariaveis.dano
+	dano = bullet_dano * PlayerVariaveis.dano * item.level
 	print("Area Instavel dano: ",dano, "| level: ", item.level)
 	if body is Inimigos:
 		body._on_hitbox_body_entered(self)

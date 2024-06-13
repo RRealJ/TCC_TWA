@@ -81,11 +81,8 @@ func update_exp(_exp):
 	exp += _exp
 	barra_exp.value += exp
 	if barra_exp.value >= barra_exp.max_value:
-		print(barra_exp.value)
 		barra_exp.value = 0
-		print(barra_exp.value)
 		barra_exp.max_value += 100
-		print(barra_exp.max_value)
 		nivel += 1 
 		texto_nivel.text = str(nivel)
 		exp = 0
@@ -129,7 +126,6 @@ func _on_hurtbox_body_entered(body):
 	if vida <= 0:
 		morto()
 		
-	
 
 func follow_camera(camera):
 	var camera_path = camera.get_path()
@@ -162,10 +158,16 @@ func inserir(item): #inserir no iventário()
 
 	else:
 		if item.nome == "Upgrade Vida":
-			print("upgrade vida aumentada")
+			vida_maxima = vida_maxima + 25
+			mini_barra.max_value = vida_maxima
+			print(mini_barra.max_value)
+			barra_vida.max_value = vida_maxima
+			print(barra_vida.max_value)
+			vida = vida + 25
+			update_PlayerUI()
 			
 		elif item.nome == "Upgrade Velocidade":
-			print("upgrade velocidade aumentada")
+			speed = speed + 75
 		
 		elif item.nome == "Upgrade Defesa":
 			print("upgrade defesa aumentada")

@@ -1,11 +1,11 @@
 extends Bullet
 
-@onready var dano = bullet_dano * PlayerVariaveis.dano
+var dano = bullet_dano * PlayerVariaveis.dano
 @onready var velocidade = bullet_velocidade * PlayerVariaveis.velocidade
 
 
 func _on_area_2d_body_entered(body):
-	dano = bullet_dano * item.level * PlayerVariaveis.dano
+	dano = bullet_dano * PlayerVariaveis.dano * item.level
 	print("Normal Bullet dano: ",dano, "| level: ", item.level)
 	if body is Inimigos:
 		bullet_penetracao -= 1
