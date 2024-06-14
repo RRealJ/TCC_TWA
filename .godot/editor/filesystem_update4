@@ -3,4 +3,11 @@ res://Inimigos/inimigos_comum.gd
 res://Inventario/player_inv.tres
 res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
-res://Mundos/mundo.gd
+res://Player/player.gd
+res://Player/player.tscn
+res://Recompensas/Recompensas_ui.tscn
+res://Player/Armas e Bullets/bullet_normal.tscn
+res://Player/Armas e Bullets/area_instavel.tscn
+res://Recompensas/recompensas.tscn
+res://Inventario/inv_ui_slot.tscn
+res://Inimigos/dino_comum_shooter.tscn

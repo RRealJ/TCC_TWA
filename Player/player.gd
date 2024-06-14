@@ -160,12 +160,10 @@ func limpar_inventario():
 
 func inserir(item): #inserir no iventário()
 	if item is PackedScene:
-		var i = item.instantiate()
-		var c_inv = inv.slots
 		var passou = true
-		for slot in c_inv:
-			if slot.item == i.item:
-				passou = false
+		var i = item.instantiate()
+		for slot in inv.slots:
+			if slot.item == i.item: passou = false
 		if passou:
 			$".".add_child(i)
 		inv.insert(i.item)
