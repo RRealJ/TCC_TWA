@@ -1,3 +1,4 @@
+CharacterBody2D
 Button
 HBoxContainer
 Timer
@@ -12,4 +13,3 @@ CenterContainer
 ColorRect
 Control
 AnimatedSprite2D
-AnimationTree

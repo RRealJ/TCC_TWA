@@ -98,6 +98,7 @@ shape = SubResource("CapsuleShape2D_apyr5")
 debug_color = Color(0.849834, 0, 0.39639, 0.42)
 
 [node name="shooter" parent="." groups=["inimigos"] instance=ExtResource("5_rscpy")]
+position = Vector2(0, -1)
 
 [editable path="softCollision"]
 [editable path="shooter"]

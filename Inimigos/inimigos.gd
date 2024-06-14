@@ -11,6 +11,7 @@ signal InimigoMorto
 @export var ouro:= 10 as int
 @export var exp_multi:= 1 as int
 @onready var target_pos : Vector2
+@onready var a_sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var anim_morte = preload("res://Efeitos/morte_vfx.tscn")
 @onready var drop_moedas = load("res://Efeitos/drop_moedas.tscn")
 @onready var drop_expe = load("res://Efeitos/drop_exp.tscn")
@@ -24,14 +25,14 @@ func _physics_process(delta):
 	else:
 		velocity = position.direction_to(target.position) * speed
 		move_and_slide()
-		$AnimatedSprite2D.play("andar")
+		a_sprite.play("andar")
 		
 		if (target.position.x - position.x) < 0:
-			$AnimatedSprite2D.flip_h = true
+			a_sprite.flip_h = true
 		else:
-			$AnimatedSprite2D.flip_h = false
+			a_sprite.flip_h = false
 			
-		target_pos = target.global_position
+	target_pos = target.global_position
 		
 		
 func receber_dano(dano_recebido):

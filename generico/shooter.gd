@@ -2,11 +2,13 @@ extends Arma
 
 @onready var menu_pausa = $"../../../camera/menu_pausa"
 @onready var recompensas_ui = $"../../../camera/Recompensas"
+@onready var inimigo = $".."
+
 
 func _ready():
 	mundo = $"../../.."
-	
-	atirar()
+	if !inimigo.is_in_group("inimigo_boss"):
+		atirar()
 	
 
 func atirar():
@@ -33,5 +35,6 @@ func atirar():
 				mundo.add_child(new_bullet)
 			await get_tree().create_timer(fire_rate).timeout
 			can_shoot = true
-			atirar()
+			if !inimigo.is_in_group("inimigo_boss"):
+				atirar()
 

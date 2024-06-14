@@ -57,6 +57,7 @@ script = ExtResource("1_iolbi")
 item = ExtResource("2_6q2pk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_0k4bq")
 animation = &"area_attack"

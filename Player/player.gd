@@ -59,8 +59,8 @@ func _ready():
 	barra_vida.init_vida(vida)
 	mini_barra.init_vida(vida)
 	update_PlayerUI()
-
-
+	
+	
 func _physics_process(delta):
 	var mouse_pos = get_global_mouse_position()
 	$Marker2D.look_at(mouse_pos)
@@ -171,6 +171,7 @@ func inserir(item): #inserir no iventário()
 			
 		elif item.nome == "Upgrade Velocidade":
 			speed = speed + 75
+			friccao = friccao + 400
 		
 		elif item.nome == "Upgrade Defesa":
 			resistencia = resistencia + 5
