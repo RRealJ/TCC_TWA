@@ -1,11 +1,6 @@
-res://Player/player.tscn
+res://Mundos/mundo_1.tscn
 res://Inimigos/inimigos_comum.gd
 res://Inventario/player_inv.tres
 res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
-res://Mundos/mundo_1.tscn
-res://Recompensas/Recompensas_ui.tscn
-res://Player/Armas e Bullets/bullet_normal.tscn
-res://Player/Armas e Bullets/area_instavel.tscn
-res://Recompensas/recompensas.tscn
-res://Inventario/inv_ui_slot.tscn
+res://Mundos/mundo.gd

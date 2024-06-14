@@ -51,6 +51,7 @@ var animTree_state_keys = [
 ]
 
 func _ready():
+	inv.limpar()
 	barra_exp.min_value = 0
 	barra_exp.max_value = 100
 	barra_exp.value = 0
@@ -151,11 +152,21 @@ func animacao_morte():
 	get_tree().get_root().add_child(morreu)
 	get_tree().get_root().remove_child(morreu)
 	
+	
+	
+func limpar_inventario():
+	inv.limpar()
+	
 
 func inserir(item): #inserir no iventário()
 	if item is PackedScene:
 		var i = item.instantiate()
-		if i.item.level == 0:
+		var c_inv = inv.slots
+		var passou = true
+		for slot in c_inv:
+			if slot.item == i.item:
+				passou = false
+		if passou:
 			$".".add_child(i)
 		inv.insert(i.item)
 
@@ -175,3 +186,4 @@ func inserir(item): #inserir no iventário()
 		
 		elif item.nome == "Upgrade Defesa":
 			resistencia = resistencia + 5
+

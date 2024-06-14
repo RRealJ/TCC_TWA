@@ -15,13 +15,16 @@ class_name Mundo
 @onready var minutos = 0 as int
 
 
+
 func _ready():
 	Global.mundo_atual = 1
 	player.follow_camera(camera)
+#	reiniciar_levels()
 	
 	
 func _physics_process(delta):
 	label_m_timer.text = get_time()
+
 
 func count_moedas(moeda):
 	moedas = moedas + moeda
@@ -45,3 +48,5 @@ func get_time():
 			minutos += 1
 		
 		return str(minutos)+":"+str(segundos)
+
+

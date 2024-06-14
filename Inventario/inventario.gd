@@ -8,6 +8,7 @@ signal update
 
 
 func insert(item: InvItem):
+	var bala = load("res://Player/Armas e Bullets/bullet_normal.tscn")
 	var itemslots = slots.filter(func(slot): return slot.item == item) #verifica se já está preenchido
 	if !itemslots.is_empty():
 		itemslots[0].level += 1
@@ -17,5 +18,17 @@ func insert(item: InvItem):
 		if !emptyslots.is_empty():
 			emptyslots[0].item = item
 			emptyslots[0].level = 1
+			if item == bala.instantiate().item:
+				emptyslots[0].level = 2	
 			item.level = emptyslots[0].level
 	update.emit()
+	
+	
+func limpar():
+	for item in slots:
+		item.level = 0
+		item.item = null
+	update.emit() 
+	
+	
+		
