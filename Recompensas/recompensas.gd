@@ -2,8 +2,8 @@ extends Control
 
 class_name Recompensa
 
-@onready var anim = $anim
-@onready var slots_r: Array = $HBoxContainer.get_children()
+@onready var anim = $"Control/anim"
+@onready var slots_r: Array = $"Control/HBoxContainer".get_children()
 @onready var recompensas : Array
 @onready var player = $"../../../Player"
 
@@ -17,8 +17,8 @@ func upgrade():
 
 	for s in slots_r:
 		s.level_text.visible = false
-	$HBoxContainer2.visible = false
-	$HBoxContainer.visible = false
+	$"Control/HBoxContainer2".visible = false
+	$"Control/HBoxContainer".visible = false
 	visible = true
 	$"..".visible = true
 	get_tree().paused = true
@@ -26,7 +26,7 @@ func upgrade():
 
 
 func insert():
-	$HBoxContainer2.visible = true
+	$"Control/HBoxContainer2".visible = true
 	$recompensas_aparecerem.play()
 	await recompesas_random()
 	for i in range(0, 3):
@@ -39,8 +39,8 @@ func insert():
 			print(temp_r.nome)
 		slots_r[i].update(temp_r) 
 		temp_r = null
-	$HBoxContainer.visible = true
-	$HBoxContainer2/Button1.grab_focus()
+	$"Control/HBoxContainer".visible = true
+	$"Control/HBoxContainer2/Button1".grab_focus()
 	
 	
 func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG

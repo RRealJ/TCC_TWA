@@ -3,7 +3,7 @@ extends Node
 class_name Mundo
 
 
-@onready var label_m_timer = $"Player/player_ui/sup_esquerda/label_timer"
+@onready var label_m_timer = $"Player/player_ui/label_timer"
 @onready var player := $Player as CharacterBody2D
 @onready var camera := $camera as Camera2D
 @onready var label_contagem_inimigos = $"Player/player_ui/sup_direito/contagem_inimigos"

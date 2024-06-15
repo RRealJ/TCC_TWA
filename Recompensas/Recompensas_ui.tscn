@@ -66,19 +66,28 @@ animations = [{
 [node name="recompensas_ui" type="Control"]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_42iys")
-
-[node name="UiSounds" parent="." instance=ExtResource("5_jj8wm")]
-root_path = NodePath("..")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1288.0
-offset_bottom = 964.0
+offset_right = 3461.0
+offset_bottom = 2148.0
 color = Color(0, 0, 0, 0.588235)
 
-[node name="anim" type="AnimatedSprite2D" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="anim" type="AnimatedSprite2D" parent="Control"]
 position = Vector2(170, 80)
 scale = Vector2(29.0313, 25)
 sprite_frames = SubResource("SpriteFrames_s0ql0")
@@ -87,18 +96,18 @@ frame = 8
 frame_progress = 1.0
 centered = false
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 318.0
 offset_top = 310.0
-offset_right = 444.0
+offset_right = 448.0
 offset_bottom = 348.0
 scale = Vector2(5, 5)
 theme_override_constants/separation = 11
 alignment = 1
 
-[node name="Button1" type="Button" parent="HBoxContainer2"]
+[node name="Button1" type="Button" parent="Control/HBoxContainer2"]
 process_mode = 3
 self_modulate = Color(0.92549, 0, 0.0941176, 1)
 layout_mode = 2
@@ -106,7 +115,7 @@ theme = ExtResource("4_w5cin")
 theme_override_colors/font_focus_color = Color(0.506098, 0.0249808, 0.895972, 1)
 text = "[]"
 
-[node name="Button2" type="Button" parent="HBoxContainer2"]
+[node name="Button2" type="Button" parent="Control/HBoxContainer2"]
 process_mode = 3
 self_modulate = Color(0.92549, 0, 0.0941176, 1)
 layout_mode = 2
@@ -114,7 +123,7 @@ theme = ExtResource("4_w5cin")
 theme_override_colors/font_focus_color = Color(0.505882, 0.0235294, 0.894118, 1)
 text = "[]"
 
-[node name="Button3" type="Button" parent="HBoxContainer2"]
+[node name="Button3" type="Button" parent="Control/HBoxContainer2"]
 process_mode = 3
 self_modulate = Color(0.92549, 0, 0.0941176, 1)
 layout_mode = 2
@@ -122,7 +131,7 @@ theme = ExtResource("4_w5cin")
 theme_override_colors/font_focus_color = Color(0.505882, 0.0235294, 0.894118, 1)
 text = "[]"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 318.0
@@ -132,18 +141,21 @@ offset_bottom = 348.0
 scale = Vector2(5, 5)
 theme_override_constants/separation = 15
 
-[node name="recompensa_ui_slot" parent="HBoxContainer" instance=ExtResource("3_3tict")]
+[node name="recompensa_ui_slot" parent="Control/HBoxContainer" instance=ExtResource("3_3tict")]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="recompensa_ui_slot2" parent="HBoxContainer" instance=ExtResource("3_3tict")]
+[node name="recompensa_ui_slot2" parent="Control/HBoxContainer" instance=ExtResource("3_3tict")]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="recompensa_ui_slot3" parent="HBoxContainer" instance=ExtResource("3_3tict")]
+[node name="recompensa_ui_slot3" parent="Control/HBoxContainer" instance=ExtResource("3_3tict")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="UiSounds" parent="." instance=ExtResource("5_jj8wm")]
+root_path = NodePath("..")
 
 [node name="alavancar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_151jm")
@@ -153,7 +165,7 @@ pitch_scale = 0.88
 [node name="recompensas_aparecerem" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_xguwn")
 
-[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
-[connection signal="pressed" from="HBoxContainer2/Button1" to="." method="_on_button_1_pressed"]
-[connection signal="pressed" from="HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="HBoxContainer2/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="animation_finished" from="Control/anim" to="." method="_on_anim_animation_finished"]
+[connection signal="pressed" from="Control/HBoxContainer2/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer2/Button3" to="." method="_on_button_3_pressed"]
