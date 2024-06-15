@@ -15,7 +15,7 @@ class_name Loja
 const upgrades_nome_desc = {
 	"Vida":["Vida", "Aumenta sua vida maxima (+25)."], 
 	"Resistencia":["Resistencia", "Aumenta sua resistencia contra danos."],
-	"Velocidade":["Velocidade", "Aumenta sua velocidade (xNivel)."],
+	"Velocidade":["Velocidade", "Aumenta sua velocidade."],
 	"Sorte":["Sorte", "Recebe mais ouro e maiores chances de itens melhores."],
 	"Dano":["Dano", "Aumenta seu dano causado."],
 	"Chance_critica":["Chance Critica", "Aumenta sua chance de causa dano critico."],   

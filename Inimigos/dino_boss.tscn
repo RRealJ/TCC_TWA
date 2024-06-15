@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://oe6ppdlipi3a"]
 
-[ext_resource type="Script" path="res://inimigo_boss.gd" id="1_lyksl"]
+[ext_resource type="Script" path="res://Inimigos/inimigo_boss.gd" id="1_tnrs5"]
 [ext_resource type="Texture2D" uid="uid://dqaexh6na7wj2" path="res://Assets/inimigos/M1_boss.png" id="2_qmwus"]
 [ext_resource type="Texture2D" uid="uid://buxcg1bboihpj" path="res://Assets/inimigos/M1_boss_frenzy.png" id="3_3rfaq"]
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_oo0le"]
@@ -155,7 +155,7 @@ height = 102.0
 [node name="dino_Boss" type="CharacterBody2D" groups=["inimigo_boss"]]
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("1_lyksl")
+script = ExtResource("1_tnrs5")
 speed = 60
 dano = 30
 vida = 500

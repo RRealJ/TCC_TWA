@@ -1,7 +1,9 @@
+res://Assets
+res://
+res://Assets/itens
 res://Audio
 res://Inimigos
 res://Assets/inimigos
-res://
 res://Recompensas/upgrades e itens
 res://Assets/itens/inv_itens
 res://Assets/drops
@@ -10,7 +12,6 @@ res://Recompensas
 res://Assets/recompensas
 res://Player/Armas e Bullets
 res://Inventario
-res://Assets/itens
 res://Player
 res://generico
 res://Efeitos
@@ -19,4 +20,3 @@ res://Menus
 res://Assets/player
 D:/TCC/Player
 res://Timers e spawns
-res://OverLap

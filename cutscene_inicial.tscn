@@ -1,0 +1,154 @@
+[gd_scene load_steps=16 format=3 uid="uid://cib547evnk31o"]
+
+[ext_resource type="Script" path="res://cutscene_inicial.gd" id="1_ap7ow"]
+[ext_resource type="Texture2D" uid="uid://chl3hnvcgmxp3" path="res://Assets/intro_cut.png" id="2_y34d1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwg32"]
+atlas = ExtResource("2_y34d1")
+region = Rect2(0, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15ede"]
+atlas = ExtResource("2_y34d1")
+region = Rect2(160, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afbc3"]
+atlas = ExtResource("2_y34d1")
+region = Rect2(320, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6g2a"]
+atlas = ExtResource("2_y34d1")
+region = Rect2(480, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0leyk"]
+atlas = ExtResource("2_y34d1")
+region = Rect2(640, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k34lr"]
+atlas = ExtResource("2_y34d1")
+region = Rect2(800, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ax155"]
+atlas = ExtResource("2_y34d1")
+region = Rect2(960, 0, 160, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hjwf"]
+atlas = ExtResource("2_y34d1")
+region = Rect2(1120, 0, 160, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_riwht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwg32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15ede")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afbc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6g2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0leyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k34lr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ax155")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hjwf")
+}],
+"loop": false,
+"name": &"intro",
+"speed": 1.0
+}]
+
+[sub_resource type="Animation" id="Animation_hqtyw"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/NinePatchRect/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dotgd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/NinePatchRect/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vrann"]
+resource_name = "fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/NinePatchRect/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4l2wb"]
+_data = {
+"RESET": SubResource("Animation_dotgd"),
+"fade_in": SubResource("Animation_hqtyw"),
+"fade_out": SubResource("Animation_vrann")
+}
+
+[node name="cutscene_inicial" type="Node2D"]
+script = ExtResource("1_ap7ow")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/NinePatchRect"]
+position = Vector2(640, 480)
+scale = Vector2(8, 10.6667)
+sprite_frames = SubResource("SpriteFrames_riwht")
+animation = &"intro"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/NinePatchRect"]
+offset_left = -242.0
+offset_top = -106.0
+offset_right = 3522.0
+offset_bottom = 2356.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4l2wb")
+}
+
+[connection signal="animation_finished" from="CanvasLayer/NinePatchRect/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
