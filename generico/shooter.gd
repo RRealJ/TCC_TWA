@@ -31,6 +31,9 @@ func atirar():
 					new_bullet.global_rotation = new_rotation
 					new_bullet.dir = new_rotation
 				
+				if inimigo.is_in_group("inimigo_boss"):
+					if inimigo.state == 1:
+						new_bullet.bullet_velocidade = 150
 				new_bullet.zindex = z_index
 				mundo.add_child(new_bullet)
 			await get_tree().create_timer(fire_rate).timeout

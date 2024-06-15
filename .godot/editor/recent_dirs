@@ -1,3 +1,5 @@
+res://Inimigos
+res://Assets/inimigos
 res://
 res://Recompensas/upgrades e itens
 res://Assets/itens/inv_itens
@@ -8,10 +10,8 @@ res://Assets/recompensas
 res://Player/Armas e Bullets
 res://Inventario
 res://Assets/itens
-res://Inimigos
 res://Player
 res://generico
-res://Assets/inimigos
 res://Efeitos
 res://Generico
 res://Menus

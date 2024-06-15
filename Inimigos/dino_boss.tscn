@@ -1,0 +1,199 @@
+[gd_scene load_steps=29 format=3 uid="uid://oe6ppdlipi3a"]
+
+[ext_resource type="Script" path="res://inimigo_boss.gd" id="1_lyksl"]
+[ext_resource type="Texture2D" uid="uid://dqaexh6na7wj2" path="res://Assets/inimigos/M1_boss.png" id="2_qmwus"]
+[ext_resource type="Texture2D" uid="uid://buxcg1bboihpj" path="res://Assets/inimigos/M1_boss_frenzy.png" id="3_3rfaq"]
+[ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_oo0le"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="4_5hi7y"]
+[ext_resource type="Texture2D" uid="uid://bjjwv3538s1p1" path="res://Assets/inimigos/M1_boss_spit_atack.png" id="4_efe2q"]
+[ext_resource type="Texture2D" uid="uid://chjeaugmax71k" path="res://Assets/inimigos/M1_boss_franzy_spit_atack.png" id="5_8jmgt"]
+[ext_resource type="PackedScene" uid="uid://rl3wcnvcth1u" path="res://OverLap/hitbox.tscn" id="5_p47bi"]
+[ext_resource type="PackedScene" uid="uid://cm7kq4adfq6k4" path="res://generico/shooter.tscn" id="6_sillv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pestj"]
+atlas = ExtResource("2_qmwus")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34kxp"]
+atlas = ExtResource("2_qmwus")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_talbc"]
+atlas = ExtResource("2_qmwus")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygglg"]
+atlas = ExtResource("2_qmwus")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sx54"]
+atlas = ExtResource("3_3rfaq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bonok"]
+atlas = ExtResource("3_3rfaq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01vmp"]
+atlas = ExtResource("3_3rfaq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ngs3"]
+atlas = ExtResource("3_3rfaq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjsg6"]
+atlas = ExtResource("4_efe2q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq85a"]
+atlas = ExtResource("4_efe2q")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5uiw"]
+atlas = ExtResource("4_efe2q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_potaf"]
+atlas = ExtResource("4_efe2q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8cem"]
+atlas = ExtResource("5_8jmgt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8u3o"]
+atlas = ExtResource("5_8jmgt")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l46td"]
+atlas = ExtResource("5_8jmgt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fek3"]
+atlas = ExtResource("5_8jmgt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rky6a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pestj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34kxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_talbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygglg")
+}],
+"loop": true,
+"name": &"andar",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sx54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bonok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01vmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ngs3")
+}],
+"loop": true,
+"name": &"andar_frenzy",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjsg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq85a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5uiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_potaf")
+}],
+"loop": true,
+"name": &"spit_attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8cem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8u3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l46td")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fek3")
+}],
+"loop": true,
+"name": &"spit_attack_frenzy",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g8m81"]
+radius = 40.0125
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_25ljf"]
+radius = 41.0
+height = 102.0
+
+[node name="dino_Boss" type="CharacterBody2D" groups=["inimigo_boss"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_lyksl")
+speed = 60
+dano = 30
+vida = 500
+ouro = 200
+exp_multi = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_rky6a")
+animation = &"spit_attack_frenzy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g8m81")
+
+[node name="softCollision" parent="." instance=ExtResource("3_oo0le")]
+
+[node name="barra_vida" parent="." instance=ExtResource("4_5hi7y")]
+offset_left = -38.0
+offset_top = -50.0
+offset_right = 37.0
+offset_bottom = -45.0
+
+[node name="hitbox" parent="." instance=ExtResource("5_p47bi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_25ljf")
+debug_color = Color(1, 0.332004, 0.299074, 0.42)
+
+[node name="shooter" parent="." instance=ExtResource("6_sillv")]
+position = Vector2(1, 2)
+
+[node name="timer_atirar" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="timer_atirar" to="." method="_on_timer_atirar_timeout"]
+
+[editable path="softCollision"]

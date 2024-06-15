@@ -51,7 +51,7 @@ var animTree_state_keys = [
 ]
 
 func _ready():
-	inv.limpar()
+	limpar_inventario()
 	barra_exp.min_value = 0
 	barra_exp.max_value = 100
 	barra_exp.value = 0
@@ -84,13 +84,18 @@ func update_exp(_exp):
 	exp += _exp
 	barra_exp.value += exp
 	if barra_exp.value >= barra_exp.max_value:
-		barra_exp.value = 0
-		barra_exp.max_value += 100
-		nivel += 1 
-		texto_nivel.text = str(nivel)
-		exp = 0
-		$level_up.play()
-		recompensas_ui.upgrade()
+		level_up()
+		
+
+func level_up():
+	barra_exp.value = 0
+	barra_exp.max_value += 100
+	nivel += 1 
+	texto_nivel.text = str(nivel)
+	exp = 0
+	$level_up.play()
+	recompensas_ui.upgrade()
+	
 	
 
 func mover(delta):
@@ -124,7 +129,7 @@ func animate() -> void:
 
 func _on_hurtbox_body_entered(body):
 	if menu_pausa.visible == false:
-		if body.is_in_group("inimigos"):
+		if body is Inimigos:
 			vida = barra_vida.vida - (body.dano - resistencia)
 			update_PlayerUI()
 		if vida <= 0:
@@ -142,6 +147,7 @@ func morto():
 	Global.moedas += mundo.inimigos_abatidos
 	Global.jogos_jogados += 1
 	animacao_morte()
+	limpar_inventario()
 	queue_free()
 	get_tree().change_scene_to_file("res://Menus/gameover.tscn")
 	

@@ -1,7 +1,9 @@
+Timer
+CollisionShape2D
+AnimatedSprite2D
 CharacterBody2D
 Button
 HBoxContainer
-Timer
 CanvasLayer
 GridContainer
 NinePatchRect
@@ -10,6 +12,3 @@ Label
 Sprite2D
 Panel
 CenterContainer
-ColorRect
-Control
-AnimatedSprite2D

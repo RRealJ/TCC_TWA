@@ -55,7 +55,6 @@ script = ExtResource("1_oq4x4")
 speed_limit = 105
 speed = 90
 dano = 20
-vida = 15
 ouro = 20
 exp_multi = 3
 

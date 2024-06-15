@@ -11,24 +11,28 @@ func _ready():
 	if player == null:
 		get_tree().get_nodes_in_group("Player")
 	
+	
 func _on_timer_timeout():
-	time += 1
-	var inimigo_spawns = spawns
-	for i in inimigo_spawns:
-		if time >= i.time_start and time <= i.time_end:
-			if i.inimigo_delay_counter < i.inimigo_spawn_delay:
-				i.inimigo_delay_counter += 1
-			else:
-				i.inimigo_delay_counter = 0
-				var novo_inimigo = load(str(i.inimigo.resource_path))			
-				var counter = 0
-				while counter < i.inimigo_num:
-					var inimigo_spawn = novo_inimigo.instantiate()
-					inimigo_spawn.global_position = get_random_position()
-					add_child(inimigo_spawn)
-					counter += 1
-				
+	if get_tree().paused == false:
+		time += 1
+		var inimigo_spawns = spawns
+		if get_tree().paused == false:
+			for i in inimigo_spawns:
+				await get_tree().paused == false
+				if time >= i.time_start and time <= i.time_end:
+					if i.inimigo_delay_counter < i.inimigo_spawn_delay:
+						i.inimigo_delay_counter += 1
+					else:
+						i.inimigo_delay_counter = 0
+						var novo_inimigo = load(str(i.inimigo.resource_path))			
+						var counter = 0
+						while counter < i.inimigo_num:
+							var inimigo_spawn = novo_inimigo.instantiate()
+							inimigo_spawn.global_position = get_random_position()
+							add_child(inimigo_spawn)
+							counter += 1
 					
+						
 func get_random_position():
 	var vpr = get_viewport_rect().size * randf_range(1.1, 1.4)
 	var top_left = Vector2(player.global_position.x - vpr.x/2, player.global_position.y - vpr.y/2)

@@ -4,7 +4,7 @@ extends Inimigos
 
 func _ready():
 	barra_vida.init_vida(vida)
-
+	barra_vida.max_value = vida
 
 func update_vida():
 	barra_vida.value = vida
