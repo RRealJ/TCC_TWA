@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_8xh84"]
 [ext_resource type="Resource" uid="uid://d0cbjnswpqls" path="res://Inventario/player_inv.tres" id="2_f8ad5"]
-[ext_resource type="PackedScene" uid="uid://bjja1kgsmwtnf" path="res://generico/player_ui.tscn" id="2_tape2"]
+[ext_resource type="PackedScene" uid="uid://bjja1kgsmwtnf" path="res://player_ui.tscn" id="2_tape2"]
 [ext_resource type="Texture2D" uid="uid://tp6jsitysqn" path="res://Assets/player/sprite_move_l.png" id="4_l5q4d"]
 [ext_resource type="Texture2D" uid="uid://bgjrvdmpmu7nn" path="res://Assets/player/sprite_move.png" id="4_vrjnq"]
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="4_wer0q"]
@@ -172,12 +172,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtgwj"]
-radius = 3.0
-height = 20.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e10f4"]
 radius = 6.0
 height = 28.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e10f4"]
+radius = 7.0
 
 [sub_resource type="Animation" id="Animation_v5jau"]
 length = 0.001
@@ -545,7 +544,7 @@ position = Vector2(0, 1)
 
 [node name="level_up" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_8ba05")
-volume_db = -2.786
+volume_db = -1.0
 bus = &"sfx"
 
 [node name="Inv_ui" parent="." instance=ExtResource("7_3dj67")]

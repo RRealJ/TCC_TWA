@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dk5gjbgi8d3fk"]
+[gd_scene load_steps=9 format=3 uid="uid://dk5gjbgi8d3fk"]
 
 [ext_resource type="Script" path="res://Menus/gameover.gd" id="1_25gg1"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="1_nnl44"]
 [ext_resource type="AudioStream" uid="uid://dyp3lgj4d3ony" path="res://Audio/select.mp3" id="2_v5vgk"]
 [ext_resource type="AudioStream" uid="uid://c4fxi4goq0hx8" path="res://Audio/pressed.mp3" id="3_36h75"]
+[ext_resource type="AudioStream" uid="uid://b4v4ps3a04syf" path="res://Audio/gameover.mp3" id="5_48f56"]
 
 [sub_resource type="Animation" id="Animation_jvpvi"]
 length = 0.001
@@ -167,6 +168,9 @@ autoplay = "fadeIn"
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="gameover_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_48f56")
 
 [connection signal="focus_entered" from="VBoxContainer/btn_restart" to="." method="_on_btn_restart_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/btn_restart" to="." method="_on_btn_restart_pressed"]

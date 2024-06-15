@@ -13,6 +13,8 @@ func _ready():
 	
 
 func upgrade():
+	$alavancar.play()
+
 	for s in slots_r:
 		s.level_text.visible = false
 	$HBoxContainer2.visible = false
@@ -25,6 +27,7 @@ func upgrade():
 
 func insert():
 	$HBoxContainer2.visible = true
+	$recompensas_aparecerem.play()
 	await recompesas_random()
 	for i in range(0, 3):
 		var temp_r = recompensas[i]

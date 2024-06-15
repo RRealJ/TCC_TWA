@@ -1,3 +1,4 @@
+AudioStreamPlayer
 Timer
 CollisionShape2D
 AnimatedSprite2D
@@ -11,4 +12,3 @@ TextureButton
 Label
 Sprite2D
 Panel
-CenterContainer

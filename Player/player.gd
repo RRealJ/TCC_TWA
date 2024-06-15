@@ -89,7 +89,8 @@ func update_exp(_exp):
 
 func level_up():
 	barra_exp.value = 0
-	barra_exp.max_value += 100
+	if nivel <= 10:
+		barra_exp.max_value += 100
 	nivel += 1 
 	texto_nivel.text = str(nivel)
 	exp = 0
@@ -129,7 +130,7 @@ func animate() -> void:
 
 func _on_hurtbox_body_entered(body):
 	if menu_pausa.visible == false:
-		if body is Inimigos:
+		if body is Inimigos or body.is_in_group("inimigos"):
 			vida = barra_vida.vida - (body.dano - resistencia)
 			update_PlayerUI()
 		if vida <= 0:
