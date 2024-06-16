@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://7s87ybeqiy5i"]
+[gd_scene load_steps=19 format=3 uid="uid://7s87ybeqiy5i"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://etergefwbryv" path="res://Inimigos/dino_comum_shooter.tscn" id="11_5vrth"]
 [ext_resource type="PackedScene" uid="uid://d3odji1imsb8s" path="res://Recompensas/recompensas.tscn" id="13_itkum"]
 [ext_resource type="PackedScene" uid="uid://d4id0b8wvrc6w" path="res://Efeitos/drop_exp.tscn" id="13_vqgpm"]
+[ext_resource type="AudioStream" uid="uid://dxkmpblx5thof" path="res://Audio/m1_bgm.mp3" id="14_ghydn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wl1v"]
 resource_name = "Base"
@@ -1211,3 +1212,9 @@ position = Vector2(-80, 31)
 
 [node name="drop_exp9" parent="." instance=ExtResource("13_vqgpm")]
 position = Vector2(-132, 73)
+
+[node name="mundo_bgm" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("14_ghydn")
+volume_db = -5.0
+bus = &"bgm"

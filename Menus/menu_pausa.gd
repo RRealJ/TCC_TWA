@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var video = get_node("Video")
 @onready var volume = get_node("Volume")
 @onready var opt_btn = $Video/HBoxContainer1/checkboxes1/ob_resolucao
+@onready var mundo_bgm = $"../../mundo_bgm"
 
 const DICT_RESOLUCOES : Dictionary = {
 	"1024 x 768" : Vector2i(1024, 768),
@@ -23,6 +24,8 @@ func _ready():
 func _unhandled_input(event):
 	if event.is_action_pressed("escape"):
 		if $"../Recompensas".visible == false:
+			if Global.diminuir_bgm_ao_pausar:#vai que a pessoa pausa pra ouvir algo
+				mundo_bgm.volume_db = -15 
 			visible = true
 			get_tree().paused = true
 			btn_continuar.grab_focus()
@@ -30,6 +33,8 @@ func _unhandled_input(event):
 
 func _on_btn_continuar_pressed():
 	get_tree().paused = false
+	if Global.diminuir_bgm_ao_pausar:
+		mundo_bgm.volume_db = -5
 	visible = false
 	
 	
@@ -50,6 +55,7 @@ func add_resolucao_items() -> void:
 	
 func on_resolution_selected(index : int) -> void:
 	DisplayServer.window_set_size(DICT_RESOLUCOES.values()[index])
+	
 
 
 func _on_cb_fullscreen_toggled(toggled_on):

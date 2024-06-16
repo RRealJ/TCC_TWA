@@ -16,3 +16,7 @@ res://Menus/main_menu.gd
 res://loja.tscn
 res://loja.gd
 res://generico/confirmacao.tscn
+res://Mundos/mundo_1.gd
+res://Menus/menu_pausa.tscn
+res://Menus/menu_pausa.gd
+res://Global.gd

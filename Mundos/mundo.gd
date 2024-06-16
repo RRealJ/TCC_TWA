@@ -14,9 +14,12 @@ class_name Mundo
 @onready var counter = 0 as int
 @onready var minutos = 0 as int
 @onready var boss : Inimigos
+@onready var mundo_bgm = $mundo_bgm
 
 
 func _ready():
+	mundo_bgm.finished.connect(bgm_finalizado)
+	mundo_bgm.play()
 	label_m_timer.text = "0:0"
 	Global.mundo_atual = 1
 	player.follow_camera(camera)
@@ -56,4 +59,7 @@ func conectar_boss():
 
 func notify_player_boss_death():
 	player.morto()
+	
+func bgm_finalizado():
+	mundo_bgm.play()
 
