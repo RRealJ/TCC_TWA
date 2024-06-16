@@ -226,14 +226,18 @@ bus = &"sfx"
 
 [node name="moedas" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = 0.996094
+anchor_top = 0.003125
+anchor_right = 0.996094
+anchor_bottom = 0.003125
 offset_left = -155.0
 offset_bottom = 32.0
 grow_horizontal = 0
 theme = ExtResource("8_2vibf")
-text = "a"
+theme_override_colors/font_color = Color(0.945137, 0.833978, 0.325354, 1)
+theme_override_font_sizes/font_size = 64
+text = "0"
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 

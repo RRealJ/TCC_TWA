@@ -5,15 +5,12 @@ res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
 res://Assets/shaders/flashing_white.gdshader
 res://Assets/shaders/chromatic_aberration.gdshader
-res://Inimigos/inimigo_boss.gd
 res://Mundos/mundo_1.tscn
-res://Recompensas/Recompensas_ui.tscn
 res://Inimigos/dino_comum_shooter.tscn
 res://Timers e spawns/spawn_inimigo.tscn
 res://Menus/gameover.tscn
 res://generico/shooter.tscn
-res://Inimigos/bullet_inimigo.tscn
-res://Global.gd
-res://Player/player.gd
 res://Menus/main_menu.tscn
-res://Menus/main_menu.gd
+res://cutscene_inicial.tscn
+res://main.tscn
+res://loja.tscn

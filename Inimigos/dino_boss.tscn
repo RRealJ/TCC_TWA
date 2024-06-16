@@ -257,10 +257,13 @@ position = Vector2(1, 2)
 wait_time = 5.0
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="TextureRect" parent="."]
 z_index = 2
 material = SubResource("ShaderMaterial_m7csc")
-position = Vector2(-3, 3)
+offset_left = -55.0
+offset_top = -42.0
+offset_right = -23.0
+offset_bottom = -10.0
 scale = Vector2(3.4375, 2.875)
 texture = ExtResource("13_6yn8a")
 
