@@ -71,12 +71,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 script = ExtResource("1_42iys")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 3461.0
-offset_bottom = 2148.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.588235)
 
 [node name="Control" type="Control" parent="."]
@@ -86,15 +90,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(1385, -14)
 
 [node name="anim" type="AnimatedSprite2D" parent="Control"]
-position = Vector2(170, 80)
+position = Vector2(-348, 347)
 scale = Vector2(29.0313, 25)
 sprite_frames = SubResource("SpriteFrames_s0ql0")
 animation = &"entrada"
 frame = 8
 frame_progress = 1.0
 centered = false
+offset = Vector2(17.8428, -10.68)
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control"]
 custom_minimum_size = Vector2(32, 32)
@@ -159,11 +165,14 @@ root_path = NodePath("..")
 
 [node name="alavancar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_151jm")
-volume_db = -2.0
+volume_db = -3.0
 pitch_scale = 0.88
+bus = &"sfx"
 
 [node name="recompensas_aparecerem" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_xguwn")
+volume_db = -3.0
+bus = &"sfx"
 
 [connection signal="animation_finished" from="Control/anim" to="." method="_on_anim_animation_finished"]
 [connection signal="pressed" from="Control/HBoxContainer2/Button1" to="." method="_on_button_1_pressed"]

@@ -1,10 +1,10 @@
 Control
+CanvasLayer
 ColorRect
 AnimationPlayer
 AnimatedSprite2D
 Sprite2D
 NinePatchRect
-CanvasLayer
 AudioStreamPlayer
 Timer
 CollisionShape2D
@@ -12,4 +12,3 @@ CharacterBody2D
 Button
 HBoxContainer
 GridContainer
-TextureButton

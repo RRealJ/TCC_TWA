@@ -10,6 +10,7 @@ class_name Recompensa
 
 func _ready():
 	visible = false
+	$Control.visible = false
 	
 
 func upgrade():
@@ -20,6 +21,7 @@ func upgrade():
 	$"Control/HBoxContainer2".visible = false
 	$"Control/HBoxContainer".visible = false
 	visible = true
+	$Control.visible = true
 	$"..".visible = true
 	get_tree().paused = true
 	anim.play("entrada")
@@ -84,6 +86,7 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 func esconder():
 	visible = false
 	$"..".visible = false
+	$Control.visible = false
 	get_tree().paused = false
 
 

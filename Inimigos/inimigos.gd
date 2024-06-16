@@ -25,8 +25,8 @@ func _physics_process(delta):
 	else:
 		velocity = position.direction_to(target.position) * speed
 		move_and_slide()
-		if !self.is_in_group("inimigos_boss"):
-			a_sprite.play("andar")
+		#if !self.is_in_group("inimigos_boss"):
+		a_sprite.play("andar")
 		
 		if (target.position.x - position.x) < 0:
 			a_sprite.flip_h = true

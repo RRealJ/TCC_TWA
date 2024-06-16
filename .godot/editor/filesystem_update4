@@ -1,18 +1,9 @@
-res://Player/player.tscn
+res://Inimigos/dino_boss.tscn
 res://Inimigos/inimigos_comum.gd
 res://Inventario/player_inv.tres
 res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
+res://Inimigos/inimigos.gd
 res://Mundos/mundo_1.tscn
 res://Recompensas/Recompensas_ui.tscn
-res://Inimigos/dino_boss.tscn
 res://Menus/main_menu.tscn
-res://intro.tscn
-res://loja.tscn
-res://cutscene_inicial.tscn
-res://main.tscn
-res://Menus/menu_pausa.tscn
-res://Recompensas/recompensas.tscn
-res://player_ui.tscn
-res://Mundos/mundo.gd
-res://Recompensas/recompensas.gd
