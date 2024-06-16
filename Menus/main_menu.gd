@@ -129,6 +129,7 @@ func _on_status_pressed():
 	$Status/HBoxContainer/info/info_completados.text = str(Global.jogos_completados)
 	$Status/HBoxContainer/info/info_jogos.text = str(Global.jogos_jogados)
 	$Status/HBoxContainer/info/info_inimigos.text = str(Global.inimigos_derrotados)
+	$Status/HBoxContainer/info/info_bosses.text = str(Global.bosses_derrotados)
 	$Status/HBoxContainer/info/info_conquistas.text = str(Global.conquista_completadas)
 	$Status/btn_voltar_status.grab_focus()
 
@@ -149,9 +150,6 @@ func _on_hs_bgm_drag_ended(value_changed):
 	if value_changed:
 		pass
 		#ConfigFileHandler.save_audio_settings("bgm_volume", $Volume/HBoxContainer/sliders/hs_bgm.value/100)
-
-
-
 
 func _on_bgm_menu_loop_finished():
 	$bgm_menu_loop.play()

@@ -150,6 +150,7 @@ func salvar():
 	Global.jogos_jogados += 1
 	
 	
+	
 func morto():
 	salvar()
 	animacao_morte()

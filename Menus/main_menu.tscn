@@ -344,6 +344,11 @@ layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Inimigos Abatidos"
 
+[node name="bosses" type="Label" parent="Status/HBoxContainer/labels"]
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "Chefes Derrotados"
+
 [node name="conquistas" type="Label" parent="Status/HBoxContainer/labels"]
 texture_filter = 1
 layout_mode = 2
@@ -361,7 +366,7 @@ theme_override_constants/separation = 13
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
-text = "00000"
+text = "0"
 
 [node name="info_completados" type="Label" parent="Status/HBoxContainer/info"]
 texture_filter = 1
@@ -380,6 +385,11 @@ texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "00000"
+
+[node name="info_bosses" type="Label" parent="Status/HBoxContainer/info"]
+layout_mode = 2
+theme = ExtResource("2_4ytr2")
+text = "000000"
 
 [node name="info_conquistas" type="Label" parent="Status/HBoxContainer/info"]
 texture_filter = 1

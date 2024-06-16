@@ -1,3 +1,6 @@
+Label
+Sprite2D
+Node2D
 AudioStreamPlayer2D
 ColorRect
 NinePatchRect
@@ -6,10 +9,6 @@ Control
 CanvasLayer
 AnimationPlayer
 AnimatedSprite2D
-Sprite2D
 Timer
 CollisionShape2D
 CharacterBody2D
-Button
-HBoxContainer
-GridContainer

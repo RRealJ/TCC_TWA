@@ -5,6 +5,7 @@ extends Control
 @onready var btn_finalizar = $VBoxContainer/btn_finalizar
 
 func _ready():
+	get_tree().paused = false
 	$gameover_sound.play()
 	await get_tree().create_timer(1.5).timeout
 	btn_finalizar.grab_focus()

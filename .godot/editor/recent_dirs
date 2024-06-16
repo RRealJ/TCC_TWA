@@ -1,6 +1,7 @@
+res://Assets/shaders
+res://Assets
 res://Audio
 res://Assets/inimigos
-res://Assets
 res://
 res://Assets/itens
 res://Inimigos
@@ -19,4 +20,3 @@ res://Generico
 res://Menus
 res://Assets/player
 D:/TCC/Player
-res://Timers e spawns

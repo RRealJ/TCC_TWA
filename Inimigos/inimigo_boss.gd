@@ -40,15 +40,11 @@ func _physics_process(delta):
 	
 	
 func receber_dano(dano_recebido):
-	print(state)
 	vida = vida - dano_recebido
-	print(vida)
-	print(vida_maxima)
 	if vida <= vida_maxima/3:
 		update_frenzy()
 	update_vida()
-	print('apos update_vida')
-	print(vida, vida_maxima)
+
 		
 		
 func atirar():
@@ -69,23 +65,21 @@ func atirar():
 
 func update_frenzy():
 	if !state == 1:
-		$AnimatedSprite2D.play("frenzy_transform")
+		flashing()
 		state = FRENZY
 		speed = speed * 2
 		speed_limit = speed_limit * 2
 		dano = dano * 2
-		await get_tree().create_timer(4).timeout
+		chromo()
 		
 #colocar timer que ao acabar fará com que mude pode_atirar para true
-
-
 func update_vida():
 	barra_vida.vida = vida
 	if vida <= 0:
 		morto()
+		Global.bosses_derrotados += 1
 		boss_morto.emit()
-		
-
+	
 
 func _on_hitbox_body_entered(body):
 	if body.is_in_group("Bullets") or body is AreaArma:
@@ -101,3 +95,47 @@ func _on_timer_atirar_timeout():
 func drop_coin():
 	var valor_moeda = int(randi_range(ouro * PlayerVariaveis.sorte, ouro * 2 * PlayerVariaveis.sorte))
 	mundo.count_moedas(valor_moeda)
+	
+
+func flashing():
+	a_sprite.material.set_shader_parameter("flash_mofidifier", 1)
+	await get_tree().create_timer(0.5).timeout
+	
+	a_sprite.material.set_shader_parameter("flash_mofidifier", 0.5)
+	await get_tree().create_timer(0.5).timeout
+	
+	a_sprite.material.set_shader_parameter("flash_mofidifier", 1)
+	await get_tree().create_timer(0.5).timeout
+	
+	a_sprite.material.set_shader_parameter("flash_mofidifier", 0.0)
+	
+
+func chromo():
+	var valores = Vector2(5.0, 5.0)
+	$Sprite2D.material.set_shader_parameter("r_displacement", valores)
+	valores = Vector2(-5.0, -5.0)
+	$Sprite2D.material.set_shader_parameter("b_displacement", valores)
+	await get_tree().create_timer(0.5).timeout
+	
+	valores = Vector2(20.0, -20.0)
+	$Sprite2D.material.set_shader_parameter("r_displacement", valores)
+	valores = Vector2(-20.0, 20.0)
+	$Sprite2D.material.set_shader_parameter("b_displacement", valores)
+	await get_tree().create_timer(0.5).timeout
+	
+	valores = Vector2(50.0, 50.0)
+	$Sprite2D.material.set_shader_parameter("r_displacement", valores)
+	valores = Vector2(-50.0, -50.0)
+	$Sprite2D.material.set_shader_parameter("b_displacement", valores)
+	await get_tree().create_timer(0.5).timeout
+	
+	valores = Vector2(5.0, 5.0)
+	$Sprite2D.material.set_shader_parameter("r_displacement", valores)
+	valores = Vector2(-5.0, -5.0)
+	$Sprite2D.material.set_shader_parameter("b_displacement", valores)
+	await get_tree().create_timer(0.5).timeout
+	
+	valores = Vector2(0.0, 0.0)
+	$Sprite2D.material.set_shader_parameter("r_displacement", valores)
+	$Sprite2D.material.set_shader_parameter("b_displacement", valores)
+	
