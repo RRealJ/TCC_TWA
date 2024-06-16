@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dfm0mdvmbgdv2"]
+[gd_scene load_steps=13 format=3 uid="uid://dfm0mdvmbgdv2"]
 
 [ext_resource type="Script" path="res://loja.gd" id="1_2ofpd"]
 [ext_resource type="Texture2D" uid="uid://diwyarq17rwwc" path="res://Assets/formatos/pp_clock.png" id="1_wfg0a"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bx43gpgmorkah" path="res://text_edit_sara.tscn" id="8_pa2xe"]
 [ext_resource type="AudioStream" uid="uid://new414htllf2" path="res://Audio/btns_loja.mp3" id="10_ihp2p"]
 [ext_resource type="AudioStream" uid="uid://begye0eu0r7a5" path="res://Audio/denied.mp3" id="11_7e65p"]
+[ext_resource type="AudioStream" uid="uid://jxjvvcl2awqg" path="res://Audio/loja_bgm.mp3" id="12_rphgk"]
 
 [node name="Loja" type="Control"]
 texture_filter = 1
@@ -220,6 +221,7 @@ visible = false
 
 [node name="btn_upgrade" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_ihp2p")
+volume_db = -20.0
 bus = &"sfx"
 
 [node name="moedas" type="Label" parent="."]
@@ -237,6 +239,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="denied" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_7e65p")
+volume_db = -20.0
+
+[node name="loja_bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_rphgk")
+volume_db = -20.0
+bus = &"bgm"
 
 [connection signal="focus_entered" from="descricoes/nome_up" to="." method="_on_nome_up_focus_entered"]
 [connection signal="focus_entered" from="descricoes/TextEdit" to="." method="_on_text_edit_focus_entered"]
@@ -253,3 +261,4 @@ stream = ExtResource("11_7e65p")
 [connection signal="pressed" from="upgrades/VBoxContainer/p_upgrades/set_3/up_dano" to="." method="_on_up_dano_pressed"]
 [connection signal="focus_entered" from="upgrades/VBoxContainer/p_upgrades/set_3/up_chance_critica" to="." method="_on_up_chance_critica_focus_entered"]
 [connection signal="pressed" from="upgrades/VBoxContainer/p_upgrades/set_3/up_chance_critica" to="." method="_on_up_chance_critica_pressed"]
+[connection signal="finished" from="loja_bgm" to="." method="_on_loja_bgm_finished"]

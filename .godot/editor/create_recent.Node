@@ -1,11 +1,11 @@
+ColorRect
+NinePatchRect
+AudioStreamPlayer
 Control
 CanvasLayer
-ColorRect
 AnimationPlayer
 AnimatedSprite2D
 Sprite2D
-NinePatchRect
-AudioStreamPlayer
 Timer
 CollisionShape2D
 CharacterBody2D

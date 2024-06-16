@@ -18,6 +18,7 @@ func _ready() -> void:
 	for i in sounds.keys():
 		sounds[i].stream = load("res://Audio/" + str(i) + ".mp3")
 		#mixer
+		sounds[i].volume_db = -20
 		sounds[i].bus = &"sfx"
 		#add na sceneTree
 		add_child(sounds[i])

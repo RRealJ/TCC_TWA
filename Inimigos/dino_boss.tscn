@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://oe6ppdlipi3a"]
+[gd_scene load_steps=34 format=3 uid="uid://oe6ppdlipi3a"]
 
 [ext_resource type="Script" path="res://Inimigos/inimigo_boss.gd" id="1_tnrs5"]
 [ext_resource type="Texture2D" uid="uid://dqaexh6na7wj2" path="res://Assets/inimigos/M1_boss.png" id="2_qmwus"]
 [ext_resource type="Texture2D" uid="uid://buxcg1bboihpj" path="res://Assets/inimigos/M1_boss_frenzy.png" id="3_3rfaq"]
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_oo0le"]
+[ext_resource type="Texture2D" uid="uid://f0ai71xmtvcg" path="res://Assets/inimigos/M1_frenzy_transformando.png" id="4_1pyfd"]
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="4_5hi7y"]
 [ext_resource type="Texture2D" uid="uid://bjjwv3538s1p1" path="res://Assets/inimigos/M1_boss_spit_atack.png" id="4_efe2q"]
 [ext_resource type="Texture2D" uid="uid://chjeaugmax71k" path="res://Assets/inimigos/M1_boss_franzy_spit_atack.png" id="5_8jmgt"]
@@ -40,6 +41,22 @@ region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ngs3"]
 atlas = ExtResource("3_3rfaq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcwhs"]
+atlas = ExtResource("4_1pyfd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqdvy"]
+atlas = ExtResource("4_1pyfd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wh3n"]
+atlas = ExtResource("4_1pyfd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu3e4"]
+atlas = ExtResource("4_1pyfd")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjsg6"]
@@ -112,6 +129,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qcwhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqdvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wh3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqdvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wh3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqdvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wh3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu3e4")
+}],
+"loop": false,
+"name": &"frenzy_transform",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vjsg6")
 }, {
 "duration": 1.0,
@@ -166,7 +212,7 @@ exp_multi = 3
 z_index = 1
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_rky6a")
-animation = &"spit_attack_frenzy"
+animation = &"andar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_g8m81")

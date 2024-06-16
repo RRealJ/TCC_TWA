@@ -142,11 +142,16 @@ func follow_camera(camera):
 	remote_transform.remote_path = camera_path
 	
 
-func morto():
+
+func salvar():
 	Global.moedas += mundo.moedas
 	Global.inimigos_derrotados += mundo.inimigos_abatidos
 	Global.moedas += mundo.inimigos_abatidos
 	Global.jogos_jogados += 1
+	
+	
+func morto():
+	salvar()
 	animacao_morte()
 	limpar_inventario()
 	queue_free()

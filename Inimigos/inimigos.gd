@@ -51,9 +51,9 @@ func morto():
 	
 
 func animacao_morte():
-	var morto = anim_morte.instantiate()
-	morto.global_position = global_position
-	get_tree().get_root().add_child(morto)
+	var m = anim_morte.instantiate()
+	m.global_position = global_position
+	get_tree().get_root().add_child(m)
 	
 	
 func drop_coin():
@@ -64,10 +64,10 @@ func drop_coin():
 	
 	
 func drop_exp():
-	var exp = drop_expe.instantiate()
-	exp.global_position = global_position
-	exp.valor = int(randi_range(5 * exp_multi, 20 * exp_multi))
-	mundo.add_child(exp)
+	var expee = drop_expe.instantiate()
+	expee.global_position = global_position
+	expee.valor = int(randi_range(5 * exp_multi, 20 * exp_multi))
+	mundo.add_child(expee)
 	
 
 

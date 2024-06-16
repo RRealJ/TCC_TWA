@@ -23,6 +23,7 @@ const DICT_RESOLUCOES : Dictionary = {
 	
 
 func _ready():
+	$bgm_menu_loop.play()
 	add_resolucao_items()
 	opt_btn.item_selected.connect(on_resolution_selected)
 	btn_saltar.grab_focus()
@@ -148,3 +149,9 @@ func _on_hs_bgm_drag_ended(value_changed):
 	if value_changed:
 		pass
 		#ConfigFileHandler.save_audio_settings("bgm_volume", $Volume/HBoxContainer/sliders/hs_bgm.value/100)
+
+
+
+
+func _on_bgm_menu_loop_finished():
+	$bgm_menu_loop.play()

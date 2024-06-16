@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj6am7htam1ul"]
+[gd_scene load_steps=6 format=3 uid="uid://dj6am7htam1ul"]
 
 [ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_awpth"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="2_4ytr2"]
 [ext_resource type="PackedScene" uid="uid://eo4h62aq2wtt" path="res://Audio/ui_sounds.tscn" id="2_hguew"]
 [ext_resource type="Script" path="res://Menus/volume_sliders.gd" id="3_0g5m2"]
+[ext_resource type="AudioStream" uid="uid://bmqxqustnl2yv" path="res://Audio/menu_main_bgm.mp3" id="5_12opd"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -403,6 +404,11 @@ theme = ExtResource("2_4ytr2")
 text = "Voltar
 "
 
+[node name="bgm_menu_loop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_12opd")
+volume_db = -25.0
+bus = &"bgm"
+
 [connection signal="pressed" from="menu/btn_saltar" to="." method="_on_btn_saltar_pressed"]
 [connection signal="pressed" from="menu/btn_loja" to="." method="_on_btn_loja_pressed"]
 [connection signal="pressed" from="menu/btn_opcoes" to="." method="_on_btn_opcoes_pressed"]
@@ -420,3 +426,4 @@ text = "Voltar
 [connection signal="drag_ended" from="Volume/HBoxContainer/sliders/hs_bgm" to="." method="_on_hs_bgm_drag_ended"]
 [connection signal="pressed" from="Volume/btn_voltar_volume" to="." method="_on_btn_voltar_volume_pressed"]
 [connection signal="pressed" from="Status/btn_voltar_status" to="." method="_on_btn_voltar_status_pressed"]
+[connection signal="finished" from="bgm_menu_loop" to="." method="_on_bgm_menu_loop_finished"]

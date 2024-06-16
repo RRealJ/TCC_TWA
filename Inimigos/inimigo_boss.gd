@@ -9,12 +9,15 @@ var pode_atirar = false
 enum{NORMAL, FRENZY} #0, 1
 var state = NORMAL
 
-
+signal boss_morto
 
 func _ready():
+	mundo.boss = $"."
+	mundo.conectar_boss()
 	print("||spawnado boss||")
 	self.add_to_group("inimigo_boss")
-	barra_vida.init_vida(vida)
+	barra_vida.init_vida(vida_maxima)
+	barra_vida.max_value = vida_maxima
 
 		
 func _physics_process(delta):
@@ -65,19 +68,23 @@ func atirar():
 		
 
 func update_frenzy():
-	if !state == 1 or vida <= vida_maxima/7:
-		print('Entrando em Frenzy')
+	if !state == 1:
+		$AnimatedSprite2D.play("frenzy_transform")
 		state = FRENZY
 		speed = speed * 2
 		speed_limit = speed_limit * 2
 		dano = dano * 2
+		await get_tree().create_timer(4).timeout
+		
 #colocar timer que ao acabar fará com que mude pode_atirar para true
 
 
 func update_vida():
-	barra_vida.value = vida
+	barra_vida.vida = vida
 	if vida <= 0:
 		morto()
+		boss_morto.emit()
+		
 
 
 func _on_hitbox_body_entered(body):
@@ -89,3 +96,8 @@ func _on_timer_atirar_timeout():
 	if !atirando:
 		pode_atirar = true
 		atirar()
+
+
+func drop_coin():
+	var valor_moeda = int(randi_range(ouro * PlayerVariaveis.sorte, ouro * 2 * PlayerVariaveis.sorte))
+	mundo.count_moedas(valor_moeda)

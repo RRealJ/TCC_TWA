@@ -23,6 +23,7 @@ const upgrades_nome_desc = {
 
 
 func _ready():
+	$loja_bgm.play()
 	updateMoedas()
 	updateBars()
 	btn_up_vida.grab_focus()
@@ -141,3 +142,7 @@ func _on_text_edit_focus_entered():
 
 func updateMoedas():
 	$moedas.text = str(Global.moedas)
+
+
+func _on_loja_bgm_finished():
+	$loja_bgm.play()

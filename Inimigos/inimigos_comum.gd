@@ -2,12 +2,15 @@ extends Inimigos
 
 @onready var barra_vida = $barra_vida
 
+
 func _ready():
+	vida = vida
+	print("Inimigo Comum: ", vida)
 	barra_vida.init_vida(vida)
 	barra_vida.max_value = vida
 
 func update_vida():
-	barra_vida.value = vida
+	barra_vida.vida = vida
 	if vida <= 0:
 		morto()
 

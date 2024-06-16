@@ -165,13 +165,13 @@ root_path = NodePath("..")
 
 [node name="alavancar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_151jm")
-volume_db = -3.0
+volume_db = -20.0
 pitch_scale = 0.88
 bus = &"sfx"
 
 [node name="recompensas_aparecerem" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_xguwn")
-volume_db = -3.0
+volume_db = -20.0
 bus = &"sfx"
 
 [connection signal="animation_finished" from="Control/anim" to="." method="_on_anim_animation_finished"]

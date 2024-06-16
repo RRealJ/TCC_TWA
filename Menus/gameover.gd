@@ -9,6 +9,7 @@ func _ready():
 	await get_tree().create_timer(1.5).timeout
 	btn_finalizar.grab_focus()
 
+
 func _on_btn_restart_pressed():
 	$pressed.play()
 	print(mundo)

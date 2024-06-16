@@ -13,15 +13,15 @@ class_name Mundo
 @onready var multiplicador := Global.mundo_atual as int
 @onready var counter = 0 as int
 @onready var minutos = 0 as int
-
+@onready var boss : Inimigos
 
 
 func _ready():
+	label_m_timer.text = "0:0"
 	Global.mundo_atual = 1
 	player.follow_camera(camera)
-#	reiniciar_levels()
 	
-	
+
 func _physics_process(delta):
 	label_m_timer.text = get_time()
 
@@ -49,4 +49,11 @@ func get_time():
 		
 		return str(minutos)+":"+str(segundos)
 
+
+func conectar_boss():
+	boss.boss_morto.connect(notify_player_boss_death)
+
+
+func notify_player_boss_death():
+	player.morto()
 
