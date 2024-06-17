@@ -1,7 +1,8 @@
-res://main.tscn
+res://Mundos/mundo_1.tscn
 res://Inimigos/inimigos_comum.gd
 res://Inventario/player_inv.tres
 res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
 res://Assets/shaders/flashing_white.gdshader
 res://Assets/shaders/chromatic_aberration.gdshader
+res://Mundos/mundo.gd

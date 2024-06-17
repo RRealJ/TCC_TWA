@@ -59,6 +59,12 @@ func conectar_boss():
 
 func notify_player_boss_death():
 	player.morto()
+	#caso quer tela de vitoria, tirar player.morto()
+	#player.salvar()
+	#player.limpar_inventario()
+	#player.queue_free()
+	#change scene para a tela de vitoria
+	
 	
 func bgm_finalizado():
 	mundo_bgm.play()
