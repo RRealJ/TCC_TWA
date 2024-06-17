@@ -24,12 +24,19 @@ func _ready():
 func _unhandled_input(event):
 	if event.is_action_pressed("escape"):
 		if $"../Recompensas".visible == false:
-			if Global.diminuir_bgm_ao_pausar:#vai que a pessoa pausa pra ouvir algo
-				mundo_bgm.volume_db = -15 
-			visible = true
-			get_tree().paused = true
-			btn_continuar.grab_focus()
-		
+			if get_tree().paused == false:
+				if Global.diminuir_bgm_ao_pausar:#vai que a pessoa pausa pra ouvir algo
+					mundo_bgm.volume_db = -15 
+				visible = true
+				get_tree().paused = true
+				btn_continuar.grab_focus()
+			else:
+				if Global.diminuir_bgm_ao_pausar:
+					mundo_bgm.volume_db = -5
+				get_tree().paused = false
+				visible = false
+				
+	
 
 func _on_btn_continuar_pressed():
 	get_tree().paused = false

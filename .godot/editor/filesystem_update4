@@ -13,3 +13,4 @@ res://Inimigos/dino_boss.tscn
 res://Player/player.tscn
 res://player_ui.tscn
 res://generico/barra_vida.tscn
+res://Menus/menu_pausa.gd
