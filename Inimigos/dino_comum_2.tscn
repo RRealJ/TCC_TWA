@@ -41,8 +41,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y5xca"]
-radius = 13.0384
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bi6x4"]
+radius = 13.0
+height = 38.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvra6"]
 radius = 14.0
@@ -55,8 +56,8 @@ script = ExtResource("1_oq4x4")
 speed_limit = 105
 speed = 90
 dano = 20
+vida = 20
 ouro = 20
-exp_multi = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0j5j4")
@@ -64,10 +65,12 @@ animation = &"andar"
 frame_progress = 0.930746
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 5)
-shape = SubResource("CircleShape2D_y5xca")
+position = Vector2(1, 4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_bi6x4")
 
 [node name="softCollision" parent="." instance=ExtResource("3_lvtv3")]
+visible = false
 
 [node name="softcollision_col" parent="softCollision" index="0"]
 position = Vector2(1, 4)
@@ -80,6 +83,7 @@ offset_right = 11.0
 offset_bottom = -18.0
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 4
 

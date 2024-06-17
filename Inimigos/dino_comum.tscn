@@ -41,8 +41,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xkm4o"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s4vtd"]
 radius = 14.0
+height = 34.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yk1gn"]
 radius = 14.0
@@ -52,7 +53,9 @@ height = 36.0
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_7uwrf")
-vida = 25
+speed = 60
+dano = 15
+vida = 30
 ouro = 14
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -61,9 +64,11 @@ animation = &"andar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -1)
-shape = SubResource("CircleShape2D_xkm4o")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_s4vtd")
 
 [node name="softCollision" parent="." instance=ExtResource("3_xavkd")]
+visible = false
 
 [node name="softcollision_col" parent="softCollision" index="0"]
 rotation = 1.5708
@@ -75,6 +80,7 @@ offset_right = 11.0
 offset_bottom = -18.0
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 33
 

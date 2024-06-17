@@ -63,3 +63,12 @@ func notify_player_boss_death():
 func bgm_finalizado():
 	mundo_bgm.play()
 
+
+func _unhandled_input(event):
+	if event.is_action_pressed("f11"):
+		if Global.fullscreen == true:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			Global.fullscreen = false
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+			Global.fullscreen = true

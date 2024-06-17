@@ -71,9 +71,9 @@ func _physics_process(delta):
 
 
 func update_PlayerUI():
-	set_texto_barra_de_vida()
 	barra_vida.vida = vida
 	mini_barra.vida = vida
+	set_texto_barra_de_vida()
 
 
 func set_texto_barra_de_vida() -> void:
@@ -90,7 +90,7 @@ func update_exp(_exp):
 func level_up():
 	barra_exp.value = 0
 	if nivel <= 10:
-		barra_exp.max_value += 100
+		barra_exp.max_value += 250
 	nivel += 1 
 	texto_nivel.text = str(nivel)
 	exp = 0
@@ -185,9 +185,9 @@ func inserir(item): #inserir no iventário()
 		if item.nome == "Upgrade Vida":
 			vida_maxima = vida_maxima + 25
 			mini_barra.max_value = vida_maxima
-			print(mini_barra.max_value)
 			barra_vida.max_value = vida_maxima
-			print(barra_vida.max_value)
+			$"player_ui/sup_esquerda/barra_vida/barra_dano".max_value = vida_maxima
+			$"mini_barra/barra_dano".max_value = vida_maxima
 			vida = vida + 25
 			update_PlayerUI()
 			

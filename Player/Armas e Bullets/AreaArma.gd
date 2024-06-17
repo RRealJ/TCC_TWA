@@ -28,7 +28,7 @@ func atirar():
 		
 
 func _on_body_entered(body):
-	if menu_pausa.visible == false && recompensas_ui.visible == false:
+	if get_tree().paused == false:
 		dano = bullet_dano * PlayerVariaveis.dano * item.level
 		print("Area Instavel dano: ",dano, "| level: ", item.level)
 		if body is Inimigos:

@@ -63,6 +63,7 @@ func mostrar_esconder(mostrar, esconder):
 
 func _on_video_pressed():
 	mostrar_esconder(video, opcoes)
+	$Video/HBoxContainer/checkboxes/cb_fullscreen.button_pressed = Global.fullscreen
 	btn_display.grab_focus()
 
 
@@ -83,17 +84,20 @@ func add_resolucao_items() -> void:
 
 func on_resolution_selected(index : int) -> void:
 	DisplayServer.window_set_size(DICT_RESOLUCOES.values()[index])
+	
 
 	
 func _on_cb_fullscreen_toggled(toggled_on):
 	if toggled_on == true:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		Global.fullscreen = true
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		Global.fullscreen = false
 
 
 func _on_cb_sem_bordas_toggled(toggled_on):
-	ConfigFileHandler.save_video_settings("fullscreen", toggled_on)
+#	ConfigFileHandler.save_video_settings("fullscreen", toggled_on)
 	if toggled_on == true:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
@@ -153,3 +157,15 @@ func _on_hs_bgm_drag_ended(value_changed):
 
 func _on_bgm_menu_loop_finished():
 	$bgm_menu_loop.play()
+	
+	
+func _unhandled_input(event):
+	if event.is_action_pressed("f11"):
+		if Global.fullscreen == true:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			Global.fullscreen = false
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+			Global.fullscreen = true
+			
+			

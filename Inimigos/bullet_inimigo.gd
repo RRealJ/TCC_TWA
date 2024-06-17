@@ -4,7 +4,7 @@ extends Bullet
 
 
 func _on_area_2d_body_entered(body):
-	if menu_pausa.visible == false && recompensas_ui.visible == false:
+	if get_tree().paused == false:
 		if body is Player:
 			bullet_penetracao -= 1
 			if bullet_penetracao <= 0:

@@ -57,7 +57,15 @@ func atirar():
 			a_sprite.play("spit_attack")
 		
 		elif state == 1:
+			var valores = Vector2(5.0, 5.0)
+			$Sprite2D.material.set_shader_parameter("r_displacement", valores)
+			valores = Vector2(-5.0, -5.0)
+			$Sprite2D.material.set_shader_parameter("b_displacement", valores)
 			a_sprite.play("spit_attack_frenzy")
+			await get_tree().create_timer(0.3).timeout
+			valores = Vector2(0.0, 0.0)
+			$Sprite2D.material.set_shader_parameter("r_displacement", valores)
+			$Sprite2D.material.set_shader_parameter("b_displacement", valores)
 			
 		await get_tree().create_timer(2).timeout
 		atirando = false

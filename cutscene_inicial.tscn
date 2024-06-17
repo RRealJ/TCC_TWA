@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://cib547evnk31o"]
+[gd_scene load_steps=17 format=3 uid="uid://cib547evnk31o"]
 
 [ext_resource type="Script" path="res://cutscene_inicial.gd" id="1_ap7ow"]
 [ext_resource type="Texture2D" uid="uid://chl3hnvcgmxp3" path="res://Assets/intro_cut.png" id="2_y34d1"]
+[ext_resource type="AudioStream" uid="uid://chneq15k4nsy6" path="res://Audio/intro.mp3" id="3_fk0m5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwg32"]
 atlas = ExtResource("2_y34d1")
@@ -140,16 +141,22 @@ sprite_frames = SubResource("SpriteFrames_riwht")
 animation = &"intro"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/NinePatchRect"]
-layout_mode = 0
-offset_left = -242.0
-offset_top = -106.0
-offset_right = 3522.0
-offset_bottom = 2356.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_4l2wb")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fk0m5")
+autoplay = true
+bus = &"bgm"
 
 [connection signal="animation_finished" from="CanvasLayer/NinePatchRect/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

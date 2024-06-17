@@ -18,8 +18,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -640.0
+offset_top = 4.0
 offset_right = 640.0
-offset_bottom = 64.0
+offset_bottom = 68.0
 grow_horizontal = 2
 theme = ExtResource("5_4ym88")
 theme_override_colors/font_shadow_color = Color(0.197937, 0.197937, 0.197937, 1)
@@ -55,7 +56,7 @@ text = "1111"
 layout_mode = 0
 offset_left = 153.0
 offset_top = 13.0
-offset_right = 573.0
+offset_right = 523.0
 offset_bottom = 53.0
 
 [node name="inf_esquerda" type="Control" parent="."]

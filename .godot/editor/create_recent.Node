@@ -1,8 +1,8 @@
+AudioStreamPlayer2D
 TextureRect
 Label
 Sprite2D
 Node2D
-AudioStreamPlayer2D
 ColorRect
 NinePatchRect
 AudioStreamPlayer
@@ -12,4 +12,3 @@ AnimationPlayer
 AnimatedSprite2D
 Timer
 CollisionShape2D
-CharacterBody2D

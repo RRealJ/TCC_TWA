@@ -5,7 +5,7 @@ var dano = bullet_dano * PlayerVariaveis.dano
 
 
 func _on_area_2d_body_entered(body):
-	if menu_pausa.visible == false and recompensas_ui.visible == false:
+	if get_tree().paused == false:
 		dano = bullet_dano * PlayerVariaveis.dano * item.level
 		print("Normal Bullet dano: ",dano, "| level: ", item.level)
 		if body is Inimigos:
