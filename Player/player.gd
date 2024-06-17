@@ -171,7 +171,7 @@ func limpar_inventario():
 	inv.limpar()
 	
 
-func inserir(item): #inserir no iventário()
+func inserir(item): #inserir no inventário()
 	if item is PackedScene:
 		var passou = true
 		var i = item.instantiate()
@@ -192,7 +192,7 @@ func inserir(item): #inserir no iventário()
 			update_PlayerUI()
 			
 		elif item.nome == "Upgrade Velocidade":
-			speed = speed + 75
+			speed = speed + 25
 			friccao = friccao + 400
 		
 		elif item.nome == "Upgrade Defesa":

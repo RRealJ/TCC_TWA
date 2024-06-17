@@ -1,16 +1,23 @@
-res://Mundos/mundo_1.tscn
+res://Recompensas/recompensa_ui_slot.tscn
 res://Inimigos/inimigos_comum.gd
 res://Inventario/player_inv.tres
 res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
 res://Assets/shaders/flashing_white.gdshader
 res://Assets/shaders/chromatic_aberration.gdshader
+res://Recompensas/upgrades e itens/up_vida.tres
+res://Recompensas/recompensas.gd
+res://Recompensas/Recompensas_ui.tscn
+res://Player/player.gd
+res://Player/player.tscn
+res://Mundos/mundo_1.tscn
 res://Inimigos/dino_comum.tscn
 res://Inimigos/dino_comum_2.tscn
 res://intro.tscn
 res://Inimigos/dino_comum_shooter.tscn
 res://Inimigos/dino_boss.tscn
-res://Player/player.tscn
 res://player_ui.tscn
 res://generico/barra_vida.tscn
-res://Menus/menu_pausa.gd
+res://Recompensas/recompensas.tscn
+res://Player/Armas e Bullets/area_instavel.tscn
+res://Inimigos/inimigo_boss.gd

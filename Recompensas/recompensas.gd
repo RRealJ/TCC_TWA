@@ -15,7 +15,6 @@ func _ready():
 
 func upgrade():
 	$alavancar.play()
-
 	for s in slots_r:
 		s.level_text.visible = false
 	$"Control/HBoxContainer2".visible = false
@@ -31,7 +30,7 @@ func insert():
 	$"Control/HBoxContainer2".visible = true
 	$recompensas_aparecerem.play()
 	await recompesas_random()
-	for i in range(0, 3):
+	for i in range(0, 3): #nao pode ser for r in recompensas pq precisa do index para o slot
 		var temp_r = recompensas[i]
 		print(temp_r)
 		if recompensas[i] is PackedScene: #verificar se é uma cena
@@ -39,7 +38,7 @@ func insert():
 			print(temp_r.item.nome)
 		else:
 			print(temp_r.nome)
-		slots_r[i].update(temp_r) 
+		slots_r[i].update(temp_r)
 		temp_r = null
 	$"Control/HBoxContainer".visible = true
 	$"Control/HBoxContainer2/Button1".grab_focus()
@@ -60,12 +59,11 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 		var up_vida = load("res://Recompensas/upgrades e itens/up_vida.tres")
 		recompensas.append(up_vida)
 		print(up_vida)
-		
+	
 	if 2 in opt:
 		var area_instavel = load("res://Player/Armas e Bullets/area_instavel.tscn")
 		print(area_instavel)
 		recompensas.append(area_instavel)
-		
 		
 	if 3 in opt:
 		var bullet_normal = load("res://Player/Armas e Bullets/bullet_normal.tscn")
@@ -97,18 +95,16 @@ func _on_anim_animation_finished():
 
 func _on_button_1_pressed():
 	cena(recompensas[0])
-	esconder()
 	
 
 func _on_button_2_pressed():
 	cena(recompensas[1])
-	esconder()
 
 
 func _on_button_3_pressed():
 	cena(recompensas[2])
-	esconder()
 
 
 func cena(item):
 	player.inserir(item)
+	esconder()

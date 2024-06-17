@@ -86,6 +86,7 @@ func update_vida():
 	if vida <= 0:
 		morto()
 		Global.bosses_derrotados += 1
+		print('BOSS DERROTADO!!!')
 		boss_morto.emit()
 	
 
