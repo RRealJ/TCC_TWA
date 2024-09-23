@@ -14,7 +14,6 @@ const iFrame_duration = 1.5
 @onready var texto_vida = $player_ui/sup_esquerda/texto_barra_vida
 @onready var texto_velocidade = $player_ui/inf_direita/texto_velocidade
 @onready var remote_transform := $remote as RemoteTransform2D
-@onready var gameover = $"../gameover"
 @onready var barra_vida = $player_ui/sup_esquerda/barra_vida
 @onready var mini_barra = $mini_barra
 @onready var anim_sprite = $anim
@@ -60,7 +59,7 @@ func _ready():
 	barra_vida.init_vida(vida)
 	mini_barra.init_vida(vida)
 	update_PlayerUI()
-	
+
 	
 func _physics_process(delta):
 	var mouse_pos = get_global_mouse_position()
@@ -147,15 +146,18 @@ func salvar():
 	Global.moedas += mundo.moedas
 	Global.inimigos_derrotados += mundo.inimigos_abatidos
 	Global.moedas += mundo.inimigos_abatidos
-	Global.jogos_jogados += 1
-	
+	Global.jogos_iniciados += 1
 	
 	
 func morto():
 	salvar()
 	animacao_morte()
-	limpar_inventario()
 	queue_free()
+	Global.player_win = false
+	gameover()
+
+
+func gameover():
 	get_tree().change_scene_to_file("res://Menus/gameover.tscn")
 	
 
@@ -164,7 +166,6 @@ func animacao_morte():
 	morreu.global_position = global_position
 	get_tree().get_root().add_child(morreu)
 	get_tree().get_root().remove_child(morreu)
-	
 	
 	
 func limpar_inventario():
@@ -197,4 +198,3 @@ func inserir(item): #inserir no inventário()
 		
 		elif item.nome == "Upgrade Defesa":
 			resistencia = resistencia + 5
-

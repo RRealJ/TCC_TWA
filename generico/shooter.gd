@@ -40,4 +40,3 @@ func atirar():
 			can_shoot = true
 			if !inimigo.is_in_group("inimigo_boss"):
 				atirar()
-

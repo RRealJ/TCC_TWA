@@ -45,5 +45,3 @@ func atirar():
 		can_shoot = true
 		atirar()
 	
-
-

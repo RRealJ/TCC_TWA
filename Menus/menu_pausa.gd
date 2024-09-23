@@ -88,8 +88,3 @@ func _on_cb_vsync_toggled(toggled_on):
 		
 		
 		
-
-
-
-
-

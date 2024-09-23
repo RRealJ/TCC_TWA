@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfm0mdvmbgdv2"]
+[gd_scene load_steps=16 format=3 uid="uid://dfm0mdvmbgdv2"]
 
 [ext_resource type="Script" path="res://loja.gd" id="1_2ofpd"]
 [ext_resource type="Texture2D" uid="uid://diwyarq17rwwc" path="res://Assets/formatos/pp_clock.png" id="1_wfg0a"]
@@ -6,9 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://cl6tt0w3dyd2p" path="res://Assets/formatos/w_clock.png" id="2_e7ef7"]
 [ext_resource type="Texture2D" uid="uid://xuoatwwa0ci4" path="res://Assets/formatos/upgrade_normal.png" id="2_m2u30"]
 [ext_resource type="Texture2D" uid="uid://0vfd33ej50s7" path="res://Assets/formatos/upgrade_comprado.png" id="3_4u6ew"]
+[ext_resource type="Texture2D" uid="uid://d0sciphnw6au8" path="res://Assets/itens/inv_itens/up_vida.png" id="5_lssvn"]
 [ext_resource type="PackedScene" uid="uid://cv57l8cgtgr3v" path="res://generico/confirmacao.tscn" id="7_ga5l3"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="8_2vibf"]
 [ext_resource type="PackedScene" uid="uid://bx43gpgmorkah" path="res://text_edit_sara.tscn" id="8_pa2xe"]
+[ext_resource type="Texture2D" uid="uid://suvxqfijb8c8" path="res://Assets/itens/inv_itens/up_defense.png" id="9_wowyl"]
+[ext_resource type="Texture2D" uid="uid://dm2shhiwn14dg" path="res://Assets/itens/inv_itens/up_speed.png" id="10_207fb"]
 [ext_resource type="AudioStream" uid="uid://new414htllf2" path="res://Audio/btns_loja.mp3" id="10_ihp2p"]
 [ext_resource type="AudioStream" uid="uid://begye0eu0r7a5" path="res://Audio/denied.mp3" id="11_7e65p"]
 [ext_resource type="AudioStream" uid="uid://jxjvvcl2awqg" path="res://Audio/loja_bgm.mp3" id="12_rphgk"]
@@ -115,11 +118,13 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 
 [node name="up_vida" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_1"]
+custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
 mouse_filter = 1
-texture_normal = ExtResource("2_e7ef7")
+texture_normal = ExtResource("5_lssvn")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
+stretch_mode = 0
 
 [node name="upbar_vida" type="TextureProgressBar" parent="upgrades/VBoxContainer/p_upgrades/set_1"]
 layout_mode = 2
@@ -129,11 +134,13 @@ texture_progress = ExtResource("3_4u6ew")
 tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 
 [node name="up_resistencia" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_1"]
+custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
 mouse_filter = 1
-texture_normal = ExtResource("2_e7ef7")
+texture_normal = ExtResource("9_wowyl")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
+stretch_mode = 0
 
 [node name="upbar_resistencia" type="TextureProgressBar" parent="upgrades/VBoxContainer/p_upgrades/set_1"]
 layout_mode = 2
@@ -146,11 +153,13 @@ tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 layout_mode = 2
 
 [node name="up_velocidade" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_2"]
+custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
 mouse_filter = 1
-texture_normal = ExtResource("2_e7ef7")
+texture_normal = ExtResource("10_207fb")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
+stretch_mode = 0
 
 [node name="upbar_velocidade" type="TextureProgressBar" parent="upgrades/VBoxContainer/p_upgrades/set_2"]
 layout_mode = 2
@@ -177,6 +186,7 @@ tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 layout_mode = 2
 
 [node name="up_dano" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_3"]
+custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
 mouse_filter = 1
 texture_normal = ExtResource("2_e7ef7")

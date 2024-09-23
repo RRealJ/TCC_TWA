@@ -9,6 +9,7 @@ class_name Loja
 @onready var confirmacao = $confirmacao
 @onready var nome_up = $descricoes/nome_up
 @onready var descricao_up = $descricoes/TextEdit/MarginContainer/Label
+@onready var descricao_preco = $descricoes/TextEdit/MarginContainer/Label2
 @onready var sfx_upgrade = $btn_upgrade
 
 
@@ -105,31 +106,38 @@ func _on_voltar_menu_pressed():
 func _on_up_vida_focus_entered():
 	nome_up.text = upgrades_nome_desc["Vida"][0]
 	descricao_up.text = upgrades_nome_desc["Vida"][1]
+	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida.value)
 
 
 func _on_up_resistencia_focus_entered():
 	nome_up.text = upgrades_nome_desc["Resistencia"][0]
 	descricao_up.text = upgrades_nome_desc["Resistencia"][1]
+	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia.value)
 
 
 func _on_up_velocidade_focus_entered():
 	nome_up.text = upgrades_nome_desc["Velocidade"][0]
 	descricao_up.text = upgrades_nome_desc["Velocidade"][1]
+	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade.value)
 
 
 func _on_up_sorte_focus_entered():
 	nome_up.text = upgrades_nome_desc["Sorte"][0]
 	descricao_up.text = upgrades_nome_desc["Sorte"][1]
+	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte.value)
 
 
 func _on_up_dano_focus_entered():
 	nome_up.text = upgrades_nome_desc["Dano"][0]
 	descricao_up.text = upgrades_nome_desc["Dano"][1]
+	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano.value)
+
 
 
 func _on_up_chance_critica_focus_entered():	
 	nome_up.text = upgrades_nome_desc["Chance_critica"][0]
 	descricao_up.text = upgrades_nome_desc["Chance_critica"][1]
+	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica.value)
 
 
 func _on_nome_up_focus_entered():

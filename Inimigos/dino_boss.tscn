@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://oe6ppdlipi3a"]
+[gd_scene load_steps=40 format=3 uid="uid://oe6ppdlipi3a"]
 
 [ext_resource type="Script" path="res://Inimigos/inimigo_boss.gd" id="1_tnrs5"]
 [ext_resource type="Shader" path="res://Assets/shaders/flashing_white.gdshader" id="2_fy0fu"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://chjeaugmax71k" path="res://Assets/inimigos/M1_boss_franzy_spit_atack.png" id="5_8jmgt"]
 [ext_resource type="PackedScene" uid="uid://rl3wcnvcth1u" path="res://OverLap/hitbox.tscn" id="5_p47bi"]
 [ext_resource type="PackedScene" uid="uid://cm7kq4adfq6k4" path="res://generico/shooter.tscn" id="6_sillv"]
+[ext_resource type="PackedScene" uid="uid://bvd0r1rfek1uf" path="res://Inimigos/m1_boss_bullet.tscn" id="12_8js0j"]
 [ext_resource type="Shader" path="res://Assets/shaders/chromatic_aberration.gdshader" id="12_yaet0"]
 [ext_resource type="Texture2D" uid="uid://ih4v1cleoxwc" path="res://Assets/32x32_transparente.png" id="13_6yn8a"]
 
@@ -228,7 +229,8 @@ z_index = 1
 material = SubResource("ShaderMaterial_3ubs3")
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_rky6a")
-animation = &"andar"
+animation = &"spit_attack_frenzy"
+frame_progress = 0.0459542
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
@@ -245,6 +247,7 @@ offset_bottom = -45.0
 
 [node name="hitbox" parent="." instance=ExtResource("5_p47bi")]
 visible = false
+script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 rotation = 1.5708
@@ -253,6 +256,7 @@ debug_color = Color(1, 0.332004, 0.299074, 0.42)
 
 [node name="shooter" parent="." instance=ExtResource("6_sillv")]
 position = Vector2(1, 2)
+bullet = ExtResource("12_8js0j")
 
 [node name="timer_atirar" type="Timer" parent="."]
 wait_time = 5.0

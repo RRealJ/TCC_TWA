@@ -69,6 +69,3 @@ func drop_exp():
 	expee.valor = int(randi_range(5 * exp_multi, 20 * exp_multi))
 	mundo.add_child(expee)
 	
-
-
-

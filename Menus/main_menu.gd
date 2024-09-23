@@ -130,8 +130,8 @@ func _on_btn_voltar_status_pressed():
 func _on_status_pressed():
 	mostrar_esconder(status, opcoes)
 	$Status/HBoxContainer/info/info_moedas.text = str(Global.moedas)
-	$Status/HBoxContainer/info/info_completados.text = str(Global.jogos_completados)
-	$Status/HBoxContainer/info/info_jogos.text = str(Global.jogos_jogados)
+	$Status/HBoxContainer/info/info_iniciados.text = str(Global.jogos_iniciados)
+	$Status/HBoxContainer/info/info_mundos_completados.text = str(Global.jogos_completados)
 	$Status/HBoxContainer/info/info_inimigos.text = str(Global.inimigos_derrotados)
 	$Status/HBoxContainer/info/info_bosses.text = str(Global.bosses_derrotados)
 	$Status/HBoxContainer/info/info_conquistas.text = str(Global.conquista_completadas)

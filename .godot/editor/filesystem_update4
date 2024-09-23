@@ -1,8 +1,18 @@
 res://Mundos/mundo_1.tscn
-res://Inimigos/inimigos_comum.gd
 res://Inventario/player_inv.tres
 res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
+res://Inimigos/inimigos_comum.gd
 res://Assets/shaders/flashing_white.gdshader
 res://Assets/shaders/chromatic_aberration.gdshader
 res://Mundos/mundo.gd
+res://Player/player.gd
+res://player_variaveis.gd
+res://Inventario/Inv_ui.gd
+res://Menus/gameover.tscn
+res://Menus/gameover.gd
+res://Player/player.tscn
+res://main.tscn
+res://Menus/main_menu.tscn
+res://Inventario/inv_ui_slot.tscn
+res://player_ui.tscn

@@ -3,11 +3,23 @@ extends Control
 
 @onready var mundo = Global.mundo_atual
 @onready var btn_finalizar = $VBoxContainer/btn_finalizar
+@onready var titulo = $gameover_titulo
+@onready var inv: Inv = load("res://Inventario/player_inv.tres")
+
 
 func _ready():
 	get_tree().paused = false
-	$gameover_sound.play()
+	if Global.player_win:
+		titulo.text = "GANHOU!"
+		$gameover_win_sound.play()
+	else:
+		titulo.text = "FIM DE JOGO"
+		$gameover_sound.play()
+		
+	$Control/Inv_ui.visible = true
+	
 	await get_tree().create_timer(1.5).timeout
+	$gameover_bgm.play()
 	btn_finalizar.grab_focus()
 
 

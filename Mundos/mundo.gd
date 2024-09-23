@@ -3,7 +3,7 @@ extends Node
 class_name Mundo
 
 
-@onready var label_m_timer = $"Player/player_ui/label_timer"
+@onready var label_m_timer = $camera/camera_ui/label_timer
 @onready var player := $Player as CharacterBody2D
 @onready var camera := $camera as Camera2D
 @onready var label_contagem_inimigos = $"Player/player_ui/sup_direito/contagem_inimigos"
@@ -18,10 +18,11 @@ class_name Mundo
 
 
 func _ready():
+	player.inv.limpar()
 	mundo_bgm.finished.connect(bgm_finalizado)
 	mundo_bgm.play()
 	label_m_timer.text = "0:0"
-	Global.mundo_atual = 1
+	Global.jogos_iniciados += 1
 	player.follow_camera(camera)
 	
 
@@ -49,7 +50,6 @@ func get_time():
 			segundos = 0
 			counter = 0
 			minutos += 1
-		
 		return str(minutos)+":"+str(segundos)
 
 
@@ -58,12 +58,10 @@ func conectar_boss():
 
 
 func notify_player_boss_death():
-	player.morto()
-	#caso quer tela de vitoria, tirar player.morto()
-	#player.salvar()
-	#player.limpar_inventario()
-	#player.queue_free()
-	#change scene para a tela de vitoria
+	player.salvar()
+	Global.player_win = true
+	player.queue_free()
+	get_tree().change_scene_to_file("res://Menus/gameover.tscn")
 	
 	
 func bgm_finalizado():

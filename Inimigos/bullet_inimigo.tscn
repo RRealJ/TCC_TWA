@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://dci51j3ghkebd"]
 
 [ext_resource type="Script" path="res://Inimigos/bullet_inimigo.gd" id="1_k0coa"]
-[ext_resource type="Texture2D" uid="uid://rs47uo4pxoix" path="res://Assets/itens/armas_bullets-areas/bullet_normal.png" id="2_231w4"]
+[ext_resource type="Texture2D" uid="uid://bioosi2y3m700" path="res://Assets/inimigos/M1_shooter_bullet.png" id="2_gtgy5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o5se2"]
+radius = 6.0
 height = 26.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7jwmg"]
@@ -16,12 +17,14 @@ bullet_dano = 25
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.104166, -0.229166)
+rotation = 1.5708
 scale = Vector2(1.05599, 0.889323)
-texture = ExtResource("2_231w4")
+texture = ExtResource("2_gtgy5")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_o5se2")
 

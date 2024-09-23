@@ -46,7 +46,6 @@ func receber_dano(dano_recebido):
 	update_vida()
 
 		
-		
 func atirar():
 	if pode_atirar:
 		pode_atirar = false
@@ -87,7 +86,9 @@ func update_vida():
 		morto()
 		Global.bosses_derrotados += 1
 		print('BOSS DERROTADO!!!')
+		Global.jogos_completados += 1
 		boss_morto.emit()
+		queue_free()
 	
 
 func _on_hitbox_body_entered(body):
@@ -118,6 +119,14 @@ func flashing():
 	
 	a_sprite.material.set_shader_parameter("flash_mofidifier", 0.0)
 	
+	
+func morto():
+	await animacao_morte()
+	mundo.count_inimigo()
+	target.level_up()
+	drop_coin()
+	drop_exp()
+
 
 func chromo():
 	var valores = Vector2(5.0, 5.0)

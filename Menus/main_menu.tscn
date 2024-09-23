@@ -326,13 +326,13 @@ layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "Moedas"
 
-[node name="jogos_completados" type="Label" parent="Status/HBoxContainer/labels"]
+[node name="jogos_iniciados" type="Label" parent="Status/HBoxContainer/labels"]
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
-text = "Mundos Completados"
+text = "Jogos Iniciados"
 
-[node name="jogos_jogados" type="Label" parent="Status/HBoxContainer/labels"]
+[node name="mundos_completados" type="Label" parent="Status/HBoxContainer/labels"]
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
@@ -368,13 +368,13 @@ layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "0"
 
-[node name="info_completados" type="Label" parent="Status/HBoxContainer/info"]
+[node name="info_iniciados" type="Label" parent="Status/HBoxContainer/info"]
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
 text = "00"
 
-[node name="info_jogos" type="Label" parent="Status/HBoxContainer/info"]
+[node name="info_mundos_completados" type="Label" parent="Status/HBoxContainer/info"]
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")

@@ -12,5 +12,3 @@ func _on_collision_area_entered(area):
 		mundo.count_moedas(valor)
 		queue_free()
 	
-
-

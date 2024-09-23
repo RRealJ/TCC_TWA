@@ -30,7 +30,7 @@ func insert():
 	$"Control/HBoxContainer2".visible = true
 	$recompensas_aparecerem.play()
 	await recompesas_random()
-	for i in range(0, 3): #nao pode ser for r in recompensas pq precisa do index para o slot
+	for i in range(0, 3): #nao pode ser "for r in recompensas" pq precisa do index para o slot
 		var temp_r = recompensas[i]
 		print(temp_r)
 		if recompensas[i] is PackedScene: #verificar se é uma cena
@@ -46,7 +46,7 @@ func insert():
 	
 func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 	var opt = []
-	for i in range(0, 10):
+	for i in range(0, 25):
 		var rand = randi_range(1,5) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
 		if !opt.has(rand):
 			opt.append(rand)
