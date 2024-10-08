@@ -1193,7 +1193,7 @@ tile_set = SubResource("TileSet_1kh7e")
 
 [node name="Player" parent="." instance=ExtResource("2_b3mdk")]
 
-[node name="teste_arma" type="Node2D" parent="Player"]
+[node name="arma_padrao" type="Node2D" parent="Player"]
 script = ExtResource("8_pcuka")
 bullet = ExtResource("9_3cj20")
 
