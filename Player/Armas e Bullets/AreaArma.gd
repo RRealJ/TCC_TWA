@@ -31,7 +31,7 @@ func _on_body_entered(body):
 	if get_tree().paused == false:
 		dano = bullet_dano * PlayerVariaveis.dano * item.level
 		print("Area Instavel dano: ",dano, "| level: ", item.level)
-		if body is Inimigos:
+		if (body is Inimigos) or (body is Inimigo_boss):
 			body._on_hitbox_body_entered(self)
 		await get_tree().create_timer(1 / fire_rate).timeout
 

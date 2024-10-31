@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ca1cfckd3ym6o"]
+
+[node name="m2_rei_boss" type="CharacterBody2D" groups=["inimigo_boss"]]

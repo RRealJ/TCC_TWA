@@ -1,7 +1,7 @@
+Inimigos
 CollisionShape2D
 Area2D
 AnimatedSprite2D
-Inimigos
 CollisionPolygon2D
 TileMapLayer
 AudioStreamPlayer2D

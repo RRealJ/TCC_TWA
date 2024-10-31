@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://oe6ppdlipi3a"]
+[gd_scene load_steps=39 format=3 uid="uid://oe6ppdlipi3a"]
 
 [ext_resource type="Script" path="res://Inimigos/inimigo_boss.gd" id="1_tnrs5"]
 [ext_resource type="Shader" path="res://Assets/shaders/flashing_white.gdshader" id="2_fy0fu"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="4_5hi7y"]
 [ext_resource type="Texture2D" uid="uid://bjjwv3538s1p1" path="res://Assets/inimigos/M1_boss_spit_atack.png" id="4_efe2q"]
 [ext_resource type="Texture2D" uid="uid://chjeaugmax71k" path="res://Assets/inimigos/M1_boss_franzy_spit_atack.png" id="5_8jmgt"]
-[ext_resource type="PackedScene" uid="uid://rl3wcnvcth1u" path="res://OverLap/hitbox.tscn" id="5_p47bi"]
 [ext_resource type="PackedScene" uid="uid://cm7kq4adfq6k4" path="res://Generico/shooter.tscn" id="6_sillv"]
 [ext_resource type="PackedScene" uid="uid://bvd0r1rfek1uf" path="res://Inimigos/m1_boss_bullet.tscn" id="12_8js0j"]
 [ext_resource type="Shader" path="res://Assets/shaders/chromatic_aberration.gdshader" id="12_yaet0"]
@@ -204,25 +203,25 @@ animations = [{
 radius = 42.0
 height = 102.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_25ljf"]
-radius = 41.0
-height = 102.0
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m7csc"]
 shader = ExtResource("12_yaet0")
 shader_parameter/r_displacement = Vector2(0, 0)
 shader_parameter/g_displacement = Vector2(0, 0)
 shader_parameter/b_displacement = Vector2(0, 0)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8uhr"]
+radius = 39.0
+height = 106.0
+
 [node name="dino_Boss" type="CharacterBody2D" groups=["inimigo_boss"]]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_tnrs5")
-speed = 60
+speed = 30
 dano = 50
-vida = 500
-ouro = 200
-exp_multi = 10
+vida = 750
+ouro = 100
+exp_multi = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
@@ -245,15 +244,6 @@ offset_top = -50.0
 offset_right = 37.0
 offset_bottom = -45.0
 
-[node name="hitbox" parent="." instance=ExtResource("5_p47bi")]
-visible = false
-script = null
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_25ljf")
-debug_color = Color(1, 0.332004, 0.299074, 0.42)
-
 [node name="shooter" parent="." instance=ExtResource("6_sillv")]
 position = Vector2(1, 2)
 bullet = ExtResource("12_8js0j")
@@ -272,7 +262,14 @@ offset_bottom = -10.0
 scale = Vector2(3.4375, 2.875)
 texture = ExtResource("13_6yn8a")
 
-[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_v8uhr")
+debug_color = Color(0.992157, 0, 0.254902, 0.117647)
+
 [connection signal="timeout" from="timer_atirar" to="." method="_on_timer_atirar_timeout"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 
 [editable path="softCollision"]

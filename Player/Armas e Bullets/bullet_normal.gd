@@ -8,7 +8,7 @@ func _on_area_2d_body_entered(body):
 	if get_tree().paused == false:
 		dano = bullet_dano * PlayerVariaveis.dano * item.level
 		print("Normal Bullet dano: ",dano, "| level: ", item.level)
-		if body is Inimigos:
+		if (body is Inimigos) or (body is Inimigo_boss):
 			bullet_penetracao -= 1
 			if bullet_penetracao <= 0 or body.is_in_group("can_parry"):
 				queue_free()

@@ -1,5 +1,7 @@
 extends Inimigos
 
+class_name Inimigo_boss
+
 @onready var children = self.get_children()
 @onready var shooter = $shooter
 @onready var barra_vida = $barra_vida
@@ -14,8 +16,6 @@ signal boss_morto
 func _ready():
 	mundo.boss = $"."
 	mundo.conectar_boss()
-	print("||spawnado boss||")
-	self.add_to_group("inimigo_boss")
 	barra_vida.init_vida(vida_maxima)
 	barra_vida.max_value = vida_maxima
 
@@ -23,14 +23,13 @@ func _ready():
 func _physics_process(delta):
 	velocity = position.direction_to(target.position) * speed
 	move_and_slide()
-	
 	if !atirando:
 		if state == 0:
 			a_sprite.play("andar")
 			
 		elif state == 1:
 			a_sprite.play("andar_frenzy")
-		
+
 	if (target.position.x - position.x) < 0:
 		a_sprite.flip_h = true
 	else:
