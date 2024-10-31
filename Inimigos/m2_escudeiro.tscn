@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://koctkknwewjd"]
+
+[ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_cy5vo"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="2_cr8db"]
+[ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_mscv5"]
+[ext_resource type="Texture2D" uid="uid://dyobmj6t3cvb2" path="res://Assets/inimigos/M2_escudeiro.png" id="4_ifaxn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m223"]
+atlas = ExtResource("4_ifaxn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4yru"]
+atlas = ExtResource("4_ifaxn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hgg1"]
+atlas = ExtResource("4_ifaxn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tx6ps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m223")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4yru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hgg1")
+}],
+"loop": true,
+"name": &"andar",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7byf8"]
+radius = 8.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mvds6"]
+radius = 9.0
+
+[node name="m2_escudeiro" type="CharacterBody2D" groups=["can_parry", "inimigos"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_cy5vo")
+speed = 25
+dano = 5
+vida = 300
+ouro = 100
+exp_multi = 2
+
+[node name="barra_vida" parent="." instance=ExtResource("2_cr8db")]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 12.0
+offset_bottom = -18.0
+
+[node name="softCollision" parent="." instance=ExtResource("3_mscv5")]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tx6ps")
+animation = &"andar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7byf8")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CapsuleShape2D_mvds6")
+debug_color = Color(0.952941, 0.215686, 0, 0.298039)
+
+[editable path="softCollision"]

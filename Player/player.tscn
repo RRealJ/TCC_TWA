@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bjja1kgsmwtnf" path="res://player_ui.tscn" id="2_tape2"]
 [ext_resource type="Texture2D" uid="uid://tp6jsitysqn" path="res://Assets/player/sprite_move_l.png" id="4_l5q4d"]
 [ext_resource type="Texture2D" uid="uid://bgjrvdmpmu7nn" path="res://Assets/player/sprite_move.png" id="4_vrjnq"]
-[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="4_wer0q"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="4_wer0q"]
 [ext_resource type="AudioStream" uid="uid://busd274u8p44j" path="res://Audio/level-up-bonus1.mp3" id="6_8ba05"]
 [ext_resource type="PackedScene" uid="uid://phkkkvsjx5ro" path="res://Inventario/inv_ui.tscn" id="7_3dj67"]
 

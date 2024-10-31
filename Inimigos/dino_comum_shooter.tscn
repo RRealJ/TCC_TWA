@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="1_15rhq"]
 [ext_resource type="Texture2D" uid="uid://cx6u16tsmr2q1" path="res://Assets/inimigos/M1_shooter.png" id="1_30kv0"]
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_wj33l"]
-[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="2_j7j6u"]
-[ext_resource type="PackedScene" uid="uid://cm7kq4adfq6k4" path="res://generico/shooter.tscn" id="5_rscpy"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="2_j7j6u"]
+[ext_resource type="PackedScene" uid="uid://cm7kq4adfq6k4" path="res://Generico/shooter.tscn" id="5_rscpy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fb2ie"]
 atlas = ExtResource("1_30kv0")

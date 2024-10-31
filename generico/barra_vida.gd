@@ -24,14 +24,10 @@ func _set_vida(nova_vida):
 		
 func init_vida(_vida):
 	var vida = _vida
-	print("Inimigo Barra: ", vida)
 	max_value = vida
-	print("Inimigo Barra MAX: ", max_value)
 	value = vida
 	barra_dano.max_value = vida
-	print("Inimigo Barra MAXdano: ", barra_dano.max_value)
 	barra_dano.value = vida
-	print("Inimigo Barra dano: ", barra_dano.value)
 
 
 func _on_delay_dano_timeout():

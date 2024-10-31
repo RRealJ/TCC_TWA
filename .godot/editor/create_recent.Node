@@ -1,6 +1,8 @@
 CollisionShape2D
-CollisionPolygon2D
 Area2D
+AnimatedSprite2D
+Inimigos
+CollisionPolygon2D
 TileMapLayer
 AudioStreamPlayer2D
 Label
@@ -10,5 +12,3 @@ Camera2D
 CanvasGroup
 ColorRect
 Control
-GPUParticles2D
-Timer

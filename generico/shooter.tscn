@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm7kq4adfq6k4"]
 
-[ext_resource type="Script" path="res://generico/shooter.gd" id="1_1vpgh"]
+[ext_resource type="Script" path="res://Generico/shooter.gd" id="1_1vpgh"]
 [ext_resource type="PackedScene" uid="uid://dci51j3ghkebd" path="res://Inimigos/bullet_inimigo.tscn" id="2_3aajv"]
 
 [node name="shooter" type="Node2D"]

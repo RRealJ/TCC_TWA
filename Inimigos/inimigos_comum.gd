@@ -5,7 +5,7 @@ extends Inimigos
 
 func _ready():
 	vida = vida
-	print("Inimigo Comum: ", vida)
+	print(get_node(".").name ,":", vida)
 	barra_vida.init_vida(vida)
 	barra_vida.max_value = vida
 

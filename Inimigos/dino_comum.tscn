@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Inimigos/inimigos_comum.gd" id="1_7uwrf"]
 [ext_resource type="Texture2D" uid="uid://rgtb7n58ui2d" path="res://Assets/inimigos/M1_comum.png" id="2_sdpa3"]
 [ext_resource type="PackedScene" uid="uid://depwgaoxn7hlx" path="res://OverLap/soft_collision.tscn" id="3_xavkd"]
-[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://generico/barra_vida.tscn" id="5_680ql"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="5_680ql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qfvy"]
 atlas = ExtResource("2_sdpa3")
