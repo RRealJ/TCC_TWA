@@ -9,7 +9,7 @@ func _ready():
 	mundo = $"../../.."
 	if !inimigo.is_in_group("inimigo_boss"):
 		atirar()
-	
+
 
 func atirar():
 	if menu_pausa.visible == false && recompensas_ui.visible == false:
@@ -31,9 +31,17 @@ func atirar():
 					new_bullet.global_rotation = new_rotation
 					new_bullet.dir = new_rotation
 				
-				if inimigo.is_in_group("inimigo_boss"):
+				if (inimigo.is_in_group("inimigo_boss") and Global.mundo_atual == 1):
 					if inimigo.state == 1:
 						new_bullet.bullet_velocidade = 200
+						
+				if (inimigo.is_in_group("inimigo_boss") and Global.mundo_atual == 2):
+					if inimigo.state == 0:
+						new_bullet.animacao = "snake_attack"
+					else:
+						new_bullet.bullet_velocidade = 150
+						new_bullet.animacao = "snake_attack_frenzy"
+	 
 				new_bullet.zindex = z_index
 				mundo.add_child(new_bullet)
 			await get_tree().create_timer(fire_rate).timeout

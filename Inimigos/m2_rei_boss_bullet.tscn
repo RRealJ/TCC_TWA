@@ -1,0 +1,96 @@
+[gd_scene load_steps=13 format=3 uid="uid://chxn20nti102w"]
+
+[ext_resource type="Script" path="res://Inimigos/m2_rei_boss_bullet.gd" id="1_dfr8k"]
+[ext_resource type="Texture2D" uid="uid://do1dio4osjckb" path="res://Assets/inimigos/M2_rei_boss_snake_attack.png" id="2_xhjgn"]
+[ext_resource type="Texture2D" uid="uid://2lcp51mraax5" path="res://Assets/inimigos/M2_rei_boss_snake_attack_frenzy.png" id="3_h1sd2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26paa"]
+atlas = ExtResource("2_xhjgn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okn2e"]
+atlas = ExtResource("2_xhjgn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6ugh"]
+atlas = ExtResource("2_xhjgn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq8hk"]
+atlas = ExtResource("3_h1sd2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68261"]
+atlas = ExtResource("3_h1sd2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeo8u"]
+atlas = ExtResource("3_h1sd2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kifn7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26paa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okn2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6ugh")
+}],
+"loop": true,
+"name": &"snake_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq8hk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68261")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eeo8u")
+}],
+"loop": true,
+"name": &"snake_attack_frenzy",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5g14o"]
+radius = 7.0
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pc2am"]
+radius = 8.0
+
+[node name="M2ReiBossBullet" type="CharacterBody2D"]
+script = ExtResource("1_dfr8k")
+bullet_velocidade = 200.0
+bullet_penetracao = 1
+bullet_dano = 70
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kifn7")
+animation = &"snake_attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5g14o")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_pc2am")
+debug_color = Color(0.966367, 0.184722, 7.70092e-07, 0.42)
+
+[node name="bullet_vida" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="bullet_vida" to="." method="_on_bullet_vida_timeout"]

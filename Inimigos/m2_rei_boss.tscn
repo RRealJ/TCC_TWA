@@ -1,3 +1,121 @@
-[gd_scene format=3 uid="uid://ca1cfckd3ym6o"]
+[gd_scene load_steps=17 format=3 uid="uid://ca1cfckd3ym6o"]
+
+[ext_resource type="Texture2D" uid="uid://coxr5mbeds3si" path="res://Assets/inimigos/M2_boss.png" id="1_agnq1"]
+[ext_resource type="Script" path="res://Inimigos/m2_rei_boss.gd" id="1_pkldd"]
+[ext_resource type="PackedScene" uid="uid://cm7kq4adfq6k4" path="res://Generico/shooter.tscn" id="2_1oycw"]
+[ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="2_2jamp"]
+[ext_resource type="Texture2D" uid="uid://ih4v1cleoxwc" path="res://Assets/32x32_transparente.png" id="4_o1mhv"]
+[ext_resource type="Shader" path="res://Assets/shaders/chromatic_aberration.gdshader" id="4_xbr3p"]
+[ext_resource type="PackedScene" uid="uid://chxn20nti102w" path="res://Inimigos/m2_rei_boss_bullet.tscn" id="7_bsqud"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yoq0"]
+atlas = ExtResource("1_agnq1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dko8f"]
+atlas = ExtResource("1_agnq1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vordu"]
+atlas = ExtResource("1_agnq1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnglr"]
+atlas = ExtResource("1_agnq1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf6lw"]
+atlas = ExtResource("1_agnq1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_npgh0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yoq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dko8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vordu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnglr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf6lw")
+}],
+"loop": true,
+"name": &"andar",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_clmr2"]
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6i20u"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xx035"]
+shader = ExtResource("4_xbr3p")
+shader_parameter/r_displacement = Vector2(3, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(0, 0)
 
 [node name="m2_rei_boss" type="CharacterBody2D" groups=["inimigo_boss"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_pkldd")
+speed_limit = 90
+speed = 78
+dano = 80
+vida = 700
+ouro = 1500
+exp_multi = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_npgh0")
+animation = &"andar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_clmr2")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CapsuleShape2D_6i20u")
+debug_color = Color(0.788235, 0, 0.145098, 0.211765)
+
+[node name="barra_vida" parent="." instance=ExtResource("2_2jamp")]
+offset_left = -14.0
+offset_top = -25.0
+offset_right = 15.0
+offset_bottom = -21.0
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_xx035")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_o1mhv")
+
+[node name="timer_atirar" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[node name="shooter" parent="." instance=ExtResource("2_1oycw")]
+bullet = ExtResource("7_bsqud")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="timer_atirar" to="." method="_on_timer_atirar_timeout"]

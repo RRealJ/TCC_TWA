@@ -2,7 +2,6 @@ extends Bullet
 
 @onready var dano = bullet_dano
 
-
 func _on_area_2d_body_entered(body):
 	if get_tree().paused == false:
 		if body is Player:
