@@ -39,8 +39,9 @@ func atirar():
 					if inimigo.state == 0:
 						new_bullet.animacao = "snake_attack"
 					else:
-						new_bullet.bullet_velocidade = 150
+						new_bullet.bullet_velocidade = 250
 						new_bullet.animacao = "snake_attack_frenzy"
+						new_bullet.dano = 100
 	 
 				new_bullet.zindex = z_index
 				mundo.add_child(new_bullet)

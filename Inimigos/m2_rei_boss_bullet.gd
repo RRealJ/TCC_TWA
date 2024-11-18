@@ -6,6 +6,8 @@ extends Bullet
 
 func _ready() -> void:
 	$AnimatedSprite2D.play(animacao)
+	if animacao == "snake_attack_frenzy":
+		$AnimatedSprite2D/GPUParticles2D.visible = true
 
 
 func _physics_process(delta: float) -> void:
