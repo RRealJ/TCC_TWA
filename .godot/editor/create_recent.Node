@@ -1,3 +1,8 @@
+Button
+Label
+TextureButton
+HBoxContainer
+Control
 GPUParticles2D
 Timer
 CollisionShape2D
@@ -7,9 +12,3 @@ Sprite2D
 CharacterBody2D
 TileMapLayer
 TextureRect
-Inimigos
-CollisionPolygon2D
-AudioStreamPlayer2D
-Label
-CanvasLayer
-Node2D

@@ -37,8 +37,8 @@ func _ready():
 	
 	
 func _on_btn_saltar_pressed():
-	await get_tree().create_timer(0.4).timeout
-	get_tree().change_scene_to_file("res://Mundos/mundo_1.tscn")
+	mostrar_esconder($Mundos, menu)
+	$"Mundos/HBoxContainer/Mundo 1".grab_focus()
 
 
 func _on_btn_loja_pressed():
@@ -169,3 +169,18 @@ func _unhandled_input(event):
 			Global.fullscreen = true
 			
 			
+
+
+func _on_voltar_md_pressed() -> void:
+	mostrar_esconder(menu, $Mundos)
+	btn_saltar.grab_focus()
+
+
+func _on_mundo_1_pressed() -> void:
+	await get_tree().create_timer(0.4)
+	get_tree().change_scene_to_file("res://Mundos/mundo_1.tscn")
+
+
+func _on_mundo_2_pressed() -> void:
+	await get_tree().create_timer(0.4)
+	get_tree().change_scene_to_file("res://Mundos/mundo_2.tscn")

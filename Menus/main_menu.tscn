@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj6am7htam1ul"]
+[gd_scene load_steps=10 format=3 uid="uid://dj6am7htam1ul"]
 
 [ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_awpth"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="2_4ytr2"]
 [ext_resource type="PackedScene" uid="uid://eo4h62aq2wtt" path="res://Audio/ui_sounds.tscn" id="2_hguew"]
 [ext_resource type="Script" path="res://Menus/volume_sliders.gd" id="3_0g5m2"]
 [ext_resource type="AudioStream" uid="uid://bmqxqustnl2yv" path="res://Audio/menu_main_bgm.mp3" id="5_12opd"]
+[ext_resource type="Texture2D" uid="uid://bm402ok8fft2k" path="res://Assets/mundo1.png" id="6_6clcu"]
+[ext_resource type="Texture2D" uid="uid://4jljxmt7im4q" path="res://Assets/mundo1_s.png" id="7_pgu1p"]
+[ext_resource type="Texture2D" uid="uid://b44s4apjhs0q5" path="res://Assets/mundo2.png" id="7_q1rrj"]
+[ext_resource type="Texture2D" uid="uid://d3rqa11u541ce" path="res://Assets/mundo2_s.png" id="9_tm6tx"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -36,7 +40,7 @@ grow_vertical = 2
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
-text = "Saltar"
+text = "Periodos"
 
 [node name="btn_loja" type="Button" parent="menu"]
 texture_filter = 1
@@ -419,6 +423,75 @@ stream = ExtResource("5_12opd")
 volume_db = -25.0
 bus = &"bgm"
 
+[node name="Mundos" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Mundos"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Mundo 1" type="TextureButton" parent="Mundos/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_pgu1p")
+texture_hover = ExtResource("6_6clcu")
+stretch_mode = 3
+
+[node name="Mundo 2" type="TextureButton" parent="Mundos/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("9_tm6tx")
+texture_hover = ExtResource("7_q1rrj")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Mundos"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 145.0
+offset_right = 391.0
+offset_bottom = 177.0
+theme = ExtResource("2_4ytr2")
+text = "ESTAGIO 1"
+
+[node name="Label2" type="Label" parent="Mundos"]
+offset_left = 864.0
+offset_top = 146.0
+offset_right = 1026.0
+offset_bottom = 178.0
+theme = ExtResource("2_4ytr2")
+text = "ESTAGIO 2"
+
+[node name="voltar_md" type="Button" parent="Mundos"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = 834.0
+offset_right = 35.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_4ytr2")
+text = "VOLTAR"
+
 [connection signal="pressed" from="menu/btn_saltar" to="." method="_on_btn_saltar_pressed"]
 [connection signal="pressed" from="menu/btn_loja" to="." method="_on_btn_loja_pressed"]
 [connection signal="pressed" from="menu/btn_opcoes" to="." method="_on_btn_opcoes_pressed"]
@@ -437,3 +510,6 @@ bus = &"bgm"
 [connection signal="pressed" from="Volume/btn_voltar_volume" to="." method="_on_btn_voltar_volume_pressed"]
 [connection signal="pressed" from="Status/btn_voltar_status" to="." method="_on_btn_voltar_status_pressed"]
 [connection signal="finished" from="bgm_menu_loop" to="." method="_on_bgm_menu_loop_finished"]
+[connection signal="pressed" from="Mundos/HBoxContainer/Mundo 1" to="." method="_on_mundo_1_pressed"]
+[connection signal="pressed" from="Mundos/HBoxContainer/Mundo 2" to="." method="_on_mundo_2_pressed"]
+[connection signal="pressed" from="Mundos/voltar_md" to="." method="_on_voltar_md_pressed"]

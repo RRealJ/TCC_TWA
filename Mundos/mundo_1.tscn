@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://7s87ybeqiy5i"]
+[gd_scene load_steps=22 format=4 uid="uid://7s87ybeqiy5i"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_1.gd" id="1_lg6v3"]
 [ext_resource type="Texture2D" uid="uid://bw3onneelassf" path="res://Assets/tilemaps/BaseSet.png" id="1_visl5"]
@@ -11,10 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://cnlje1vfd60wm" path="res://Player/Armas e Bullets/bullet_normal.tscn" id="9_3cj20"]
 [ext_resource type="PackedScene" uid="uid://oe6ppdlipi3a" path="res://Inimigos/dino_boss.tscn" id="9_k767v"]
 [ext_resource type="PackedScene" uid="uid://etergefwbryv" path="res://Inimigos/dino_comum_shooter.tscn" id="9_xu0n8"]
-[ext_resource type="PackedScene" uid="uid://cnt8b52rwq0u7" path="res://Efeitos/drop_moedas.tscn" id="10_cqptc"]
 [ext_resource type="PackedScene" uid="uid://smj15b1gwncy" path="res://Inimigos/dino_comum_2.tscn" id="10_e1g3j"]
 [ext_resource type="PackedScene" uid="uid://d3odji1imsb8s" path="res://Recompensas/recompensas.tscn" id="13_itkum"]
-[ext_resource type="PackedScene" uid="uid://d4id0b8wvrc6w" path="res://Efeitos/drop_exp.tscn" id="13_vqgpm"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="14_1hhp4"]
 [ext_resource type="AudioStream" uid="uid://dxkmpblx5thof" path="res://Audio/m1_bgm.mp3" id="14_ghydn"]
 
@@ -1162,8 +1160,8 @@ inimigo_spawn_delay = 0
 
 [sub_resource type="Resource" id="Resource_n3nki"]
 script = ExtResource("6_gaajl")
-time_start = 1
-time_end = 1
+time_start = 30
+time_end = 31
 inimigo = ExtResource("9_k767v")
 inimigo_num = 1
 inimigo_spawn_delay = 0
@@ -1226,36 +1224,6 @@ theme_override_colors/font_shadow_color = Color(0.262932, 0.262932, 0.262932, 1)
 theme_override_font_sizes/font_size = 48
 text = "11111"
 horizontal_alignment = 1
-
-[node name="drop_moedas" parent="." instance=ExtResource("10_cqptc")]
-position = Vector2(-144, -30)
-
-[node name="drop_exp" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-116, 53)
-
-[node name="drop_exp2" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-146, 33)
-
-[node name="drop_exp3" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-174, 68)
-
-[node name="drop_exp4" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-80, 76)
-
-[node name="drop_exp5" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-92, 103)
-
-[node name="drop_exp6" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-98, -11)
-
-[node name="drop_exp7" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-199, -17)
-
-[node name="drop_exp8" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-80, 31)
-
-[node name="drop_exp9" parent="." instance=ExtResource("13_vqgpm")]
-position = Vector2(-132, 73)
 
 [node name="mundo_bgm" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
