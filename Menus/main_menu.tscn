@@ -470,6 +470,7 @@ theme = ExtResource("2_4ytr2")
 text = "ESTAGIO 1"
 
 [node name="Label2" type="Label" parent="Mundos"]
+layout_mode = 0
 offset_left = 864.0
 offset_top = 146.0
 offset_right = 1026.0

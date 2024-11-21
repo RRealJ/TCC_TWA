@@ -22,7 +22,7 @@ config/icon="res://icon.png"
 PlayerVariaveis="*res://player_variaveis.gd"
 Confirmacao="*res://Generico/confirmacao.gd"
 Global="*res://Global.gd"
-ConfigFileHandler="*res://configFileHandler.gd"
+SaveLoad="*res://save_load.gd"
 
 [display]
 

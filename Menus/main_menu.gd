@@ -27,13 +27,10 @@ func _ready():
 	add_resolucao_items()
 	opt_btn.item_selected.connect(on_resolution_selected)
 	btn_saltar.grab_focus()
-	#var video_settings = ConfigFileHandler.load_video_settings()
-	#$Video/HBoxContainer/checkboxes/cb_fullscreen.button_pressed = video_settings.fullscreen
-	
-	#var audio_settings = ConfigFileHandler.load_audio_settings()
-	#$Volume/HBoxContainer/sliders/hs_master.value = min(audio_settings.master_volume, 1.0) * 100
-	#$Volume/HBoxContainer/sliders/hs_sfx.value = min(audio_settings.sfx_volume, 1.0) * 100
-	#$Volume/HBoxContainer/sliders/hs_bgm.value = min(audio_settings.bgm_volume, 1.0) * 100
+	$Video/HBoxContainer/checkboxes/cb_fullscreen.button_pressed = SaveLoad.fullscreen
+	$Volume/HBoxContainer/sliders/hs_master.value = SaveLoad.hs_master * 100
+	$Volume/HBoxContainer/sliders/hs_sfx.value = SaveLoad.hs_sfx * 100
+	$Volume/HBoxContainer/sliders/hs_bgm.value = SaveLoad.hs_bgm * 100
 	
 	
 func _on_btn_saltar_pressed():
@@ -59,11 +56,14 @@ func _on_btn_sair_pressed():
 func mostrar_esconder(mostrar, esconder):
 	mostrar.show()
 	esconder.hide()
+	SaveLoad.save()
 
 
 func _on_video_pressed():
 	mostrar_esconder(video, opcoes)
 	$Video/HBoxContainer/checkboxes/cb_fullscreen.button_pressed = Global.fullscreen
+	$Video/HBoxContainer/checkboxes/cb_vsync.button_pressed = Global.sem_bordas
+	$Video/HBoxContainer/checkboxes/cb_sem_bordas.button_pressed = Global.vsync
 	btn_display.grab_focus()
 
 
@@ -85,7 +85,6 @@ func add_resolucao_items() -> void:
 func on_resolution_selected(index : int) -> void:
 	DisplayServer.window_set_size(DICT_RESOLUCOES.values()[index])
 	
-
 	
 func _on_cb_fullscreen_toggled(toggled_on):
 	if toggled_on == true:
@@ -94,22 +93,29 @@ func _on_cb_fullscreen_toggled(toggled_on):
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		Global.fullscreen = false
+		if $Video/HBoxContainer/checkboxes/cb_sem_bordas.button_pressed == true:
+			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
+			Global.sem_bordas = true
 
 
 func _on_cb_sem_bordas_toggled(toggled_on):
 #	ConfigFileHandler.save_video_settings("fullscreen", toggled_on)
-	if toggled_on == true:
+	if toggled_on == true  && $Video/HBoxContainer/checkboxes/cb_fullscreen.button_pressed == false:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
+		Global.sem_bordas = true
 	else:
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
+		Global.fullscreen = false
 
 
 func _on_cb_vsync_toggled(toggled_on):
 	if toggled_on == true:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+		Global.vsync = true
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		Global.vsync = false
 		
 
 func _on_btn_voltar_video_pressed():
@@ -140,21 +146,17 @@ func _on_status_pressed():
 
 func _on_hs_master_drag_ended(value_changed):
 	if value_changed:
-		pass
-		#ConfigFileHandler.save_audio_settings("master_volume", $Volume/HBoxContainer/sliders/hs_master.value/100)
-
+		SaveLoad.hs_master = $Volume/HBoxContainer/sliders/hs_master.value/100
 
 func _on_hs_sfx_drag_ended(value_changed):
 	if value_changed:
-		pass
-		#ConfigFileHandler.save_audio_settings("sfx_volume", $Volume/HBoxContainer/sliders/hs_sfx.value/100)
+		SaveLoad.hs_sfx = $Volume/HBoxContainer/sliders/hs_sfx.value/100
 
 
 func _on_hs_bgm_drag_ended(value_changed):
 	if value_changed:
-		pass
-		#ConfigFileHandler.save_audio_settings("bgm_volume", $Volume/HBoxContainer/sliders/hs_bgm.value/100)
-
+		SaveLoad.hs_bgm = $Volume/HBoxContainer/sliders/hs_bgm.value/100
+		
 func _on_bgm_menu_loop_finished():
 	$bgm_menu_loop.play()
 	
