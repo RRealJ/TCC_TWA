@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732219870
+::res://::1732279089
 cutscene_inicial.gd::GDScript::-1::1718489413::0::1::::<>Node2D<>::
 cutscene_inicial.tscn::PackedScene::5338291479949121714::1718599009::0::1::::<><>::res://cutscene_inicial.gd<>uid://chl3hnvcgmxp3::::res://Assets/intro_cut.png<>uid://chneq15k4nsy6::::res://Audio/intro.mp3
 default_bus_layout.tres::AudioBusLayout::2548682415142993850::1717782766::0::1::::<><>::
@@ -80,9 +80,9 @@ sprite_move.png::CompressedTexture2D::2827203012662960391::1714745990::171474599
 sprite_move_l.png::CompressedTexture2D::40189792736153701::1714745990::1714745990::1::::<><>::
 ::res://Assets/recompensas/::1718070085
 animacao_recompensa.png::CompressedTexture2D::6057033072038669553::1718069902::1718070085::1::::<><>::
-::res://Assets/shaders/::1732219864
-chromatic_aberration.gdshader::Shader::-1::1732219864::0::1::::<><>::
-flashing_white.gdshader::Shader::-1::1732219864::0::1::::<><>::
+::res://Assets/shaders/::1732221342
+chromatic_aberration.gdshader::Shader::-1::1732221342::0::1::::<><>::
+flashing_white.gdshader::Shader::-1::1732221342::0::1::::<><>::
 ::res://Assets/text_box/::1717782766
 Sara_TextBox16.png::CompressedTexture2D::5676698643213330133::1714745990::1714745990::1::::<><>::
 Sara_TextBox32.png::CompressedTexture2D::4585341129156083775::1714745990::1714745990::1::::<><>::
@@ -184,7 +184,7 @@ confirmacao.gd::GDScript::-1::1717782766::0::1::::<>CanvasLayer<>::
 confirmacao.tscn::PackedScene::6310702740566579121::1718515615::0::1::::<><>::res://Generico/confirmacao.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
 shooter.gd::GDScript::-1::1731937283::0::1::::<>Arma<>::
 shooter.tscn::PackedScene::5681804845123453725::1731933197::0::1::::<><>::res://Generico/shooter.gd<>uid://dci51j3ghkebd::::res://Inimigos/bullet_inimigo.tscn
-::res://Inimigos/::1732219459
+::res://Inimigos/::1732221317
 bullet_inimigo.gd::GDScript::-1::1731935817::0::1::::<>Bullet<>::
 bullet_inimigo.tscn::PackedScene::7318023217059406901::1730345763::0::1::::<><>::res://Inimigos/bullet_inimigo.gd<>uid://bioosi2y3m700::::res://Assets/inimigos/M1_shooter_bullet.png
 dino_boss.tscn::PackedScene::992811128628771824::1732219458::0::1::::<><>::res://Inimigos/inimigo_boss.gd<>res://Assets/shaders/flashing_white.gdshader<>uid://dqaexh6na7wj2::::res://Assets/inimigos/M1_boss.png<>uid://buxcg1bboihpj::::res://Assets/inimigos/M1_boss_frenzy.png<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://f0ai71xmtvcg::::res://Assets/inimigos/M1_frenzy_transformando.png<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn<>uid://bjjwv3538s1p1::::res://Assets/inimigos/M1_boss_spit_atack.png<>uid://chjeaugmax71k::::res://Assets/inimigos/M1_boss_franzy_spit_atack.png<>uid://cm7kq4adfq6k4::::res://Generico/shooter.tscn<>uid://bvd0r1rfek1uf::::res://Inimigos/m1_boss_bullet.tscn<>res://Assets/shaders/chromatic_aberration.gdshader<>uid://ih4v1cleoxwc::::res://Assets/32x32_transparente.png
@@ -192,7 +192,7 @@ dino_comum.tscn::PackedScene::7248562642999813795::1730337698::0::1::::<><>::res
 dino_comum_2.tscn::PackedScene::1288766180545253280::1730337447::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://bbubn1j6mecqx::::res://Assets/inimigos/M1_comum2.png<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn
 dino_comum_shooter.tscn::PackedScene::320252099922669201::1730345763::0::1::::<><>::uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://cx6u16tsmr2q1::::res://Assets/inimigos/M1_shooter.png<>res://Inimigos/inimigos_comum.gd<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn<>uid://cm7kq4adfq6k4::::res://Generico/shooter.tscn
 inimigos.gd::GDScript::-1::1725279514::0::1::::Inimigos<>CharacterBody2D<>::
-inimigos_comum.gd::GDScript::-1::1732210961::0::1::::<>Inimigos<>::
+inimigos_comum.gd::GDScript::-1::1732221316::0::1::::<>Inimigos<>::
 inimigo_boss.gd::GDScript::-1::1730345414::0::1::::Inimigo_boss<>Inimigos<>::
 m1_boss_bullet.tscn::PackedScene::3868129208771230341::1732219459::0::1::::<><>::res://Inimigos/bullet_inimigo.gd<>uid://fipeapn1hql5::::res://Assets/inimigos/M1_boss_bullet.png
 m2_escudeiro.tscn::PackedScene::730945630308675117::1730337751::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://dyobmj6t3cvb2::::res://Assets/inimigos/M2_escudeiro.png
@@ -201,22 +201,22 @@ m2_rei_boss.tscn::PackedScene::4826645672616240060::1732219459::0::1::::<><>::ui
 m2_rei_boss_bullet.gd::GDScript::-1::1731936787::0::1::::<>Bullet<>::
 m2_rei_boss_bullet.tscn::PackedScene::5312482832578426368::1732219459::0::1::::<><>::res://Inimigos/m2_rei_boss_bullet.gd<>uid://do1dio4osjckb::::res://Assets/inimigos/M2_rei_boss_snake_attack.png<>uid://2lcp51mraax5::::res://Assets/inimigos/M2_rei_boss_snake_attack_frenzy.png
 m2_soldado_comum.tscn::PackedScene::5900912677089256757::1730337698::0::1::::<><>::res://Inimigos/inimigos_comum.gd<>uid://bj5aem6ujjqnx::::res://Assets/inimigos/M2_comum.png<>uid://depwgaoxn7hlx::::res://OverLap/soft_collision.tscn<>uid://b8i4jge24ih01::::res://Generico/barra_vida.tscn
-::res://Inventario/::1732210961
+::res://Inventario/::1732221316
 inventario.gd::GDScript::-1::1718397169::0::1::::Inv<>Resource<>::
 inv_slot.gd::GDScript::-1::1718037927::0::1::::Inv_slot<>Resource<>::
 Inv_ui.gd::GDScript::-1::1727051148::0::1::::<>Control<>::
 inv_ui.tscn::PackedScene::1067908885220815888::1727048403::0::1::::<><>::res://Inventario/Inv_ui.gd<>uid://ddmfhbr2v2yy4::::res://Assets/itens/inventory-background.png<>uid://3yt2p0o7no5h::::res://Inventario/inv_ui_slot.tscn
-inv_ui_slot.gd::GDScript::-1::1732210961::0::1::::<>Panel<>::
+inv_ui_slot.gd::GDScript::-1::1732221316::0::1::::<>Panel<>::
 inv_ui_slot.tscn::PackedScene::2016035354410085795::1727051527::0::1::::<><>::uid://ct7gw1no7mxkm::::res://Assets/itens/inventory-slot.png<>res://Inventario/inv_ui_slot.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres
 itens_inventario.gd::GDScript::-1::1718067689::0::1::::InvItem<>Resource<>::
-player_inv.tres::Resource/Inv::262299688185483552::1732210961::0::1::::<><>::res://Inventario/inventario.gd<>res://Inventario/inv_slot.gd
-::res://Menus/::1732219459
+player_inv.tres::Resource/Inv::262299688185483552::1732221316::0::1::::<><>::res://Inventario/inventario.gd<>res://Inventario/inv_slot.gd
+::res://Menus/::1732221329
 gameover.gd::GDScript::-1::1732219290::0::1::::<>Control<>::
 gameover.tscn::PackedScene::7923462256383072716::1732219459::0::1::::<><>::res://Menus/gameover.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>uid://dyp3lgj4d3ony::::res://Audio/select.mp3<>uid://c4fxi4goq0hx8::::res://Audio/pressed.mp3<>uid://b4v4ps3a04syf::::res://Audio/gameover.mp3<>uid://dn6ybsi2pshtp::::res://Audio/gameover_win_sound.wav<>uid://btp7yiljril4::::res://Audio/gameover_music.mp3<>uid://phkkkvsjx5ro::::res://Inventario/inv_ui.tscn
 hs_bgm.gd::GDScript::-1::1717782766::0::1::::<>HSlider<>::
 hs_master.gd::GDScript::-1::1717782766::0::1::::<>HSlider<>::
-main_menu.gd::GDScript::-1::1732219434::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::7854980476148917403::1732219457::0::1::::<><>::res://Menus/main_menu.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>uid://eo4h62aq2wtt::::res://Audio/ui_sounds.tscn<>res://Menus/volume_sliders.gd<>uid://bmqxqustnl2yv::::res://Audio/menu_main_bgm.mp3<>uid://bm402ok8fft2k::::res://Assets/mundo1.png<>uid://4jljxmt7im4q::::res://Assets/mundo1_s.png<>uid://b44s4apjhs0q5::::res://Assets/mundo2.png<>uid://d3rqa11u541ce::::res://Assets/mundo2_s.png
+main_menu.gd::GDScript::-1::1732221329::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::7854980476148917403::1732221329::0::1::::<><>::res://Menus/main_menu.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>uid://eo4h62aq2wtt::::res://Audio/ui_sounds.tscn<>res://Menus/volume_sliders.gd<>uid://bmqxqustnl2yv::::res://Audio/menu_main_bgm.mp3<>uid://bm402ok8fft2k::::res://Assets/mundo1.png<>uid://4jljxmt7im4q::::res://Assets/mundo1_s.png<>uid://b44s4apjhs0q5::::res://Assets/mundo2.png<>uid://d3rqa11u541ce::::res://Assets/mundo2_s.png
 menu_pausa.gd::GDScript::-1::1724097461::0::1::::<>CanvasLayer<>::
 menu_pausa.tscn::PackedScene::7299979961124047284::1718516661::0::1::::<><>::res://Menus/menu_pausa.gd<>uid://0a7264asjqtn::::res://Assets/font/TextFont.tres<>res://Menus/volume_sliders.gd<>uid://eo4h62aq2wtt::::res://Audio/ui_sounds.tscn
 volume_sliders.gd::GDScript::-1::1732218010::0::1::::<>HSlider<>::
@@ -253,7 +253,7 @@ bala_normal.tres::Resource/Resource::7308030204782212545::1718248399::0::1::::<>
 up_defense.tres::Resource/Resource::2538124394260723890::1718151713::0::1::::<><>::res://Inventario/itens_inventario.gd<>uid://suvxqfijb8c8::::res://Assets/itens/inv_itens/up_defense.png
 up_speed.tres::Resource/Resource::282749932815141839::1718148179::0::1::::<><>::res://Inventario/itens_inventario.gd<>uid://dm2shhiwn14dg::::res://Assets/itens/inv_itens/up_speed.png
 up_vida.tres::Resource/Resource::4488369235371539849::1718663180::0::1::::<><>::res://Inventario/itens_inventario.gd<>uid://d0sciphnw6au8::::res://Assets/itens/inv_itens/up_vida.png
-::res://Timers e spawns/::1732210961
+::res://Timers e spawns/::1732221316
 spawn_info.gd::GDScript::-1::1718513593::0::1::::Spawn_info<>Resource<>::
-spawn_inimigo.gd::GDScript::-1::1732210961::0::1::::<>Node2D<>::
+spawn_inimigo.gd::GDScript::-1::1732221316::0::1::::<>Node2D<>::
 spawn_inimigo.tscn::PackedScene::3314906109168669731::1718577618::0::1::::<><>::res://Timers e spawns/spawn_inimigo.gd

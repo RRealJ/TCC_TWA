@@ -31,6 +31,7 @@ func _ready():
 	$Volume/HBoxContainer/sliders/hs_master.value = SaveLoad.hs_master * 100
 	$Volume/HBoxContainer/sliders/hs_sfx.value = SaveLoad.hs_sfx * 100
 	$Volume/HBoxContainer/sliders/hs_bgm.value = SaveLoad.hs_bgm * 100
+	SaveLoad.save()
 	
 	
 func _on_btn_saltar_pressed():

@@ -62,6 +62,8 @@ func update_data_in_save():
 	diminuir_bgm_ao_pausar = Global.diminuir_bgm_ao_pausar
 	fullscreen = Global.fullscreen
 	sem_bordas = Global.sem_bordas
+	
+	
 	vsync = Global.vsync
 	moedas = Global.moedas
 	inimigos_derrotados = Global.inimigos_derrotados
@@ -82,6 +84,8 @@ func update_data_in_variables():
 	Global.diminuir_bgm_ao_pausar = diminuir_bgm_ao_pausar
 	Global.fullscreen = fullscreen
 	Global.sem_bordas = sem_bordas
+	#para os audio_bus, ele está puxando em main_menu _ready()
+	
 	Global.vsync = vsync
 	Global.moedas = moedas
 	Global.inimigos_derrotados = inimigos_derrotados
