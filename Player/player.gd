@@ -38,6 +38,9 @@ var resistencia = PlayerVariaveis.resistencia * 3
 enum{IDLE, MOVE}
 var state = IDLE
 var vampirismo = 0
+var dano_add = PlayerVariaveis.dano
+var chance_critica = (PlayerVariaveis.chance_critica*5)/100
+var sorte = PlayerVariaveis.sorte
 
 var blend_pos: Vector2 = Vector2.ZERO
 var blend_pos_paths = [
@@ -202,3 +205,12 @@ func inserir(item): #inserir no inventário()
 		
 		elif item.nome == "Upgrade Defesa":
 			resistencia = resistencia + 5
+			
+		elif item.nome == "Upgrade Dano":
+			dano_add = dano_add + 5
+		
+		elif item.nome == "Upgrade Sorte":
+			sorte = sorte + 5
+		
+		elif item.nome == "Upgrade Chance Critica":
+			chance_critica = chance_critica + 0.05

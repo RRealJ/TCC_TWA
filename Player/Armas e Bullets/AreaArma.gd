@@ -11,6 +11,8 @@ class_name AreaArma
 @onready var menu_pausa = $"../../camera/menu_pausa"
 @onready var recompensas_ui = $"../../camera/Recompensas"
 @onready var dano = bullet_dano * PlayerVariaveis.dano
+@onready var player = $".."
+
 var can_shoot = true
 
 
@@ -29,7 +31,11 @@ func atirar():
 
 func _on_body_entered(body):
 	if get_tree().paused == false:
-		dano = bullet_dano * PlayerVariaveis.dano * item.level
+		var critico = randf()
+		dano = bullet_dano * player.dano_add * item.level
+		print(critico)
+		if critico < player.chance_critica:
+			dano = dano * 2
 		print("Area Instavel dano: ",dano, "| level: ", item.level)
 		if (body is Inimigos) or (body is Inimigo_boss):
 			body._on_hitbox_body_entered(self)
@@ -37,7 +43,7 @@ func _on_body_entered(body):
 
 
 func colidindo() -> void:
-	dano = bullet_dano * item.level * PlayerVariaveis.dano
+	dano = bullet_dano * item.level * player.dano_add
 	var lista_inimigos = get_overlapping_bodies()
 	for i in lista_inimigos:
 		i._on_hitbox_body_entered(self)

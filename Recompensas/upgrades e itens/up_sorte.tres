@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://bkf3xs4gppyx6"]
+
+[ext_resource type="Script" path="res://Inventario/itens_inventario.gd" id="1_2eu58"]
+[ext_resource type="Texture2D" uid="uid://cr8202tvb67qk" path="res://Assets/itens/inv_itens/up_sorte.png" id="2_akfg0"]
+
+[resource]
+script = ExtResource("1_2eu58")
+level = 1
+nome = "Upgrade Sorte"
+descricao = "Aumenta a sorte"
+textura = ExtResource("2_akfg0")

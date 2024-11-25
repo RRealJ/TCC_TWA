@@ -19,7 +19,7 @@ const upgrades_nome_desc = {
 	"Velocidade":["Velocidade", "Aumenta sua velocidade."],
 	"Sorte":["Sorte", "Recebe mais ouro e maiores chances de itens melhores."],
 	"Dano":["Dano", "Aumenta seu dano causado."],
-	"Chance_critica":["Chance Critica", "Aumenta sua chance de causa dano critico."],   
+	"Chance_critica":["Chance Critica", "Aumenta sua chance de causar dano critico."],   
 } #colocar mais após pensar.
 
 

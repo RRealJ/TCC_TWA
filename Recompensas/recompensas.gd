@@ -46,45 +46,49 @@ func insert():
 	
 func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 	var opt = []
-	for i in range(0, 25):
-		var rand = randi_range(1,6) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
+	for i in range(0, 50):
+		var rand = randi_range(1,9) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
 		if !opt.has(rand):
 			opt.append(rand)
 		
 		if opt.size() == 3:
-			print(opt)
 			break
 		
 	if 	1 in opt: 
 		var up_vida = load("res://Recompensas/upgrades e itens/up_vida.tres")
 		recompensas.append(up_vida)
-		print(up_vida)
 	
 	if 2 in opt:
 		var area_instavel = load("res://Player/Armas e Bullets/area_instavel.tscn")
-		print(area_instavel)
 		recompensas.append(area_instavel)
 		
 	if 3 in opt:
 		var bullet_normal = load("res://Player/Armas e Bullets/bullet_normal.tscn")
 		recompensas.append(bullet_normal)
-		print(bullet_normal)
 		
 	if 4 in opt:
 		var up_speed = load("res://Recompensas/upgrades e itens/up_speed.tres")
 		recompensas.append(up_speed)
-		print(up_speed)
 		
 	if 5 in opt:
 		var up_defesa = load("res://Recompensas/upgrades e itens/up_defense.tres")
 		recompensas.append(up_defesa)
-		print(up_defesa)
 		
 	if 6 in opt:
 		var up_vamp = load("res://Player/itens/colar_vampirismo.tscn")
 		recompensas.append(up_vamp)
-		print(up_vamp)
 		
+	if 7 in opt:
+		var up_sorte = load("res://Recompensas/upgrades e itens/up_sorte.tres")
+		recompensas.append(up_sorte)
+		
+	if 8 in opt:
+		var up_dano = load("res://Recompensas/upgrades e itens/up_dano.tres")
+		recompensas.append(up_dano)
+		
+	if 9 in opt:
+		var up_cc = load("res://Recompensas/upgrades e itens/up_critico.tres")
+		recompensas.append(up_cc)
 	
 func esconder():
 	visible = false

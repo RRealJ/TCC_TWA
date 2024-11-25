@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://dfm0mdvmbgdv2"]
+[gd_scene load_steps=18 format=3 uid="uid://dfm0mdvmbgdv2"]
 
 [ext_resource type="Script" path="res://loja.gd" id="1_2ofpd"]
 [ext_resource type="Texture2D" uid="uid://diwyarq17rwwc" path="res://Assets/formatos/pp_clock.png" id="1_wfg0a"]
 [ext_resource type="PackedScene" uid="uid://eo4h62aq2wtt" path="res://Audio/ui_sounds.tscn" id="2_2soxn"]
-[ext_resource type="Texture2D" uid="uid://cl6tt0w3dyd2p" path="res://Assets/formatos/w_clock.png" id="2_e7ef7"]
 [ext_resource type="Texture2D" uid="uid://xuoatwwa0ci4" path="res://Assets/formatos/upgrade_normal.png" id="2_m2u30"]
 [ext_resource type="Texture2D" uid="uid://0vfd33ej50s7" path="res://Assets/formatos/upgrade_comprado.png" id="3_4u6ew"]
 [ext_resource type="Texture2D" uid="uid://d0sciphnw6au8" path="res://Assets/itens/inv_itens/up_vida.png" id="5_lssvn"]
@@ -14,7 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://dm2shhiwn14dg" path="res://Assets/itens/inv_itens/up_speed.png" id="10_207fb"]
 [ext_resource type="AudioStream" uid="uid://new414htllf2" path="res://Audio/btns_loja.mp3" id="10_ihp2p"]
 [ext_resource type="AudioStream" uid="uid://begye0eu0r7a5" path="res://Audio/denied.mp3" id="11_7e65p"]
+[ext_resource type="Texture2D" uid="uid://cr8202tvb67qk" path="res://Assets/itens/inv_itens/up_sorte.png" id="11_kxaon"]
+[ext_resource type="Texture2D" uid="uid://d3rhbc7hmwsbb" path="res://Assets/itens/inv_itens/up_dano.png" id="12_dhe6i"]
 [ext_resource type="AudioStream" uid="uid://jxjvvcl2awqg" path="res://Audio/loja_bgm.mp3" id="12_rphgk"]
+[ext_resource type="Texture2D" uid="uid://badi237gqp1ct" path="res://Assets/itens/inv_itens/up_chance_critica.png" id="13_plfm1"]
 
 [node name="Loja" type="Control"]
 texture_filter = 1
@@ -74,7 +76,7 @@ offset_bottom = 221.5
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/separation = 65
-alignment = 2
+alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="upgrades"]
 layout_mode = 2
@@ -111,7 +113,8 @@ text = "Map Icons
 [node name="p_upgrades" type="HBoxContainer" parent="upgrades/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_constants/separation = 61
+theme_override_constants/separation = 50
+alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="set_1" type="VBoxContainer" parent="upgrades/VBoxContainer/p_upgrades"]
@@ -120,7 +123,7 @@ layout_mode = 2
 [node name="up_vida" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_1"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
-mouse_filter = 1
+mouse_filter = 2
 texture_normal = ExtResource("5_lssvn")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
@@ -136,7 +139,7 @@ tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 [node name="up_resistencia" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_1"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
-mouse_filter = 1
+mouse_filter = 2
 texture_normal = ExtResource("9_wowyl")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
@@ -155,7 +158,7 @@ layout_mode = 2
 [node name="up_velocidade" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_2"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
-mouse_filter = 1
+mouse_filter = 2
 texture_normal = ExtResource("10_207fb")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
@@ -169,11 +172,13 @@ texture_progress = ExtResource("3_4u6ew")
 tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 
 [node name="up_sorte" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_2"]
+custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
-mouse_filter = 1
-texture_normal = ExtResource("2_e7ef7")
+mouse_filter = 2
+texture_normal = ExtResource("11_kxaon")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
+stretch_mode = 0
 
 [node name="upbar_sorte" type="TextureProgressBar" parent="upgrades/VBoxContainer/p_upgrades/set_2"]
 layout_mode = 2
@@ -188,10 +193,11 @@ layout_mode = 2
 [node name="up_dano" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_3"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
-mouse_filter = 1
-texture_normal = ExtResource("2_e7ef7")
+mouse_filter = 2
+texture_normal = ExtResource("12_dhe6i")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
+stretch_mode = 0
 
 [node name="upbar_dano" type="TextureProgressBar" parent="upgrades/VBoxContainer/p_upgrades/set_3"]
 layout_mode = 2
@@ -201,11 +207,13 @@ texture_progress = ExtResource("3_4u6ew")
 tint_under = Color(1, 0.940905, 0.936234, 0.780392)
 
 [node name="up_chance_critica" type="TextureButton" parent="upgrades/VBoxContainer/p_upgrades/set_3"]
+custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
-mouse_filter = 1
-texture_normal = ExtResource("2_e7ef7")
+mouse_filter = 2
+texture_normal = ExtResource("13_plfm1")
 texture_hover = ExtResource("1_wfg0a")
 texture_focused = ExtResource("1_wfg0a")
+stretch_mode = 0
 
 [node name="upbar_chance_critica" type="TextureProgressBar" parent="upgrades/VBoxContainer/p_upgrades/set_3"]
 layout_mode = 2

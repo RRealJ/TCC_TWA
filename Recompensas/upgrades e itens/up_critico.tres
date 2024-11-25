@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://b1k1ccl0x2jdi"]
+
+[ext_resource type="Script" path="res://Inventario/itens_inventario.gd" id="1_pnxuy"]
+[ext_resource type="Texture2D" uid="uid://badi237gqp1ct" path="res://Assets/itens/inv_itens/up_chance_critica.png" id="2_c7d5r"]
+
+[resource]
+script = ExtResource("1_pnxuy")
+level = 1
+nome = "Upgrade Chance Critica"
+descricao = "Aumenta a chance das suas armas causarem dano critico"
+textura = ExtResource("2_c7d5r")

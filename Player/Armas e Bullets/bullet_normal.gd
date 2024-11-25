@@ -6,7 +6,11 @@ var dano = bullet_dano * PlayerVariaveis.dano
 
 func _on_area_2d_body_entered(body):
 	if get_tree().paused == false:
-		dano = bullet_dano * PlayerVariaveis.dano * item.level
+		var critico = randf()
+		dano = bullet_dano * player.dano_add * item.level
+		print(critico)
+		if critico < player.chance_critica:
+			dano = dano * 2
 		print("Normal Bullet dano: ",dano, "| level: ", item.level)
 		if (body is Inimigos) or (body is Inimigo_boss):
 			bullet_penetracao -= 1
