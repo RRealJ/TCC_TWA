@@ -1,22 +1,20 @@
-res://main.tscn
+res://Mundos/mundo_2.tscn
 res://Inventario/player_inv.tres
 res://Inventario/inv_ui_slot.gd
 res://Timers e spawns/spawn_inimigo.gd
 res://Inimigos/inimigos_comum.gd
 res://Assets/shaders/flashing_white.gdshader
 res://Assets/shaders/chromatic_aberration.gdshader
-res://Menus/main_menu.tscn
-res://Mundos/mundo_2.tscn
 res://Mundos/mundo_1.tscn
-res://Recompensas/Recompensas_ui.tscn
-res://Player/itens/colar_vampirismo.tscn
 res://Inimigos/dino_comum_shooter.tscn
-res://Generico/shooter.tscn
 res://loja.tscn
-res://loja.gd
-res://Recompensas/recompensas.gd
+res://Player/player.tscn
+res://player_ui.tscn
+res://Mundos/mundo_2.gd
 res://Player/player.gd
-res://player_variaveis.gd
 res://Player/Armas e Bullets/AreaArma.gd
-res://Player/Armas e Bullets/bullet.gd
 res://Player/Armas e Bullets/bullet_normal.gd
+res://loja.gd
+res://Menus/main_menu.tscn
+res://Menus/menu_pausa.tscn
+res://Menus/menu_pausa.gd

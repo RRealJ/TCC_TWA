@@ -89,6 +89,7 @@ f11={
 2d_physics/layer_7="mundo"
 2d_physics/layer_8="drops"
 2d_physics/layer_9="pick_up_area"
+2d_physics/layer_10="map"
 
 [rendering]
 

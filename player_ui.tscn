@@ -1,8 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjja1kgsmwtnf"]
+[gd_scene load_steps=5 format=3 uid="uid://bjja1kgsmwtnf"]
 
-[ext_resource type="Texture2D" uid="uid://bk8cqkr7ukuv6" path="res://Assets/formatos/b_clock.png" id="1_3tsbh"]
 [ext_resource type="PackedScene" uid="uid://b8i4jge24ih01" path="res://Generico/barra_vida.tscn" id="1_fk6hq"]
-[ext_resource type="Texture2D" uid="uid://cl6tt0w3dyd2p" path="res://Assets/formatos/w_clock.png" id="2_bjl60"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="5_4ym88"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3v4v"]
@@ -53,31 +51,13 @@ offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
 
-[node name="barra_delta_time" type="TextureProgressBar" parent="inf_esquerda"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 10.0
-offset_top = -208.0
-offset_right = 190.0
-offset_bottom = -54.0
-grow_horizontal = 2
-grow_vertical = 2
-fill_mode = 4
-texture_under = ExtResource("1_3tsbh")
-texture_progress = ExtResource("2_bjl60")
-tint_progress = Color(0.85098, 0.85098, 0.0745098, 1)
-
 [node name="texto_nivel" type="Label" parent="inf_esquerda"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 69.0
-offset_top = -134.0
-offset_right = 169.0
-offset_bottom = -84.0
+offset_left = 10.0
+offset_top = -46.0
+offset_right = 110.0
+offset_bottom = 4.0
 theme = ExtResource("5_4ym88")
 theme_override_colors/font_shadow_color = Color(0.37879, 0.00129818, 0.592192, 1)
 theme_override_font_sizes/font_size = 48
@@ -100,10 +80,10 @@ grow_vertical = 0
 [node name="texto_velocidade" type="Label" parent="inf_direita"]
 texture_filter = 1
 layout_mode = 0
-offset_left = -89.0
-offset_top = -64.0
-offset_right = -9.0
-offset_bottom = 2.0
+offset_left = -59.0
+offset_top = -59.0
+offset_right = 21.0
+offset_bottom = 7.0
 theme = ExtResource("5_4ym88")
 theme_override_colors/font_shadow_color = Color(0.658132, 0.771446, 1, 1)
 theme_override_font_sizes/font_size = 65

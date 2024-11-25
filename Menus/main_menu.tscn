@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dj6am7htam1ul"]
+[gd_scene load_steps=13 format=3 uid="uid://dj6am7htam1ul"]
 
 [ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_awpth"]
 [ext_resource type="Theme" uid="uid://0a7264asjqtn" path="res://Assets/font/TextFont.tres" id="2_4ytr2"]
@@ -10,6 +10,26 @@
 [ext_resource type="Texture2D" uid="uid://b44s4apjhs0q5" path="res://Assets/mundo2.png" id="7_q1rrj"]
 [ext_resource type="Texture2D" uid="uid://d3rqa11u541ce" path="res://Assets/mundo2_s.png" id="9_tm6tx"]
 
+[sub_resource type="Curve" id="Curve_hrslw"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.126214, 1), 0.0, 0.0, 0, 0, Vector2(0.194175, 0.263736), 0.0, 0.0, 0, 0, Vector2(0.286408, 0.56044), 0.0, 0.0, 0, 0, Vector2(0.466019, 0.923077), 0.0, 0.0, 0, 0, Vector2(0.684466, 1), 0.0, 0.0, 0, 0, Vector2(0.912621, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 8
+
+[sub_resource type="CurveTexture" id="CurveTexture_k1q3s"]
+curve = SubResource("Curve_hrslw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m2485"]
+particle_flag_disable_z = true
+emission_shape = 2
+emission_sphere_radius = 128.0
+radial_velocity_min = -123.98
+radial_velocity_max = 157.01
+gravity = Vector3(0, 98, 0)
+radial_accel_min = -21.49
+radial_accel_max = 44.63
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_k1q3s")
+color = Color(1, 1, 0.243137, 1)
+
 [node name="Main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -18,6 +38,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_awpth")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.140886, 0.0150334, 0.249895, 1)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(651, 459)
+scale = Vector2(10, 10)
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_m2485")
 
 [node name="UiSounds" parent="." instance=ExtResource("2_hguew")]
 root_path = NodePath("..")
@@ -40,7 +75,7 @@ grow_vertical = 2
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("2_4ytr2")
-text = "Periodos"
+text = "Jogar"
 
 [node name="btn_loja" type="Button" parent="menu"]
 texture_filter = 1

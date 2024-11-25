@@ -32,7 +32,7 @@ func atirar():
 func _on_body_entered(body):
 	if get_tree().paused == false:
 		var critico = randf()
-		dano = bullet_dano * player.dano_add * item.level
+		dano = bullet_dano * item.level + player.dano_add
 		print(critico)
 		if critico < player.chance_critica:
 			dano = dano * 2

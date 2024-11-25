@@ -5,9 +5,9 @@ class_name Player
 signal PlayerDeath
 
 const iFrame_duration = 1.5
-@export var max_speed = 75 * PlayerVariaveis.velocidade
-@export var ACELERACAO = 500 * PlayerVariaveis.velocidade
-@export var FRICCAO = 1000 * PlayerVariaveis.velocidade
+@export var max_speed = 75 + (5 * PlayerVariaveis.velocidade)
+@export var ACELERACAO = 500 + (5 * PlayerVariaveis.velocidade)
+@export var FRICCAO = 1000 + (5 * PlayerVariaveis.velocidade)
 @export var inv: Inv
 @onready var axis = Vector2.ZERO
 @onready var recompensas_ui = $"../camera/Recompensas/recompensas_ui"
@@ -38,7 +38,7 @@ var resistencia = PlayerVariaveis.resistencia * 3
 enum{IDLE, MOVE}
 var state = IDLE
 var vampirismo = 0
-var dano_add = PlayerVariaveis.dano
+var dano_add = PlayerVariaveis.dano * 5
 var chance_critica = (PlayerVariaveis.chance_critica*5)/100
 var sorte = PlayerVariaveis.sorte
 

@@ -63,37 +63,37 @@ func _on_button_pressed(selecao, button, custo):
 	
 
 func _on_up_vida_pressed():
-	await _on_button_pressed(btn_up_vida, $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida, 25 + (10 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida.value))
+	await _on_button_pressed(btn_up_vida, $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida, 25 + (100 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida.value))
 	if $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida.value >= 1:		
 		PlayerVariaveis.vida = $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida.value
 		
 
 func _on_up_resistencia_pressed():
-	await _on_button_pressed(btn_up_resistencia, $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia, 25 + (10 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia.value))
+	await _on_button_pressed(btn_up_resistencia, $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia, 25 + (100 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia.value))
 	if $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia.value >= 1:		
 		PlayerVariaveis.vida = $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia.value
 
 
 func _on_up_velocidade_pressed():
-	await _on_button_pressed(btn_up_velocidade, $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade, 25 + (10 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade.value))
+	await _on_button_pressed(btn_up_velocidade, $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade, 25 + (100 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade.value))
 	if $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade.value >= 1:		
 		PlayerVariaveis.velocidade = $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade.value
 
 
 func _on_up_sorte_pressed():
-	await _on_button_pressed($upgrades/VBoxContainer/p_upgrades/set_2/up_sorte, $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte, 25 + (10 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte.value))
+	await _on_button_pressed($upgrades/VBoxContainer/p_upgrades/set_2/up_sorte, $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte, 25 + (100 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte.value))
 	if $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte.value >= 1:		
 		PlayerVariaveis.sorte = $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte.value
 	
 	
 func _on_up_dano_pressed():
-	await _on_button_pressed($upgrades/VBoxContainer/p_upgrades/set_3/up_dano, $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano, 25 + (10 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano.value))
+	await _on_button_pressed($upgrades/VBoxContainer/p_upgrades/set_3/up_dano, $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano, 25 + (100 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano.value))
 	if $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano.value >= 1:		
 		PlayerVariaveis.dano = $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano.value
 
 
 func _on_up_chance_critica_pressed():
-	await _on_button_pressed(btn_up_chance_critica, $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica, 25 + (10 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica.value))
+	await _on_button_pressed(btn_up_chance_critica, $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica, 25 + (100 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica.value))
 	if $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica.value >= 1:		
 		PlayerVariaveis.chance_critica = $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica.value
 
@@ -106,38 +106,38 @@ func _on_voltar_menu_pressed():
 func _on_up_vida_focus_entered():
 	nome_up.text = upgrades_nome_desc["Vida"][0]
 	descricao_up.text = upgrades_nome_desc["Vida"][1]
-	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida.value)
+	descricao_preco.text = str(100 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_vida.value)
 
 
 func _on_up_resistencia_focus_entered():
 	nome_up.text = upgrades_nome_desc["Resistencia"][0]
 	descricao_up.text = upgrades_nome_desc["Resistencia"][1]
-	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia.value)
+	descricao_preco.text = str(100 * $upgrades/VBoxContainer/p_upgrades/set_1/upbar_resistencia.value)
 
 
 func _on_up_velocidade_focus_entered():
 	nome_up.text = upgrades_nome_desc["Velocidade"][0]
 	descricao_up.text = upgrades_nome_desc["Velocidade"][1]
-	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade.value)
+	descricao_preco.text = str(100 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_velocidade.value)
 
 
 func _on_up_sorte_focus_entered():
 	nome_up.text = upgrades_nome_desc["Sorte"][0]
 	descricao_up.text = upgrades_nome_desc["Sorte"][1]
-	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte.value)
+	descricao_preco.text = str(100 * $upgrades/VBoxContainer/p_upgrades/set_2/upbar_sorte.value)
 
 
 func _on_up_dano_focus_entered():
 	nome_up.text = upgrades_nome_desc["Dano"][0]
 	descricao_up.text = upgrades_nome_desc["Dano"][1]
-	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano.value)
+	descricao_preco.text = str(100 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_dano.value)
 
 
 
 func _on_up_chance_critica_focus_entered():	
 	nome_up.text = upgrades_nome_desc["Chance_critica"][0]
 	descricao_up.text = upgrades_nome_desc["Chance_critica"][1]
-	descricao_preco.text = str(10 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica.value)
+	descricao_preco.text = str(100 * $upgrades/VBoxContainer/p_upgrades/set_3/upbar_chance_critica.value)
 
 
 func _on_nome_up_focus_entered():
