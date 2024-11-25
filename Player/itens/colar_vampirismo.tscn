@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpp4i6iv0whr1"]
+
+[ext_resource type="Script" path="res://Player/itens/colar_vampirismo.gd" id="1_4ayh1"]
+[ext_resource type="Resource" uid="uid://cgi01klkneikg" path="res://Recompensas/upgrades e itens/Colar_vampirismo.tres" id="2_f48jg"]
+
+[node name="ColarVampirismo" type="Node2D"]
+script = ExtResource("1_4ayh1")
+item = ExtResource("2_f48jg")

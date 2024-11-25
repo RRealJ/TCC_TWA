@@ -47,6 +47,17 @@ func morto():
 		target.level_up()
 	drop_coin()
 	drop_exp()
+	
+	if target.vampirismo >= 1:
+		var chance = randi_range(1,4)
+		if chance == 1:
+			var vida_apos = target.vida + 2 * target.vampirismo
+			if target.vida_maxima >= vida_apos:
+				target.vida = vida_apos
+			else:
+				target.vida = target.vida_maxima
+			target.update_PlayerUI()
+	
 	queue_free()
 	
 

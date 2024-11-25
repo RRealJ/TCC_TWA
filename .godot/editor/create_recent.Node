@@ -1,9 +1,9 @@
+GPUParticles2D
 Button
 Label
 TextureButton
 HBoxContainer
 Control
-GPUParticles2D
 Timer
 CollisionShape2D
 Area2D

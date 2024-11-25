@@ -32,6 +32,7 @@ _data = {
 script = ExtResource("1_ki8i7")
 
 [node name="sprite_moeda" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_orjdd")
 hframes = 4
 frame = 3

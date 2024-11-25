@@ -1,5 +1,5 @@
 extends Inimigo_boss
-
+		
 		
 func atirar():
 	if pode_atirar:

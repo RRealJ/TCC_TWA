@@ -47,7 +47,7 @@ func insert():
 func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 	var opt = []
 	for i in range(0, 25):
-		var rand = randi_range(1,5) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
+		var rand = randi_range(1,6) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
 		if !opt.has(rand):
 			opt.append(rand)
 		
@@ -79,6 +79,11 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 		var up_defesa = load("res://Recompensas/upgrades e itens/up_defense.tres")
 		recompensas.append(up_defesa)
 		print(up_defesa)
+		
+	if 6 in opt:
+		var up_vamp = load("res://Player/itens/colar_vampirismo.tscn")
+		recompensas.append(up_vamp)
+		print(up_vamp)
 		
 	
 func esconder():

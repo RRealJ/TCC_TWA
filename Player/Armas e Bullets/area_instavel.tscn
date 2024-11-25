@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ca2ht3sny8tvi"]
+[gd_scene load_steps=12 format=3 uid="uid://ca2ht3sny8tvi"]
 
 [ext_resource type="Script" path="res://Player/Armas e Bullets/AreaArma.gd" id="1_iolbi"]
 [ext_resource type="Resource" uid="uid://cntklbi62h6hl" path="res://Recompensas/upgrades e itens/Area_Instavel.tres" id="2_6q2pk"]
@@ -47,6 +47,18 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ul4eb"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 2
+emission_sphere_radius = 55.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = -1.60933e-05
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 0.0500001
+gravity = Vector3(0, 0, 0)
+color = Color(0.627451, 0.196078, 0.866667, 1)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_sa66x"]
 radius = 15.252
 
@@ -63,7 +75,13 @@ sprite_frames = SubResource("SpriteFrames_0k4bq")
 animation = &"area_attack"
 frame_progress = 0.932238
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="AnimatedSprite2D"]
+scale = Vector2(0.25, 0.25)
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_ul4eb")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_sa66x")
 debug_color = Color(0.713726, 0.360784, 0.917647, 0.0392157)

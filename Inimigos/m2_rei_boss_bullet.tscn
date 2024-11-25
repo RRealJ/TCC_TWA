@@ -91,12 +91,12 @@ color_ramp = SubResource("GradientTexture1D_jss3p")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5g14o"]
 radius = 7.0
-height = 36.0
+height = 24.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pc2am"]
 radius = 8.0
 
-[node name="M2ReiBossBullet" type="CharacterBody2D"]
+[node name="M2ReiBossBullet" type="CharacterBody2D" groups=["inimigos"]]
 script = ExtResource("1_dfr8k")
 bullet_velocidade = 200.0
 bullet_penetracao = 1
@@ -105,7 +105,6 @@ bullet_dano = 70
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kifn7")
 animation = &"snake_attack_frenzy"
-frame_progress = 0.847254
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="AnimatedSprite2D"]
 position = Vector2(5, 2)

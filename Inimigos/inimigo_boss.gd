@@ -117,17 +117,10 @@ func flashing():
 	await get_tree().create_timer(0.5).timeout
 	
 	a_sprite.material.set_shader_parameter("flash_mofidifier", 0.0)
-	
-	
-func morto():
-	await animacao_morte()
-	mundo.count_inimigo()
-	target.level_up()
-	drop_coin()
-	drop_exp()
 
 
 func chromo():
+	$Sprite2D.visible = true
 	var valores = Vector2(5.0, 5.0)
 	$Sprite2D.material.set_shader_parameter("r_displacement", valores)
 	valores = Vector2(-5.0, -5.0)

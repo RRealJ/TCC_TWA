@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://cgi01klkneikg"]
+
+[ext_resource type="Script" path="res://Inventario/itens_inventario.gd" id="1_bkfjq"]
+[ext_resource type="Texture2D" uid="uid://dws0ee4ca2qs1" path="res://Assets/itens/inv_itens/up_vampirismo.png" id="2_t0w8x"]
+
+[resource]
+script = ExtResource("1_bkfjq")
+level = 0
+nome = "Colar de Vampirismo"
+descricao = "Um colar que ao matar um inimigo recupera +2 pontos de vida"
+textura = ExtResource("2_t0w8x")

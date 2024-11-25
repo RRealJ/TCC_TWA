@@ -37,6 +37,7 @@ var friccao = FRICCAO
 var resistencia = PlayerVariaveis.resistencia * 3
 enum{IDLE, MOVE}
 var state = IDLE
+var vampirismo = 0
 
 var blend_pos: Vector2 = Vector2.ZERO
 var blend_pos_paths = [
@@ -181,6 +182,9 @@ func inserir(item): #inserir no inventário()
 		if passou:
 			$".".add_child(i)
 		inv.insert(i.item)
+		if i.item.nome == "Colar de Vampirismo":
+			vampirismo = i.item.level
+
 
 	else:
 		if item.nome == "Upgrade Vida":

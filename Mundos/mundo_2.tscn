@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bj3154tlobgp0"]
+[gd_scene load_steps=31 format=4 uid="uid://bj3154tlobgp0"]
 
 [ext_resource type="Script" path="res://Mundos/mundo_2.gd" id="1_r3805"]
 [ext_resource type="PackedScene" uid="uid://dcafurs16oq33" path="res://Menus/menu_pausa.tscn" id="2_bmhlh"]
@@ -3556,26 +3556,66 @@ sources/0 = SubResource("TileSetAtlasSource_q1dcm")
 [sub_resource type="Resource" id="Resource_ib0fs"]
 script = ExtResource("8_erppp")
 time_start = 1
-time_end = 3
+time_end = 10
 inimigo = ExtResource("11_ctwfk")
-inimigo_num = 4
+inimigo_num = 3
 inimigo_spawn_delay = 1
 
 [sub_resource type="Resource" id="Resource_y2w25"]
 script = ExtResource("8_erppp")
-time_start = 1
-time_end = 2
+time_start = 10
+time_end = 15
 inimigo = ExtResource("12_yj7hc")
-inimigo_num = 2
-inimigo_spawn_delay = 0
+inimigo_num = 5
+inimigo_spawn_delay = 1
 
-[sub_resource type="Resource" id="Resource_vabwb"]
+[sub_resource type="Resource" id="Resource_lv6u4"]
 script = ExtResource("8_erppp")
-time_start = 30
-time_end = 31
+time_start = 15
+time_end = 50
+inimigo = ExtResource("11_ctwfk")
+inimigo_num = 10
+inimigo_spawn_delay = 5
+
+[sub_resource type="Resource" id="Resource_fre3q"]
+script = ExtResource("8_erppp")
+time_start = 50
+time_end = 60
+inimigo = ExtResource("12_yj7hc")
+inimigo_num = 10
+inimigo_spawn_delay = 2
+
+[sub_resource type="Resource" id="Resource_64n71"]
+script = ExtResource("8_erppp")
+time_start = 60
+time_end = 100
+inimigo = ExtResource("11_ctwfk")
+inimigo_num = 20
+inimigo_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_qbbwu"]
+script = ExtResource("8_erppp")
+time_start = 100
+time_end = 100
 inimigo = ExtResource("13_bw50w")
 inimigo_num = 1
 inimigo_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_cao07"]
+script = ExtResource("8_erppp")
+time_start = 100
+time_end = 500
+inimigo = ExtResource("12_yj7hc")
+inimigo_num = 20
+inimigo_spawn_delay = 10
+
+[sub_resource type="Resource" id="Resource_4831c"]
+script = ExtResource("8_erppp")
+time_start = 100
+time_end = 500
+inimigo = ExtResource("12_yj7hc")
+inimigo_num = 5
+inimigo_spawn_delay = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0y0gw"]
 size = Vector2(318, 571)
@@ -3629,10 +3669,11 @@ script = ExtResource("5_vjacv")
 bullet = ExtResource("7_4yvjh")
 
 [node name="spawn_inimigo" parent="." instance=ExtResource("7_lm4il")]
-spawns = Array[ExtResource("8_erppp")]([SubResource("Resource_ib0fs"), SubResource("Resource_y2w25"), SubResource("Resource_vabwb")])
+spawns = Array[ExtResource("8_erppp")]([SubResource("Resource_ib0fs"), SubResource("Resource_y2w25"), SubResource("Resource_lv6u4"), SubResource("Resource_fre3q"), SubResource("Resource_64n71"), SubResource("Resource_qbbwu"), SubResource("Resource_cao07"), SubResource("Resource_4831c")])
 
 [node name="mundo_bgm" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_tften")
+bus = &"bgm"
 
 [node name="Agua" type="Area2D" parent="."]
 collision_layer = 0
