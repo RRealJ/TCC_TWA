@@ -47,7 +47,7 @@ func insert():
 func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 	var opt = []
 	for i in range(0, 50):
-		var rand = randi_range(1,9) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
+		var rand = randi_range(1,10) #opcoes de recompensas, colocar mais buffs -> CENAS e InvItem
 		if !opt.has(rand):
 			opt.append(rand)
 		
@@ -89,6 +89,11 @@ func recompesas_random(): #fazer coisas aqui pra alterar e "pesar" o RNG
 	if 9 in opt:
 		var up_cc = load("res://Recompensas/upgrades e itens/up_critico.tres")
 		recompensas.append(up_cc)
+		
+		
+	if 10 in opt:
+		var escopeta = load("res://Player/Armas e Bullets/escopeta.tscn")
+		recompensas.append(escopeta)
 	
 func esconder():
 	visible = false

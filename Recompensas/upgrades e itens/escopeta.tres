@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://burtmgrk8203f"]
+
+[ext_resource type="Script" path="res://Inventario/itens_inventario.gd" id="1_mlmtl"]
+[ext_resource type="Texture2D" uid="uid://ceyw4lfgkuyi8" path="res://Assets/itens/inv_itens/shotgun_item_awake.png" id="2_epax3"]
+
+[resource]
+script = ExtResource("1_mlmtl")
+level = 0
+nome = "Escopeta"
+descricao = "Transforma sua arma para que atire em arco."
+textura = ExtResource("2_epax3")

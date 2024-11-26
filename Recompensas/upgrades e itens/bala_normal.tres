@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://dcecgpmga3vvd"]
 
 [ext_resource type="Script" path="res://Inventario/itens_inventario.gd" id="1_sks46"]
-[ext_resource type="Texture2D" uid="uid://rs47uo4pxoix" path="res://Assets/itens/armas_bullets-areas/bullet_normal.png" id="2_lh1pd"]
+[ext_resource type="Texture2D" uid="uid://ex20ejem4xwt" path="res://Assets/itens/inv_itens/shotgun_item.png" id="2_rftpv"]
 
 [resource]
 script = ExtResource("1_sks46")
 level = 1
 nome = "Bala Normal"
 descricao = "Aumenta o dano da bala normal."
-textura = ExtResource("2_lh1pd")
+textura = ExtResource("2_rftpv")
