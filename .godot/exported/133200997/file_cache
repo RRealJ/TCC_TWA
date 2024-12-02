@@ -5,31 +5,31 @@ res://Efeitos/drop_moedas.tscn::25f34aab1f2f51f765011e2d2d971b47::1732542995::re
 res://Efeitos/morte_vfx.tscn::1c689d1edd90d036f485b46531f47b9f::1717782766::res://.godot/exported/133200997/export-2f23cce702160b4ccfcb1ebdaf3a3d5a-morte_vfx.scn
 res://Generico/barra_vida.tscn::53807f317861893b36b3f3b33f84a9cf::1718651782::res://.godot/exported/133200997/export-a28989bd2156c9d1dfa478f6fd272e7a-barra_vida.scn
 res://Generico/confirmacao.tscn::ea77f0c592d674458a1f071aef059ea8::1718515615::res://.godot/exported/133200997/export-23d16139967d53c067fa792165162054-confirmacao.scn
-res://Generico/shooter.tscn::52e7af10e4a3932261a45f4b9b63512e::1733158876::res://.godot/exported/133200997/export-e3daf012999a0c073dc7e381d2629748-shooter.scn
-res://Inimigos/bullet_inimigo.tscn::713d4b25d5eaba9afa17b134e32d2ab7::1733158876::res://.godot/exported/133200997/export-12b841b95a04bf9c6ed69eaec4681d6e-bullet_inimigo.scn
-res://Inimigos/dino_boss.tscn::ddfc2d55bb0d4e69ca79047ab9a20f87::1733158876::res://.godot/exported/133200997/export-cec1985655b75051cad4a7c7dc987f65-dino_boss.scn
+res://Generico/shooter.tscn::52e7af10e4a3932261a45f4b9b63512e::1733161630::res://.godot/exported/133200997/export-e3daf012999a0c073dc7e381d2629748-shooter.scn
+res://Inimigos/bullet_inimigo.tscn::713d4b25d5eaba9afa17b134e32d2ab7::1733161630::res://.godot/exported/133200997/export-12b841b95a04bf9c6ed69eaec4681d6e-bullet_inimigo.scn
+res://Inimigos/dino_boss.tscn::ddfc2d55bb0d4e69ca79047ab9a20f87::1733161629::res://.godot/exported/133200997/export-cec1985655b75051cad4a7c7dc987f65-dino_boss.scn
 res://Inimigos/dino_comum.tscn::2caaf61f94ef4a7f5f0638d8f458e22d::1730337698::res://.godot/exported/133200997/export-fa69649e51de994978f00ccb4716a911-dino_comum.scn
 res://Inimigos/dino_comum_2.tscn::f5044316f33a1338f8d5b2c2e5ad9ed5::1730337447::res://.godot/exported/133200997/export-f7324ebe21f9f8ddcd5ac82313a5e720-dino_comum_2.scn
-res://Inimigos/dino_comum_shooter.tscn::f0cacdd6c3b32500ade306a1ce217186::1733158874::res://.godot/exported/133200997/export-403f018bbcf9789a53afe1630c4fcbb3-dino_comum_shooter.scn
+res://Inimigos/dino_comum_shooter.tscn::f0cacdd6c3b32500ade306a1ce217186::1733161628::res://.godot/exported/133200997/export-403f018bbcf9789a53afe1630c4fcbb3-dino_comum_shooter.scn
 res://Inimigos/m1_boss_bullet.tscn::ff0cdcb5748e2c172b5624785fd1f412::1732539036::res://.godot/exported/133200997/export-b16c3c6dc7178989b23e970a96881a7e-m1_boss_bullet.scn
-res://Inimigos/m2_escudeiro.tscn::0ad480b5d090d299be445d93994a45c3::1733158876::res://.godot/exported/133200997/export-245d12d59aaed8d8571538274535971c-m2_escudeiro.scn
+res://Inimigos/m2_escudeiro.tscn::0ad480b5d090d299be445d93994a45c3::1733161630::res://.godot/exported/133200997/export-245d12d59aaed8d8571538274535971c-m2_escudeiro.scn
 res://Inimigos/m2_rei_boss.tscn::2cca02a8da9de5ebf2421e1b087623cd::1733158876::res://.godot/exported/133200997/export-52ec81a3bb439717051aab9ac0c90e80-m2_rei_boss.scn
 res://Inimigos/m2_rei_boss_bullet.tscn::eaab0781f0983cdfba530b00bc9a2e1a::1732542995::res://.godot/exported/133200997/export-8ffd90c06179a78770cc137ba9767de5-m2_rei_boss_bullet.scn
-res://Inimigos/m2_soldado_comum.tscn::d6c66fec340d2568900fffe7284ea2e4::1733158877::res://.godot/exported/133200997/export-190623b0efe2f7856939e91aa26510f1-m2_soldado_comum.scn
+res://Inimigos/m2_soldado_comum.tscn::d6c66fec340d2568900fffe7284ea2e4::1733161630::res://.godot/exported/133200997/export-190623b0efe2f7856939e91aa26510f1-m2_soldado_comum.scn
 res://Inventario/inv_ui.tscn::6bb6bdc1002011f43f3ec2dfc44bc98e::1727048403::res://.godot/exported/133200997/export-5aaec4d3a77c14890435f3beaf384da1-inv_ui.scn
 res://Inventario/inv_ui_slot.tscn::155c9131699fc0546988399bfe68cfcc::1727051527::res://.godot/exported/133200997/export-8a5d0f00be28770f982c32b1868fc15d-inv_ui_slot.scn
-res://Inventario/player_inv.tres::7f583e035c675ad4c05e5798988f7e78::1733158848::res://.godot/exported/133200997/export-44e31f91aa9934ca169ddd7ac9329315-player_inv.res
+res://Inventario/player_inv.tres::7f583e035c675ad4c05e5798988f7e78::1733161625::res://.godot/exported/133200997/export-44e31f91aa9934ca169ddd7ac9329315-player_inv.res
 res://Menus/gameover.tscn::d07d461109695f92e09731760901bca2::1732542995::res://.godot/exported/133200997/export-5c095f9772bd0b7253c7c7c620ecafdc-gameover.scn
-res://Menus/main_menu.tscn::e3f8584061135daa8bab9532986be8b8::1733158875::res://.godot/exported/133200997/export-5bda0e0ec853836ec4ad6256227f4bcf-main_menu.scn
-res://Menus/menu_pausa.tscn::b505720bb00e36b6a76d6318f232b8bb::1733158875::res://.godot/exported/133200997/export-6d13f961e21a33b309df5ce793a7e561-menu_pausa.scn
-res://Mundos/mundo_1.tscn::df5d1aa0d92dee9a0b6a6256df866129::1733158997::res://.godot/exported/133200997/export-96e0bebde0e7bcc737cd43fa6c41f57a-mundo_1.scn
-res://Mundos/mundo_2.tscn::2b9953f7c2ef9850489071e827078ab6::1733158874::res://.godot/exported/133200997/export-9d519d72b7c1a8a80f95730d388fb594-mundo_2.scn
+res://Menus/main_menu.tscn::51e536474c7a1ac48bc26fb456421ae2::1733161629::res://.godot/exported/133200997/export-5bda0e0ec853836ec4ad6256227f4bcf-main_menu.scn
+res://Menus/menu_pausa.tscn::b505720bb00e36b6a76d6318f232b8bb::1733161629::res://.godot/exported/133200997/export-6d13f961e21a33b309df5ce793a7e561-menu_pausa.scn
+res://Mundos/mundo_1.tscn::df5d1aa0d92dee9a0b6a6256df866129::1733161629::res://.godot/exported/133200997/export-96e0bebde0e7bcc737cd43fa6c41f57a-mundo_1.scn
+res://Mundos/mundo_2.tscn::2b9953f7c2ef9850489071e827078ab6::1733161628::res://.godot/exported/133200997/export-9d519d72b7c1a8a80f95730d388fb594-mundo_2.scn
 res://OverLap/hitbox.tscn::f59b8d5cfcb628a55cac41c4eeab8d3e::1717782766::res://.godot/exported/133200997/export-e4324ec3dd8ec58d3fed72c6741aa3a4-hitbox.scn
 res://OverLap/soft_collision.tscn::c3ddc5c80af8333599f9cf0de81a4da8::1717782766::res://.godot/exported/133200997/export-c639702befeae63990dc1f8612692959-soft_collision.scn
 res://Player/Armas e Bullets/area_instavel.tscn::21f4d4f6c54b7ac4ce41fa94c9b15db9::1733158875::res://.godot/exported/133200997/export-339590bff3a0ebfdb5d9252dca342c03-area_instavel.scn
 res://Player/Armas e Bullets/bullet_normal.tscn::1832e494c4432cf92f18112e02be7cdb::1732542996::res://.godot/exported/133200997/export-c3b93e09dbf4773a786181e0bba581b4-bullet_normal.scn
 res://Player/itens/colar_vampirismo.tscn::2f1d91f025609a5fba50d19bff6df091::1732559747::res://.godot/exported/133200997/export-76c4ae116ecf33e186642d76ca840012-colar_vampirismo.scn
-res://Player/player.tscn::ee63d80bfef7233f2c9ba1b0ea6f4a0f::1733158875::res://.godot/exported/133200997/export-d267b47f7e81a3258979164d56d0d9c2-player.scn
+res://Player/player.tscn::ee63d80bfef7233f2c9ba1b0ea6f4a0f::1733161628::res://.godot/exported/133200997/export-d267b47f7e81a3258979164d56d0d9c2-player.scn
 res://Recompensas/upgrades e itens/Area_Instavel.tres::ee75b48687ebcf2849607d5af0ae215c::1718159501::res://.godot/exported/133200997/export-5ab78a18800e923a6b858ec41938eb43-Area_Instavel.res
 res://Recompensas/upgrades e itens/bala_normal.tres::0ea047f995dc24c0469d8cac2b53f958::1732625597::res://.godot/exported/133200997/export-90f5a74b9dcc52fddda7177a53155548-bala_normal.res
 res://Recompensas/upgrades e itens/Colar_vampirismo.tres::fc4684ec78086910185275b672062dea::1732542669::res://.godot/exported/133200997/export-a55510100808b2a99338dcc7aafe9479-Colar_vampirismo.res
@@ -46,9 +46,9 @@ res://Timers e spawns/spawn_inimigo.tscn::677d1a5f8ec284e66c306591c0250af3::1718
 res://cutscene_inicial.tscn::c385f5b315c74837a7915c5252494fbc::1718599009::res://.godot/exported/133200997/export-cf81cfebe7b31e2e2c8fbb3fb75831ca-cutscene_inicial.scn
 res://default_bus_layout.tres::a27bfc456e2d7f7d6f35d8303863eea3::1717782766::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
 res://intro.tscn::0309e3a1f367aa8002dbb39176403279::1718651782::res://.godot/exported/133200997/export-2dff5a063e418d17c9220ff5a6df7e7a-intro.scn
-res://loja.tscn::abf8715be757124bb49feb1d730cc45a::1733158874::res://.godot/exported/133200997/export-aef888d8369a220fe3561ae5d0241510-loja.scn
-res://main.tscn::47c5934d42c6ae848cb5d1fb160e0fcc::1733158876::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
-res://player_ui.tscn::90335e00f2df7653105a7f07b75ad210::1733158875::res://.godot/exported/133200997/export-6cbc785530040a7274f4a532558507e7-player_ui.scn
+res://loja.tscn::28782011e48dae9f8bfafd8cd4e26d5c::1733161653::res://.godot/exported/133200997/export-aef888d8369a220fe3561ae5d0241510-loja.scn
+res://main.tscn::47c5934d42c6ae848cb5d1fb160e0fcc::1733161629::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
+res://player_ui.tscn::90335e00f2df7653105a7f07b75ad210::1733161628::res://.godot/exported/133200997/export-6cbc785530040a7274f4a532558507e7-player_ui.scn
 res://text_edit_sara.tscn::bbeeafdae8c8b3174cac3f4b74e4c786::1725375448::res://.godot/exported/133200997/export-a91caa6a8cff6d90e39bc841c15d2f98-text_edit_sara.scn
-res://Player/Armas e Bullets/escopeta.tscn::f41d17c5e367ce764815fead10e5d51f::1733158974::res://.godot/exported/133200997/export-9bbf1998181b72e0ed378dc61ecf4727-escopeta.scn
+res://Player/Armas e Bullets/escopeta.tscn::f41d17c5e367ce764815fead10e5d51f::1733161629::res://.godot/exported/133200997/export-9bbf1998181b72e0ed378dc61ecf4727-escopeta.scn
 res://Recompensas/upgrades e itens/escopeta.tres::ffedb24966d4d5e7d9d0d93faae8f2c6::1732625857::res://.godot/exported/133200997/export-78819e687ff98234263ec689a0a6c626-escopeta.res
