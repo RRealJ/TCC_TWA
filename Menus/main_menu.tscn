@@ -14,7 +14,7 @@
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.126214, 1), 0.0, 0.0, 0, 0, Vector2(0.194175, 0.263736), 0.0, 0.0, 0, 0, Vector2(0.286408, 0.56044), 0.0, 0.0, 0, 0, Vector2(0.466019, 0.923077), 0.0, 0.0, 0, 0, Vector2(0.684466, 1), 0.0, 0.0, 0, 0, Vector2(0.912621, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 8
 
-[sub_resource type="CurveTexture" id="CurveTexture_k1q3s"]
+[sub_resource type="CurveTexture" id="CurveTexture_7iql5"]
 curve = SubResource("Curve_hrslw")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m2485"]
@@ -27,7 +27,7 @@ gravity = Vector3(0, 98, 0)
 radial_accel_min = -21.49
 radial_accel_max = 44.63
 scale_max = 3.0
-scale_curve = SubResource("CurveTexture_k1q3s")
+scale_curve = SubResource("CurveTexture_7iql5")
 color = Color(1, 1, 0.243137, 1)
 
 [node name="Main_menu" type="Control"]
