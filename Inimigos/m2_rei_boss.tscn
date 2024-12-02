@@ -111,7 +111,7 @@ script = ExtResource("1_pkldd")
 speed_limit = 90
 speed = 78
 dano = 80
-vida = 700
+vida = 4000
 ouro = 1500
 exp_multi = 2
 

@@ -219,7 +219,7 @@ collision_mask = 0
 script = ExtResource("1_tnrs5")
 speed = 30
 dano = 50
-vida = 750
+vida = 2000
 ouro = 100
 exp_multi = 3
 

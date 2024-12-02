@@ -50,7 +50,10 @@ func get_time():
 			segundos = 0
 			counter = 0
 			minutos += 1
-		return str(minutos)+":"+str(segundos)
+		if segundos >= 10:
+			return str(minutos)+":"+str(segundos)
+		return str(minutos)+":0"+str(segundos)
+			
 
 
 func conectar_boss():

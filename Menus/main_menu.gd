@@ -100,7 +100,6 @@ func _on_cb_fullscreen_toggled(toggled_on):
 
 
 func _on_cb_sem_bordas_toggled(toggled_on):
-#	ConfigFileHandler.save_video_settings("fullscreen", toggled_on)
 	if toggled_on == true  && $Video/HBoxContainer/checkboxes/cb_fullscreen.button_pressed == false:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)

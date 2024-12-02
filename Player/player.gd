@@ -39,7 +39,7 @@ enum{IDLE, MOVE}
 var state = IDLE
 var vampirismo = 0
 var dano_add = PlayerVariaveis.dano * 5
-var chance_critica = (PlayerVariaveis.chance_critica*5)/100
+var chance_critica = float(PlayerVariaveis.chance_critica*5)/100
 var sorte = PlayerVariaveis.sorte
 
 var blend_pos: Vector2 = Vector2.ZERO
@@ -200,8 +200,8 @@ func inserir(item): #inserir no inventário()
 			update_PlayerUI()
 			
 		elif item.nome == "Upgrade Velocidade":
-			speed = speed + 25
-			friccao = friccao + 400
+			speed = speed + 5
+			friccao = friccao + 30
 		
 		elif item.nome == "Upgrade Defesa":
 			resistencia = resistencia + 5

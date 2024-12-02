@@ -1184,8 +1184,8 @@ inimigo_spawn_delay = 10
 
 [sub_resource type="Resource" id="Resource_w78te"]
 script = ExtResource("6_gaajl")
-time_start = 100
-time_end = 100
+time_start = 200
+time_end = 200
 inimigo = ExtResource("9_k767v")
 inimigo_num = 1
 inimigo_spawn_delay = 0
